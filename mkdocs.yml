@@ -187,8 +187,6 @@ not_in_nav: |
 # Navigation (Page tree)
 nav:
 - Home: 'index.md'
-- Intro:
-  - 'LoopFollow Overview': 'intro/overview-intro.md'
 - Setup:
   - 'LoopFollow Setup': 'setup/lf-setup.md'
 - Features:
