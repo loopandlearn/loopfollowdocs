@@ -131,7 +131,7 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/loopandlearn/LoopFollow
-      name: Trio on GitHub
+      name: LoopFollow on GitHub
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/groups/loopfollowlnl
       name: LoopFollow on Facebook
@@ -183,18 +183,24 @@ exclude_docs: |
   /includes/
 
 not_in_nav: |
-  0.2.x/Analyze/EvaluateBasal.md
-  0.2.x/Analyze/EvaluateCR.md
-  0.2.x/configuration/Configure.md
-  0.2.x/Getting-Started/cgm.md
-  0.2.x/settings/loop.md
-  0.2.x/settings/configuration/preferences/statistics.md
-  0.2.x/settings/devices/pump.md
-  configuration/CompatibleDevices.md
-  configuration/transition-qa.md
-  install/customize.md
-  resources/citations.md
 
 # Navigation (Page tree)
 nav:
 - Home: 'index.md'
+- Intro:
+  - 'LoopFollow Overview': 'intro/overview-intro.md'
+- Setup:
+  - 'LoopFollow Setup': 'setup/lf-setup.md'
+- Features:
+  - 'LoopFollow Features': 'features/lf-features-overview.md'
+  - 'LoopFollow Remote Control Overview': 'features/remote-control-overview.md'
+  - 'LoopFollow Loop Remote Control': 'features/remote-control-loop.md'
+  - 'LoopFollow Trio Remote Control': 'features/remote-control-trio.md'
+- Build:
+  - 'LoopFollow Build': 'build/build-options.md'
+- FAQs:
+  - 'LoopFollow FAQs': 'faqs/lf-faqs.md'
+  - 'Glossary': faqs/glossary.md
+- Translate:
+  - 'Translation': 'translate.md'
+
