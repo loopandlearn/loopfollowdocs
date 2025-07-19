@@ -68,8 +68,6 @@ theme:
 plugins:
   - redirects:
       redirect_maps:
-      #  'startup-guide.md': 'configuration/new-user-setup.md'
-      #  'startup-guide/index.md': 'configuration/new-user-setup.md'
   - open-in-new-tab
   - macros
   - exporter:
@@ -190,10 +188,11 @@ nav:
 - Setup:
   - 'LoopFollow Setup': 'setup/lf-setup.md'
 - Features:
-  - 'LoopFollow Features': 'features/lf-features-overview.md'
-  - 'LoopFollow Remote Control Overview': 'features/remote-control-overview.md'
-  - 'LoopFollow Loop Remote Control': 'features/remote-control-loop.md'
-  - 'LoopFollow Trio Remote Control': 'features/remote-control-trio.md'
+  - LoopFollow Features: 'features/lf-features-overview.md'
+  - Remote Control:
+    - 'Nightscout Remote Control Overview': 'features/remote-control-overview.md'
+    - 'Loop Remote Control': 'features/remote-control-loop.md'
+    - 'Trio Remote Control': 'features/remote-control-trio.md'
 - Build:
   - 'LoopFollow Build': 'build/build-options.md'
 - FAQs:
