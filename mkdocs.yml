@@ -68,8 +68,6 @@ theme:
 plugins:
   - redirects:
       redirect_maps:
-      #  'startup-guide.md': 'configuration/new-user-setup.md'
-      #  'startup-guide/index.md': 'configuration/new-user-setup.md'
   - open-in-new-tab
   - macros
   - exporter:
@@ -131,7 +129,7 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/loopandlearn/LoopFollow
-      name: Trio on GitHub
+      name: LoopFollow on GitHub
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/groups/loopfollowlnl
       name: LoopFollow on Facebook
@@ -183,18 +181,23 @@ exclude_docs: |
   /includes/
 
 not_in_nav: |
-  0.2.x/Analyze/EvaluateBasal.md
-  0.2.x/Analyze/EvaluateCR.md
-  0.2.x/configuration/Configure.md
-  0.2.x/Getting-Started/cgm.md
-  0.2.x/settings/loop.md
-  0.2.x/settings/configuration/preferences/statistics.md
-  0.2.x/settings/devices/pump.md
-  configuration/CompatibleDevices.md
-  configuration/transition-qa.md
-  install/customize.md
-  resources/citations.md
 
 # Navigation (Page tree)
 nav:
 - Home: 'index.md'
+- Setup and Features:
+  - Setup: 'setup/lf-setup.md'
+  - Features: 'setup/lf-features.md'
+- Remote Control:
+  - 'Remote Control Overview': 'remote/remote-control-overview.md'
+  - 'Nightscout Remote Control': 'remote/remote-control-nightscout.md'
+  - 'Loop Remote Control': 'remote/remote-control-loop.md'
+  - 'Trio Remote Control': 'remote/remote-control-trio.md'
+- Build:
+  - 'LoopFollow Build': 'build/build-options.md'
+- FAQs:
+  - 'LoopFollow FAQs': 'faqs/lf-faqs.md'
+  - 'Glossary': faqs/glossary.md
+- Translate:
+  - 'Translation': 'translate.md'
+
