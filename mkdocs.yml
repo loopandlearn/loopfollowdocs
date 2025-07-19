@@ -185,14 +185,14 @@ not_in_nav: |
 # Navigation (Page tree)
 nav:
 - Home: 'index.md'
-- Setup:
-  - 'LoopFollow Setup': 'setup/lf-setup.md'
-- Features:
-  - LoopFollow Features: 'features/lf-features-overview.md'
-  - Remote Control:
-    - 'Nightscout Remote Control Overview': 'features/remote-control-overview.md'
-    - 'Loop Remote Control': 'features/remote-control-loop.md'
-    - 'Trio Remote Control': 'features/remote-control-trio.md'
+- Setup and Features:
+  - Setup: 'setup/lf-setup.md'
+  - Features: 'setup/lf-features.md'
+- Remote Control:
+  - 'Remote Control Overview': 'remote/remote-control-overview.md'
+  - 'Nightscout Remote Control': 'remote/remote-control-nightscout.md'
+  - 'Loop Remote Control': 'remote/remote-control-loop.md'
+  - 'Trio Remote Control': 'remote/remote-control-trio.md'
 - Build:
   - 'LoopFollow Build': 'build/build-options.md'
 - FAQs:

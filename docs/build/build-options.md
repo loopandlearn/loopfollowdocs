@@ -1,88 +1,74 @@
+## Building Options
 
-🚧 Documentation Under Construction 🚧
+*LoopFollow* can be built using either the Browser Build or the Mac-Xcode Build method.  A paid Apple Developer account is required to use the Browser Build method.  Regardless of how you build, you can customize your *LoopFollow* app’s name.
 
-<!--todo-->
-<!--Notes: be sure to add this info
-
--->
-
-
-### Building Options
-
-Please see [Loop and Learn: LoopFollow](https://www.loopandlearn.org/loop-follow/) for all the building options.
-
-With the release of version 2.1.0, there is now an easy option for building up to three instances of the LoopFollow app for multiple Loopers in your family. Each instance can be configured to have the display name you choose with these names being the default:
-
-* LoopFollow
-* LoopFollow_Second
-* LoopFollow_Third
-
-#### Display Name Updates
-
-The _display_name_ is found in a single file.
-
-* Suggestion if you customize the name: use LF {unique name} so you can find the apps easily in iOS Settings screen
-
-Summary instructions by build method:
-
-* Browser Build: 
-    * Fork and setup the repository for each LoopFollow instance you want to use: 
-        * https://github.com/loopandlearn/LoopFollow
-        * https://github.com/loopandlearn/LoopFollow_Second
-        * https://github.com/loopandlearn/LoopFollow_Third
-    * Commit the desired _display_name_ in the LoopFollowDisplayNameConfig.xcconfig file of your forked repository for LoopFollow, LoopFollow_Second or LoopFollow_Third
-* Mac-Xcode Build
-    * First build with script, you will be prompted to enter the desired _display_name_
-    * This _display_name_ is used each time you select a fresh download for LoopFollow 1, 2 or 3
-    * To modify the _display_name_ for subsequent script builds, edit the appropriate file in the ~/Downloads/BuildLoopFollow folder
-        *  LoopFollowDisplayNameConfig.xcconfig 
-        *  LoopFollowDisplayNameConfig_Second.xcconfig 
-        *  LoopFollowDisplayNameConfig_Third.xcconfig 
-
-### Updates
-
-When modifications and versions are updated, you might see activity at GitHub. Please wait for the release message to be posted at [LoopFollow Releases](https://github.com/loopandlearn/LoopFollow/releases) before using the updated versions for the `main` branch of LoopFollow, LoopFollow_Second and LoopFollow_Third.
-
-### Version Numbers
-
-Updates to the `main` branch (releases) have a version number that ends in 0; for example, 2.7.0.
-
-* Immediately following the release, the `dev` branch is at the same version as `main` indicating the code is identical
-* Each time a feature is merged into the `dev` branch, the final number increments; for example, 2.7.1, 2.7.2
-* When the next release is made, the second digit is incremented and the final digit is restore to 0 for both `main` and `dev`; for example, 2.8.0
+* Browser Build: See [LoopDocs: Browser Build for Other Apps]()
+* Mac-Xcode: [Build *LoopFollow* Script for Mac-Xcode](#build-loopfollow-script-for-mac-xcode)
 
 
-### Building Options
+### Build LoopFollow Script for Mac-Xcode
 
-Please see [Loop and Learn: LoopFollow](https://www.loopandlearn.org/loop-follow/) for all the building options.
+Carefully read the information in the terminal before making any choices.
 
-With the release of version 2.1.0, there is now an easy option for building up to three instances of the LoopFollow app for multiple Loopers in your family. Each instance can be configured to have the display name you choose with these names being the default:
+Step 1: Open Terminal
 
-* LoopFollow
-* LoopFollow_Second
-* LoopFollow_Third
+> Tip: Press Command-Space to open spotlight search. Start typing “term” (without the quotes) and you will see the Terminal application icon in the box. Hit enter to open.
 
-#### Display Name Updates
+Step 2: Copy the entire line starting with /bin/bash and then Paste the line into Terminal and enter
 
-The _display_name_ is found in a single file.
+Click on the copy icon at right of the box below to copy it. You’ll see Copied to Clipboard briefly.
 
-* Suggestion if you customize the name: use LF {unique name} so you can find the apps easily in iOS Settings screen
+``` { .bash .copy title="Copy and Paste to start the Build LoopFollow Script" }
+/bin/bash -c "$(curl -fsSL \
+  https://raw.githubusercontent.com/loopandlearn/lnl-scripts/main/BuildLoopFollow.sh)"
+```
 
-Summary instructions by build method:
+Step 3: Choose from one of the options presented by the script
 
-* Browser Build: 
-    * Fork and setup the repository for each LoopFollow instance you want to use: 
-        * https://github.com/loopandlearn/LoopFollow
-        * https://github.com/loopandlearn/LoopFollow_Second
-        * https://github.com/loopandlearn/LoopFollow_Third
-    * Commit the desired _display_name_ in the LoopFollowDisplayNameConfig.xcconfig file of your forked repository for LoopFollow, LoopFollow_Second or LoopFollow_Third
-* Mac-Xcode Build
-    * First build with script, you will be prompted to enter the desired _display_name_
-    * This _display_name_ is used each time you select a fresh download for LoopFollow 1, 2 or 3
-    * To modify the _display_name_ for subsequent script builds, edit the appropriate file in the ~/Downloads/BuildLoopFollow folder
-        *  LoopFollowDisplayNameConfig.xcconfig 
-        *  LoopFollowDisplayNameConfig_Second.xcconfig 
-        *  LoopFollowDisplayNameConfig_Third.xcconfig 
+> If you are not following multiple Loopers, always choose 1 for the latest release.
+
+You are prompted to enter a custom name if you want or you can continue using the LoopFollow default name
+
+> If you are following up to 3 Loopers, choose option 1, 2 or 3.
+
+* Each Looper can have a unique name displayed for the app
+* Each time you download using the script, the name you selected the first time is remembered, but editing instructions are provided
+
+To test a specific feature that is only found in the dev branch, choose option 4. This is not typical, and only builds to the app associated with Looper #1
+
+### Run LoopFollow on Mac using TestFlight
+
+If you used the Browser Build method, follow these instructions to run LoopFollow on your Mac computer using TestFlight. (You can also use an iPad.)
+
+* You need to install the TestFlight app on your computer
+* The TestFlight app on the Mac shows the same set of builds and uses the same installation procedure as shown in LoopDocs for installing apps on a phone from TestFlight
+* Install on computer from TestFlight
+* You need to enter the data source and configuration values into the app on your computer
+
+From Mac system settings/notifications, scroll down to LoopFollow and enable notifications with the options you want.
+
+### Run LoopFollow on your Mac with Mac-Xcode Build
+
+1. Build LoopFollow to your Mac with Xcode (choose My Mac (Mac Catalyst) as the device)
+2. Click Stop to close the running app that is started by Xcode
+3. On the left side of Xcode, click on the Folder icon
+4. Click to open the LoopFollow folder list
+5. Click to open the LoopFollow/Products folder
+6. Right-click (or Control-click) on “LoopFollow.app” and select Show in Finder
+7. First time on the Mac:
+    * Drag the LoopFollow.app icon to your Applications folder in Finder
+    * From Mac system settings/notifications, scroll down to LoopFollow and enable notifications with the options you want
+8. When updating on your Mac
+    * Make sure you close the LoopFollow app currently running on your computer
+    * Drag the LoopFollow.app icon to your Applications folder in Finder
+    * Most people choose to replace the application, but you can keep both if you prefer
+    * All configurations and settings are maintained
+
+### Selection of Branch to Build
+
+`main` vs. `dev`
+
+*LoopFollow* users should build *LoopFollow*-main.  New features are tested in the dev branch. Once they are thoroughly tested, they are merged into main.  Experienced users can test *LoopFollow*-dev, but there will be minimal support. Any issues found with *LoopFollow*-dev should be reported in GitHub.   
 
 ### Updates
 
@@ -90,50 +76,9 @@ When modifications and versions are updated, you might see activity at GitHub. P
 
 ### Version Numbers
 
-Updates to the `main` branch (releases) have a version number that ends in 0; for example, 2.7.0.
+Updates to the `main` branch (releases) have a version number that ends in 0; for example, 3.1.0.
 
 * Immediately following the release, the `dev` branch is at the same version as `main` indicating the code is identical
-* Each time a feature is merged into the `dev` branch, the final number increments; for example, 2.7.1, 2.7.2
-* When the next release is made, the second digit is incremented and the final digit is restore to 0 for both `main` and `dev`; for example, 2.8.0
+* Each time a feature is merged into the `dev` branch, the final number increments; for example, 3.1.1, 3.1.2
+* When the next release is made, the second digit is incremented and the final digit is restore to 0 for both `main` and `dev`; for example, 3.2.0
 
-### General feature list
-
-Please review the list on [Loop and Learn: LoopFollow](https://www.loopandlearn.org/loop-follow/).
-
-Each time a release is made, the features added or bugs fixed for that particular release are found at [LoopFollow Releases](https://github.com/loopandlearn/LoopFollow/releases).
-
-### Open Source DIY
-
-> This is a DIY open source project that may or may not function as you expect. You take full responsibility for building and running this app and do so at your own risk.
-
-## For Developers
-
-> * If you are interested in assisting with this app and want to work on new features and improvements for Loop, Trio, iAPS and Nightscout functionality, please reach out. 
-> * Issues and Pull Requests in GitHub are monitored and will get a response. 
-
-New PR are directed to the dev branch. If you direct one to main, we will move it to point to dev. So always start with your code aligned with dev.
-
-Always rename your branch (that is aligned with `dev`) to a name suitable for your feature, for example, `feature_name`, before starting to add commits to your branch.
-
-After a PR is merged to `dev`, there is an automatic bump up the version number - please do not modify the version in your branch.
-
-### Version Updates
-
-Only the maintainers for LoopFollow will update version numbers.
-
-### Release Process
-
-To assist in releasing to all three LoopFollow repositories, the script `release.sh` is now available. This bumps up the version number to M.N+1.0 for a minor release or M+1.0.0 for a major release. It also updates the LoopFollow_Second and LoopFollow_Third repositories with parallel changes to what was just released for LoopFollow. Only LoopFollow uses a `dev` branch. The other repositories use just the `main` branch and are kept at the released version.
-
-When a release is generated, the updates found in the `dev` branch are merged into `main`; the version number in the `Config.xcconfig` file is updated to A.B.O; a tag of the form v.A.B.0 is created and associated with the `main` branch at that time.
-
-When PR are subsequently merged to `dev`, the version number is incremented by 1 in the last place, e.g., "v.A.B.1" etc.
-
-### Files in LoopFollow Only
-
-There are several files found only in the LoopFollow repository:
-
-* .github/workflow/auto_version_dev.yml
-* release.sh
-
-These files are not added to _Second or _Third version because they are not needed for those repositories.
