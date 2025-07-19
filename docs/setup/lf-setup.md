@@ -8,7 +8,7 @@
 
 ## Initial Configuration
 
-After you build *LoopFollow* the first time, you are asked a few questions (these choices can always be modified later):
+After you build *LoopFollow* the first time, you are asked a few questions (your initial choices can always be modified later):
 
 * **Calendar Access**: if you want to allow *LoopFollow* to provide real-time updates to carplay using the Calendar, choose **Allow Full Access**
 * **Bluetooth Access**: if you want to use an expired Dexcom sensor or a spare RileyLink device to keep *LoopFollow* running in the background while your phone is locked, choose **Allow**
@@ -24,7 +24,9 @@ You will then be presented with a blank home screen as shown below.
 Tap on the Gear/Settings Icon (⚙️) in the tab bar to get to the Settings screen.
 
 !!! note "Tab Customization"
-    With version 3.1 and newer, you can modify what icons show up in the tab bar. If the far right icons is the &hellip; More icon, first tap on that and then choose Settings to get to the Settings screen.
+    With version 3.1 and newer, you can modify what icons show up in the tab bar. 
+    
+    If the far right icons is the &hellip;&nbsp;More icon, first tap on that and then choose Settings to get to the Settings screen.
 
 - - -
 
@@ -39,6 +41,8 @@ The full lists of Settings is shown in the composite graphic below.
 {align="center"}
 
 ### *LoopFollow* Data Source
+
+> Make sure you have access to the internet when filling out credentials.
 
 You provide *LoopFollow* with information about the person you are following. At least one of these must be entered:
 
@@ -57,20 +61,23 @@ To simplify setup, you can copy your *Nightscout* URL (including the token) from
 !!! tip "*Nightscout* Access"
     It is possible to have your *Nightscout* site readable by the world, in which case you do not need to add a token. If you choose to do that, just ignore references to entering the token. The status will show up as `OK (Read)`.
 
-    The only exception is if you choose to Use *LoopFollow* *Nightscout* Remote Control. In that case, you must have a token with careportal access.
+    The only exception is if you choose to use *LoopFollow* [*Nightscout* Remote Control](../remote/remote-control-nightscout.md){: target="_blank" }. In that case, you must have a token with careportal access.
 
     For more information about tokens with *Nightscout*, refer to [Admin Tools in *Nightscout*](https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles).
 
-The type of token depends on the type of remote control desired. The table below indicates the minimum token access for each type of remote control available with Trio. When you enter your credentials, *LoopFollow* tries to reach the site and then provides the status.
+The type of token depends on the type of remote control desired. 
+The table below indicates the minimum token access for each type of remote control available with *LoopFollow*. 
+When you enter your credentials, *LoopFollow* tries to reach the site and then provides the status. 
 
 * The *Loop* Remote Control option will be available in the `dev` branch as soon as [PR 434](https://github.com/loopandlearn/LoopFollow/pull/434) is approved and merged
+* The *Trio* Remote Control option requires the user be on version 0.5.x or newer of Trio
 
 | *LoopFollow* Remote Type | Minimum Token Access| *LoopFollow* Status |
 |:--|:--|:--|
 | **None** | Read | OK (Read) |
 | ***Nightscout*** | Read & Careportal | OK (Read & Write) |
-| **Loop Remote Control** <br>- in development| Read | OK (Read) |
-| **Trio Remote Control** <br>- Trio 0.5.x or newer | Read | OK (Read) |
+| ***Loop* Remote Control** <br>- in development| Read | OK (Read) |
+| ***Trio* Remote Control**| Read | OK (Read) |
 
 #### Add *Dexcom*
 
@@ -85,7 +92,7 @@ The graphic below shows the display when you tap on the *Dexcom* Settings row.
 
 ## The Toolbar
 
-The toolbar at the bottom of the screen is now configurable for rapid access to the items of your choice. The items that can be selected are:
+The toolbar (tab bar) at the bottom of the screen is now configurable for rapid access to the items of your choice. The items that can be selected are:
 
 * [Home](#home)
 * [Alarms](#alarms)
@@ -94,7 +101,7 @@ The toolbar at the bottom of the screen is now configurable for rapid access to 
 * Nightscout
 * Settings
 
-See [Toolbar Tab Customization](../features/lf-features-overview.md#toolbar-tab-customization){: target="_blank" }
+See [Toolbar Tab Customization](lf-features.md#toolbar-tab-customization){: target="_blank" }
 
 - - -
 
@@ -103,9 +110,10 @@ See [Toolbar Tab Customization](../features/lf-features-overview.md#toolbar-tab-
 The home screen provides a dashboard of important information.  
 
 * Supports Glucose display when Dexcom is available but Nightscout is not
-* Supports Information Display from Loop and Trio when Nightscout URL is provided
-* Loop: Loop status, Loop Prediction, Profile Name, remote control (in development)
-* Trio: Trio status, Trio Predictions, Autosens, TDD, remote control (with Trio 0.5.x and newer)
+* Supports Information Display from *Loop* and *Trio* when Nightscout URL is provided
+    * *Loop* & *Trio*: common features like status, basal, bolus, carbs and eventual glucose forecast
+    * *Loop*: *Loop* specific features like Profile Name, remote control (in development)
+    * *Trio*: *Trio* specific features like Autosens, TDD, remote control (with *Trio* 0.5.x and newer)
 
 Once you’ve configured your settings, your Main screen will look as beautiful as the example below!
 

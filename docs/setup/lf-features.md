@@ -16,17 +16,18 @@ Some features require more explanation.
 
 ## Toolbar Tab Customization
 
-The toolbar at the bottom of the *LoopFollow* screen supports up to 5 tabs, but there are 6 options that could be placed there. With version 3.1, the tab display is now customizable.
+The toolbar or tab bar at the bottom of the *LoopFollow* screen is used for rapid access to specific features. This navigation feature can support up to 5 tabs, but there are 6 options that could be placed there. With version 3.1 and newer, the tabs displayed are customizable.
 
-Historically the 5 tabs were:
+??? tip "Historical Tabs (Click to open/close)"
+    Historically the 5 tabs were:
 
-* tab 1: Home
-* tab 2: Alarms or Remote Control
-* tab 3: Snoozer
-* tab 4: Nightscout site
-* tab 5: Settings
+    * tab 1: Home
+    * tab 2: Alarms or Remote Control
+    * tab 3: Snoozer
+    * tab 4: Nightscout site
+    * tab 5: Settings
 
-The updated design is that tabs 2 and 4 are optional and tab 5 can be either settings or the hellip; More icon.
+    The updated design is that tabs 2 and 4 are optional and tab 5 can be either settings or the &hellip;&nbsp;More icon.
 
 The new arrangement is:
 
@@ -34,13 +35,27 @@ The new arrangement is:
 * tab 2: Configurable
 * tab 3: Snoozer
 * tab 4: Configurable
-* tab 5: Configurable (Settings or hellip; More)
+* tab 5: Configurable (Settings or &hellip;&nbsp;More)
 
-These options can be placed in the toolbar for rapid access in your choice of tab 2, tab 4, the More Menu or Hidden:
+### Instructions for Tab Selection
+
+After choosing the Tab Selection row from *LoopFollow* Settings, these tab options can be placed as desired in your choice of tab 2, tab 4, the &hellip;&nbsp;More Menu or Hidden. 
 
 * Alarms
 * Remote
 * Nightscout site
+
+> If you tap cancel in upper left - no changes are saved. 
+
+> Once you tap `Apply` in upper right, your toolbar is updated.
+
+> ![Instructions for tab customization](img/lf-tab-custom-instructions.svg){width="350"}
+{align="center"}
+
+
+### Example Tab Choices
+
+To clarify the selection process, the graphic below shows 3 choices for Tab Settings on the left, with the resultant toolbar on the right.
 
 ![Several tab selections](img/lf-tab-custom.svg){width="700"}
 {align="center"}
@@ -52,7 +67,7 @@ These options can be placed in the toolbar for rapid access in your choice of ta
 
 LoopFollow has traditionally provided an option to play a silent audio as a trick to allow it to wake up when in the background or when the phone is locked. This has several drawbacks including battery drain and limited reliability.
 
-With LoopFollow version 2.2.9 or higher, an additional method is provided using an external device to provide a heartbeat. This can be a radiolink device, if you have one available, or a used Dexcom Transmitter (G5/ G6/ ONE/ Anubis) or Sensor (G7/ ONE+). The batteries on Dexcom devices continue to provide power to the Bluetooth system, giving a heartbeat at about 5 minute intervals. The radiolink devices provide a heartbeat every minute.
+With LoopFollow version 2.2.9 or newer, an additional method is provided using an external device to provide a heartbeat. This can be a radiolink device, if you have one available, or a used Dexcom Transmitter (G5/ G6/ ONE/ Anubis) or Sensor (G7/ ONE+). The batteries on Dexcom devices continue to provide power to the Bluetooth system, giving a heartbeat at about 5 minute intervals. The radiolink devices provide a heartbeat every minute.
 
 ### Bluetooth Heartbeat
 
@@ -93,14 +108,18 @@ If the person using LoopFollow is also wearing a Dexcom or radiolink, they shoul
 
 Updated Method for Watch Display of Real Time Glucose.
 
-Follow your Looper’s glucose value in real time on your Apple watch by adding a complication! Note: a new method is required because old “calendar” method no longer works for iOS 18. You must have LoopFollow v2.2.8 or newer to use this method.
+Follow your Looper’s glucose value in real time on your Apple watch by adding a complication! 
+
+> Note: a new method is required because the old “calendar” method no longer works for iOS 18. You must have LoopFollow v2.2.8 or newer to use this method.
 
 Features include:
 
 * Options for delta value or arrow
 * Dynamic font size
 
-### Step-by-Step Instructions to Set Up LoopFollow Contact Complication on Your Apple Watch
+### Step-by-Step Instructions
+
+It is probably easiest to view the video for Set Up LoopFollow Contact Complication on Your Apple Watch, but a bullet list is also provided below
 
 Video, [How to add a complication for real-time watch display](https://youtu.be/xQ6pd80tKT4)
 
@@ -137,16 +156,15 @@ You’re ready to monitor your glucose data directly on your Apple Watch!
 
 ## Remote Control with *LoopFollow*
 
+Do not skip the overview page if you have not yet configured *LoopFollow* for Remote Control.
+
+* [Remote Control Overview](../remote/remote-control-overview.md)
+
 There are separate pages for the 3 different remote control options. (No page is provided if `None` is selected).
+Quick access is provided using these links once you have configured *LoopFollow* for Remote Control:
 
-The table below indicates the options for Remote Control and includes the minimum token access for each option.
-
-* The *Loop* Remote Control option will be available in the `dev` branch as soon as [PR 434](https://github.com/loopandlearn/LoopFollow/pull/434) is approved and merged
-
-| *LoopFollow* Remote Type | Minimum Token Access| *LoopFollow* Status |
-|:--|:--|:--|
-| **None** | Read | OK (Read) |
-| ***Nightscout*** | Read & Careportal | OK (Read & Write) |
-| **Loop Remote Control** <br>- in development| Read | OK (Read) |
-| **Trio Remote Control** <br>- Trio 0.5.x or newer | Read | OK (Read) |
+* None
+* [*Nightscout*](../remote/remote-control-nightscout.md){: target="_blank" } (*LoopFollow* offers actions that can be done from a *Nightscout* Careportal)
+* [*Loop* Remote Control](../remote/remote-control-loop.md){: target="_blank" } (in development: only available with a *Loop* URL)
+* [*Trio* Remote Control](../remote/remote-control-trio.md){: target="_blank" }: requires Trio 0.5.x or newer
 

@@ -8,13 +8,13 @@
 
 While this website is under construction, you can find missing information in three places:
 
-* [Loop and Learn website: *LoopFollow* page](https://www.loopandlearn.org/loop-follow/)
+* [*Loop and Learn* website: *LoopFollow* page](https://www.loopandlearn.org/loop-follow/)
 * [LoopDocs website: Build Other Apps page](https://loopkit.github.io/loopdocs/browser/other-apps/)
 * [Trio Docs: Loop Follow Remote Control Configuration page](https://triodocs.org/configuration/settings/features/remote-control/)
 
 ## *LoopFollow* 
 
-*LoopFollow* is an open-source DIY (do-it-yourself) iPhone app or Mac app that combines display information and alerts for a person with diabetes into a single easy-to-use interface.
+*LoopFollow* is an open-source DIY (do-it-yourself) iPhone, iPad or Mac app that displays information from multiple other apps and provide custom alerts for a person with diabetes into a single easy-to-use interface. With newer versions, some remote control features are available for the *Loop* and *Trio* apps.
 
 *LoopFollow* was created because using different apps as a parent or caregiver of a person with diabetes can be cumbersome. 
 Add in the extra details from looping with an Open Source Automated Insulin Delivery (OS AID) app 
@@ -39,13 +39,13 @@ An example of the main screen for *LoopFollow* is shown in the graphic below:
 
 ## Hardware Requirements
 
-The *LoopFollow* app will run on any iPhone or iPad that supports iOS 16.6 or newer operating system and on any Mac computer that supports macOS xx.
+The *LoopFollow* app will run on any iPhone or iPad that supports iOS 16.6 or newer operating system and on any Mac computer with an Apple Silicon chip, i.e., M1, M2, M3, M4, etc.
 
 - - -
 
 ## Build Options
 
-*LoopFollow* can be built using [Xcode on a Mac]() or with a [Browser on any computer]().
+*LoopFollow* can be built with a [Browser on any computer](build/build-options.md#building-options){: target="_blank" } or using [Xcode on a Mac](build/build-options.md#build-loopfollow-script-for-mac-xcode){: target="_blank" }.
 
 ### Community Support and Build Help
 
@@ -73,11 +73,11 @@ In addition, at the bottom of the Settings screen for *LoopFollow*, the version 
 
 ## History
 
-This code was originally developed by Jon Fawcett who turned over development and management to the Loop and Learn team. 
+This code was originally developed by Jon Fawcett who turned over development and management to the *Loop and Learn* team. 
 
 We are happy to respond to bug reports or feature requests.
 
-* [Loop and Learn Website](https://loopandlearn.org)
-* [Loop and Learn Facebook](https://www.facebook.com/groups/LOOPandLEARN)
-* [Loop and Learn YouTube Channel](https://www.youtube.com/c/loopandlearn)
+* [*Loop and Learn* Website](https://loopandlearn.org)
+* [*Loop and Learn* Facebook](https://www.facebook.com/groups/LOOPandLEARN)
+* [*Loop and Learn* YouTube Channel](https://www.youtube.com/c/loopandlearn)
 
