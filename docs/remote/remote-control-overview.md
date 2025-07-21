@@ -98,7 +98,7 @@ If you do not have APNS credentials, you need to create a key and grant it acces
     This only works with the **paid** Apple Developer ID.
 
 !!! warning "*Apple* changed the APN system"
-    *Apple* changed the way APN are created. Your old ones should still work, but it they don't, create new ones and update all the places where they are used.
+    *Apple* changed the way APN are created. Your old ones should still work, but if they don't, create new ones and update all the places where they are used.
 
     When creating new APN keys, you have the option for "Sandbox", "Production" or "Sandbox & Production". Be sure to choose "Sandbox & Production".
 

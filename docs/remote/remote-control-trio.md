@@ -42,7 +42,7 @@ The Remote Settings row in the *LoopFollow* Settings screen is used to select th
 ![LoopFollow remote settings type](img/lf-trc-selection.jpg){width="300"}
 {align="center"}
 
-!!! warning "The *Trio* Remote Contol option is not available"
+!!! warning "The *Trio* Remote Control option is not available"
     The `Trio Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* URL](#add-nightscout) with a default profile recognized as a *Trio* profile. Review [Troubleshooting](#troubleshooting) for possible reasons for not seeing the option.
 
 * *Nightscout* option
