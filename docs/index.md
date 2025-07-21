@@ -49,9 +49,9 @@ The *LoopFollow* app will run on any iPhone or iPad that supports iOS 16.6 or ne
 
 ### Community Support and Build Help
 
-Community support for *LoopFollow* is available on [*LoopFollow*’s facebook page](https://www.facebook.com/groups/loopfollowlnl). Please use community support for Build problems. It is very unlikely that a new Issue needs to be opened when you are having trouble building. 
+Community support for *LoopFollow* is available on [*LoopFollow*’s FaceBook page](https://www.facebook.com/groups/loopfollowlnl). Please use community support for Build problems. It is very unlikely that a new Issue needs to be opened when you are having trouble building. 
 
-Remember, for build help with Browser Build, only your *LoopFollow* URL is needed. Just exchange your github address for `docs-test` in the example below:
+Remember, for build help with Browser Build, all we need is the *GitHub* URL to your own fork of *LoopFollow*. Just replace `docs-test` in the example below with your *GitHub* username:
 
 * Example: [https://github.com/docs-test/LoopFollow/actions](https://github.com/docs-test/LoopFollow/actions)
 
