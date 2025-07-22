@@ -2,7 +2,7 @@
 site_name: LoopFollowDocs
 site_description: Documentation of LoopFollow, a companion for Loop and Trio AID systems for iOS.
 site_url: https://loopfollowdocs.org
-site_author: Loop and Learn: LoopFollow Community
+site_author: Loop and Learn
 use_directory_urls: !ENV [CHECK_BROKEN_LINKS, True]
 
 # GitHub Repository
@@ -10,7 +10,7 @@ repo_name: loopandlearn/loopfollowdocs
 repo_url: https://github.com/loopandlearn/loopfollowdocs/
 #edit_uri: edit/dev/docs/
 
-copyright: Loop and Learn: LoopFollow Community
+copyright: Loop and Learn
 
 theme:
   name: material
