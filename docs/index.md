@@ -14,11 +14,12 @@ While this website is under construction, you can find missing information in th
 
 ## *LoopFollow* 
 
-*LoopFollow* is an open-source DIY (do-it-yourself) iPhone, iPad or Mac app that displays information from multiple other apps and provide custom alerts for a person with diabetes into a single easy-to-use interface. With newer versions, some remote control features are available for the *Loop* and *Trio* apps.
+*LoopFollow* is an open-source DIY (do-it-yourself) app that displays information for a person with diabetes in an easy-to-use interface. 
+It combines information from multiple other apps and provides custom alerts. It runs on iPhone, iPad or Mac devices. With newer versions, some remote control features are available for the *Loop* and *Trio* apps.
 
 *LoopFollow* was created because using different apps as a parent or caregiver of a person with diabetes can be cumbersome. 
 Add in the extra details from looping with an Open Source Automated Insulin Delivery (OS AID) app 
-and it can be a challenge flipping back and forth between various sources of information. 
+and flipping back and forth between various sources of information can be a challenge. 
 Many loopers use *LoopFollow* for themselves because of the flexible (and loud) alarm options.
 
 *LoopFollow*:
@@ -27,7 +28,7 @@ Many loopers use *LoopFollow* for themselves because of the flexible (and loud) 
 * Provides flexible alarm features with a Snooze screen
 * Supports *Loop* and *Trio* OS AID systems and provides remote control features
 * Supports up to 3 loopers – each with their own unique app name
-* Works with your Apple watch
+* Works with your Apple Watch
 * Runs on an iPhone, iPad or a Mac computer
 
 An example of the main screen for *LoopFollow* is shown in the graphic below:
@@ -55,7 +56,7 @@ Remember, for build help with Browser Build, all we need is the *GitHub* URL to 
 
 * Example: [https://github.com/docs-test/LoopFollow/actions](https://github.com/docs-test/LoopFollow/actions)
 
-If you do not choose to use Facebook, you can reach out on the [*Trio* discord server](https://discord.gg/FnwFEFUwXE) in one of the build channels.
+If you choose not to use Facebook, you can reach out on the [*Trio* Discord server](https://discord.gg/FnwFEFUwXE) in one of the build channels.
 
 ### Issues and Feature Requests
 
