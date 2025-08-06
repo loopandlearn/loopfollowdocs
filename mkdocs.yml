@@ -190,9 +190,9 @@ nav:
   - Features: 'setup/lf-features.md'
 - Remote Control:
   - 'Remote Control Overview': 'remote/remote-control-overview.md'
-  - 'Nightscout Remote Control': 'remote/remote-control-nightscout.md'
   - 'Loop Remote Control': 'remote/remote-control-loop.md'
   - 'Trio Remote Control': 'remote/remote-control-trio.md'
+  - 'Nightscout Remote Control': 'remote/remote-control-nightscout.md'
 - Build:
   - 'LoopFollow Build': 'build/build-options.md'
 - FAQs:

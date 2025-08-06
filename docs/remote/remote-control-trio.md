@@ -28,11 +28,31 @@ The most powerful arrangement, for *Trio* 0.5.x (or newer), is to configure the 
 ## *Trio* Remote Control
 
 !!! warning "Important"
-    The ability for the *Trio* app to be remotely controlled will be **disabled** when `Enable Remote Control` is turned OFF on the *Trio* phone, even if you have *LoopFollow* configured with the correct credential. This is for the protection of the *Trio* user, so that they **always** are the primary controller of their insulin dosing app.
+    The ability for the *Trio* app to be remotely controlled will be **disabled** when `Enable Remote Control` is turned OFF on the *Trio* phone, even if you have *LoopFollow* configured with the correct credentials. This is for the protection of the *Trio* user, so that they **always** are the primary controller of their insulin dosing app.
 
-    For more details, see [*Trio* Remote Control](remote-control-overview.md#trio-remote-control){: target="_blank" }.
+### Configuration on the *Trio* phone
 
-- - -
+> The graphics displayed on this page are associated with *Trio* version 0.5.x or newer. The same setting is available in older version of *Trio* but in a different location in the menu structure.
+
+**Default:** _OFF_
+
+Remote control must be enabled on the *Trio* phone or no remote information is accepted by the *Trio* phone.
+
+> You can search for this screen in *Trio* settings or go through the sequence: Trio, Settings, Features, Remote Control.
+
+Once Remote Control is enabled, a Shared Secret is available. This is only used if you want to use *Trio* Remote Control with *LoopFollow*.
+
+The graphic below is on the *Trio* phone:
+
+![Trio remote control settings](img/trio-enable-remote-control.png){width="300"}
+{align="center"}
+
+When Remote Control is enabled on the *Trio* app and the *LoopFollow* phone is properly configured, you can add carbs, send boluses, set or cancel overrides or temporary targets from the *LoopFollow* phone to the *Trio* phone via *Apple* push notifications.
+
+The `SHARED SECRET` should be copied from the *Trio* phone and added to the [`Shared Secret`](#shared-secret) row of the *LoopFollow* Remote Settings screen as part of the configuration for using *LoopFollow*.
+
+!!! warning "Important"
+    The ability for the *Trio* app to be remotely controlled will be **disabled** when `Enable Remote Control` is turned OFF on the *Trio* phone, even if you have *LoopFollow* configured with the correct shared secret or your *Nightscout* URL has Careportal access. This is for the protection of the *Trio* user, so that they **always** are the primary controller of their insulin dosing app.
 
 
 ### *LoopFollow* Remote Setting Type 
@@ -64,6 +84,24 @@ When you select *Trio* Remote Control as the Remote Type in the *LoopFollow* app
 |:-:|:-:|
 | ![default remote trc settings ](img/lf-trc-empty-control-settings.jpg){width="300"} | ![LoopFollow settings](img/lf-trc-filled-control-settings.png){width="300"} |
 
+### Guardrails
+
+The maximum allowed entries for Bolus, Carbs, Protein, and Fat are configured in the guardrails section shown in the graphic below. The default values are shown in the graphic below. Adjust this to what is appropriate for the individual.
+
+![default guardrails](img/lf-trc-guardrails.jpg){width="300"}
+{align=center}
+
+### Meal Settings
+
+The user can decide to enable or disable two features independently.
+
+* Meal with Bolus
+    * When enabled, a bolus command can be sent at the same time as the meal entry
+* Meal with Fat/Protein 
+    * When enabled, the user is presented with a Protein and Fat row in addition to the Carbs and Bolus Amount rows
+
+Refer to the graphic in the [Guardrails](#guardrails) section.
+
 ### User
 
 The person using the *LoopFollow* app should enter the name they want to show up as having entered this entry. 
@@ -71,6 +109,8 @@ The person using the *LoopFollow* app should enter the name they want to show up
 * At the current time, this is not used by *LoopFollow* for Trio
 * It does show up as a notification on a *Loop* phone when *LoopFollow* is used with the *Loop* app
     * This feature might be added to *LoopFollow* for *Trio* at a later time
+
+### Credentials
 
 ### Shared Secret
 
@@ -91,25 +131,6 @@ If you have never created an APNS (or have lost the credentials), follow the dir
 If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](#existing-apns). The value of the `LOOP_APNS_KEY` goes here.
 
 If you have never created an APNS (or have lost the credentials), follow the directions in [New APNS](#new-apns) and copy the APNS Key into *LoopFollow* and save the value in your Secrets Reference file.
-
-### Guardrails
-
-The maximum allowed entries for Bolus, Carbs, Protein, and Fat are configured in the guardrails section shown in the graphic below. This example is one in which the Shared Secret and APNS values have not yet been added.
-
-![default guardrails](img/lf-trc-guardrails.jpg){width="300"}
-{align=center}
-
-### Meal Settings
-
-The user can decide to enable or disable two features independently.
-
-* Meal with Bolus
-    * When enabled, a bolus command can be sent at the same time as the meal entry
-* Meal with Fat/Protein 
-    * When enabled, the user is presented with a Protein and Fat row in addition to the Carbs and Bolus Amount rows
-
-Refer to the graphic in the [Guardrails](#guardrails) section.
-
 ### Debug / Info
 
 This section indicates if *Trio* has uploaded required information to *Nightscout*.
@@ -194,13 +215,13 @@ In *Nightscout*, you need to modify these config vars:
 
 Remember to restart the *Nightscout* server (restart dynos) after updating these variables.
 
-### Stop *Nightscout* access from the *Loop* app and the *iAPS* app
+### Stop *Nightscout* uploads from other apps
 
 If you were previously running the *Loop* app or the *iAPS* app:
 
 * Remove *Nightscout* from *Loop* Services or *iAPS* services
-* Add *Nightscout* credentials to Trio
-    * You need the URL and the API_SECRET.
+* Add *Nightscout* as a Service to *Trio*
+    * You need the *Nightscout* URL and the API_SECRET
 
 In addition to this step, you may need to force the profile (from Trio) to upload to *Nightscout* and overwrite the one stored as the default profile in *Nightscout*.
 
@@ -209,7 +230,7 @@ In addition to this step, you may need to force the profile (from Trio) to uploa
 !!! warning "Must on *Trio* 0.5.x (or newer)"
     If you are on *Trio* 0.2.x, you might see the option for *Trio* Remote Control in *LoopFollow* Remote Settings, but you can't use it. See [Use *LoopFollow* *Nightscout* Remote Control](#use-loopfollow-nightscout-remote-control).
 
-If you were previously running the *Loop* app, take the actions in the [previous section](#stop-nightscout-access-from-the-loop-app) and then force the profile to update.
+If you were previously running the *Loop* app or the *iAPS* app, [Stop *Nightscout* upload](#stop-nightscout-uploads-from-other-apps) from those apps and then force the profile to update.
 
 To force a profile to update to *Nightscout*, go to the *Trio* app and toggle Allow Uploading to Nightscout off (disable) and then enable it again.
 
