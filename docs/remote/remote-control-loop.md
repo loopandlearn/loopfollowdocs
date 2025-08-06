@@ -4,8 +4,15 @@
 
 This option is available for remote control of a *Loop* phone when you build the `dev` branch of *LoopFollow*. After testing and release, this will replace [Nightscout Remote Control for Loop](remote-control-nightscout.md#loopfollow--careportal-with-the-loop-app).
 
-* After you [Configure for Remote Control](#configure-for-remote-control)
+* *Loop* Remote Control
+    * Remote control with *LoopFollow* includes adding remote carbs, enacting remote bolus, and starting and canceling Overrides
+    * Available with all versions of *Loop* 3
+    * Requires *LoopFollow* `dev` branch (once released, the version will be 3.2 or newer)
+
+
+* After you [Configure *LoopFollow* for Remote Control](#configure-loopfollow-for-remote-control)
 * You can [Use *LoopFollow* *Loop* Remote Control](#use-loopfollow-loop-remote-control)
+* Be sure to read [FAQs for Remote Commands](#faqs-for-remote-commands)
 
 - - -
 
@@ -31,8 +38,24 @@ The sequence is *LoopFollow* to *Apple Push Notifications* to *Loop*, which uplo
 
 ***More info coming soon!***
 
+
 ![ remote bolus](img/lf-lrc-bolus.png){width="300"}
 {align=center}
+
+!!! tip "Make sure *Loop* information is up to date"
+    If *LoopFollow* shows "Not Looping", do not use any value that shows up in the Insulin Amount field. That value might be coming from a *Nightscout* calculation of Recommended Bolus and not from the *Loop* app.
+
+    Read the warning in the Remote Bolus screen and make sure the Insulin Amount value is recent, less than 5 minutes old.
+
+The requested remote bolus does not need to conform to allowed pump bolus amounts. Once the *Loop* app gets the requested bolus, the amount suitable for the pump is used.
+
+!!! abstract "Example Remote Bolus"
+    For this example, the pump is an Omnipod with 0.05 U bolus increments.
+    
+    * Send remote bolus value of 2.54 U
+    * The amount is modified to 2.50 U by Loop before being issued to the pump
+    * The actual amount delivered is updated to *Nightscout* and visible in *LoopFollow* plot
+
 
 ### Overrides
 
@@ -43,10 +66,13 @@ The sequence is *LoopFollow* to *Apple Push Notifications* to *Loop*, which uplo
 
 - - -
 
-## FAQs for all Remote Commands
+## FAQs for Remote Commands
 
-1. **If I have multiple *Nightscout* sites because I support multiple people with T1D looping, do I need multiple APNs Keys?**  
-   **Answer**: No. If you support multiple people, you can use the one APNs key in each of their *Nightscout* sites.
+1. **If I follow more than one person with *LoopFollow*, do I need multiple APNs Keys?**  
+   **Answer**: No. If you support multiple people, you only need one APNS key.
+
+    * You can follow someone who is using the *Trio* app and another person who is using the *Loop* app. 
+    * You enter the same APNS credentials for each instance of *LoopFollow* that you are using for your multiple loopers.
 
 1. **How can I tell if it worked?**  
    **Answer**: You will get an immediate response on *LoopFollow* whether it successfully sent an APNS command. 
@@ -58,14 +84,14 @@ The sequence is *LoopFollow* to *Apple Push Notifications* to *Loop*, which uplo
     >   {align=center}
 
 
-## FAQs on Remote Overrides
+### FAQs on Remote Overrides
 
 Don't forget to read [*Loopdocs*: Overrides](https://loopkit.github.io/loopdocs/operation/features/overrides/). 
 
 For remote overrides in particular:
 
-1. **Can I set a different override in *Nighscout* than I have programmed into&nbsp;_<span translate="no">Loop</span>_&nbsp;app?**  
-   **Answer**: No. You will only be able to enact override presets already programmed into the Loop app.
+1. **Can I set a different override in *LoopFollow* than I have programmed into&nbsp;_<span translate="no">Loop</span>_&nbsp;app?**  
+   **Answer**: No. You will only be able to enact override presets already programmed into the *Loop* app.
 
 1. **If I didn't start the override in *LoopFollow* (it was started in&nbsp;_<span translate="no">Loop</span>_&nbsp;itself), can I still use *LoopFollow* to cancel it?**  
    **Answer**: Yes. You can cancel an override set in&nbsp;_<span translate="no">Loop</span>_&nbsp;with *LoopFollow*.
@@ -77,7 +103,10 @@ For remote overrides in particular:
    **Answer**: Yes. 
    
     * There will be a green bar on the *LoopFollow* display within a few minutes. 
-    * Once you see the bar, you can tap on Remote, Overrides to see the name of the override that is running. The details for that override are seen in the display below the active override. You may need to scroll down to find that override in the list to see the details.
+    * Once you see the bar, you can tap on Remote, Overrides to view the active override
+        * If it is a named preset (override), the name is listed at the top of the screen in the Active Override row
+        * If you want to see the details, you may need to scroll down to find that override in the list
+        * A custom override (not named) shows up as "Custom Override" in the Active Override row - the details can be observed in the Information Table on the main *LoopFollow* screen
     * The values set for the override may take up to 5 minutes to appear in the Information Table Display, at which time the %insulin needs and target are shown.
 
 1. **Can a looper cancel a remote override**?  
@@ -88,13 +117,6 @@ For remote overrides in particular:
 
 1. **Can I schedule a remote override ahead of time using Nightscout?**    
    **Answer**: No. When you set a remote override in *LoopFollow*, it starts immediately and lasts for the duration programmed for that override in the *Loop* app. You can only set an override in advance using the *Loop* app.
-
-## Remote Commands
-
-Remote Commands to deliver a bolus or add a carb entry **require** a &nbsp;<span translate="no">One Time Passcode</span>&nbsp; (OTP).
-
-!!! important "Minimum Versions: <span translate="no">Loop 3</span>&nbsp; and &nbsp;<span translate="no">**Nightscout 14.2.6**</span>"
-    If your Nightscout version does not meet that minimum requirement, remote commands **might** be accepted but if they are, the time for the commands is always the current time. In other words, Carbs in the Past or Future might be accepted, but would be entered at the current time on the&nbsp;_<span translate="no">loop</span>_&nbsp;phone.
 
 ### Warnings on Remote Commands
 
@@ -138,7 +160,7 @@ You can see the danger of sending duplicate bolus/carbs so be careful. If a remo
 
 - - -
 
-## Configure for Remote Control
+## Configure *LoopFollow* for Remote Control
 
 ### *LoopFollow* Remote Setting Type 
 
@@ -147,29 +169,28 @@ The Remote Settings row in the *LoopFollow* Settings screen is used to select th
 ![LoopFollow remote settings type](img/lf-lrc-selection.png){width="300"}
 {align="center"}
 
-!!! warning "The *Loop* Remote Control option is not available"
+!!! question "The *Loop* Remote Control option is not available"
     The `Loop Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* URL](#add-nightscout) with a default profile recognized as a *Loop* profile. 
-
-* *Loop* Remote Control
-    * Remote control with *LoopFollow* includes adding remote carbs, enacting remote bolus, and starting and canceling Overrides
-    * Available with all versions of *Loop* 3
-    * Requires *LoopFollow* `dev` branch (once released, the version will be 3.2 or later)
-    * Continue with [Configure *LoopFollow* *Trio* Remote Control](#configure-loopfollow-trio-remote-control) to finish the configuration process
-
-- - -
-
-## Configure *LoopFollow* *Loop* Remote Control
-
-> This is method for remote control of *Loop* 3.x (or newer) is currently available when using *LoopFollow* `dev` branch. This will be released as *LoopFollow* 3.2 at a later time.
 
 ### Guardrails
 
 The maximum allowed entries for Bolus and Carbs are configured in the guardrails section. The default values are shown in the graphic below. Adjust this to what is appropriate for the individual.
 
-These guardrails are for sending remote commands with *LoopFollow*. There are separate guardrails in the *Loop* app itself. Be sure the *LoopFollow* guardrails are at least as conservative as the *Loop* guardrails.
-
 ![default guardrails](img/lf-lrc-guardrails.png){width="300"}
 {align=center}
+
+These guardrails are for sending remote commands with *LoopFollow*. There are separate guardrails in the *Loop* app itself. Be sure the *LoopFollow* guardrails are at least as conservative as the *Loop* guardrails.
+
+!!! warning "Do not exceed *Loop* Guardrails"
+    Example:
+
+    * *LoopFollow* guardrail is 10 U bolus
+    * *Loop* guardrail is 8 U bolus
+    * Send remote bolus amount of 10 U from *LoopFollow*
+        * *LoopFollow* shows a success message, meaning the APNS request was successfully sent to the *Loop* phone
+        * The *Loop* phone rejects the request because it exceeds the guardrail
+        * A gray dot shows up on the *LoopFollow* screen, tapping it shows the message "Exceeds Maximum allowed bolus in settings"
+
 
 ### Credentials to Enable Loop Remote Control
 
@@ -180,7 +201,9 @@ When you select *Loop* Remote Control as the Remote Type in the *LoopFollow* app
 
 ### Developer Team ID
 
-This is *Apple* Developer ID for whoever created the APNS Key. The developer must be the same as the person who built the *Loop* app.
+This is the *Apple* Developer ID for whoever created the APNS Key. The developer must be the same as the developer who built the *Loop* app.
+
+Note that the *Nightscout* app and the *LoopFollow* app do not need to be built by this developer. It is only the *Loop* app that has this requirement.
 
 ### APNS Key ID
 
@@ -188,7 +211,7 @@ If you previously configured remote control with the *Loop* app, you already hav
 
 If you have never created an APNS (or have lost the credentials), follow the directions in [New APNS](#new-apns){: target="_blank" } and copy the APNS Key ID into *LoopFollow* and save the value in your Secrets Reference file.
 
-The APNS Key ID and APNS Key only need to be added to *LoopFollow* to enable *Loop* Remote Control. They do not need to be added to the *Nightscout* site.
+The APNS Key ID and APNS Key only need to be added to *LoopFollow* to enable *Loop* Remote Control. They do not need to be added to the *Nightscout* site if they are not already there. However, if you plan to use *Nightscout* `Careportal` or *LoopCaregiver*, then the APNS `config` vars must be added to *Nightscout*.
 
 > When creating the APNS, you must be logged in as a developer. The developer ID for the APNS must be the same as the one used for creating your *Loop* app or remote control will not work.
 
@@ -230,11 +253,8 @@ This section indicates if *Loop* has uploaded required information to *Nightscou
 
 The graphic below shows a properly configured *LoopFollow* when the *Loop* app was built using the Browser Build method.
 
-![shows credentials entered into loopfollow are correct](img/lf-trc-debug-blurred.png){width="300"}
+![shows credentials entered into loopfollow are correct](img/lf-lrc-debug.png){width="300"}
 {align=center}
-
-If you have empty rows in the Debug / Info screen, the most likely problem is the default profile is not coming from Trio. See [Update Profile](#update-profile). 
-If you took those steps and still have missing rows, return to [Configure *LoopFollow* *Loop* Remote Control](#configure-loopfollow-trio-remote-control) and try again.
 
 - - -
 
