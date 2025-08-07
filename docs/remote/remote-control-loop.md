@@ -20,12 +20,25 @@ This option is available for remote control of a *Loop* phone when you build the
 
 Once the *LoopFollow* phone is [configured](#configure-for-remote-control), and while the *Loop* phone is handy, test sending Remote Commands. It is good to also have a browser open with the *Nightscout* URL displayed.
 
-Remember to give the system time to update.
-
-The sequence is *LoopFollow* to *Apple Push Notifications* to *Loop*, which uploads to *Nightscout* and then is displayed in the *LoopFollow* main screen.
-
 ![loopfollow loop remote control choices](img/lf-lrc.png){width="300"}
 {align=center}
+
+### Remote Sequence Steps
+
+!!! tip "Wait for the Result"
+
+    The remote control sequence requires several steps:
+
+    1. *LoopFollow* device to *Apple Push Notifications*
+        * If that interchange is successful, you get a success message in *LoopFollow*
+        * If that interchange fails, you get an immediate message with the failure reason
+    1. *Apple Push Notifications* to *Loop* phone
+    1. The *Loop* app processes the remote command and either **enacts** it or **rejects** it
+    1. The *Loop* app uploads to *Nightscout* with result shown on *LoopFollow* main screen in a few minutes
+        * If the remote request was **enacted**, the result is visible on the *LoopFollow* main plot
+        * If the remote request was **rejected**, a gray dot is visible on the *LoopFollow* main plot - touch it to see the reason why the request was rejected
+
+    > If no result shows up at *LoopFollow* (no gray dot, no response to remote request), then it is most likely step 2 that failed. We have limited control over that.
 
 ### Remote Meal
 
@@ -39,22 +52,20 @@ The sequence is *LoopFollow* to *Apple Push Notifications* to *Loop*, which uplo
 ***More info coming soon!***
 
 
-![ remote bolus](img/lf-lrc-bolus.png){width="300"}
+| Recent Rec Bolus | Last `Loop` > 12 minutes |
+|:-:|:-:|
+| ![ remote bolus current](img/lf-lrc-bolus.png){width="300"} | ![ remote bolus older than 12 minutes](img/lf-lrc-bolus-old.png){width="300"} |
+
+
+!
 {align=center}
 
 !!! tip "Make sure *Loop* information is up to date"
-    If *LoopFollow* shows "Not Looping", do not use any value that shows up in the Insulin Amount field. That value might be coming from a *Nightscout* calculation of Recommended Bolus and not from the *Loop* app.
+    The insulin amount is filled out with the last recommended bolus that *LoopFollow* downloaded from the *Nightscout* site, which in turn was uploaded from the *Loop* phone.
 
-    Read the warning in the Remote Bolus screen and make sure the Insulin Amount value is recent, less than 5 minutes old.
+    Read the warning in the Remote Bolus screen and make sure the Insulin Amount value is recent.
 
-The requested remote bolus does not need to conform to allowed pump bolus amounts. Once the *Loop* app gets the requested bolus, the amount suitable for the pump is used.
-
-!!! abstract "Example Remote Bolus"
-    For this example, the pump is an Omnipod with 0.05 U bolus increments.
-    
-    * Send remote bolus value of 2.54 U
-    * The amount is modified to 2.50 U by Loop before being issued to the pump
-    * The actual amount delivered is updated to *Nightscout* and visible in *LoopFollow* plot
+    If the last update was more than 12 minutes ago, that line is not prefilled.
 
 
 ### Overrides
