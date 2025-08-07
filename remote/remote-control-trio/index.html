@@ -7,7 +7,7 @@
 <meta content="Loop and Learn" name="author"/>
 <link href="https://loopfollowdocs.org/remote/remote-control-trio/" rel="canonical"/>
 <link href="../remote-control-loop/" rel="prev"/>
-<link href="../../build/build-options/" rel="next"/>
+<link href="../remote-control-nightscout/" rel="next"/>
 <link href="../../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.7" name="generator"/>
 <title>Trio Remote Control - LoopFollowDocs</title>
@@ -249,14 +249,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../remote-control-nightscout/">
-<span class="md-ellipsis">
-    Nightscout Remote Control
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../remote-control-loop/">
 <span class="md-ellipsis">
     Loop Remote Control
@@ -293,84 +285,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#trio-remote-control">
-<span class="md-ellipsis">
-      Trio Remote Control
-    </span>
-</a>
-<nav aria-label="Trio Remote Control" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#loopfollow-remote-setting-type">
-<span class="md-ellipsis">
-      LoopFollow Remote Setting Type
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#configure-loopfollow-trio-remote-control">
-<span class="md-ellipsis">
-      Configure LoopFollow Trio Remote Control
-    </span>
-</a>
-<nav aria-label="Configure LoopFollow Trio Remote Control" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#user">
-<span class="md-ellipsis">
-      User
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#shared-secret">
-<span class="md-ellipsis">
-      Shared Secret
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#apns-key-id">
-<span class="md-ellipsis">
-      APNS Key ID
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#apns-key">
-<span class="md-ellipsis">
-      APNS Key
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#guardrails">
-<span class="md-ellipsis">
-      Guardrails
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#meal-settings">
-<span class="md-ellipsis">
-      Meal Settings
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#debug-info">
-<span class="md-ellipsis">
-      Debug / Info
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#use-loopfollow-trio-remote-control">
 <span class="md-ellipsis">
       Use LoopFollow Trio Remote Control
@@ -378,6 +292,13 @@
 </a>
 <nav aria-label="Use LoopFollow Trio Remote Control" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-sequence-steps">
+<span class="md-ellipsis">
+      Remote Sequence Steps
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#remote-meal">
 <span class="md-ellipsis">
@@ -406,10 +327,113 @@
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#trio-remote-control-stops-working">
+<a class="md-nav__link" href="#configure-trio-phone-for-remote-control">
 <span class="md-ellipsis">
-      Trio Remote Control Stops Working
+      Configure Trio Phone for Remote Control
+    </span>
+</a>
+<nav aria-label="Configure Trio Phone for Remote Control" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shared-secret">
+<span class="md-ellipsis">
+      Shared Secret
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configure-loopfollow-for-remote-control">
+<span class="md-ellipsis">
+      Configure LoopFollow for Remote Control
+    </span>
+</a>
+<nav aria-label="Configure LoopFollow for Remote Control" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loopfollow-remote-setting-type">
+<span class="md-ellipsis">
+      LoopFollow Remote Setting Type
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configure-loopfollow-trio-remote-control">
+<span class="md-ellipsis">
+      Configure LoopFollow Trio Remote Control
+    </span>
+</a>
+<nav aria-label="Configure LoopFollow Trio Remote Control" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meal-settings">
+<span class="md-ellipsis">
+      Meal Settings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guardrails">
+<span class="md-ellipsis">
+      Guardrails
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user">
+<span class="md-ellipsis">
+      User
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#credentials">
+<span class="md-ellipsis">
+      Credentials
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shared-secret_1">
+<span class="md-ellipsis">
+      Shared Secret
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apns-credentials">
+<span class="md-ellipsis">
+      APNS Credentials
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apns-key-id">
+<span class="md-ellipsis">
+      APNS Key ID
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apns-key">
+<span class="md-ellipsis">
+      APNS Key
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debug-info">
+<span class="md-ellipsis">
+      Debug / Info
     </span>
 </a>
 </li>
@@ -432,9 +456,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#stop-nightscout-access-from-the-loop-app-and-the-iaps-app">
+<a class="md-nav__link" href="#stop-nightscout-uploads-from-other-apps">
 <span class="md-ellipsis">
-      Stop Nightscout access from the Loop app and the iAPS app
+      Stop Nightscout uploads from other apps
     </span>
 </a>
 </li>
@@ -445,11 +469,26 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#trio-remote-control-stops-working">
+<span class="md-ellipsis">
+      Trio Remote Control Stops Working
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../remote-control-nightscout/">
+<span class="md-ellipsis">
+    Nightscout Remote Control
+    
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -503,84 +542,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#trio-remote-control">
-<span class="md-ellipsis">
-      Trio Remote Control
-    </span>
-</a>
-<nav aria-label="Trio Remote Control" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#loopfollow-remote-setting-type">
-<span class="md-ellipsis">
-      LoopFollow Remote Setting Type
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#configure-loopfollow-trio-remote-control">
-<span class="md-ellipsis">
-      Configure LoopFollow Trio Remote Control
-    </span>
-</a>
-<nav aria-label="Configure LoopFollow Trio Remote Control" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#user">
-<span class="md-ellipsis">
-      User
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#shared-secret">
-<span class="md-ellipsis">
-      Shared Secret
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#apns-key-id">
-<span class="md-ellipsis">
-      APNS Key ID
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#apns-key">
-<span class="md-ellipsis">
-      APNS Key
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#guardrails">
-<span class="md-ellipsis">
-      Guardrails
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#meal-settings">
-<span class="md-ellipsis">
-      Meal Settings
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#debug-info">
-<span class="md-ellipsis">
-      Debug / Info
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#use-loopfollow-trio-remote-control">
 <span class="md-ellipsis">
       Use LoopFollow Trio Remote Control
@@ -588,6 +549,13 @@
 </a>
 <nav aria-label="Use LoopFollow Trio Remote Control" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-sequence-steps">
+<span class="md-ellipsis">
+      Remote Sequence Steps
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#remote-meal">
 <span class="md-ellipsis">
@@ -616,10 +584,113 @@
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#trio-remote-control-stops-working">
+<a class="md-nav__link" href="#configure-trio-phone-for-remote-control">
 <span class="md-ellipsis">
-      Trio Remote Control Stops Working
+      Configure Trio Phone for Remote Control
+    </span>
+</a>
+<nav aria-label="Configure Trio Phone for Remote Control" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shared-secret">
+<span class="md-ellipsis">
+      Shared Secret
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configure-loopfollow-for-remote-control">
+<span class="md-ellipsis">
+      Configure LoopFollow for Remote Control
+    </span>
+</a>
+<nav aria-label="Configure LoopFollow for Remote Control" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loopfollow-remote-setting-type">
+<span class="md-ellipsis">
+      LoopFollow Remote Setting Type
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configure-loopfollow-trio-remote-control">
+<span class="md-ellipsis">
+      Configure LoopFollow Trio Remote Control
+    </span>
+</a>
+<nav aria-label="Configure LoopFollow Trio Remote Control" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meal-settings">
+<span class="md-ellipsis">
+      Meal Settings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guardrails">
+<span class="md-ellipsis">
+      Guardrails
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user">
+<span class="md-ellipsis">
+      User
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#credentials">
+<span class="md-ellipsis">
+      Credentials
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shared-secret_1">
+<span class="md-ellipsis">
+      Shared Secret
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apns-credentials">
+<span class="md-ellipsis">
+      APNS Credentials
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apns-key-id">
+<span class="md-ellipsis">
+      APNS Key ID
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apns-key">
+<span class="md-ellipsis">
+      APNS Key
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debug-info">
+<span class="md-ellipsis">
+      Debug / Info
     </span>
 </a>
 </li>
@@ -642,9 +713,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#stop-nightscout-access-from-the-loop-app-and-the-iaps-app">
+<a class="md-nav__link" href="#stop-nightscout-uploads-from-other-apps">
 <span class="md-ellipsis">
-      Stop Nightscout access from the Loop app and the iAPS app
+      Stop Nightscout uploads from other apps
     </span>
 </a>
 </li>
@@ -652,6 +723,13 @@
 <a class="md-nav__link" href="#update-profile">
 <span class="md-ellipsis">
       Update Profile
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#trio-remote-control-stops-working">
+<span class="md-ellipsis">
+      Trio Remote Control Stops Working
     </span>
 </a>
 </li>
@@ -694,18 +772,86 @@
 <li><strong>Using announcements to provide remote control of the <em>Trio</em> phone is no longer supported</strong></li>
 </ul>
 </details>
+<p>The bullets below take you to the indicated topics. The configuration steps are listed first but only need to be done once:</p>
+<ul>
+<li><a href="#configure-trio-phone-for-remote-control">Configure <em>Trio</em> Phone for Remote Control</a></li>
+<li><a href="#configure-loopfollow-for-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for Remote Control</a></li>
+<li><a href="#use-loopfollow-trio-remote-control">Use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em>Trio</em> Remote Control</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
 <hr/>
-<h2 id="trio-remote-control"><em>Trio</em> Remote Control<a class="headerlink" href="#trio-remote-control" title="Link to this section for reference">¶</a></h2>
+<h2 id="use-loopfollow-trio-remote-control">Use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em>Trio</em> Remote Control<a class="headerlink" href="#use-loopfollow-trio-remote-control" title="Link to this section for reference">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
-<p>The ability for the <em>Trio</em> app to be remotely controlled will be <strong>disabled</strong> when <code>Enable Remote Control</code> is turned OFF on the <em>Trio</em> phone, even if you have <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> configured with the correct credential. This is for the protection of the <em>Trio</em> user, so that they <strong>always</strong> are the primary controller of their insulin dosing app.</p>
-<p>For more details, see <a href="../remote-control-overview/#trio-remote-control" target="_blank"><em>Trio</em> Remote Control</a>.</p>
+<p>The ability for the <em>Trio</em> app to be remotely controlled will be <strong>disabled</strong> when <code>Enable Remote Control</code> is turned OFF on the <em>Trio</em> phone, even if you have <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> configured with the correct credentials. This is for the protection of the <em>Trio</em> user, so that they <strong>always</strong> are the primary controller of their insulin dosing app.</p>
+<p>The APNS commands will report success on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app, but you will see a gray dot on the plot. The message is "Remote command received, but remote control is disabled in settings. Ignoring the command."</p>
+</div>
+<p>Once the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app is configured, and while the <em>Trio</em> phone is handy, test sending Remote Commands. It is good to also have a browser open with the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> displayed.</p>
+<p>Remember to give the system time to update.</p>
+<p>The sequence is <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> to <em>Apple Push Notifications</em> to <em>Trio</em>, which uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> and then is displayed in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main screen.</p>
+<p align="center"><img alt="loopfollow trio remote control choices" src="../img/lf-trc.jpg" width="300"/></p>
+<h3 id="remote-sequence-steps">Remote Sequence Steps<a class="headerlink" href="#remote-sequence-steps" title="Link to this section for reference">¶</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Wait for the Result</p>
+<p>The remote control sequence requires several steps:</p>
+<ol>
+<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> device to <em>Apple Push Notifications</em><ul>
+<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> provides an immediate success or failure message</li>
+</ul>
+</li>
+<li><em>Apple Push Notifications</em> to <em>Trio</em> phone where the message could be:<ul>
+<li>handled promptly</li>
+<li>discarded, ignored by <em>Apple</em> or the phone</li>
+<li>significantly slowed down due to network connectivity</li>
+</ul>
+</li>
+<li>The <em>Trio</em> app processes the remote command and either <strong>enacts</strong> it or <strong>rejects</strong> it</li>
+<li>The <em>Trio</em> app uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> with result shown on <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main screen in a few minutes<ul>
+<li>If the remote request was <strong>enacted</strong>, the result is visible on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main plot</li>
+<li>If the remote request was <strong>rejected</strong>, a gray dot is visible on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main plot - touch it to see the reason why the request was rejected</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>If no result shows up at <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> (no gray dot, no response to remote request), then it is most likely step 2 that failed. We have limited control over that.</p>
+</blockquote>
+</div>
+<h3 id="remote-meal">Remote Meal<a class="headerlink" href="#remote-meal" title="Link to this section for reference">¶</a></h3>
+<p><strong><em>More info coming soon!</em></strong></p>
+<p>When entering meals and choosing to schedule the meal, any bolus included in the meal is enacted immediately. Only the carb entry is entered according to the schedule.</p>
+<p align="center"><img alt="scheduled meal warning" src="../img/lf-trc-scheduled-meal.png" width="300"/></p>
+<h3 id="remote-bolus">Remote Bolus<a class="headerlink" href="#remote-bolus" title="Link to this section for reference">¶</a></h3>
+<p><strong><em>More info coming soon!</em></strong></p>
+<h3 id="temp-target">Temp Target<a class="headerlink" href="#temp-target" title="Link to this section for reference">¶</a></h3>
+<p><strong><em>More info coming soon!</em></strong></p>
+<h3 id="overrides">Overrides<a class="headerlink" href="#overrides" title="Link to this section for reference">¶</a></h3>
+<p><strong><em>More info coming soon!</em></strong></p>
+<hr/>
+<h2 id="configure-trio-phone-for-remote-control">Configure <em>Trio</em> Phone for Remote Control<a class="headerlink" href="#configure-trio-phone-for-remote-control" title="Link to this section for reference">¶</a></h2>
+<blockquote>
+<p>The graphics displayed on this page are associated with <em>Trio</em> version 0.5.x or newer. The same setting is available in older version of <em>Trio</em> but in a different location in the menu structure.</p>
+</blockquote>
+<p><strong>Default:</strong> <em>OFF</em></p>
+<p>Remote control must be enabled on the <em>Trio</em> phone or no remote information is accepted by the <em>Trio</em> phone.</p>
+<blockquote>
+<p>You can search for this screen in <em>Trio</em> settings or go through the sequence: Trio, Settings, Features, Remote Control.</p>
+</blockquote>
+<h3 id="shared-secret">Shared Secret<a class="headerlink" href="#shared-secret" title="Link to this section for reference">¶</a></h3>
+<p>Once Remote Control is enabled, a Shared Secret is available. This is only used if you want to use <em>Trio</em> Remote Control with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>.</p>
+<p>The graphic below is on the <em>Trio</em> phone:</p>
+<p align="center"><img alt="Trio remote control settings" src="../img/trio-enable-remote-control.png" width="300"/></p>
+<p>When Remote Control is enabled on the <em>Trio</em> app and the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app is properly configured, you can add carbs, send boluses, set or cancel overrides or temporary targets from the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app to the <em>Trio</em> phone via <em>Apple</em> push notifications.</p>
+<p>The <code>SHARED SECRET</code> should be copied from the <em>Trio</em> phone and added to the <a href="#shared-secret_1"><code>Shared Secret</code></a> row of the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Settings screen as part of the configuration for using <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>The ability for the <em>Trio</em> app to be remotely controlled will be <strong>disabled</strong> when <code>Enable Remote Control</code> is turned OFF on the <em>Trio</em> phone, even if you have <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> configured with the correct shared secret or your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> has Careportal access. This is for the protection of the <em>Trio</em> user, so that they <strong>always</strong> are the primary controller of their insulin dosing app.</p>
 </div>
 <hr/>
+<h2 id="configure-loopfollow-for-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for Remote Control<a class="headerlink" href="#configure-loopfollow-for-remote-control" title="Link to this section for reference">¶</a></h2>
 <h3 id="loopfollow-remote-setting-type"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Setting Type<a class="headerlink" href="#loopfollow-remote-setting-type" title="Link to this section for reference">¶</a></h3>
 <p>The Remote Settings row in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Settings screen is used to select the type of remote access you wish to use.</p>
 <p align="center"><img alt="LoopFollow remote settings type" src="../img/lf-trc-selection.jpg" width="300"/></p>
-<div class="admonition warning">
+<div class="admonition question">
 <p class="admonition-title">The <em>Trio</em> Remote Control option is not available</p>
 <p>The <code>Trio Remote Control</code> option is only available in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> if you have already entered a <a href="#add-nightscout"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr></a> with a default profile recognized as a <em>Trio</em> profile. Review <a href="#troubleshooting">Troubleshooting</a> for possible reasons for not seeing the option.</p>
 </div>
@@ -727,6 +873,50 @@
 <blockquote>
 <p>This is supported for <em>Trio</em> 0.5.x (or newer) when using <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 2.4.0 (or newer).</p>
 </blockquote>
+<h3 id="meal-settings">Meal Settings<a class="headerlink" href="#meal-settings" title="Link to this section for reference">¶</a></h3>
+<p>The user can decide to enable or disable two features independently.</p>
+<ul>
+<li>Meal with Bolus<ul>
+<li>When enabled, a bolus command can be sent at the same time as the meal entry</li>
+</ul>
+</li>
+<li>Meal with Fat/Protein <ul>
+<li>When enabled, the user is presented with a Protein and Fat row in addition to the Carbs and Bolus Amount rows</li>
+</ul>
+</li>
+</ul>
+<p>Refer to the graphic below which shows default settings for meal settings and guardrails rows. The user row is filled in.</p>
+<p align="center"><img alt="default meal settings and guardrails" src="../img/lf-trc-meal-default.png" width="300"/></p>
+<h3 id="guardrails"><abbr title="limits in the code for user selected settings, recommended and absolute limits are provided">Guardrails</abbr><a class="headerlink" href="#guardrails" title="Link to this section for reference">¶</a></h3>
+<p>The maximum allowed entries for Bolus, Carbs, Protein, and Fat are configured in the guardrails section. The default values are shown in the graphic in the <a href="#meal-settings">Meal Settings</a> section. Adjust this to what is appropriate for the individual.</p>
+<p>These guardrails are for sending remote commands with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>. There are separate guardrails in the <em>Trio</em> app itself. Be sure the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> guardrails are at least as conservative as the <em>Trio</em> guardrails.</p>
+<div class="admonition warning">
+<p class="admonition-title">Do not exceed <em>Trio</em> <abbr title="limits in the code for user selected settings, recommended and absolute limits are provided">Guardrails</abbr></p>
+<p>Example:</p>
+<ul>
+<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> guardrail is 10 U bolus</li>
+<li><em>Trio</em> guardrail is 8 U bolus</li>
+<li>Send remote bolus amount of 10 U from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em><ul>
+<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> shows a success message, meaning the APNS request was successfully sent to the <em>Trio</em> phone</li>
+<li>The <em>Trio</em> phone rejects the request because it exceeds the guardrail</li>
+<li>A gray dot shows up on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> screen, tapping it shows the message "Command rejected: bolus amount (10 units) exceeds the maximum allowed (8 units)"</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="user">User<a class="headerlink" href="#user" title="Link to this section for reference">¶</a></h3>
+<p>The person using the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app should enter the name they want to show up as having entered this entry. </p>
+<ul>
+<li>At the current time, this is not used by <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for Trio</li>
+</ul>
+<p>Refer to the graphic in the <a href="#meal-settings">Meal Settings</a> section.</p>
+<h3 id="credentials">Credentials<a class="headerlink" href="#credentials" title="Link to this section for reference">¶</a></h3>
+<h3 id="shared-secret_1">Shared Secret<a class="headerlink" href="#shared-secret_1" title="Link to this section for reference">¶</a></h3>
+<p>This is the unique shared secret that can be generated or entered into the <em>Trio</em> app in the Remote Control screen. The shared secret in <em>Trio</em> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> must match to provide the ability to remotely send commands to this <em>Trio</em> app.</p>
+<blockquote>
+<p>Please use a secure secret - the <a href="#configure-trio-phone-for-remote-control">automatically generated secret</a> is recommended.</p>
+</blockquote>
+<h3 id="apns-credentials">APNS Credentials<a class="headerlink" href="#apns-credentials" title="Link to this section for reference">¶</a></h3>
 <p>When you select <em>Trio</em> Remote Control as the Remote Type in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app, you must fill in the (1) <a href="#shared-secret">Shared Secret</a>, (2) <a href="#apns-key-id">APNS Key ID</a> and (3) <a href="#apns-key">APNS Key</a>.</p>
 <table>
 <thead>
@@ -742,20 +932,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="user">User<a class="headerlink" href="#user" title="Link to this section for reference">¶</a></h3>
-<p>The person using the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app should enter the name they want to show up as having entered this entry. </p>
-<ul>
-<li>At the current time, this is not used by <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for Trio</li>
-<li>It does show up as a notification on a <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone when <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> is used with the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app<ul>
-<li>This feature might be added to <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for <em>Trio</em> at a later time</li>
-</ul>
-</li>
-</ul>
-<h3 id="shared-secret">Shared Secret<a class="headerlink" href="#shared-secret" title="Link to this section for reference">¶</a></h3>
-<p>This is the unique shared secret that can be generated or entered into the <em>Trio</em> app in the Remote Control screen. The shared secret in <em>Trio</em> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> must match to provide the ability to remotely send commands to this <em>Trio</em> app.</p>
-<blockquote>
-<p>Please use a secure secret - the <a href="#trio-remote-control">automatically generated secret</a> is recommended.</p>
-</blockquote>
 <h3 id="apns-key-id">APNS Key ID<a class="headerlink" href="#apns-key-id" title="Link to this section for reference">¶</a></h3>
 <p>If you previously configured remote control with the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app, you already have an <em>Apple</em> Push Notification System (APNS) Key ID and Key. These were added to the config vars in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site. See <a href="#existing-apns">Existing APNS</a>. The value of the <code>LOOP_APNS_KEY_ID</code> goes here. Be sure to read the <a href="#configure-for-openaps">Configure for OpenAPS</a> section about steps to make <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> work with Trio.</p>
 <p>If you have never created an APNS (or have lost the credentials), follow the directions in <a href="#new-apns">New APNS</a> and copy the APNS Key ID into <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and save the value in your Secrets Reference file.</p>
@@ -765,61 +941,12 @@
 <h3 id="apns-key">APNS Key<a class="headerlink" href="#apns-key" title="Link to this section for reference">¶</a></h3>
 <p>If you previously configured remote control with the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app, you already have an <em>Apple</em> Push Notification System (APNS) Key ID and Key. These were added to the config vars in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site. See <a href="#existing-apns">Existing APNS</a>. The value of the <code>LOOP_APNS_KEY</code> goes here.</p>
 <p>If you have never created an APNS (or have lost the credentials), follow the directions in <a href="#new-apns">New APNS</a> and copy the APNS Key into <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and save the value in your Secrets Reference file.</p>
-<h3 id="guardrails"><abbr title="limits in the code for user selected settings, recommended and absolute limits are provided">Guardrails</abbr><a class="headerlink" href="#guardrails" title="Link to this section for reference">¶</a></h3>
-<p>The maximum allowed entries for Bolus, Carbs, Protein, and Fat are configured in the guardrails section shown in the graphic below. This example is one in which the Shared Secret and APNS values have not yet been added.</p>
-<p align="center"><img alt="default guardrails" src="../img/lf-trc-guardrails.jpg" width="300"/></p>
-<h3 id="meal-settings">Meal Settings<a class="headerlink" href="#meal-settings" title="Link to this section for reference">¶</a></h3>
-<p>The user can decide to enable or disable two features independently.</p>
-<ul>
-<li>Meal with Bolus<ul>
-<li>When enabled, a bolus command can be sent at the same time as the meal entry</li>
-</ul>
-</li>
-<li>Meal with Fat/Protein <ul>
-<li>When enabled, the user is presented with a Protein and Fat row in addition to the Carbs and Bolus Amount rows</li>
-</ul>
-</li>
-</ul>
-<p>Refer to the graphic in the <a href="#guardrails"><abbr title="limits in the code for user selected settings, recommended and absolute limits are provided">Guardrails</abbr></a> section.</p>
 <h3 id="debug-info">Debug / Info<a class="headerlink" href="#debug-info" title="Link to this section for reference">¶</a></h3>
 <p>This section indicates if <em>Trio</em> has uploaded required information to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>.</p>
 <p>The graphic below shows a properly configured <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> when the <em>Trio</em> app was built using the Browser Build method.</p>
 <p align="center"><img alt="shows credentials entered into loopfollow are correct" src="../img/lf-trc-debug-blurred.png" width="300"/></p>
 <p>If you have empty rows in the Debug / Info screen, the most likely problem is the default profile is not coming from Trio. See <a href="#update-profile">Update Profile</a>. 
 If you took those steps and still have missing rows, return to <a href="#configure-loopfollow-trio-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em>Trio</em> Remote Control</a> and try again.</p>
-<hr/>
-<h2 id="use-loopfollow-trio-remote-control">Use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em>Trio</em> Remote Control<a class="headerlink" href="#use-loopfollow-trio-remote-control" title="Link to this section for reference">¶</a></h2>
-<p>Once the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> phone is configured, and while the <em>Trio</em> phone is handy, test sending Remote Commands. It is good to also have a browser open with the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> displayed.</p>
-<p>Remember to give the system time to update.</p>
-<p>The sequence is <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> to <em>Apple Push Notifications</em> to <em>Trio</em>, which uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> and then is displayed in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main screen.</p>
-<p align="center"><img alt="loopfollow trio remote control choices" src="../img/lf-trc.jpg" width="300"/></p>
-<h3 id="remote-meal">Remote Meal<a class="headerlink" href="#remote-meal" title="Link to this section for reference">¶</a></h3>
-<p><strong><em>More info coming soon!</em></strong></p>
-<p>When entering meals and choosing to schedule the meal, any bolus included in the meal is enacted immediately. Only the carb entry is entered according to the schedule.</p>
-<p align="center"><img alt="scheduled meal warning" src="../img/lf-trc-scheduled-meal.png" width="300"/></p>
-<h3 id="remote-bolus">Remote Bolus<a class="headerlink" href="#remote-bolus" title="Link to this section for reference">¶</a></h3>
-<p><strong><em>More info coming soon!</em></strong></p>
-<h3 id="temp-target">Temp Target<a class="headerlink" href="#temp-target" title="Link to this section for reference">¶</a></h3>
-<p><strong><em>More info coming soon!</em></strong></p>
-<h3 id="overrides">Overrides<a class="headerlink" href="#overrides" title="Link to this section for reference">¶</a></h3>
-<p><strong><em>More info coming soon!</em></strong></p>
-<hr/>
-<h3 id="trio-remote-control-stops-working"><em>Trio</em> Remote Control Stops Working<a class="headerlink" href="#trio-remote-control-stops-working" title="Link to this section for reference">¶</a></h3>
-<p>Other signatures that you need to <a href="#update-profile">force the update</a> are shown in the graphics below - for both these instances, <em>Trio</em> Remote Control (TRC) was working with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and then stopped working:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">TRC Option Not Allowed</th>
-<th style="text-align: center;">TRC Error</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><img alt="cannot select trio remote control " src="../img/lf-trc-not-shown.png" width="300"/></td>
-<td style="text-align: center;"><img alt="LoopFollow settings" src="../img/lf-trc-error-wrong-profile.png" width="300"/></td>
-</tr>
-</tbody>
-</table>
 <hr/>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this section for reference">¶</a></h2>
 <p>This section covers known troubleshooting issues:</p>
@@ -859,12 +986,12 @@ If you took those steps and still have missing rows, return to <a href="#configu
 </tbody>
 </table>
 <p>Remember to restart the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> server (restart dynos) after updating these variables.</p>
-<h3 id="stop-nightscout-access-from-the-loop-app-and-the-iaps-app">Stop <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> access from the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app and the <em>iAPS</em> app<a class="headerlink" href="#stop-nightscout-access-from-the-loop-app-and-the-iaps-app" title="Link to this section for reference">¶</a></h3>
+<h3 id="stop-nightscout-uploads-from-other-apps">Stop <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> uploads from other apps<a class="headerlink" href="#stop-nightscout-uploads-from-other-apps" title="Link to this section for reference">¶</a></h3>
 <p>If you were previously running the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app or the <em>iAPS</em> app:</p>
 <ul>
 <li>Remove <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> from <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Services or <em>iAPS</em> services</li>
-<li>Add <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> credentials to Trio<ul>
-<li>You need the <abbr title="website address (Uniform Resource Locator)">URL</abbr> and the API_SECRET.</li>
+<li>Add <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> as a Service to <em>Trio</em><ul>
+<li>You need the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> and the API_SECRET</li>
 </ul>
 </li>
 </ul>
@@ -874,11 +1001,28 @@ If you took those steps and still have missing rows, return to <a href="#configu
 <p class="admonition-title">Must on <em>Trio</em> 0.5.x (or newer)</p>
 <p>If you are on <em>Trio</em> 0.2.x, you might see the option for <em>Trio</em> Remote Control in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Settings, but you can't use it. See <a href="#use-loopfollow-nightscout-remote-control">Use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Remote Control</a>.</p>
 </div>
-<p>If you were previously running the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app, take the actions in the <a href="#stop-nightscout-access-from-the-loop-app">previous section</a> and then force the profile to update.</p>
+<p>If you were previously running the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app or the <em>iAPS</em> app, <a href="#stop-nightscout-uploads-from-other-apps">Stop <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> upload</a> from those apps and then force the profile to update.</p>
 <p>To force a profile to update to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, go to the <em>Trio</em> app and toggle Allow Uploading to <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> off (disable) and then enable it again.</p>
 <p>Once the user has toggled "Allow Uploading to <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr>", <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> needs to be refreshed (pull down glucose value to refresh) or re-started in order to fetch the correct information. <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> will refresh eventually, but most users are impatient.</p>
 <p>If the Debug Info in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> is missing a Device Token or a Bundle ID, as shown on the left side of the graphic, you need to make sure the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app is no longer uploading to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> and force the profile to update.</p>
 <p align="center"><img alt="LoopFollow debug info indicates a problem" src="../img/lf-force-ns-profile.svg" width="600"/></p>
+<h3 id="trio-remote-control-stops-working"><em>Trio</em> Remote Control Stops Working<a class="headerlink" href="#trio-remote-control-stops-working" title="Link to this section for reference">¶</a></h3>
+<p>Other signatures that you need to <a href="#update-profile">force the update</a> are shown in the graphics below - for both these instances, <em>Trio</em> Remote Control (TRC) was working with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and then stopped working:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">TRC Option Not Allowed</th>
+<th style="text-align: center;">TRC Error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img alt="cannot select trio remote control " src="../img/lf-trc-not-shown.png" width="300"/></td>
+<td style="text-align: center;"><img alt="LoopFollow settings" src="../img/lf-trc-error-wrong-profile.png" width="300"/></td>
+</tr>
+</tbody>
+</table>
+<hr/>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
@@ -904,13 +1048,13 @@ If you took those steps and still have missing rows, return to <a href="#configu
               </div>
 </div>
 </a>
-<a aria-label="Next: LoopFollow Build" class="md-footer__link md-footer__link--next" href="../../build/build-options/">
+<a aria-label="Next: Nightscout Remote Control" class="md-footer__link md-footer__link--next" href="../remote-control-nightscout/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                LoopFollow Build
+                Nightscout Remote Control
               </div>
 </div>
 <div class="md-footer__button md-icon">

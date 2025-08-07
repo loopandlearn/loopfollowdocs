@@ -6,7 +6,7 @@
 <meta content="Documentation of LoopFollow, a companion for Loop and Trio AID systems for iOS." name="description"/>
 <meta content="Loop and Learn" name="author"/>
 <link href="https://loopfollowdocs.org/remote/remote-control-loop/" rel="canonical"/>
-<link href="../remote-control-nightscout/" rel="prev"/>
+<link href="../remote-control-overview/" rel="prev"/>
 <link href="../remote-control-trio/" rel="next"/>
 <link href="../../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.7" name="generator"/>
@@ -248,14 +248,6 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../remote-control-nightscout/">
-<span class="md-ellipsis">
-    Nightscout Remote Control
-    
-  </span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -284,6 +276,158 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#use-loopfollow-loop-remote-control">
+<span class="md-ellipsis">
+      Use LoopFollow Loop Remote Control
+    </span>
+</a>
+<nav aria-label="Use LoopFollow Loop Remote Control" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-sequence-steps">
+<span class="md-ellipsis">
+      Remote Sequence Steps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-meal">
+<span class="md-ellipsis">
+      Remote Meal
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-bolus">
+<span class="md-ellipsis">
+      Remote Bolus
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overrides">
+<span class="md-ellipsis">
+      Overrides
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#faqs-for-remote-commands">
+<span class="md-ellipsis">
+      FAQs for Remote Commands
+    </span>
+</a>
+<nav aria-label="FAQs for Remote Commands" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#faqs-on-remote-overrides">
+<span class="md-ellipsis">
+      FAQs on Remote Overrides
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#warnings-on-remote-commands">
+<span class="md-ellipsis">
+      Warnings on Remote Commands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-bolus-then-remote-carb">
+<span class="md-ellipsis">
+      Remote Bolus, Then Remote Carb
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configure-loopfollow-for-remote-control">
+<span class="md-ellipsis">
+      Configure LoopFollow for Remote Control
+    </span>
+</a>
+<nav aria-label="Configure LoopFollow for Remote Control" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loopfollow-remote-setting-type">
+<span class="md-ellipsis">
+      LoopFollow Remote Setting Type
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guardrails">
+<span class="md-ellipsis">
+      Guardrails
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#credentials-to-enable-loop-remote-control">
+<span class="md-ellipsis">
+      Credentials to Enable Loop Remote Control
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#developer-team-id">
+<span class="md-ellipsis">
+      Developer Team ID
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apns-key-id">
+<span class="md-ellipsis">
+      APNS Key ID
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apns-key">
+<span class="md-ellipsis">
+      APNS Key
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#qr-code-url">
+<span class="md-ellipsis">
+      QR Code URL
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#environment-production">
+<span class="md-ellipsis">
+      Environment Production
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debug-info">
+<span class="md-ellipsis">
+      Debug / Info
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting">
+<span class="md-ellipsis">
+      Troubleshooting
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -291,6 +435,14 @@
 <a class="md-nav__link" href="../remote-control-trio/">
 <span class="md-ellipsis">
     Trio Remote Control
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../remote-control-nightscout/">
+<span class="md-ellipsis">
+    Nightscout Remote Control
     
   </span>
 </a>
@@ -346,6 +498,158 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#use-loopfollow-loop-remote-control">
+<span class="md-ellipsis">
+      Use LoopFollow Loop Remote Control
+    </span>
+</a>
+<nav aria-label="Use LoopFollow Loop Remote Control" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-sequence-steps">
+<span class="md-ellipsis">
+      Remote Sequence Steps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-meal">
+<span class="md-ellipsis">
+      Remote Meal
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-bolus">
+<span class="md-ellipsis">
+      Remote Bolus
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overrides">
+<span class="md-ellipsis">
+      Overrides
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#faqs-for-remote-commands">
+<span class="md-ellipsis">
+      FAQs for Remote Commands
+    </span>
+</a>
+<nav aria-label="FAQs for Remote Commands" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#faqs-on-remote-overrides">
+<span class="md-ellipsis">
+      FAQs on Remote Overrides
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#warnings-on-remote-commands">
+<span class="md-ellipsis">
+      Warnings on Remote Commands
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-bolus-then-remote-carb">
+<span class="md-ellipsis">
+      Remote Bolus, Then Remote Carb
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configure-loopfollow-for-remote-control">
+<span class="md-ellipsis">
+      Configure LoopFollow for Remote Control
+    </span>
+</a>
+<nav aria-label="Configure LoopFollow for Remote Control" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loopfollow-remote-setting-type">
+<span class="md-ellipsis">
+      LoopFollow Remote Setting Type
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guardrails">
+<span class="md-ellipsis">
+      Guardrails
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#credentials-to-enable-loop-remote-control">
+<span class="md-ellipsis">
+      Credentials to Enable Loop Remote Control
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#developer-team-id">
+<span class="md-ellipsis">
+      Developer Team ID
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apns-key-id">
+<span class="md-ellipsis">
+      APNS Key ID
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apns-key">
+<span class="md-ellipsis">
+      APNS Key
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#qr-code-url">
+<span class="md-ellipsis">
+      QR Code URL
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#environment-production">
+<span class="md-ellipsis">
+      Environment Production
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debug-info">
+<span class="md-ellipsis">
+      Debug / Info
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting">
+<span class="md-ellipsis">
+      Troubleshooting
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -359,7 +663,257 @@
 <h1>Loop Remote Control</h1>
 <p>🚧 Documentation Under Construction 🚧</p>
 <h2 id="remote-control-of-the-loop-app">Remote Control of the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> App<a class="headerlink" href="#remote-control-of-the-loop-app" title="Link to this section for reference">¶</a></h2>
-<p>🚧 This option is not yet available, see <a href="https://github.com/loopandlearn/LoopFollow/pull/434"><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="Pull Request - a formal method to request changes to a repository">PR</abbr> 434</a> 🚧</p>
+<p>This option is available for remote control of a <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone when you build the <code>dev</code> <abbr title="version of code within a single repository or workspace repository">branch</abbr> of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>. After testing and release, this will replace <a href="../remote-control-nightscout/#loopfollow--careportal-with-the-loop-app"><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> Remote Control for <abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></a>.</p>
+<ul>
+<li>
+<p><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control</p>
+<ul>
+<li>Remote control with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> includes adding remote carbs, enacting remote bolus, and starting and canceling Overrides</li>
+<li>Available with all versions of <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> 3</li>
+<li>Requires <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <code>dev</code> <abbr title="version of code within a single repository or workspace repository">branch</abbr> (once released, the version will be 3.2 or newer)</li>
+</ul>
+</li>
+<li>
+<p>After you <a href="#configure-loopfollow-for-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for Remote Control</a></p>
+</li>
+<li>You can <a href="#use-loopfollow-loop-remote-control">Use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control</a></li>
+<li>Be sure to read <a href="#faqs-for-remote-commands">FAQs for Remote Commands</a></li>
+</ul>
+<hr/>
+<h2 id="use-loopfollow-loop-remote-control">Use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control<a class="headerlink" href="#use-loopfollow-loop-remote-control" title="Link to this section for reference">¶</a></h2>
+<p>Once the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> phone is <a href="#configure-for-remote-control">configured</a>, and while the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone is handy, test sending Remote Commands. It is good to also have a browser open with the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> displayed.</p>
+<p align="center"><img alt="loopfollow loop remote control choices" src="../img/lf-lrc.png" width="300"/></p>
+<h3 id="remote-sequence-steps">Remote Sequence Steps<a class="headerlink" href="#remote-sequence-steps" title="Link to this section for reference">¶</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Wait for the Result</p>
+<p>The remote control sequence requires several steps:</p>
+<ol>
+<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> device to <em>Apple Push Notifications</em><ul>
+<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> provides an immediate success or failure message</li>
+</ul>
+</li>
+<li><em>Apple Push Notifications</em> to <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone where the message could be:<ul>
+<li>handled promptly</li>
+<li>discarded, ignored by <em>Apple</em> or the phone</li>
+<li>significantly slowed down due to network connectivity</li>
+</ul>
+</li>
+<li>The <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app processes the remote command and either <strong>enacts</strong> it or <strong>rejects</strong> it</li>
+<li>The <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> with result shown on <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main screen in a few minutes<ul>
+<li>If the remote request was <strong>enacted</strong>, the result is visible on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main plot</li>
+<li>If the remote request was <strong>rejected</strong>, a gray dot is visible on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main plot - touch it to see the reason why the request was rejected</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>If no result shows up at <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> (no gray dot, no response to remote request), then it is most likely step 2 that failed. We have limited control over that.</p>
+</blockquote>
+</div>
+<h3 id="remote-meal">Remote Meal<a class="headerlink" href="#remote-meal" title="Link to this section for reference">¶</a></h3>
+<p><strong><em>More info coming soon!</em></strong></p>
+<p align="center"><img alt=" remote carb entries" src="../img/lf-lrc-meal.png" width="300"/></p>
+<h3 id="remote-bolus">Remote Bolus<a class="headerlink" href="#remote-bolus" title="Link to this section for reference">¶</a></h3>
+<p><strong><em>More info coming soon!</em></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Recent Rec Bolus</th>
+<th style="text-align: center;">Last <code>Loop</code> &gt; 12 minutes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img alt=" remote bolus current" src="../img/lf-lrc-bolus.png" width="300"/></td>
+<td style="text-align: center;"><img alt=" remote bolus older than 12 minutes" src="../img/lf-lrc-bolus-old.png" width="300"/></td>
+</tr>
+</tbody>
+</table>
+<p align="center">!</p>
+<div class="admonition tip">
+<p class="admonition-title">Make sure <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> information is up to date</p>
+<p>The insulin amount is filled out with the last recommended bolus that <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> downloaded from the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site, which in turn was uploaded from the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone.</p>
+<p>Read the warning in the Remote Bolus screen and make sure the Insulin Amount value is recent.</p>
+<p>If the last update was more than 12 minutes ago, that line is not prefilled.</p>
+</div>
+<h3 id="overrides">Overrides<a class="headerlink" href="#overrides" title="Link to this section for reference">¶</a></h3>
+<p><strong><em>More info coming soon!</em></strong></p>
+<p align="center"><img alt=" remote overrides" src="../img/lf-lrc-override.png" width="300"/></p>
+<hr/>
+<h2 id="faqs-for-remote-commands">FAQs for Remote Commands<a class="headerlink" href="#faqs-for-remote-commands" title="Link to this section for reference">¶</a></h2>
+<ol>
+<li>
+<p><strong>If I follow more than one person with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, do I need multiple APNs Keys?</strong><br/>
+<strong>Answer</strong>: No. If you support multiple people, you only need one APNS key.</p>
+<ul>
+<li>You can follow someone who is using the <em>Trio</em> app and another person who is using the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app. </li>
+<li>You enter the same APNS credentials for each instance of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> that you are using for your multiple loopers.</li>
+</ul>
+</li>
+<li>
+<p><strong>How can I tell if it worked?</strong><br/>
+<strong>Answer</strong>: You will get an immediate response on <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> whether it successfully sent an APNS command. </p>
+<ul>
+<li>It is still possible that the command won't go through to the <em>loop</em> phone - so wait until you see the remote entry on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> display</li>
+<li>If the command was sent but there was an error, you will see a gray dot on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> plot instead of the desired remote entry. If you tap on the gray dot, the error message will be displayed.</li>
+</ul>
+<blockquote>
+<p align="center"><img alt="apns command failed to complete" src="../img/lf-lrc-error.png" width="300"/></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="faqs-on-remote-overrides">FAQs on Remote Overrides<a class="headerlink" href="#faqs-on-remote-overrides" title="Link to this section for reference">¶</a></h3>
+<p>Don't forget to read <a href="https://loopkit.github.io/loopdocs/operation/features/overrides/"><em>Loopdocs</em>: Overrides</a>. </p>
+<p>For remote overrides in particular:</p>
+<ol>
+<li>
+<p><strong>Can I set a different override in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> than I have programmed into <em><span translate="no"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></span></em> app?</strong><br/>
+<strong>Answer</strong>: No. You will only be able to enact override presets already programmed into the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app.</p>
+</li>
+<li>
+<p><strong>If I didn't start the override in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> (it was started in <em><span translate="no"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></span></em> itself), can I still use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> to cancel it?</strong><br/>
+<strong>Answer</strong>: Yes. You can cancel an override set in <em><span translate="no"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></span></em> with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>.</p>
+</li>
+<li>
+<p><strong>Can I replace an override set in <em><span translate="no"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></span></em> with an override set in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>?</strong><br/>
+<strong>Answer</strong>: Yes.</p>
+</li>
+<li>
+<p><strong>Can I see on <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> when a temporary override has been set using the looper’s phone?</strong><br/>
+<strong>Answer</strong>: Yes. </p>
+<ul>
+<li>There will be a green bar on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> display within a few minutes. </li>
+<li>Once you see the bar, you can tap on Remote, Overrides to view the active override<ul>
+<li>If it is a named preset (override), the name is listed at the top of the screen in the Active Override row</li>
+<li>If you want to see the details, you may need to scroll down to find that override in the list</li>
+<li>A custom override (not named) shows up as "Custom Override" in the Active Override row - the details can be observed in the Information Table on the main <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> screen</li>
+</ul>
+</li>
+<li>The values set for the override may take up to 5 minutes to appear in the Information Table Display, at which time the %insulin needs and target are shown.</li>
+</ul>
+</li>
+<li>
+<p><strong>Can a looper cancel a remote override</strong>?<br/>
+<strong>Answer</strong>: Yes. They can tap the heart icon <font color="blue"><span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M228.3 469.1 47.6 300.4c-4.2-3.9-8.2-8.1-11.9-12.4h87c22.6 0 43-13.6 51.7-34.5l10.5-25.2 49.3 109.5c3.8 8.5 12.1 14 21.4 14.1s17.8-5 22-13.3l42.4-84.9 1.7 3.4c9.5 19 28.9 31 50.1 31h104.5c-3.7 4.3-7.7 8.5-11.9 12.4L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9M503.7 240h-132c-3 0-5.8-1.7-7.2-4.4l-23.2-46.3c-4.1-8.1-12.4-13.3-21.5-13.3s-17.4 5.1-21.5 13.3l-41.4 82.8-51-113.9c-3.9-8.7-12.7-14.3-22.2-14.1s-18.1 5.9-21.8 14.8l-31.8 76.3c-1.2 3-4.2 4.9-7.4 4.9L16 240c-2.6 0-5 .4-7.3 1.1C3 225.2 0 208.2 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141 45.6-7.6 92 7.3 124.6 39.9l12 12 12-12c32.6-32.6 79-47.5 124.6-39.9 68.9 11.5 119.4 71.1 119.4 141v5.8c0 16.9-2.8 33.5-8.3 49.1"></path></svg></span></font> in <em><span translate="no"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></span></em> so that it is no longer highlighted. This turns off the override, regardless of where it was initiated.</p>
+</li>
+<li>
+<p><strong>I set a remote override in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> but the Looper tapped the heart symbol <font color="blue"><span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M228.3 469.1 47.6 300.4c-4.2-3.9-8.2-8.1-11.9-12.4h87c22.6 0 43-13.6 51.7-34.5l10.5-25.2 49.3 109.5c3.8 8.5 12.1 14 21.4 14.1s17.8-5 22-13.3l42.4-84.9 1.7 3.4c9.5 19 28.9 31 50.1 31h104.5c-3.7 4.3-7.7 8.5-11.9 12.4L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9M503.7 240h-132c-3 0-5.8-1.7-7.2-4.4l-23.2-46.3c-4.1-8.1-12.4-13.3-21.5-13.3s-17.4 5.1-21.5 13.3l-41.4 82.8-51-113.9c-3.9-8.7-12.7-14.3-22.2-14.1s-18.1 5.9-21.8 14.8l-31.8 76.3c-1.2 3-4.2 4.9-7.4 4.9L16 240c-2.6 0-5 .4-7.3 1.1C3 225.2 0 208.2 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141 45.6-7.6 92 7.3 124.6 39.9l12 12 12-12c32.6-32.6 79-47.5 124.6-39.9 68.9 11.5 119.4 71.1 119.4 141v5.8c0 16.9-2.8 33.5-8.3 49.1"></path></svg></span></font> in the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app, so the override turned off. Will the override get reinstated  the next time <em><span translate="no"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></span></em> completes with internet access?</strong><br/>
+<strong>Answer</strong>: No. The <em><abbr title="Apple Push Notification service">APN</abbr></em> is only sent once. You can set the remote override again if need be.</p>
+</li>
+<li>
+<p><strong>Can I schedule a remote override ahead of time using <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr>?</strong> <br/>
+<strong>Answer</strong>: No. When you set a remote override in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, it starts immediately and lasts for the duration programmed for that override in the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app. You can only set an override in advance using the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app.</p>
+</li>
+</ol>
+<h3 id="warnings-on-remote-commands">Warnings on Remote Commands<a class="headerlink" href="#warnings-on-remote-commands" title="Link to this section for reference">¶</a></h3>
+<div class="admonition danger">
+<p class="admonition-title"><strong>Duplicate Delivery Risk</strong></p>
+<p>We want to highlight a very important risk before you get started.</p>
+<p>For safety, always assume a previous remote carbs/bolus was delivered. For motivation think of the following example:</p>
+<ul>
+<li>You send a 5-unit remote bolus.</li>
+<li>The bolus is delivered to the Looper.</li>
+<li><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> is having a temporary technical issue and doesn't show the bolus was received.</li>
+<li>The <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> display echoes what is shown in the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> so you don’t see a delivery and you assume it failed.</li>
+<li>You send another remote 5-unit bolus.</li>
+<li>The second 5-unit bolus is delivered to the Looper (10 Units total).</li>
+</ul>
+</div>
+<p>You can see the danger of sending duplicate bolus/carbs so be careful. If a remote bolus/carb entry doesn’t show in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> or <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, use your own judgment on whether enough time has passed to try again.</p>
+<h3 id="remote-bolus-then-remote-carb">Remote Bolus, Then Remote Carb<a class="headerlink" href="#remote-bolus-then-remote-carb" title="Link to this section for reference">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">If sending both, choose Bolus then Carbs</p>
+<p>If you plan to send a carb command remotely and later decide to issue a bolus command - STOP and consider.</p>
+<p>There are 2 scenarios of concern that could lead to too much insulin:</p>
+<ul>
+<li>Dosing Strategy is <strong>Temp Basal Only</strong> (temporary basal)<ul>
+<li><em><span translate="no"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></span></em> will initiate a max Temp Basal when it receives the carbs remote command</li>
+<li>Your bolus is accepted next and takes place in addition to the high temporary basal</li>
+</ul>
+</li>
+<li>Dosing Strategy is <strong>Automatic Bolus</strong> <ul>
+<li><em><span translate="no"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></span></em> will initiate a percentage of the recommended dose when it receives the carbs remote command</li>
+<li>Your bolus will be accepted and take place in addition to an automatic boluses or be rejected because a bolus is already in progress</li>
+</ul>
+</li>
+</ul>
+<p>Typically, sending a remote carb entry alone is sufficient for <em><span translate="no"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></span></em> to know about the carbs and begin to dose for them.</p>
+<p>If you really want to both bolus for carbs and enter carbs, then do it in that order.</p>
+<ol>
+<li>The bolus, when accepted, may start a zero Temp Basal (temporary basal) (which is "safer")</li>
+<li>The carbs, when accepted, will cause the app to respond to the carbs</li>
+<li>In this case, the prediction includes both carbs and bolus</li>
+</ol>
+<p>❗️ Remember - you must wait pause at least 30 seconds between remote commands or the One-Time-Password (OTP) will be rejected as having already been used.</p>
+<p>❗️ <em>Apple</em> can decide to limit the number of APNS commands it services. Make your remote requests count.</p>
+</div>
+<hr/>
+<h2 id="configure-loopfollow-for-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for Remote Control<a class="headerlink" href="#configure-loopfollow-for-remote-control" title="Link to this section for reference">¶</a></h2>
+<h3 id="loopfollow-remote-setting-type"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Setting Type<a class="headerlink" href="#loopfollow-remote-setting-type" title="Link to this section for reference">¶</a></h3>
+<p>The Remote Settings row in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Settings screen is used to select the type of remote access you wish to use.</p>
+<p align="center"><img alt="LoopFollow remote settings type" src="../img/lf-lrc-selection.png" width="300"/></p>
+<div class="admonition question">
+<p class="admonition-title">The <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control option is not available</p>
+<p>The <code>Loop Remote Control</code> option is only available in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> if you have already entered a <a href="#add-nightscout"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr></a> with a default profile recognized as a <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> profile. </p>
+</div>
+<h3 id="guardrails"><abbr title="limits in the code for user selected settings, recommended and absolute limits are provided">Guardrails</abbr><a class="headerlink" href="#guardrails" title="Link to this section for reference">¶</a></h3>
+<p>The maximum allowed entries for Bolus and Carbs are configured in the guardrails section. The default values are shown in the graphic below. Adjust this to what is appropriate for the individual.</p>
+<p align="center"><img alt="default guardrails" src="../img/lf-lrc-guardrails.png" width="300"/></p>
+<p>These guardrails are for sending remote commands with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>. There are separate guardrails in the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app itself. Be sure the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> guardrails are at least as conservative as the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> guardrails.</p>
+<div class="admonition warning">
+<p class="admonition-title">Do not exceed <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> <abbr title="limits in the code for user selected settings, recommended and absolute limits are provided">Guardrails</abbr></p>
+<p>Example:</p>
+<ul>
+<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> guardrail is 10 U bolus</li>
+<li><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> guardrail is 8 U bolus</li>
+<li>Send remote bolus amount of 10 U from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em><ul>
+<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> shows a success message, meaning the APNS request was successfully sent to the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone</li>
+<li>The <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone rejects the request because it exceeds the guardrail</li>
+<li>A gray dot shows up on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> screen, tapping it shows the message "Exceeds Maximum allowed bolus in settings"</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="credentials-to-enable-loop-remote-control">Credentials to Enable <abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr> Remote Control<a class="headerlink" href="#credentials-to-enable-loop-remote-control" title="Link to this section for reference">¶</a></h3>
+<p>When you select <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control as the Remote Type in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app, you must fill in the (1) <a href="#developer-team-id">Developer Team ID</a>, (2) <a href="#apns-key-id">APNS Key ID</a> and (3) <a href="#apns-key">APNS Key</a>.</p>
+<p align="center"><img alt="remote lrc settings " src="../img/lf-lrc-credentials.png" width="300"/></p>
+<h3 id="developer-team-id">Developer Team ID<a class="headerlink" href="#developer-team-id" title="Link to this section for reference">¶</a></h3>
+<p>This is the <em>Apple</em> Developer ID for whoever created the APNS Key. The developer must be the same as the developer who built the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app.</p>
+<p>Note that the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> app and the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app do not need to be built by this developer. It is only the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app that has this requirement.</p>
+<h3 id="apns-key-id">APNS Key ID<a class="headerlink" href="#apns-key-id" title="Link to this section for reference">¶</a></h3>
+<p>If you previously configured remote control with the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app, you already have an <em>Apple</em> Push Notification System (APNS) Key ID and Key. These were added to the config vars in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site. See <a href="#existing-apns" target="_blank">Existing APNS</a>. The value of the <code>LOOP_APNS_KEY_ID</code> goes here. </p>
+<p>If you have never created an APNS (or have lost the credentials), follow the directions in <a href="#new-apns" target="_blank">New APNS</a> and copy the APNS Key ID into <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and save the value in your Secrets Reference file.</p>
+<p>The APNS Key ID and APNS Key only need to be added to <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> to enable <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control. They do not need to be added to the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site if they are not already there. However, if you plan to use <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <code>Careportal</code> or <em>LoopCaregiver</em>, then the APNS <code>config</code> vars must be added to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>.</p>
+<blockquote>
+<p>When creating the APNS, you must be logged in as a developer. The developer ID for the APNS must be the same as the one used for creating your <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app or remote control will not work.</p>
+</blockquote>
+<h3 id="apns-key">APNS Key<a class="headerlink" href="#apns-key" title="Link to this section for reference">¶</a></h3>
+<p>If you previously configured remote control with the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app, you already have an <em>Apple</em> Push Notification System (APNS) Key ID and Key. These were added to the config vars in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site. See <a href="#existing-apns" target="_blank">Existing APNS</a>. The value of the <code>LOOP_APNS_KEY</code> goes here.</p>
+<p>If you have never created an APNS (or have lost the credentials), follow the directions in <a href="#new-apns" target="_blank">New APNS</a> and copy the APNS Key into <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and save the value in your Secrets Reference file.</p>
+<h3 id="qr-code-url"><abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code <abbr title="website address (Uniform Resource Locator)">URL</abbr><a class="headerlink" href="#qr-code-url" title="Link to this section for reference">¶</a></h3>
+<p>This provides the One-Time Password needed for the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app to accept the APNS input as valid.</p>
+<p>On the <em><span translate="no"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></span></em> phone, <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> must be included under the <code>Loop</code> -&gt; Settings -&gt; Services section. Navigate to Services and select <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>. Tap on the One-Time Password row to view the <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code.</p>
+<p>When you need to configure your authentication method, you can either use a saved <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> screenshot or scan the <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> on the <em><span translate="no"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></span></em> phone.</p>
+<p>Options:</p>
+<ul>
+<li>Have your Looper (or at least their phone) available</li>
+<li>Save a screenshot of their <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code<ul>
+<li>Keep this secure</li>
+<li>Do not share the <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> screenshot when asking for help</li>
+</ul>
+</li>
+</ul>
+<p align="center"><img alt="example screen for nightscout and qr code" src="../img/qr-code-example.png" width="650"/></p>
+<p>While you are on the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Settings -&gt; Services -&gt; NightScout screen, notice that the 6-digit number on the One-Time Password row updates every 30 seconds.</p>
+<h3 id="environment-production">Environment Production<a class="headerlink" href="#environment-production" title="Link to this section for reference">¶</a></h3>
+<p>If the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app was built with Browser Build, you must enable this row.</p>
+<p>If the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app was built using <abbr title="program used to build an app">Xcode</abbr> on a Mac, you must disable this row.</p>
+<h3 id="debug-info">Debug / Info<a class="headerlink" href="#debug-info" title="Link to this section for reference">¶</a></h3>
+<p>This section indicates if <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> has uploaded required information to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>.</p>
+<p>The graphic below shows a properly configured <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> when the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app was built using the Browser Build method.</p>
+<p align="center"><img alt="shows credentials entered into loopfollow are correct" src="../img/lf-lrc-debug.png" width="300"/></p>
+<hr/>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this section for reference">¶</a></h2>
+<p>This section is a placeholder for troubleshooting issues.</p>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
@@ -372,7 +926,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Nightscout Remote Control" class="md-footer__link md-footer__link--prev" href="../remote-control-nightscout/">
+<a aria-label="Previous: Remote Control Overview" class="md-footer__link md-footer__link--prev" href="../remote-control-overview/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -381,7 +935,7 @@
                 Previous
               </span>
 <div class="md-ellipsis">
-                Nightscout Remote Control
+                Remote Control Overview
               </div>
 </div>
 </a>
