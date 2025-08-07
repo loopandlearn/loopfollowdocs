@@ -179,6 +179,8 @@ If you do not have APNS credentials, you need to create a key and grant it acces
 
     > ![APNS KEY ID is highlighted by red rectangle](img/apns-key-id.png)
 
+- - -
+
 ## Next Step
 
 Depending on the selection you made, continue to one of these pages for more information on how to configure *LoopFollow* for your desired remote control option.

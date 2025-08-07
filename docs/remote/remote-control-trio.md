@@ -48,6 +48,25 @@ The sequence is *LoopFollow* to *Apple Push Notifications* to *Trio*, which uplo
 ![loopfollow trio remote control choices](img/lf-trc.jpg){width="300"}
 {align=center}
 
+### Remote Sequence Steps
+
+!!! tip "Wait for the Result"
+
+    The remote control sequence requires several steps:
+
+    1. *LoopFollow* device to *Apple Push Notifications*
+        * *LoopFollow* provides an immediate success or failure message
+    1. *Apple Push Notifications* to *Trio* phone where the message could be:
+        * handled promptly
+        * discarded, ignored by *Apple* or the phone
+        * significantly slowed down due to network connectivity
+    1. The *Trio* app processes the remote command and either **enacts** it or **rejects** it
+    1. The *Trio* app uploads to *Nightscout* with result shown on *LoopFollow* main screen in a few minutes
+        * If the remote request was **enacted**, the result is visible on the *LoopFollow* main plot
+        * If the remote request was **rejected**, a gray dot is visible on the *LoopFollow* main plot - touch it to see the reason why the request was rejected
+
+    > If no result shows up at *LoopFollow* (no gray dot, no response to remote request), then it is most likely step 2 that failed. We have limited control over that.
+
 ### Remote Meal
 
 ***More info coming soon!***
@@ -96,6 +115,8 @@ The `SHARED SECRET` should be copied from the *Trio* phone and added to the [`Sh
 
 !!! warning "Important"
     The ability for the *Trio* app to be remotely controlled will be **disabled** when `Enable Remote Control` is turned OFF on the *Trio* phone, even if you have *LoopFollow* configured with the correct shared secret or your *Nightscout* URL has Careportal access. This is for the protection of the *Trio* user, so that they **always** are the primary controller of their insulin dosing app.
+
+- - -
 
 ## Configure *LoopFollow* for Remote Control
 
