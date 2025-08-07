@@ -25,7 +25,7 @@ Once the *LoopFollow* phone is [configured](#configure-for-remote-control), and 
 
 ### Remote Sequence Steps
 
-!!! tip "Wait for the Result"
+!!! info "Wait for the Result"
 
     The remote control sequence requires several steps:
 

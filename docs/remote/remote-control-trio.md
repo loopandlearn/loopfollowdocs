@@ -50,7 +50,7 @@ The sequence is *LoopFollow* to *Apple Push Notifications* to *Trio*, which uplo
 
 ### Remote Sequence Steps
 
-!!! tip "Wait for the Result"
+!!! info "Wait for the Result"
 
     The remote control sequence requires several steps:
 
