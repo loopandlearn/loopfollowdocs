@@ -81,6 +81,8 @@ Remote control must be enabled on the *Trio* phone or no remote information is a
 
 > You can search for this screen in *Trio* settings or go through the sequence: Trio, Settings, Features, Remote Control.
 
+### Shared Secret
+
 Once Remote Control is enabled, a Shared Secret is available. This is only used if you want to use *Trio* Remote Control with *LoopFollow*.
 
 The graphic below is on the *Trio* phone:
@@ -90,7 +92,7 @@ The graphic below is on the *Trio* phone:
 
 When Remote Control is enabled on the *Trio* app and the *LoopFollow* app is properly configured, you can add carbs, send boluses, set or cancel overrides or temporary targets from the *LoopFollow* app to the *Trio* phone via *Apple* push notifications.
 
-The `SHARED SECRET` should be copied from the *Trio* phone and added to the [`Shared Secret`](#shared-secret) row of the *LoopFollow* Remote Settings screen as part of the configuration for using *LoopFollow*.
+The `SHARED SECRET` should be copied from the *Trio* phone and added to the [`Shared Secret`](#shared-secret_1) row of the *LoopFollow* Remote Settings screen as part of the configuration for using *LoopFollow*.
 
 !!! warning "Important"
     The ability for the *Trio* app to be remotely controlled will be **disabled** when `Enable Remote Control` is turned OFF on the *Trio* phone, even if you have *LoopFollow* configured with the correct shared secret or your *Nightscout* URL has Careportal access. This is for the protection of the *Trio* user, so that they **always** are the primary controller of their insulin dosing app.
@@ -166,7 +168,7 @@ Refer to the graphic in the [Meal Settings](#meal-settings) section.
 
 This is the unique shared secret that can be generated or entered into the *Trio* app in the Remote Control screen. The shared secret in *Trio* and *LoopFollow* must match to provide the ability to remotely send commands to this *Trio* app.
 
-> Please use a secure secret - the [automatically generated secret](#trio-remote-control) is recommended.
+> Please use a secure secret - the [automatically generated secret](#configure-trio-phone-for-remote-control) is recommended.
 
 ### APNS Credentials
 

@@ -89,6 +89,18 @@ Depending on the selection you made, continue to one of these pages for more inf
 
 ## *Apple* Push Notifications System (APNS)
 
+!!! tip "One Set of APNS Credentials"
+    **Question: If I follow more than one person with *LoopFollow*, do I need multiple APNs Keys?**
+
+    **Answer: No.**
+    
+    If you support multiple people, you only need one APNS key.
+
+    * You can follow someone who is using the *Trio* app and another person who is using the *Loop* app. 
+    * You enter the same APNS credentials for each instance of *LoopFollow* that you are using for your multiple loopers
+    * The looper's app (*Loop* or *Trio*) must be built with the Developer ID used to create the APNS key.
+
+
 ### Existing APNS
 
 If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site.
