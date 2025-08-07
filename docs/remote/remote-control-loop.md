@@ -167,7 +167,10 @@ You can see the danger of sending duplicate bolus/carbs so be careful. If a remo
     2. The carbs, when accepted, will cause the app to respond to the carbs
     3. In this case, the prediction includes both carbs and bolus
     
-    ❗️ Remember - you should pause at least 60 seconds between remote commands or the One-Time-Password (OTP) will be rejected as having already been used.
+    ❗️ Remember - you must wait pause at least 30 seconds between remote commands or the One-Time-Password (OTP) will be rejected as having already been used.
+
+     ❗️ *Apple* can decide to limit the number of APNS commands it services. Make your remote requests count.
+   
 
 - - -
 
