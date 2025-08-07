@@ -30,9 +30,11 @@ Once the *LoopFollow* phone is [configured](#configure-for-remote-control), and 
     The remote control sequence requires several steps:
 
     1. *LoopFollow* device to *Apple Push Notifications*
-        * If that interchange is successful, you get a success message in *LoopFollow*
-        * If that interchange fails, you get an immediate message with the failure reason
-    1. *Apple Push Notifications* to *Loop* phone
+        * *LoopFollow* provides an immediate success or failure message
+    1. *Apple Push Notifications* to *Loop* phone where the message could be:
+        * handled promptly
+        * discarded, ignored by *Apple* or the phone
+        * significantly slowed down due to network connectivity
     1. The *Loop* app processes the remote command and either **enacts** it or **rejects** it
     1. The *Loop* app uploads to *Nightscout* with result shown on *LoopFollow* main screen in a few minutes
         * If the remote request was **enacted**, the result is visible on the *LoopFollow* main plot
