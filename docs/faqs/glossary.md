@@ -21,6 +21,8 @@ When Google Translate is selected:
 
 **<span translate="no">CAGE</span>**&nbsp; (CAGE): cannula (or pump site) age on Nightscout site
 
+**<span translate="no">Careportal</span>**&nbsp; (Careportal): A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout
+
 **<span translate="no">Certificate</span>**&nbsp; (Certificate): Apple certificate is used to sign your iOS or Mac apps - tied to but different from your permanent Developer ID
 
 **<span translate="no">CGM</span>**&nbsp; (CGM): continuous glucose monitor, wearable medical device that measures and reports glucose in interstitial fluid

@@ -4,6 +4,7 @@
 *[BLE]: Bluetooth low energy, used for communication by phones, CGM and some pumps
 *[branch]: version of code within a single repository or workspace repository
 *[CAGE]: cannula (or pump site) age on Nightscout site
+*[Careportal]: A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout
 *[Certificate]: Apple certificate is used to sign your iOS or Mac apps - tied to but different from your permanent Developer ID
 *[CGM]: continuous glucose monitor, wearable medical device that measures and reports glucose in interstitial fluid
 *[clone]: create a copy of a repository on your computer including revision history and ability to update using git commands
