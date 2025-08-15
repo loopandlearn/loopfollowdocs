@@ -56,6 +56,7 @@
 *[Terminal]: interface for entering commands to the computer
 *[TestFlight]: a method to distribute apps without direct connection
 *[Tooltip]: brief definitions provided for important terms and abbreviations on the website
+*[Trio]: an iOS app that implements the OpenAPS (oref) algorithm on an iPhone
 *[URL]: website address (Uniform Resource Locator)
 *[watchOS]: Apple watch operating system; must be compatible with phone iOS
 *[workflow]: a set of instructions to GitHub to perform an action; the instruction files are found in the .github/workflows folder of the repository

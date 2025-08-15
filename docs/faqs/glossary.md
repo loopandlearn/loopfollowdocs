@@ -125,6 +125,8 @@ When Google Translate is selected:
 
 **<span translate="no">Tooltip</span>**&nbsp; (Tooltip): brief definitions provided for important terms and abbreviations on the website
 
+**<span translate="no">Trio</span>**&nbsp; (Trio): an iOS app that implements the OpenAPS (oref) algorithm on an iPhone
+
 **<span translate="no">URL</span>**&nbsp; (URL): website address (Uniform Resource Locator)
 
 **<span translate="no">watchOS</span>**&nbsp; (watchOS): Apple watch operating system; must be compatible with phone iOS

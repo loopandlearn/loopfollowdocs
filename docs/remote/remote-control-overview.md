@@ -52,7 +52,7 @@
     * APNS keys do not need to be embedded in the *Nightscout* site
         * This simplifies configuration of *Nightscout*, especially for those who use a paid service for *Nightscout*
 * For those following a looper using *Trio* 0.2.x, the only option for the Remote Setting is *Nightscout*, which uses Careportal
-    * With this selection, the *LoopFollow* phone sends commands to *Nightscout* which then sends commands to the *Trio* phone
+    * With this selection, the *LoopFollow* phone sends commands to *Nightscout*, which then sends commands to the *Trio* phone
     * For that reason, the *Nightscout* display will be updated first
         * If there is an issue sending the careportal request from *Nightscout*, it might not make it to the *Trio* phone
         * After the next download from *Nightscout*, the display will update if commands do or do not make it through the full round trip
@@ -81,7 +81,7 @@ If you plan to use the [*Apple* Push Notifications System (APNS)](#apple-push-no
 
 If you are using a *Trio* *Nightscout* URL, be aware:
 
-* If the user of the *Trio* app disables Remote Control and their *Trio* phone, then *LoopFollow* remote commands will be issued but not enacted
+* If the user of the *Trio* app disables Remote Control on their *Trio* phone, then *LoopFollow* remote commands will be issued but not enacted
 
 Depending on the selection you made, continue to one of these pages for more information on how to configure *LoopFollow* for that remote control option.
 
