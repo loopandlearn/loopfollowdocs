@@ -20,7 +20,10 @@ Please read the appropriate section on this page.
 
 ## *LoopFollow* & Careportal with the *Loop* App
 
-> Once *LoopFollow* 3.2.0 is released, this option will no longer be available for Loop URL. It will be replaced with the `Loop Remote Control` feature currently being tested in the `dev` branch.
+!!! important "Not Available for *LoopFollow* 3.2"
+    This option is not available with *LoopFollow* 3.2 or newer versions. It was replaced with [`Loop Remote Control`](remote-control-loop.md){: target="_blank" }.
+
+    This section will remain in the documents for while for people still running earlier versions of *LoopFollow*.
 
 For *Loop* careportal access, your *Nightscout* site must be configured with Apple Push Notification System (APNS) credentials as fully explained in LoopDocs.
 

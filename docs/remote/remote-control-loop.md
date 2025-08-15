@@ -2,17 +2,21 @@
 
 ## Remote Control of the *Loop* App
 
-This option is available for remote control of a *Loop* phone when you build the `dev` branch of *LoopFollow*. After testing and release, this will replace [Nightscout Remote Control for Loop](remote-control-nightscout.md#loopfollow--careportal-with-the-loop-app).
+This option is available for remote control of a *Loop* phone using *LoopFollow* 3.2 and newer.
 
 * *Loop* Remote Control
     * Remote control with *LoopFollow* includes adding remote carbs, enacting remote bolus, and starting and canceling Overrides
     * Available with all versions of *Loop* 3
-    * Requires *LoopFollow* `dev` branch (once released, the version will be 3.2 or newer)
+    * Requires *LoopFollow* 3.2 or newer
 
 
-* After you [Configure *LoopFollow* for Remote Control](#configure-loopfollow-for-remote-control)
-* You can [Use *LoopFollow* *Loop* Remote Control](#use-loopfollow-loop-remote-control)
-* Be sure to read [FAQs for Remote Commands](#faqs-for-remote-commands)
+### Quick Access
+
+The bullets below take you to the indicated topics. The configuration step is listed first but only needs to be done once, so is located at the end of this page:
+
+* [Configure *LoopFollow* for Remote Control](#configure-loopfollow-for-remote-control)
+* [Use *LoopFollow* *Loop* Remote Control](#use-loopfollow-loop-remote-control)
+* [FAQs for Remote Commands](#faqs-for-remote-commands)
 
 - - -
 

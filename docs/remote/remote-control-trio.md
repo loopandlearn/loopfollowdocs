@@ -23,12 +23,15 @@ The most powerful arrangement, for *Trio* 0.5.x (or newer), is to configure the 
     * Those options were replaced by the more secure *Trio* Remote Control for *Trio* 0.5.x (or newer)
     * **Using announcements to provide remote control of the *Trio* phone is no longer supported**
 
+### Quick Access
+
 The bullets below take you to the indicated topics. The configuration steps are listed first but only need to be done once:
 
 * [Configure *Trio* Phone for Remote Control](#configure-trio-phone-for-remote-control)
 * [Configure *LoopFollow* for Remote Control](#configure-loopfollow-for-remote-control)
 * [Use *LoopFollow* *Trio* Remote Control](#use-loopfollow-trio-remote-control)
 * [Troubleshooting](#troubleshooting)
+
 - - -
 
 ## Use *LoopFollow* *Trio* Remote Control
