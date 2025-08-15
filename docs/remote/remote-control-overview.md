@@ -94,11 +94,7 @@ Depending on the selection you made, continue to one of these pages for more inf
 ## *Apple* Push Notifications System (APNS)
 
 !!! tip "One Set of APNS Credentials"
-    **Question: If I follow more than one person with *LoopFollow*, do I need multiple APNs Keys?**
-
-    **Answer: No.**
-    
-    If you support multiple people, you only need one APNS key.
+    **If you support multiple people, you only need one APNS key for a given Developer ID.**
 
     * You can follow someone who is using the *Trio* app and another person who is using the *Loop* app. 
     * You enter the same APNS credentials for each instance of *LoopFollow* that you are using for your multiple loopers
@@ -150,7 +146,7 @@ If you do not have APNS credentials, you need to create a key and grant it acces
 1. To get started, go to the `Keys` section under Apple Developer's [`Certificates, Identifiers & Profiles`](https://developer.apple.com/account/resources/authkeys/list) and login with the *Apple ID* associated with your developer team that you used to build the *Trio* app.
 2. If not already open in your browser (compare with the below screenshot), 
     - Click on **`Keys`** (located in the left-hand column). 
-    - Either click on the blue **`Create a new key`** button **OR** the plus button (<font color="#2997FF">:material-plus-circle:</font>)  to add a new key.
+    - Either click on the blue **`Create a key`** button **OR** the plus button (<font color="#2997FF">:material-plus-circle:</font>)  to add a key.
     > ![img/apns-add-key.png](img/apns-add-key.png)
 3. In the form that appears, do the following:
     - Click the checkbox for enabling **`Apple Push Notifications service (APNs)`**

@@ -131,7 +131,7 @@ The Remote Settings row in the *LoopFollow* Settings screen is used to select th
 {align="center"}
 
 !!! question "The *Trio* Remote Control option is not available"
-    The `Trio Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* URL](#add-nightscout) with a default profile recognized as a *Trio* profile. Review [Troubleshooting](#troubleshooting) for possible reasons for not seeing the option.
+    The `Trio Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* URL](../setup/lf-setup.md#add-nightscout){: target="_blank" } with a default profile recognized as a *Trio* profile. Review [Troubleshooting](#troubleshooting) for possible reasons for not seeing the option.
 
 * *Nightscout* option
     * Remote control with *LoopFollow* is limited to starting and canceling Temp Targets
@@ -204,17 +204,17 @@ When you select *Trio* Remote Control as the Remote Type in the *LoopFollow* app
 
 ### APNS Key ID
 
-If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](#existing-apns). The value of the `LOOP_APNS_KEY_ID` goes here. Be sure to read the [Configure for OpenAPS](#configure-for-openaps) section about steps to make *Nightscout* and *LoopFollow* work with Trio.
+If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](remote-control-overview.md#existing-apns){: target="_blank" }. The value of the `LOOP_APNS_KEY_ID` goes here. Be sure to read the [Configure for OpenAPS](#configure-for-openaps) section about steps to make *Nightscout* and *LoopFollow* work with Trio.
 
-If you have never created an APNS (or have lost the credentials), follow the directions in [New APNS](#new-apns) and copy the APNS Key ID into *LoopFollow* and save the value in your Secrets Reference file.
+If you have never created an APNS (or have lost the credentials), follow the directions in [New APNS](remote-control-overview.md#new-apns){: target="_blank" } and copy the APNS Key ID into *LoopFollow* and save the value in your Secrets Reference file.
 
 > When creating the APNS, you must be logged in as a developer. The developer ID for the APNS must be the same as the one used for creating your *Trio* app or remote control will not work.
 
 ### APNS Key
 
-If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](#existing-apns). The value of the `LOOP_APNS_KEY` goes here.
+If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](remote-control-overview.md#existing-apns){: target="_blank" }. The value of the `LOOP_APNS_KEY` goes here.
 
-If you have never created an APNS (or have lost the credentials), follow the directions in [New APNS](#new-apns) and copy the APNS Key into *LoopFollow* and save the value in your Secrets Reference file.
+If you have never created an APNS (or have lost the credentials), follow the directions in [New APNS](remote-control-overview.md#new-apns){: target="_blank" } and copy the APNS Key into *LoopFollow* and save the value in your Secrets Reference file.
 
 ### Debug / Info
 

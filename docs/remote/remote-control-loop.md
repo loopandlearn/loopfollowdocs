@@ -190,7 +190,7 @@ The Remote Settings row in the *LoopFollow* Settings screen is used to select th
 {align="center"}
 
 !!! question "The *Loop* Remote Control option is not available"
-    The `Loop Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* URL](#add-nightscout) with a default profile recognized as a *Loop* profile. 
+    The `Loop Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* URL](../setup/lf-setup.md#add-nightscout){: target="_blank" } with a default profile recognized as a *Loop* profile. 
 
 ### Guardrails
 
@@ -227,9 +227,9 @@ Note that the *Nightscout* app and the *LoopFollow* app do not need to be built 
 
 ### APNS Key ID
 
-If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](#existing-apns){: target="_blank" }. The value of the `LOOP_APNS_KEY_ID` goes here. 
+If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](remote-control-overview.md#existing-apns){: target="_blank" }. The value of the `LOOP_APNS_KEY_ID` goes here. 
 
-If you have never created an APNS (or have lost the credentials), follow the directions in [New APNS](#new-apns){: target="_blank" } and copy the APNS Key ID into *LoopFollow* and save the value in your Secrets Reference file.
+If you have never created an APNS (or have lost the credentials), follow the directions in [New APNS](remote-control-overview.md#new-apns){: target="_blank" } and copy the APNS Key ID into *LoopFollow* and save the value in your Secrets Reference file.
 
 The APNS Key ID and APNS Key only need to be added to *LoopFollow* to enable *Loop* Remote Control. They do not need to be added to the *Nightscout* site if they are not already there. However, if you plan to use *Nightscout* `Careportal` or *LoopCaregiver*, then the APNS `config` vars must be added to *Nightscout*.
 
@@ -237,9 +237,9 @@ The APNS Key ID and APNS Key only need to be added to *LoopFollow* to enable *Lo
 
 ### APNS Key
 
-If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](#existing-apns){: target="_blank" }. The value of the `LOOP_APNS_KEY` goes here.
+If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](remote-control-overview.md#existing-apns){: target="_blank" }. The value of the `LOOP_APNS_KEY` goes here.
 
-If you have never created an APNS (or have lost the credentials), follow the directions in [New APNS](#new-apns){: target="_blank" } and copy the APNS Key into *LoopFollow* and save the value in your Secrets Reference file.
+If you have never created an APNS (or have lost the credentials), follow the directions in [New APNS](remote-control-overview.md#new-apns){: target="_blank" } and copy the APNS Key into *LoopFollow* and save the value in your Secrets Reference file.
 
 ### QR Code URL
 
