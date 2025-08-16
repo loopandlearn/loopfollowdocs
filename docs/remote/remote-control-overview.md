@@ -114,8 +114,8 @@ When you configured APNS for the *Loop* app and saved information in your *Night
 
 Note that the `LOOP_DEVELOPER_TEAM_ID` is the Apple Developer ID used to build the *Loop* app.
 
-* When using *LoopFollow* 3.2 or newer, the addition of those `config` variables in *Nightscout* is only required to support sending remote commands from *Nightscout* `Careportal` and from *LoopCaregiver*.
-* *LoopFollow* 3.2 and newer versions only require the APNS credentials to be entered in the *LoopFollow* app for both the *Loop* and *Trio* Remote Control features.
+* When using *LoopFollow* 3.2 or newer, the addition of those `config` variables in *Nightscout* is only required to support sending remote commands to the *Loop* app from *Nightscout* `Careportal` and from *LoopCaregiver*.
+* With *LoopFollow* 3.2 and newer versions, the *LoopFollow* Remote Control features are available for both the *Loop* and *Trio* apps when the APNS credentials are entered in the *LoopFollow* app, along with other specific credentials for each app.
 
 If you are configuring for *Trio* remote control with *LoopFollow*, you do not need to enter the Apple Developer ID explicitly because it is included in the information *Trio* uploads to *Nightscout*.
 
