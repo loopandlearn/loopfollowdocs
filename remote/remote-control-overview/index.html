@@ -270,6 +270,13 @@
 <nav aria-label="Remote Control Overview" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#changes-for-loopfollow-remote-control-of-the-loop-app">
+<span class="md-ellipsis">
+      Changes for LoopFollow Remote Control of the Loop App
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#loopfollow-remote-control">
 <span class="md-ellipsis">
       LoopFollow Remote Control
@@ -287,20 +294,6 @@
 </a>
 <nav aria-label="LoopFollow Remote Options" class="md-nav">
 <ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#remote-options-310">
-<span class="md-ellipsis">
-      Remote Options: 3.1.0
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#remote-options-under-development">
-<span class="md-ellipsis">
-      Remote Options: Under Development
-    </span>
-</a>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#critical-configuration-information">
 <span class="md-ellipsis">
@@ -423,6 +416,13 @@
 <nav aria-label="Remote Control Overview" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#changes-for-loopfollow-remote-control-of-the-loop-app">
+<span class="md-ellipsis">
+      Changes for LoopFollow Remote Control of the Loop App
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#loopfollow-remote-control">
 <span class="md-ellipsis">
       LoopFollow Remote Control
@@ -440,20 +440,6 @@
 </a>
 <nav aria-label="LoopFollow Remote Options" class="md-nav">
 <ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#remote-options-310">
-<span class="md-ellipsis">
-      Remote Options: 3.1.0
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#remote-options-under-development">
-<span class="md-ellipsis">
-      Remote Options: Under Development
-    </span>
-</a>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#critical-configuration-information">
 <span class="md-ellipsis">
@@ -509,39 +495,15 @@
 <h1>Remote Control Overview</h1>
 <p>🚧 Documentation Under Construction 🚧</p>
 <h2 id="remote-control-overview">Remote Control Overview<a class="headerlink" href="#remote-control-overview" title="Link to this section for reference">¶</a></h2>
-<p>In the near future, all <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> remote commands will be sent directly using the <a href="#apple-push-notifications-system-apns">Apple Push Notification System (APNS)</a>. </p>
-<div class="admonition abstract">
-<p class="admonition-title">Remote Control Updates in Development</p>
-<p>The instructions in this section are subject to updates as changes are made to the <em>Trio</em> app and the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app.</p>
-<ul>
-<li>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.1 and earlier:<ul>
-<li>If you are using <em>Trio</em> 0.2.x, remote commands are routed via <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em></li>
-<li>If you are using <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> 3.x or newer, remote commands are routed via <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em><ul>
-<li>Only Overrides can be sent from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.1 and only if <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site has the APNS keys embedded</li>
-</ul>
-</li>
-<li>If you are using <em>Trio</em> 0.5.x or newer, remote commands are sent directly through APNS</li>
-</ul>
-</li>
-<li>Once <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2.0 is released (currently being tested in <code>dev</code> <abbr title="version of code within a single repository or workspace repository">branch</abbr>):<ul>
-<li>If you are using <em>Trio</em> 0.2.x, remote commands are routed via <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></li>
-<li>If you are using <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> 3.x or newer, remote commands are sent directly through APNS</li>
-<li>If you are using <em>Trio</em> 0.5.x or newer, remote commands are sent directly through APNS</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>Using APNS directly from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> provides faster feedback about commanding.</p>
-<p>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2, APNS keys will not need to be embedded in the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site which may simplify configuration for those who use a paid service for <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>.</p>
-</blockquote>
+<p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> remote commands are sent directly using the <a href="#apple-push-notifications-system-apns">Apple Push Notification System (APNS)</a> for all Open-Source Automated Insulin Delivery systems that support this feature. At this time, the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app and the open beta version of the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app (0.5.x or newer) support direct APNS from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>.</p>
+<div class="admonition tip">
+<p class="admonition-title"><code>Loop</code> Remote Control with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2</p>
+<p>With the release of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2, the remote control features accessible from <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> match those available from the <em>LoopCaregiver</em> app.</p>
+<p>You must update to <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 or newer and configure remote settings in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app to use these features.</p>
 </div>
-<p>In summary, changes for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> sending remote commands to the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app:</p>
+<h3 id="changes-for-loopfollow-remote-control-of-the-loop-app">Changes for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Control of the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> App<a class="headerlink" href="#changes-for-loopfollow-remote-control-of-the-loop-app" title="Link to this section for reference">¶</a></h3>
 <ul>
-<li>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.1 (released version) and earlier<ul>
-<li><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> remote commands are limited to Overrides, require the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site be configured with the APNS credentials and require a token with <code>careportal</code> access</li>
-</ul>
-</li>
-<li>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 (once it is released) and newer<ul>
+<li>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 and newer<ul>
 <li><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> remote commands from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> include Meal, Bolus and Override control<ul>
 <li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> no longer requires the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site be configured with the APNS credentials</li>
 <li>Read access for the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> is sufficient</li>
@@ -549,24 +511,55 @@
 </li>
 </ul>
 </li>
+<li>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.1 and older<ul>
+<li><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> remote commands are limited to Overrides, require the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site be configured with the APNS credentials and require a token with <code>careportal</code> access</li>
+</ul>
+</li>
 </ul>
 <blockquote>
-<p>With <em>Trio</em> 0.2.x, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> only supports temp targets and requires a token with <code>careportal</code> access. Once updated to <em>Trio</em> 0.5.x or newer, the full Trio Remote Control options are available.</p>
+<p>With <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> only supports temp targets and requires a token with <code>careportal</code> access. Once updated to <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.x or newer, the full <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> Remote Control options are available.</p>
 </blockquote>
+<div class="admonition abstract">
+<p class="admonition-title">Remote Control Updates in Development</p>
+<p>The instructions in this section depend on the version of the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app and the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app.</p>
+<ul>
+<li>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 or newer:<ul>
+<li>Remote commands are sent directly through APNS for both the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app and the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> open beta version<ul>
+<li>If you are using <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x, remote commands are routed via <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> and are limited to modifying <code>Temp Targets</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.1 and earlier:<ul>
+<li>Using the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app:<ul>
+<li>remote commands are routed via <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em></li>
+<li>Only Overrides can be modified using <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and only if <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site has the APNS keys embedded</li>
+</ul>
+</li>
+<li>Using the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app<ul>
+<li>If you are using <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.x or newer, remote commands are sent directly through APNS</li>
+<li>If you are using <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x, remote commands are routed via <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Using APNS directly from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> provides faster feedback about commanding.</p>
+<p>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2, APNS keys will not need to be embedded in the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site for remote control of the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, which may simplify configuration for those who use a paid service for <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>.</p>
+</blockquote>
+</div>
 <h3 id="loopfollow-remote-control"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Control<a class="headerlink" href="#loopfollow-remote-control" title="Link to this section for reference">¶</a></h3>
 <ul>
-<li><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Remote setting in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> makes the standard Careportal options easily available from inside the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app<ul>
-<li>With this selection, the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> phone sends commands to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> which then sends commands to the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em>/<em>Trio</em> phone</li>
-<li>For that reason, the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> display will be updated first<ul>
-<li>If there is an issue sending the careportal request from <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, it might not make it to the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em>/<em>Trio</em> phone</li>
-<li>After the next download from <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, the display will update if commands do or do not make it through the full round trip</li>
+<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Control sends messages to the loopers phone using APNS<ul>
+<li>Requires <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 or newer to use with the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app (version 3.x)</li>
+<li>Requires <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5 or newer for the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app</li>
+<li>Commands go via APNS to the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em>/<em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone<ul>
+<li>An immediate success or failure for sending the message to APNS is recieved</li>
+<li>There still could be a communication failure between APNS and the looper's phone or the command could be rejected by the looper's app</li>
 </ul>
 </li>
-</ul>
-</li>
-<li><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Command (for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> dev only) and <em>Trio</em> Remote Command features use APNS <ul>
-<li>With this selection, successful commands go directly via APNS to the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em>/<em>Trio</em> phone</li>
-<li>The results show up in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> after being uploaded from the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em>/<em>Trio</em> phone</li>
+<li>The results show up in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> after being uploaded from the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em>/<em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone</li>
 <li>The results are plotted or displayed in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> after being downloaded from the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> as a new treatment</li>
 <li>APNS keys do not need to be embedded in the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site<ul>
 <li>This simplifies configuration of <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, especially for those who use a paid service for <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em></li>
@@ -574,53 +567,53 @@
 </li>
 </ul>
 </li>
+<li>For those following a looper using <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x, the only option for the Remote Setting is <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, which uses <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr><ul>
+<li>With this selection, the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> phone sends commands to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, which then sends commands to the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone</li>
+<li>For that reason, the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> display will be updated first<ul>
+<li>If there is an issue sending the careportal request from <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, it might not make it to the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone</li>
+<li>After the next download from <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, the display will update if commands do or do not make it through the full round trip</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <hr/>
 <h2 id="loopfollow-remote-options"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Options<a class="headerlink" href="#loopfollow-remote-options" title="Link to this section for reference">¶</a></h2>
-<h3 id="remote-options-310">Remote Options: 3.1.0<a class="headerlink" href="#remote-options-310" title="Link to this section for reference">¶</a></h3>
-<p>The graphic below shows the top portion of the Remote Settings screen when None, <code>Nightscout</code> or <code>Trio Remote Control</code> is selected. This graphic is for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.1.0 or earlier.</p>
-<p align="center"><img alt="LoopFollow remote options - all types" src="../img/lf-remote-options.svg" width="400"/></p>
-<h3 id="remote-options-under-development">Remote Options: Under Development<a class="headerlink" href="#remote-options-under-development" title="Link to this section for reference">¶</a></h3>
-<p>The graphic below is from the <code>dev</code> <abbr title="version of code within a single repository or workspace repository">branch</abbr> of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>. You must first enter a <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> before any remote options are offered and then only the option suitable for that <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site can be selected.</p>
+<blockquote>
+<p>With the release of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2, remote options for the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app are updated.</p>
+</blockquote>
+<p>The graphic below shows the Remote Settings screen for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>. You must first enter a <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> before any remote options are offered and then only the option suitable for that <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site can be selected.</p>
 <ul>
 <li>When following someone running <abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr>, the options are None or <a href="../remote-control-loop/" target="_blank"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr> Remote Control</a></li>
-<li>When following someone running Trio, the options are None or:<ul>
-<li>Trio 0.5.x and newer: <a href="../remote-control-trio/" target="_blank">Trio Remote Control</a></li>
-<li>Trio 0.2.x: <a href="../remote-control-nightscout/#loopfollow--careportal-with-the-trio-app" target="_blank"><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> Remote Control</a></li>
+<li>When following someone running <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr>, the options are None or:<ul>
+<li><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> 0.5.x and newer: <a href="../remote-control-trio/" target="_blank"><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> Remote Control</a></li>
+<li><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> 0.2.x: <a href="../remote-control-nightscout/#loopfollow--careportal-with-the-trio-app" target="_blank"><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> Remote Control</a></li>
 </ul>
 </li>
 </ul>
 <p align="center"><img alt="LoopFollow remote options - all types" src="../img/lf-remote-options_3.2.svg" width="600"/></p>
 <h3 id="critical-configuration-information">Critical Configuration Information<a class="headerlink" href="#critical-configuration-information" title="Link to this section for reference">¶</a></h3>
-<p>If you plan to use the <a href="#apple-push-notifications-system-apns"><em>Apple</em> Push Notifications System (APNS)</a>, follow that link for instructions to find or create your keys.</p>
-<p>If you are using a <em>Trio</em> <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr>, be aware:</p>
+<p>If you plan to use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Control with a looper using the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app version 3.x or the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app version 0.5 or newer, continue to the next section for instructions to find or create your keys <a href="#apple-push-notifications-system-apns"><em>Apple</em> Push Notifications System (APNS)</a>.</p>
+<p>If your looper is using <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x, use this link for configuration:</p>
 <ul>
-<li>If the user of the <em>Trio</em> app disables Remote Control and their <em>Trio</em> phone, then <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> remote commands will be issued but not enacted</li>
-</ul>
-<p>Depending on the selection you made, continue to one of these pages for more information on how to configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for that remote control option.</p>
-<ul>
-<li><a href="../remote-control-loop/"><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control</a></li>
-<li><a href="../remote-control-trio/"><em>Trio</em> Remote Control</a></li>
-<li><a href="../remote-control-nightscout/"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em></a></li>
+<li><a href="../remote-control-nightscout/"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Remote Control</a></li>
 </ul>
 <hr/>
 <h2 id="apple-push-notifications-system-apns"><em>Apple</em> Push Notifications System (APNS)<a class="headerlink" href="#apple-push-notifications-system-apns" title="Link to this section for reference">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">One Set of APNS Credentials</p>
-<p><strong>Question: If I follow more than one person with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, do I need multiple APNs Keys?</strong></p>
-<p><strong>Answer: No.</strong></p>
-<p>If you support multiple people, you only need one APNS key.</p>
+<p><strong>If you support multiple people, you only need one APNS key for a given Developer ID.</strong></p>
 <ul>
-<li>You can follow someone who is using the <em>Trio</em> app and another person who is using the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app. </li>
+<li>You can follow someone who is using the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app and another person who is using the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app. </li>
 <li>You enter the same APNS credentials for each instance of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> that you are using for your multiple loopers</li>
-<li>The looper's app (<em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> or <em>Trio</em>) must be built with the Developer ID used to create the APNS key.</li>
+<li>The looper's app (<em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> or <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>) must be built with the Developer ID used to create the APNS key.</li>
 </ul>
 </div>
 <h3 id="existing-apns">Existing APNS<a class="headerlink" href="#existing-apns" title="Link to this section for reference">¶</a></h3>
 <p>If you previously configured remote control with the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app, you already have an <em>Apple</em> Push Notification System (APNS) Key ID and Key. These were added to the config vars in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site.</p>
 <ul>
-<li>For <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em>, these keys must be added to <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> for you to use the Careportal feature</li>
-<li>For <em>Trio</em>, these keys do not need to be added to <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> to use the Careportal feature</li>
+<li>For <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em>, these keys must be added to <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> for you to use the <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr> feature</li>
+<li>For <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>, these keys do not need to be added to <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> to use the <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr> feature</li>
 </ul>
 <p>If you do not have existing APNS Keys, skip ahead to <a href="#new-apns">New APNS</a>.</p>
 <p>When you configured APNS for the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app and saved information in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> config vars, they used the names in the table below. The same APNS Key ID and Key are what you need to add to the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app when configuring for Remote Control with APNS.</p>
@@ -648,16 +641,16 @@
 </table>
 <p>Note that the <code>LOOP_DEVELOPER_TEAM_ID</code> is the Apple Developer ID used to build the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app.</p>
 <ul>
-<li>Once <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 is released, the addition of those <code>config</code> variables in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> is only required to support sending remote commands from <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <code>Careportal</code> and from <em>LoopCaregiver</em>.</li>
-<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 and newer versions only require the APNS credentials to be entered in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app for both the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> and <em>Trio</em> Remote Control features.</li>
+<li>When using <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 or newer, the addition of those <code>config</code> variables in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> is only required to support sending remote commands to the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app from <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <code>Careportal</code> and from <em>LoopCaregiver</em>.</li>
+<li>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 and newer versions, the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Control features are available for both the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> apps when the APNS credentials are entered in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app, along with other specific credentials for each app.</li>
 </ul>
-<p>If you are configuring for <em>Trio</em> remote control with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, you do not need to enter the Apple Developer ID explicitly because it is included in the information <em>Trio</em> uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>.</p>
+<p>If you are configuring for <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> remote control with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, you do not need to enter the Apple Developer ID explicitly because it is included in the information <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>.</p>
 <h3 id="new-apns">New APNS<a class="headerlink" href="#new-apns" title="Link to this section for reference">¶</a></h3>
-<p>When using <em>Trio</em>, you do not need to add the config vars to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> that are required for <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> remote control from <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <code>Careportal</code> and <em>LoopCaregiver</em>. If you already have them, it doesn't hurt anything, but you do not need to add them to use remote control with <em>Trio</em>. </p>
-<p>Once <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 is released, the config vars will not need to be embedded in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> for <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>.</p>
+<p>When using <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>, you do not need to add the config vars to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> that are required for <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> remote control from <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <code>Careportal</code> and <em>LoopCaregiver</em>. If you already have them, it doesn't hurt anything, but you do not need to add them to use remote control with <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>. </p>
+<p>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 and newer, the config vars will not need to be embedded in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> for <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, although they are still needed to issue remote commands with the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <em><abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr></em> and the <em>LoopCaregiver</em> app.</p>
 <p>If you do not have APNS credentials, you need to create a key and grant it access to the  <span translate="no">Apple Push Notification Service (APNS)</span>. </p>
 <blockquote>
-<p>Note - these directions are copied from <em>LoopDocs</em> so it suggests you name the key <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>. It is probably best to stick with that naming for APNS keys whether you are using <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> or <em>Trio</em>.</p>
+<p>Note - these directions are copied from <em>LoopDocs</em> so it suggests you name the key <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>. It is probably best to stick with that naming for APNS keys whether you are using <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> or <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>.</p>
 </blockquote>
 <div class="admonition info">
 <p class="admonition-title">Reminder</p>
@@ -669,10 +662,10 @@
 <p>When creating new <abbr title="Apple Push Notification service">APN</abbr> keys, you have the option for "Sandbox", "Production" or "Sandbox &amp; Production". Be sure to choose "Sandbox &amp; Production".</p>
 </div>
 <ol>
-<li>To get started, go to the <code>Keys</code> section under Apple Developer's <a href="https://developer.apple.com/account/resources/authkeys/list"><code>Certificates, Identifiers &amp; Profiles</code></a> and login with the <em>Apple ID</em> associated with your developer team that you used to build the <em>Trio</em> app.</li>
+<li>To get started, go to the <code>Keys</code> section under Apple Developer's <a href="https://developer.apple.com/account/resources/authkeys/list"><code>Certificates, Identifiers &amp; Profiles</code></a> and login with the <em>Apple ID</em> associated with your developer team that you used to build the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app.</li>
 <li>If not already open in your browser (compare with the below screenshot), <ul>
 <li>Click on <strong><code>Keys</code></strong> (located in the left-hand column). </li>
-<li>Either click on the blue <strong><code>Create a new key</code></strong> button <strong>OR</strong> the plus button (<font color="#2997FF"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></font>)  to add a new key.<blockquote>
+<li>Either click on the blue <strong><code>Create a key</code></strong> button <strong>OR</strong> the plus button (<font color="#2997FF"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></font>)  to add a key.<blockquote>
 <p><img alt="img/apns-add-key.png" src="../img/apns-add-key.png"/></p>
 </blockquote>
 </li>
@@ -731,9 +724,9 @@
 <h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Link to this section for reference">¶</a></h2>
 <p>Depending on the selection you made, continue to one of these pages for more information on how to configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for your desired remote control option.</p>
 <ul>
-<li><a href="../remote-control-loop/"><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control</a> (<em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> dev <abbr title="version of code within a single repository or workspace repository">branch</abbr> only)</li>
-<li><a href="../remote-control-trio/"><em>Trio</em> Remote Control</a></li>
-<li><a href="../remote-control-nightscout/"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em></a></li>
+<li><a href="../remote-control-loop/"><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control</a></li>
+<li><a href="../remote-control-trio/"><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control</a></li>
+<li><a href="../remote-control-nightscout/"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Remote Control</a> (<code>Trio 0.2.x only</code>)</li>
 </ul>
 </article>
 </div>
