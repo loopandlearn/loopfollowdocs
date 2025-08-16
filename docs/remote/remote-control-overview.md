@@ -181,4 +181,4 @@ Depending on the selection you made, continue to one of these pages for more inf
 
 * [*Loop* Remote Control](remote-control-loop.md)
 * [*Trio* Remote Control](remote-control-trio.md)
-* [*Nightscout*](remote-control-nightscout.md)
+* [*Nightscout* Remote Control](remote-control-nightscout.md) (`Trio 0.2.x only`)
