@@ -2,64 +2,68 @@
 
 ## Remote Control Overview
 
-In the near future, all *LoopFollow* remote commands will be sent directly using the [Apple Push Notification System (APNS)](#apple-push-notifications-system-apns). 
+*LoopFollow* remote commands are sent directly using the [Apple Push Notification System (APNS)](#apple-push-notifications-system-apns) for all Open-Source Automated Insulin Delivery systems that support this feature. At this time, the *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) support direct APNS from *LoopFollow*.
 
-!!! abstract "Remote Control Updates in Development"
-    The instructions in this section are subject to updates as changes are made to the *Trio* app and the *LoopFollow* app.
+!!! tip "`Loop` Remote Control with *LoopFollow* 3.2"
+    With the release of *LoopFollow* 3.2, the remote control features accessible from LoopFollow match those available from the *LoopCaregiver* app.
 
-    * With *LoopFollow* 3.1 and earlier:
-        * If you are using *Trio* 0.2.x, remote commands are routed via *Nightscout*
-        * If you are using *Loop* 3.x or newer, remote commands are routed via *Nightscout*
-            * Only Overrides can be sent from *LoopFollow* 3.1 and only if *Nightscout* site has the APNS keys embedded
-        * If you are using *Trio* 0.5.x or newer, remote commands are sent directly through APNS
-    * Once *LoopFollow* 3.2.0 is released (currently being tested in `dev` branch):
-        * If you are using *Trio* 0.2.x, remote commands are routed via Nightscout
-        * If you are using *Loop* 3.x or newer, remote commands are sent directly through APNS
-        * If you are using *Trio* 0.5.x or newer, remote commands are sent directly through APNS
+    You must update to *LoopFollow* 3.2 or newer and configure remote settings in the *LoopFollow* app to use these features.
 
-    > Using APNS directly from *LoopFollow* provides faster feedback about commanding.
-    
-    > With *LoopFollow* 3.2, APNS keys will not need to be embedded in the *Nightscout* site which may simplify configuration for those who use a paid service for *Nightscout*.
 
-In summary, changes for *LoopFollow* sending remote commands to the *Loop* app:
+### Changes for *LoopFollow* Remote Control of the *Loop* App
 
-* With *LoopFollow* 3.1 (released version) and earlier
-    * *Loop* remote commands are limited to Overrides, require the *Nightscout* site be configured with the APNS credentials and require a token with `careportal` access
-* With *LoopFollow* 3.2 (once it is released) and newer
+* With *LoopFollow* 3.2 and newer
     * *Loop* remote commands from *LoopFollow* include Meal, Bolus and Override control
         * *LoopFollow* no longer requires the *Nightscout* site be configured with the APNS credentials
         * Read access for the *Nightscout* URL is sufficient
+* With *LoopFollow* 3.1 and older
+    * *Loop* remote commands are limited to Overrides, require the *Nightscout* site be configured with the APNS credentials and require a token with `careportal` access
 
 > With *Trio* 0.2.x, *LoopFollow* only supports temp targets and requires a token with `careportal` access. Once updated to *Trio* 0.5.x or newer, the full Trio Remote Control options are available.
 
+!!! abstract "Remote Control Updates in Development"
+    The instructions in this section depend on the version of the *Trio* app and the *LoopFollow* app.
+
+    * With *LoopFollow* 3.2 or newer:
+        * Remote commands are sent directly through APNS for both the *Loop* app and the *Trio* open beta version
+            * If you are using *Trio* 0.2.x, remote commands are routed via *Nightscout* and are limited to modifying `Temp Targets`
+    * With *LoopFollow* 3.1 and earlier:
+        * Using the *Loop* app:
+            * remote commands are routed via *Nightscout*
+            * Only Overrides can be modified using *LoopFollow* and only if *Nightscout* site has the APNS keys embedded
+        * Using the *Trio* app
+            * If you are using *Trio* 0.5.x or newer, remote commands are sent directly through APNS
+            * If you are using *Trio* 0.2.x, remote commands are routed via *Nightscout*
+
+    > Using APNS directly from *LoopFollow* provides faster feedback about commanding.
+    
+    > With *LoopFollow* 3.2, APNS keys will not need to be embedded in the *Nightscout* site for remote control of the *Loop* app from *LoopFollow*, which may simplify configuration for those who use a paid service for *Nightscout*.
+
 ### *LoopFollow* Remote Control
 
-* *Nightscout* Remote setting in *LoopFollow* makes the standard Careportal options easily available from inside the *LoopFollow* app
-    * With this selection, the *LoopFollow* phone sends commands to *Nightscout* which then sends commands to the *Loop*/*Trio* phone
-    * For that reason, the *Nightscout* display will be updated first
-        * If there is an issue sending the careportal request from *Nightscout*, it might not make it to the *Loop*/*Trio* phone
-        * After the next download from *Nightscout*, the display will update if commands do or do not make it through the full round trip
-* *Loop* Remote Command (for *LoopFollow* dev only) and *Trio* Remote Command features use APNS 
-    * With this selection, successful commands go directly via APNS to the *Loop*/*Trio* phone
+* *LoopFollow* Remote Control sends messages to the loopers phone using APNS
+    * Requires *LoopFollow* 3.2 or newer to use with the *Loop* app (version 3.x)
+    * Requires *Trio* 0.5 or newer for the *Trio* app
+    * Commands go via APNS to the *Loop*/*Trio* phone
+        * An immediate success or failure for sending the message to APNS is recieved
+        * There still could be a communication failure between APNS and the looper's phone or the command could be rejected by the looper's app
     * The results show up in *Nightscout* after being uploaded from the *Loop*/*Trio* phone
     * The results are plotted or displayed in *LoopFollow* after being downloaded from the *Nightscout* URL as a new treatment
     * APNS keys do not need to be embedded in the *Nightscout* site
         * This simplifies configuration of *Nightscout*, especially for those who use a paid service for *Nightscout*
+* For those following a looper using *Trio* 0.2.x, the only option for the Remote Setting is *Nightscout*, which uses Careportal
+    * With this selection, the *LoopFollow* phone sends commands to *Nightscout*, which then sends commands to the *Trio* phone
+    * For that reason, the *Nightscout* display will be updated first
+        * If there is an issue sending the careportal request from *Nightscout*, it might not make it to the *Trio* phone
+        * After the next download from *Nightscout*, the display will update if commands do or do not make it through the full round trip
 
 - - -
 
 ## *LoopFollow* Remote Options
 
-### Remote Options: 3.1.0
+> With the release of *LoopFollow* 3.2, remote options for the *Loop* app are updated.
 
-The graphic below shows the top portion of the Remote Settings screen when None, `Nightscout` or `Trio Remote Control` is selected. This graphic is for *LoopFollow* 3.1.0 or earlier.
-
-![LoopFollow remote options - all types](img/lf-remote-options.svg){width="400"}
-{align="center"}
-
-### Remote Options: Under Development
-
-The graphic below is from the `dev` branch of *LoopFollow*. You must first enter a *Nightscout* URL before any remote options are offered and then only the option suitable for that *Nightscout* site can be selected.
+The graphic below shows the Remote Settings screen for *LoopFollow*. You must first enter a *Nightscout* URL before any remote options are offered and then only the option suitable for that *Nightscout* site can be selected.
 
 * When following someone running Loop, the options are None or [Loop Remote Control](remote-control-loop.md){: target="_blank" }
 * When following someone running Trio, the options are None or:
@@ -73,28 +77,18 @@ The graphic below is from the `dev` branch of *LoopFollow*. You must first enter
 
 ### Critical Configuration Information
 
-If you plan to use the [*Apple* Push Notifications System (APNS)](#apple-push-notifications-system-apns), follow that link for instructions to find or create your keys.
+If you plan to use *LoopFollow* Remote Control with a looper using the *Loop* app version 3.x or the *Trio* app version 0.5 or newer, continue to the next section for instructions to find or create your keys [*Apple* Push Notifications System (APNS)](#apple-push-notifications-system-apns).
 
-If you are using a *Trio* *Nightscout* URL, be aware:
+If your looper is using *Trio* 0.2.x, use this link for configuration:
 
-* If the user of the *Trio* app disables Remote Control and their *Trio* phone, then *LoopFollow* remote commands will be issued but not enacted
-
-Depending on the selection you made, continue to one of these pages for more information on how to configure *LoopFollow* for that remote control option.
-
-* [*Loop* Remote Control](remote-control-loop.md)
-* [*Trio* Remote Control](remote-control-trio.md)
-* [*Nightscout*](remote-control-nightscout.md)
+* [*Nightscout* Remote Control](remote-control-nightscout.md)
 
 - - -
 
 ## *Apple* Push Notifications System (APNS)
 
 !!! tip "One Set of APNS Credentials"
-    **Question: If I follow more than one person with *LoopFollow*, do I need multiple APNs Keys?**
-
-    **Answer: No.**
-    
-    If you support multiple people, you only need one APNS key.
+    **If you support multiple people, you only need one APNS key for a given Developer ID.**
 
     * You can follow someone who is using the *Trio* app and another person who is using the *Loop* app. 
     * You enter the same APNS credentials for each instance of *LoopFollow* that you are using for your multiple loopers
@@ -120,8 +114,8 @@ When you configured APNS for the *Loop* app and saved information in your *Night
 
 Note that the `LOOP_DEVELOPER_TEAM_ID` is the Apple Developer ID used to build the *Loop* app.
 
-* Once *LoopFollow* 3.2 is released, the addition of those `config` variables in *Nightscout* is only required to support sending remote commands from *Nightscout* `Careportal` and from *LoopCaregiver*.
-* *LoopFollow* 3.2 and newer versions only require the APNS credentials to be entered in the *LoopFollow* app for both the *Loop* and *Trio* Remote Control features.
+* When using *LoopFollow* 3.2 or newer, the addition of those `config` variables in *Nightscout* is only required to support sending remote commands to the *Loop* app from *Nightscout* `Careportal` and from *LoopCaregiver*.
+* With *LoopFollow* 3.2 and newer versions, the *LoopFollow* Remote Control features are available for both the *Loop* and *Trio* apps when the APNS credentials are entered in the *LoopFollow* app, along with other specific credentials for each app.
 
 If you are configuring for *Trio* remote control with *LoopFollow*, you do not need to enter the Apple Developer ID explicitly because it is included in the information *Trio* uploads to *Nightscout*.
 
@@ -129,7 +123,7 @@ If you are configuring for *Trio* remote control with *LoopFollow*, you do not n
 
 When using *Trio*, you do not need to add the config vars to *Nightscout* that are required for *Loop* remote control from *Nightscout* `Careportal` and *LoopCaregiver*. If you already have them, it doesn't hurt anything, but you do not need to add them to use remote control with *Trio*. 
 
-Once *LoopFollow* 3.2 is released, the config vars will not need to be embedded in *Nightscout* for *Loop* Remote Control from *LoopFollow*.
+With *LoopFollow* 3.2 and newer, the config vars will not need to be embedded in *Nightscout* for *Loop* Remote Control from *LoopFollow*, although they are still needed to issue remote commands with the *Nightscout* *Careportal* and the *LoopCaregiver* app.
 
 If you do not have APNS credentials, you need to create a key and grant it access to the &nbsp;<span translate="no">Apple Push Notification Service (APNS)</span>. 
 
@@ -146,7 +140,7 @@ If you do not have APNS credentials, you need to create a key and grant it acces
 1. To get started, go to the `Keys` section under Apple Developer's [`Certificates, Identifiers & Profiles`](https://developer.apple.com/account/resources/authkeys/list) and login with the *Apple ID* associated with your developer team that you used to build the *Trio* app.
 2. If not already open in your browser (compare with the below screenshot), 
     - Click on **`Keys`** (located in the left-hand column). 
-    - Either click on the blue **`Create a new key`** button **OR** the plus button (<font color="#2997FF">:material-plus-circle:</font>)  to add a new key.
+    - Either click on the blue **`Create a key`** button **OR** the plus button (<font color="#2997FF">:material-plus-circle:</font>)  to add a key.
     > ![img/apns-add-key.png](img/apns-add-key.png)
 3. In the form that appears, do the following:
     - Click the checkbox for enabling **`Apple Push Notifications service (APNs)`**
@@ -185,6 +179,6 @@ If you do not have APNS credentials, you need to create a key and grant it acces
 
 Depending on the selection you made, continue to one of these pages for more information on how to configure *LoopFollow* for your desired remote control option.
 
-* [*Loop* Remote Control](remote-control-loop.md) (*LoopFollow* dev branch only)
+* [*Loop* Remote Control](remote-control-loop.md)
 * [*Trio* Remote Control](remote-control-trio.md)
-* [*Nightscout*](remote-control-nightscout.md)
+* [*Nightscout* Remote Control](remote-control-nightscout.md) (`Trio 0.2.x only`)

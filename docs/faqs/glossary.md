@@ -21,6 +21,8 @@ When Google Translate is selected:
 
 **<span translate="no">CAGE</span>**&nbsp; (CAGE): cannula (or pump site) age on Nightscout site
 
+**<span translate="no">Careportal</span>**&nbsp; (Careportal): A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout
+
 **<span translate="no">Certificate</span>**&nbsp; (Certificate): Apple certificate is used to sign your iOS or Mac apps - tied to but different from your permanent Developer ID
 
 **<span translate="no">CGM</span>**&nbsp; (CGM): continuous glucose monitor, wearable medical device that measures and reports glucose in interstitial fluid
@@ -122,6 +124,8 @@ When Google Translate is selected:
 **<span translate="no">TestFlight</span>**&nbsp; (TestFlight): a method to distribute apps without direct connection
 
 **<span translate="no">Tooltip</span>**&nbsp; (Tooltip): brief definitions provided for important terms and abbreviations on the website
+
+**<span translate="no">Trio</span>**&nbsp; (Trio): an iOS app that implements the OpenAPS (oref) algorithm on an iPhone
 
 **<span translate="no">URL</span>**&nbsp; (URL): website address (Uniform Resource Locator)
 

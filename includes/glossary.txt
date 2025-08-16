@@ -4,6 +4,7 @@
 *[BLE]: Bluetooth low energy, used for communication by phones, CGM and some pumps
 *[branch]: version of code within a single repository or workspace repository
 *[CAGE]: cannula (or pump site) age on Nightscout site
+*[Careportal]: A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout
 *[Certificate]: Apple certificate is used to sign your iOS or Mac apps - tied to but different from your permanent Developer ID
 *[CGM]: continuous glucose monitor, wearable medical device that measures and reports glucose in interstitial fluid
 *[clone]: create a copy of a repository on your computer including revision history and ability to update using git commands
@@ -55,6 +56,7 @@
 *[Terminal]: interface for entering commands to the computer
 *[TestFlight]: a method to distribute apps without direct connection
 *[Tooltip]: brief definitions provided for important terms and abbreviations on the website
+*[Trio]: an iOS app that implements the OpenAPS (oref) algorithm on an iPhone
 *[URL]: website address (Uniform Resource Locator)
 *[watchOS]: Apple watch operating system; must be compatible with phone iOS
 *[workflow]: a set of instructions to GitHub to perform an action; the instruction files are found in the .github/workflows folder of the repository
