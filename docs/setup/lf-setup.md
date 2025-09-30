@@ -69,14 +69,17 @@ The type of token depends on the type of remote control desired.
 The table below indicates the minimum token access for each type of remote control available with *LoopFollow*. 
 When you enter your credentials, *LoopFollow* tries to reach the site and then provides the status. 
 
-* The *Loop* Remote Control option will be available in the `dev` branch as soon as [PR 434](https://github.com/loopandlearn/LoopFollow/pull/434) is approved and merged
+* The *Loop* Remote Control option requires *LoopFollow* version 3.2 or newer
 * The *Trio* Remote Control option requires the user be on version 0.5.x or newer of Trio
+    * **Breaking change** on 2025-October-02
+    * *Trio* 0.5.2 or newer requires *LoopFollow* 3.3 or newer
+    * *Trio* 0.5.1 or older requires *LoopFollow* 3.2 or older
 
 | *LoopFollow* Remote Type | Minimum Token Access| *LoopFollow* Status |
 |:--|:--|:--|
 | **None** | Read | OK (Read) |
 | ***Nightscout*** | Read & Careportal | OK (Read & Write) |
-| ***Loop* Remote Control** <br>- in development| Read | OK (Read) |
+| ***Loop* Remote Control**| Read | OK (Read) |
 | ***Trio* Remote Control**| Read | OK (Read) |
 
 #### Add *Dexcom*

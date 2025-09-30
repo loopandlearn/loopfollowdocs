@@ -2,8 +2,64 @@
 
 *LoopFollow* can be built using either the Browser Build or the Mac-Xcode Build method.  A paid Apple Developer account is required to use the Browser Build method.  Regardless of how you build, you can customize your *LoopFollow* app’s name.
 
-* Browser Build: See [LoopDocs: Browser Build for Other Apps]()
+* Browser Build: 
+    * If you have never built, see [LoopDocs: Browser Build for Other Apps](https://loopkit.github.io/loopdocs/browser/other-apps/) 
+    * If you are a repeat builder, then you need a one-time update [Browser Build Update for *LoopFollow* v3.3](#browser-build-update-for-loopfollow-v33)
 * Mac-Xcode: [Build *LoopFollow* Script for Mac-Xcode](#build-loopfollow-script-for-mac-xcode)
+
+### Browser Build Update for *LoopFollow* v3.3
+
+!!! important "New Capability with LoopFollow v3.3"
+    A new capability was added to LoopFollow regarding remote commands which requires an update to your LoopFollow Identifier.
+    
+    * Simply sync, run Add Identifiers and Create Certificate to update the credentials needed
+    * This update is required only one time
+
+It doesn't matter whether the person you follow uses *Loop* or *Trio*. You have to update the Identifiers or the Browser Build will fail.
+
+This requires you to [Sync](#sync-your-loopfollow-fork), [Add Identifiers](#run-add-identifiers), [Create Certificates](#run-create-certificates) and [Build](#run-build-loopfollow):
+
+#### Sync Your *LoopFollow* fork
+
+* Go to your *LoopFollow* fork and click on the Sync button
+* If your browser build already failed, it already did the sync for you
+
+> ![sync the fork](img/github-build-check-fork-status.svg){width="700"}
+
+#### Run `Add Identifiers`
+
+1. Click on the Actions tab of your *LoopFollow* repository
+2. On the left side, click on `2. Add Identifiers`
+3. On the right side, click Run Workflow to show a dropdown menu
+4. Tap the green button that says Run workflow.
+
+> ![add identifiers](img/action-02-add-identifiers.svg){width="700"}
+
+**Wait for this to complete before you create certificates.**
+
+#### Run `Create Certificates`
+
+1. Click on the Actions tab of your *LoopFollow* repository
+2. On the left side, click on `3. Create Certificates`
+3. On the right side, click Run Workflow to show a dropdown menu
+4. Tap the green button that says Run workflow.
+
+> ![add identifiers](img/action-03-create-certs.svg){width="700"}
+
+**Wait for this to complete before you build *LoopFollow*.**
+
+#### Run `Build LoopFollow`
+
+1. Click on the Actions tab of your *LoopFollow* repository
+2. On the left side, click on `4. Build LoopFollow`
+3. On the right side, click Run Workflow to show a dropdown menu
+4. Tap the green button that says Run workflow.
+
+> ![add identifiers](img/action-04-build.svg){width="700"}
+
+**Once this completes, be sure to update from TestFlight to get the updated version of *LoopFollow* on your phone.**
+
+If you follow two loopers, repeat those steps for LoopFollow_Second. For three loopers, repeat for LoopFollow_Third.
 
 
 ### Build LoopFollow Script for Mac-Xcode

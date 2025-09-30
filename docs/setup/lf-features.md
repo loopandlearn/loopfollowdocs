@@ -165,6 +165,6 @@ Quick access is provided using these links once you have configured *LoopFollow*
 
 * None
 * [*Nightscout*](../remote/remote-control-nightscout.md){: target="_blank" } (*LoopFollow* offers actions that can be done from a *Nightscout* Careportal)
-* [*Loop* Remote Control](../remote/remote-control-loop.md){: target="_blank" } (in development: only available with a *Loop* URL)
+* [*Loop* Remote Control](../remote/remote-control-loop.md){: target="_blank" } 
 * [*Trio* Remote Control](../remote/remote-control-trio.md){: target="_blank" }: requires Trio 0.5.x or newer
 
