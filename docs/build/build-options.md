@@ -10,10 +10,7 @@
 ### Browser Build Update for *LoopFollow* v3.3
 
 !!! important "New Capability with LoopFollow v3.3"
-    A new capability was added to LoopFollow regarding remote commands which requires an update to your LoopFollow Identifier.
-    
-    * Simply sync, run Add Identifiers and Create Certificate to update the credentials needed
-    * This update is required only one time
+    A new capability was added to LoopFollow regarding remote commands which **requires a one-time update** to your LoopFollow **Identifier**. Browser Build will fail until you take these steps.
 
 It doesn't matter whether the person you follow uses *Loop* or *Trio*. You have to update the Identifiers or the Browser Build will fail.
 

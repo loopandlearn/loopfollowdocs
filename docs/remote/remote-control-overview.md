@@ -36,7 +36,7 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
         * *LoopFollow* no longer requires the *Nightscout* site be configured with the APNS credentials
         * Read access for the *Nightscout* URL is sufficient
 * With *LoopFollow* 3.1 and older
-    * *Loop* remote commands were limited to Overrides, require the *Nightscout* site be configured with the APNS credentials and require a token with `careportal` access
+    * *Loop* remote commands were limited to Overrides, required the *Nightscout* site be configured with the APNS credentials and required a token with `careportal` access
 
 > With *Trio* 0.2.x, *LoopFollow* only supports temp targets and requires a token with `careportal` access. Once updated to *Trio* 0.5.x or newer, the full Trio Remote Control options are available.
 
@@ -49,7 +49,7 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
         * Trio 0.5.2 (or newer) requires LoopFollow 3.3.0 (or newer)
         * Trio 0.5.1 requires LoopFollow 3.2.3 (or older)
     * Commands go via APNS to the *Loop*/*Trio* phone
-        * An immediate success or failure for **sending** the message to APNS is recieved
+        * An immediate success or failure for **sending** the message to APNS is received
         * There still could be a communication failure between APNS and the looper's phone or the command could be rejected by the looper's app
     * **Trio v0.5.2 or newer** an APNS response is returned to *LoopFollow*
         * A success or failure message is pushed back to the *LoopFollow* phone from the *Trio* phone when a remote command is received and handled
