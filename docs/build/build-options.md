@@ -4,12 +4,12 @@
 
 * Browser Build: 
     * If you have never built, see [LoopDocs: Browser Build for Other Apps](https://loopkit.github.io/loopdocs/browser/other-apps/) 
-    * If you are a repeat builder, then you need a one-time update [Browser Build Update for *LoopFollow* v3.3](#browser-build-update-for-loopfollow-v33)
+    * If you are a repeat builder, then you need a one-time update [Browser Build Update for *LoopFollow* v4.0](#browser-build-update-for-loopfollow-v40)
 * Mac-Xcode: [Build *LoopFollow* Script for Mac-Xcode](#build-loopfollow-script-for-mac-xcode)
 
-### Browser Build Update for *LoopFollow* v3.3
+### Browser Build Update for *LoopFollow* v4.0
 
-!!! important "New Capability with LoopFollow v3.3"
+!!! important "New Capability with LoopFollow v4.0"
     A new capability was added to LoopFollow regarding remote commands which **requires a one-time update** to your LoopFollow **Identifier**. Browser Build will fail until you take these steps.
 
 It doesn't matter whether the person you follow uses *Loop* or *Trio*. You have to update the Identifiers or the Browser Build will fail.

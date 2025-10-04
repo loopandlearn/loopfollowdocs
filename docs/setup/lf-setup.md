@@ -71,8 +71,8 @@ When you enter your credentials, *LoopFollow* tries to reach the site and then p
 
 * The *Loop* Remote Control option requires *LoopFollow* version 3.2 or newer
 * The *Trio* Remote Control option requires the user be on version 0.5.x or newer of Trio
-    * **Breaking change** on 2025-October-02
-    * *Trio* 0.5.2 or newer requires *LoopFollow* 3.3 or newer
+    * **Breaking change** on 2025-October-04
+    * *Trio* 0.6 or newer requires *LoopFollow* 4.0 or newer
     * *Trio* 0.5.1 or older requires *LoopFollow* 3.2 or older
 
 | *LoopFollow* Remote Type | Minimum Token Access| *LoopFollow* Status |

@@ -7,9 +7,9 @@
 The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) support direct APNS from *LoopFollow*.
 
 !!! warning "Browser Build Update"
-    If you use Browser Build, follow the one-time updates needed to transition from *LoopFollow* v3.2 to *LoopFollow* v3.3:
+    If you use Browser Build, follow the one-time updates needed to transition from *LoopFollow* v3.2 to *LoopFollow* v4.0:
 
-    * [Browser Build Update for LoopFollow v3.3](../build/build-options.md#browser-build-update-for-loopfollow-v33){: target="_blank" }
+    * [Browser Build Update for LoopFollow v4.0](../build/build-options.md#browser-build-update-for-loopfollow-v40){: target="_blank" }
 
 !!! tip "`Loop` Remote Control with *LoopFollow* 3.2"
     With the release of *LoopFollow* 3.2, the remote control features accessible from LoopFollow match those available from the *LoopCaregiver* app.
@@ -19,14 +19,14 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
 !!! important "Breaking Change: Trio Remote Command Users"
     Trio users must have matching code for LoopFollow and Trio.
 
-    * Trio 0.5.2 (or newer) requires LoopFollow 3.3.0 (or newer)
+    * Trio 0.6 (or newer) requires LoopFollow 4.0 (or newer)
     * Trio 0.5.1 requires LoopFollow 3.2.3 (or older)
 
     See [Trio Remote Control](trio-remote-control.md){: target="_blank" } for more information.
 
     For Browser Builders:
 
-    * [Browser Build Update for LoopFollow v3.3](../build/build-options.md#browser-build-update-for-loopfollow-v33){: target="_blank" }
+    * [Browser Build Update for LoopFollow v4.0](../build/build-options.md#browser-build-update-for-loopfollow-v40){: target="_blank" }
 
 
 ### Changes for *LoopFollow* Remote Control of the *Loop* App
@@ -46,12 +46,12 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
 * *LoopFollow* Remote Control sends messages to the loopers phone using APNS
     * **Loop**: Requires *LoopFollow* 3.2 or newer
     * **Trio**: Requires matched code versions:
-        * Trio 0.5.2 (or newer) requires LoopFollow 3.3.0 (or newer)
+        * Trio 0.6 (or newer) requires LoopFollow 4.0 (or newer)
         * Trio 0.5.1 requires LoopFollow 3.2.3 (or older)
     * Commands go via APNS to the *Loop*/*Trio* phone
         * An immediate success or failure for **sending** the message to APNS is received
         * There still could be a communication failure between APNS and the looper's phone or the command could be rejected by the looper's app
-    * **Trio v0.5.2 or newer** an APNS response is returned to *LoopFollow*
+    * **Trio v0.6 or newer** an APNS response is returned to *LoopFollow*
         * A success or failure message is pushed back to the *LoopFollow* phone from the *Trio* phone when a remote command is received and handled
     * The results show up in *Nightscout* after being uploaded from the *Loop*/*Trio* phone
     * The results are plotted or displayed in *LoopFollow* after being downloaded from the *Nightscout* URL as a new treatment
