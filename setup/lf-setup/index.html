@@ -750,8 +750,13 @@
 The table below indicates the minimum token access for each type of remote control available with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>. 
 When you enter your credentials, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> tries to reach the site and then provides the status. </p>
 <ul>
-<li>The <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control option will be available in the <code>dev</code> <abbr title="version of code within a single repository or workspace repository">branch</abbr> as soon as <a href="https://github.com/loopandlearn/LoopFollow/pull/434"><abbr title="Pull Request - a formal method to request changes to a repository">PR</abbr> 434</a> is approved and merged</li>
-<li>The <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control option requires the user be on version 0.5.x or newer of <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></li>
+<li>The <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control option requires <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> version 3.2 or newer</li>
+<li>The <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control option requires the user be on version 0.5.x or newer of <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr><ul>
+<li><strong>Breaking change</strong> on 2025-October-06</li>
+<li><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.6 or newer requires <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 4.0 or newer</li>
+<li><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.1.28 or older requires <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2.11 or older</li>
+</ul>
+</li>
 </ul>
 <table>
 <thead>
@@ -773,7 +778,7 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <td style="text-align: left;">OK (Read &amp; Write)</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control</strong> <br/>- in development</td>
+<td style="text-align: left;"><strong><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control</strong></td>
 <td style="text-align: left;">Read</td>
 <td style="text-align: left;">OK (Read)</td>
 </tr>
@@ -826,9 +831,23 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <h3 id="graph-settings-settings">Graph Settings Settings<a class="headerlink" href="#graph-settings-settings" title="Link to this section for reference">¶</a></h3>
 <p>🚧 Documentation Under Construction 🚧</p>
 <h3 id="tab-settings">Tab Settings<a class="headerlink" href="#tab-settings" title="Link to this section for reference">¶</a></h3>
-<p>🚧 Documentation Under Construction 🚧</p>
+<p>The user can modify which icons are displayed in the task bar at the bottom of the screen.</p>
+<p>See <a href="../lf-features/#toolbar-tab-customization" target="_blank">Toolbar Tab Settings</a> for more information.</p>
 <h3 id="information-display-settings">Information Display Settings<a class="headerlink" href="#information-display-settings" title="Link to this section for reference">¶</a></h3>
 <p>🚧 Documentation Under Construction 🚧</p>
+<h4 id="rec-bolus"><code>Rec. Bolus</code><a class="headerlink" href="#rec-bolus" title="Link to this section for reference">¶</a></h4>
+<div class="admonition warning">
+<p class="admonition-title"><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> Report of <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> Recommended Dose</p>
+<p>It happens. We made a mistake. The <code>Rec. Bolus</code> feature for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> was reporting a value from the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app that was never meant to be used as a recommended bolus. </p>
+<ul>
+<li>With <code>LoopFollow</code> 4.0 and newer, users viewing a <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> will notice the <code>Rec. Bolus</code> display is always blank<ul>
+<li>Updates are planned for <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> to provide the last recommended value from the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app</li>
+</ul>
+</li>
+<li>The value shown to users viewing a <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> matches what the user of the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone would see when asking for a recommendation and is not changed in <code>LoopFollow</code> 4.0</li>
+</ul>
+<p><strong>Remember: the <code>Rec. Bolus</code> values is from the last AID app update to <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></strong></p>
+</div>
 <h3 id="remote-settings">Remote Settings<a class="headerlink" href="#remote-settings" title="Link to this section for reference">¶</a></h3>
 <p>🚧 Documentation Under Construction 🚧</p>
 <h3 id="alarms">Alarms<a class="headerlink" href="#alarms" title="Link to this section for reference">¶</a></h3>
