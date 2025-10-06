@@ -71,9 +71,9 @@ When you enter your credentials, *LoopFollow* tries to reach the site and then p
 
 * The *Loop* Remote Control option requires *LoopFollow* version 3.2 or newer
 * The *Trio* Remote Control option requires the user be on version 0.5.x or newer of Trio
-    * **Breaking change** on 2025-October-04
+    * **Breaking change** on 2025-October-06
     * *Trio* 0.6 or newer requires *LoopFollow* 4.0 or newer
-    * *Trio* 0.5.1 or older requires *LoopFollow* 3.2 or older
+    * *Trio* 0.5.1.28 or older requires *LoopFollow* 3.2.11 or older
 
 | *LoopFollow* Remote Type | Minimum Token Access| *LoopFollow* Status |
 |:--|:--|:--|
@@ -143,11 +143,25 @@ Once you’ve configured your settings, your Main screen will look as beautiful 
 
 ### Tab Settings
 
-🚧 Documentation Under Construction 🚧
+The user can modify which icons are displayed in the task bar at the bottom of the screen.
+
+See [Toolbar Tab Settings](lf-features.md#toolbar-tab-customization){: target="_blank" } for more information.
 
 ### Information Display Settings
 
 🚧 Documentation Under Construction 🚧
+
+#### `Rec. Bolus`
+
+!!! warning "LoopFollow Report of Trio Recommended Dose"
+    It happens. We made a mistake. The `Rec. Bolus` feature for *LoopFollow* was reporting a value from the *Trio* app that was never meant to be used as a recommended bolus. 
+    
+    * With `LoopFollow` 4.0 and newer, users viewing a *Trio* URL will notice the `Rec. Bolus` display is always blank
+        * Updates are planned for *Trio* and *LoopFollow* to provide the last recommended value from the *Trio* app
+    * The value shown to users viewing a *Loop* URL matches what the user of the *Loop* phone would see when asking for a recommendation and is not changed in `LoopFollow` 4.0
+    
+    **Remember: the `Rec. Bolus` values is from the last AID app update to Nightscout**
+    
 
 ### Remote Settings
 

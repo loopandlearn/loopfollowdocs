@@ -20,7 +20,7 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
     Trio users must have matching code for LoopFollow and Trio.
 
     * Trio 0.6 (or newer) requires LoopFollow 4.0 (or newer)
-    * Trio 0.5.1 requires LoopFollow 3.2.3 (or older)
+    * Trio 0.5.1.28 (or older) requires LoopFollow 3.2.11 (or older)
 
     See [Trio Remote Control](trio-remote-control.md){: target="_blank" } for more information.
 
@@ -47,7 +47,7 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
     * **Loop**: Requires *LoopFollow* 3.2 or newer
     * **Trio**: Requires matched code versions:
         * Trio 0.6 (or newer) requires LoopFollow 4.0 (or newer)
-        * Trio 0.5.1 requires LoopFollow 3.2.3 (or older)
+        * Trio 0.5.1.28 (or older) requires LoopFollow 3.2.11 (or older)
     * Commands go via APNS to the *Loop*/*Trio* phone
         * An immediate success or failure for **sending** the message to APNS is received
         * There still could be a communication failure between APNS and the looper's phone or the command could be rejected by the looper's app
