@@ -7,10 +7,27 @@ Trio can accept remote commands from *Nightscout* or from *LoopFollow*. There ar
 !!! warning "*Nightscout* version must be 15.0.2 or newer"
     To properly display the OpenAPS pill with *Trio* 0.5.x (or newer), your *Nightscout* version must be 15.0.2 (or newer). If you do not see the expected treatments or pills in the *Nightscout* dashboard, follow the steps to [Configure for OpenAPS](#configure-for-openaps).
 
-The most powerful arrangement, for *Trio* 0.5.x (or newer), is to configure the *LoopFollow* app to use the *Trio* Remote Control (TRC) setting. This requires:
+The most powerful arrangement, for *Trio* 0.5.x (or newer), is to configure the *LoopFollow* app to use the *Trio* Remote Control (TRC) setting.
 
-* *Trio* 0.5.x (or newer)
-* *LoopFollow* version 2.4.0 (or newer)
+### Real-time Notifications for *Trio*
+
+Starting with *LoopFollow* v4.0 and *Trio* v0.6, users of remote control are provided with real-time notifications for the results of remote commands. This requires a paired change to both *Trio* and *LoopFollow*.
+
+* This change enables *Trio* to send a push notification back to the *LoopFollow* app on the originating phone, immediately informing the user whether their command (e.g., meal, bolus, override) was successfully processed or if an error occurred
+* This greatly improves the user experience compared to waiting for Nightscout being updated
+
+!!! important "Breaking Change: *Trio* Remote Command Users"
+    *Trio* users must have matching code for LoopFollow and *Trio*.
+
+    * LoopFollow v4.0 (or newer) works with *Trio* v0.6 (or newer)
+    * LoopFollow v3.2.3 (or older) works with *Trio* v0.5.1 (or older)
+
+    **Question: What happens if versions are not correct?**: Remote control commands stop working.
+
+    **Question: If I was using Trio / LoopFollow remote control do I need to change my configuration parameters?**: No, the parameters you already set up continue to work. **BUT** you need to update the *LoopFollow* Identifiers if you use Browser Build.
+
+    * [Browser Build Update for LoopFollow v4.0](../build/build-options.md#browser-build-update-for-loopfollow-v40){: target="_blank" }
+
 
 ??? question "How does this differ from *Trio* 0.2.x? (Click to Open/Close)"
     *Trio* can use *Nightscout* Careportal to enter `Carb Correction`, and start and cancel `Temporary Target`.
