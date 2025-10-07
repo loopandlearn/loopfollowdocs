@@ -443,7 +443,7 @@
 <p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> can be built using either the Browser Build or the Mac-<abbr title="program used to build an app">Xcode</abbr> Build method.  A paid Apple Developer account is required to use the Browser Build method.  Regardless of how you build, you can customize your <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app’s name.</p>
 <ul>
 <li>Browser Build: <ul>
-<li>If you have never built, see <a href="https://loopkit.github.io/loopdocs/browser/other-apps/">LoopDocs: Browser Build for Other Apps</a> </li>
+<li>If you have never built, see <a href="https://loopkit.github.io/loopdocs/browser/other-apps/">LoopDocs: Browser Build for Other Apps</a></li>
 <li>If you are a repeat builder, then you need a one-time update <a href="#browser-build-update-for-loopfollow-v40">Browser Build Update for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v4.0</a></li>
 </ul>
 </li>
@@ -455,7 +455,7 @@
 <p>A new capability was added to <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> regarding remote commands which <strong>requires a one-time update</strong> to your <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <strong>Identifier</strong>. Browser Build will fail until you take these steps.</p>
 </div>
 <p>It doesn't matter whether the person you follow uses <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> or <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>. You have to update the <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> or the Browser Build will fail.</p>
-<p>This requires you to <a href="#sync-your-loopfollow-fork">Sync</a>, <a href="#run-add-identifiers">Add <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr></a>, <a href="#run-create-certificates">Create Certificates</a> and <a href="#run-build-loopfollow">Build</a>:</p>
+<p>This requires you to follow these steps:</p>
 <h4 id="sync-your-loopfollow-fork">Sync Your <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="a copy of code in a github repository other than the original">fork</abbr><a class="headerlink" href="#sync-your-loopfollow-fork" title="Link to this section for reference">¶</a></h4>
 <ul>
 <li>Go to your <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="a copy of code in a github repository other than the original">fork</abbr> and click on the Sync button</li>
@@ -464,28 +464,24 @@
 <blockquote>
 <p><img alt="sync the fork" src="../img/github-build-check-fork-status.svg" width="700"/></p>
 </blockquote>
-<h4 id="run-add-identifiers">Run <code>Add Identifiers</code><a class="headerlink" href="#run-add-identifiers" title="Link to this section for reference">¶</a></h4>
+<h4 id="add-push-notifications-capability-to-loopfollow-identifiers">Add Push Notifications Capability to <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr><a class="headerlink" href="#add-push-notifications-capability-to-loopfollow-identifiers" title="Link to this section for reference">¶</a></h4>
+<p>You must manually enable the Push Notifications capabilty to the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Identifier. Follow the directions below to open the Identifier and then keep scrolling down until you see Push Notifications. Make sure that check box is enabled, as shown in the graphic below. If you do not do this, the Build will fail.</p>
+<p>The example graphic below has numbered steps that match these directions:</p>
+<p>Click to open the <a href="https://developer.apple.com/account/resources/identifiers/list">Certificates, <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> &amp; Profiles: <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> List</a> page. </p>
 <ol>
-<li>Click on the Actions tab of your <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="contains project files and each file's revision history">repository</abbr></li>
-<li>On the left side, click on <code>2. Add Identifiers</code></li>
-<li>On the right side, click Run Workflow to show a dropdown menu</li>
-<li>Tap the green button that says Run <abbr title="a set of instructions to GitHub to perform an action; the instruction files are found in the .github/workflows folder of the repository">workflow</abbr>.</li>
+<li>Look in the <strong><code>IDENTIFIER</code></strong> column to locate the <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> Identifer and click on it<ul>
+<li>The name in the <strong><code>NAME</code></strong> column may be different if you previously built with a Mac using <abbr title="program used to build an app">Xcode</abbr>, in that case it will start with XC</li>
+</ul>
+</li>
+<li>Looking at the <code>App Services</code> column, scroll down to the <code>Push Notifications</code> row</li>
+<li>If the check box is not checked, you must check it</li>
+<li>Scroll back to the top and hit Save if you modified that value or All <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> if you made no changes</li>
 </ol>
+<p>If you made a change and hit Save, you then need to Tap <code>Continue</code> and Tap <code>Save</code> to complete the process.</p>
 <blockquote>
-<p><img alt="add identifiers" src="../img/action-02-add-identifiers.svg" width="700"/></p>
+<p><img alt="graphic showing selection of the push notifications" src="../img/add-push-notifications.svg" width="600"/></p>
 </blockquote>
-<p><strong>Wait for this to complete before you create certificates.</strong></p>
-<h4 id="run-create-certificates">Run <code>Create Certificates</code><a class="headerlink" href="#run-create-certificates" title="Link to this section for reference">¶</a></h4>
-<ol>
-<li>Click on the Actions tab of your <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="contains project files and each file's revision history">repository</abbr></li>
-<li>On the left side, click on <code>3. Create Certificates</code></li>
-<li>On the right side, click Run Workflow to show a dropdown menu</li>
-<li>Tap the green button that says Run <abbr title="a set of instructions to GitHub to perform an action; the instruction files are found in the .github/workflows folder of the repository">workflow</abbr>.</li>
-</ol>
-<blockquote>
-<p><img alt="add identifiers" src="../img/action-03-create-certs.svg" width="700"/></p>
-</blockquote>
-<p><strong>Wait for this to complete before you build <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>.</strong></p>
+<p>Repeat this step if you use LoopFollow_Second or LoopFollow_Third.</p>
 <h4 id="run-build-loopfollow">Run <code>Build LoopFollow</code><a class="headerlink" href="#run-build-loopfollow" title="Link to this section for reference">¶</a></h4>
 <ol>
 <li>Click on the Actions tab of your <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="contains project files and each file's revision history">repository</abbr></li>
@@ -497,7 +493,7 @@
 <p><img alt="add identifiers" src="../img/action-04-build.svg" width="700"/></p>
 </blockquote>
 <p><strong>Once this completes, be sure to update from <abbr title="a method to distribute apps without direct connection">TestFlight</abbr> to get the updated version of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> on your phone.</strong></p>
-<p>If you follow two loopers, repeat those steps for LoopFollow_Second. For three loopers, repeat for LoopFollow_Third.</p>
+<p>Repeat the build and install from <abbr title="a method to distribute apps without direct connection">TestFlight</abbr> steps if you use LoopFollow_Second or LoopFollow_Third.</p>
 <h3 id="build-loopfollow-script-for-mac-xcode">Build <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> Script for Mac-<abbr title="program used to build an app">Xcode</abbr><a class="headerlink" href="#build-loopfollow-script-for-mac-xcode" title="Link to this section for reference">¶</a></h3>
 <p>Carefully read the information in the terminal before making any choices.</p>
 <p>Step 1: Open <abbr title="interface for entering commands to the computer">Terminal</abbr></p>
