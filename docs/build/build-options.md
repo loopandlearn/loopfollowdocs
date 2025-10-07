@@ -31,7 +31,7 @@ The example graphic below has numbered steps that match these directions:
 
 Click to open the [Certificates, Identifiers & Profiles: Identifiers List](https://developer.apple.com/account/resources/identifiers/list) page. 
 
-1. Look in the **`IDENTIFIER`** column to locate the LoopFollow Identifer and click on it
+1. Locate the LoopFollow Identifer and click on it to open the `Edit your App ID Configuration` screen
     * The name in the **`NAME`** column may be different if you previously built with a Mac using Xcode, in that case it will start with XC
 2. Looking at the `App Services` column, scroll down to the `Push Notifications` row
 3. If the check box is not checked, you must check it
