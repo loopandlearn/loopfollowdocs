@@ -3,7 +3,7 @@
 *LoopFollow* can be built using either the Browser Build or the Mac-Xcode Build method.  A paid Apple Developer account is required to use the Browser Build method.  Regardless of how you build, you can customize your *LoopFollow* app’s name.
 
 * Browser Build: 
-    * If you have never built, see [LoopDocs: Browser Build for Other Apps](https://loopkit.github.io/loopdocs/browser/other-apps/) 
+    * If you have never built, see [LoopDocs: Browser Build for Other Apps](https://loopkit.github.io/loopdocs/browser/other-apps/)
     * If you are a repeat builder, then you need a one-time update [Browser Build Update for *LoopFollow* v4.0](#browser-build-update-for-loopfollow-v40)
 * Mac-Xcode: [Build *LoopFollow* Script for Mac-Xcode](#build-loopfollow-script-for-mac-xcode)
 
@@ -14,7 +14,7 @@
 
 It doesn't matter whether the person you follow uses *Loop* or *Trio*. You have to update the Identifiers or the Browser Build will fail.
 
-This requires you to [Sync](#sync-your-loopfollow-fork), [Add Identifiers](#run-add-identifiers), [Create Certificates](#run-create-certificates) and [Build](#run-build-loopfollow):
+This requires you to follow these steps:
 
 #### Sync Your *LoopFollow* fork
 
@@ -23,27 +23,25 @@ This requires you to [Sync](#sync-your-loopfollow-fork), [Add Identifiers](#run-
 
 > ![sync the fork](img/github-build-check-fork-status.svg){width="700"}
 
-#### Run `Add Identifiers`
+#### Add Push Notifications Capability to LoopFollow Identifiers
 
-1. Click on the Actions tab of your *LoopFollow* repository
-2. On the left side, click on `2. Add Identifiers`
-3. On the right side, click Run Workflow to show a dropdown menu
-4. Tap the green button that says Run workflow.
+You must manually enable the Push Notifications capabilty to the *LoopFollow* Identifier. Follow the directions below to open the Identifier and then keep scrolling down until you see Push Notifications. Make sure that check box is enabled, as shown in the graphic below. If you do not do this, the Build will fail.
 
-> ![add identifiers](img/action-02-add-identifiers.svg){width="700"}
+The example graphic below has numbered steps that match these directions:
 
-**Wait for this to complete before you create certificates.**
+Click to open the [Certificates, Identifiers & Profiles: Identifiers List](https://developer.apple.com/account/resources/identifiers/list) page. 
 
-#### Run `Create Certificates`
+1. Look in the **`IDENTIFIER`** column to locate the LoopFollow Identifer and click on it
+    * The name in the **`NAME`** column may be different if you previously built with a Mac using Xcode, in that case it will start with XC
+2. Looking at the `App Services` column, scroll down to the `Push Notifications` row
+3. If the check box is not checked, you must check it
+4. Scroll back to the top and hit Save if you modified that value or All Identifiers if you made no changes
 
-1. Click on the Actions tab of your *LoopFollow* repository
-2. On the left side, click on `3. Create Certificates`
-3. On the right side, click Run Workflow to show a dropdown menu
-4. Tap the green button that says Run workflow.
+If you made a change and hit Save, you then need to Tap `Continue` and Tap `Save` to complete the process.
 
-> ![add identifiers](img/action-03-create-certs.svg){width="700"}
+> ![graphic showing selection of the push notifications](img/add-push-notifications.svg){width="600"}
 
-**Wait for this to complete before you build *LoopFollow*.**
+Repeat this step if you use LoopFollow_Second or LoopFollow_Third.
 
 #### Run `Build LoopFollow`
 
@@ -56,8 +54,7 @@ This requires you to [Sync](#sync-your-loopfollow-fork), [Add Identifiers](#run-
 
 **Once this completes, be sure to update from TestFlight to get the updated version of *LoopFollow* on your phone.**
 
-If you follow two loopers, repeat those steps for LoopFollow_Second. For three loopers, repeat for LoopFollow_Third.
-
+Repeat the build and install from TestFlight steps if you use LoopFollow_Second or LoopFollow_Third.
 
 ### Build LoopFollow Script for Mac-Xcode
 
