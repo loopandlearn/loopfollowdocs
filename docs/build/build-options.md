@@ -33,7 +33,7 @@ Click to open the [Certificates, Identifiers & Profiles: Identifiers List](https
 
 1. Locate the LoopFollow Identifer and click on it to open the `Edit your App ID Configuration` screen
     * The name in the **`NAME`** column may be different if you previously built with a Mac using Xcode, in that case it will start with XC
-2. Looking at the `App Services` column, scroll down to the `Push Notifications` row
+2. Looking at the `Capabilities` column, scroll down to the `Push Notifications` row
 3. If the check box is not checked, you must check it
 4. Scroll back to the top and hit Save if you modified that value or All Identifiers if you made no changes
 
