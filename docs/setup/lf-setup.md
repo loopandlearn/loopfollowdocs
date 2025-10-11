@@ -31,7 +31,7 @@ Tap on the Gear/Settings Icon (⚙️) in the tab bar to get to the Settings scr
 - - -
 
 !!! note "Setting up a second device"
-    With version 4.0 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [QR Code Setup](#qr-code-setup).
+    With version 4.0 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import from QR Code](#import-from-qr-code).
 
 - - -
 
@@ -134,13 +134,13 @@ Once you’ve configured your settings, your Main screen will look as beautiful 
 
 🚧 Documentation Under Construction 🚧
 
-#### QR code setup
+#### Import from QR Code
 
 When setting up LoopFollow for another caregiver that will use the same nightscout and remote control capabilities, you can scan a QR code from the other phone to get the settings for Nightscout URL, Token and all remote settings.
 
-If you already setup nightscout and want to share the remote commands capabilites, read this section [QR Code Remote Setup](#qr-code-remote-setup)
+If you already setup Nightscout and want to share the remote commands capabilities, read this section [Export Remote Settings with QR Code](#export-remote-settings-with-qr-code).
 
-When you enter Settings with an app that does not have any nightscout adress set, there will be a button in settings named Import Settings.
+With a device that does not have a Nightscout address set, there will be a button in Settings named Import Settings.
 
 ![Import settings](img/import-settings.png){width="300"}
 {align="center"}
@@ -149,15 +149,7 @@ Clicking that will take you to the remote screen where you can use the button Im
 
 Use the Camera to scan a QR Code from the other phone.
 
-This will populate the nightscout address, token and remote settings
-
-To show the QR Code, you can go into Remote settings and click the button Export Remote Settings as QR Code and the QR code will show on screen
-
-![Export settings](img/export-settings.png){width="300"}
-{align="center"}
-
-!!! warning "QR Code contain secret information"
-    Never share your QR code as a screenshot online or send it to someone that is not supposed to have access to remote capabilities for your looper. If in doubt revoke access to the key at [https://developer.apple.com/account/resources/authkeys/list](https://developer.apple.com/account/resources/authkeys/list)
+This will populate the Nightscout URL, token and remote settings.
 
 
 
@@ -199,23 +191,16 @@ See [Toolbar Tab Settings](lf-features.md#toolbar-tab-customization){: target="_
 
 🚧 Documentation Under Construction 🚧
 
-#### QR code remote setup
+#### Export Remote Settings with QR Code
 
-To get the remote settings from another phone, Go into Settings->Remote settings. Use the button Import Remote Settings from QR Code.
-
-![Import from QR Code](img/import-from-qr-code.PNG){width="300"}
-{align="center"}
-
-If the button does not show and there is a button called Export Remote Settings as QR code, you may have already setup remote commands. If you want to overwrite those settings select None at the top remote command selector
-
-Use the Camera to scan a QR Code from the other phone.
+To share your remote settings with another device, see the [Import from QR Code](#import-from-qr-code) section.
 
 To show the QR Code, go into Remote settings and click the button Export Remote Settings as QR Code and the QR code will show on screen
 
 ![Export settings](img/export-settings.png){width="300"}
 {align="center"}
 
-!!! warning "QR Code contain secret information"
+!!! important "QR Code Contains Secret Information"
     Never share your QR code as a screenshot online or send it to someone that is not supposed to have access to remote capabilities for your looper. If in doubt revoke access to the key at [https://developer.apple.com/account/resources/authkeys/list](https://developer.apple.com/account/resources/authkeys/list)
 
 ### Alarms
