@@ -10,6 +10,19 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
     If you use Browser Build, follow the one-time updates needed to transition from *LoopFollow* v3.2 to *LoopFollow* v4.0:
 
     * [Browser Build Update for LoopFollow v4.0](../build/build-options.md#browser-build-update-for-loopfollow-v40){: target="_blank" }
+
+!!! important "Breaking Change: Trio Remote Command Users"
+    Trio users must have matching code for LoopFollow and Trio.
+
+    * Trio 0.6 (or newer) requires LoopFollow 4.0 (or newer)
+    * Trio 0.5.1.28 (or older) requires LoopFollow 3.2.11 (or older)
+
+    See [Trio Remote Control](trio-remote-control.md){: target="_blank" } for more information.
+
+    For Browser Builders:
+
+    * [Browser Build Update for LoopFollow v4.0](../build/build-options.md#browser-build-update-for-loopfollow-v40){: target="_blank" }
+
 - - -
 
 ## *LoopFollow* Remote Options
@@ -28,7 +41,7 @@ The graphic below shows the Remote Settings screen for *LoopFollow*. You must fi
 
 ### Critical Configuration Information
 
-If you plan to use *LoopFollow* Remote Control with a looper using the *Loop* app version 3.x or the *Trio* app version 0.5 or newer, and you don't have your APNS recorded or configured, see the instructions in [*Apple* Push Notifications System (APNS)](#apple-push-notifications-system-apns).
+If you plan to use *LoopFollow* Remote Control with a looper using the *Loop* app version 3.x or the *Trio* app version 0.5 or newer, and you don't have your APNS key information recorded or configured, see the instructions in [*Apple* Push Notifications System (APNS)](#apple-push-notifications-system-apns).
 
 If your looper is using *Trio* 0.2.x, use this link for configuration:
 
@@ -216,18 +229,6 @@ The historical notes are in this section.
     With the release of *LoopFollow* 3.2, the remote control features accessible from LoopFollow match those available from the *LoopCaregiver* app.
 
     You must update to *LoopFollow* 3.2 or newer and configure remote settings in the *LoopFollow* app to use these features.
-
-!!! important "Breaking Change: Trio Remote Command Users"
-    Trio users must have matching code for LoopFollow and Trio.
-
-    * Trio 0.6 (or newer) requires LoopFollow 4.0 (or newer)
-    * Trio 0.5.1.28 (or older) requires LoopFollow 3.2.11 (or older)
-
-    See [Trio Remote Control](trio-remote-control.md){: target="_blank" } for more information.
-
-    For Browser Builders:
-
-    * [Browser Build Update for LoopFollow v4.0](../build/build-options.md#browser-build-update-for-loopfollow-v40){: target="_blank" }
 
 
 ### Changes for *LoopFollow* Remote Control of the *Loop* App
