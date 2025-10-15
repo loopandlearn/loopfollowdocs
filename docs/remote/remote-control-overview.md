@@ -32,7 +32,7 @@ If you plan to use *LoopFollow* Remote Control with a looper using the *Loop* ap
 
 If your looper is using *Trio* 0.2.x, use this link for configuration:
 
-* [*Nightscout* Remote Control](remote-control-nightscout.md)
+* [*Nightscout* Remote Control](remote-control-nightscout.md){: target="_blank" }
 
 - - -
 
@@ -54,7 +54,9 @@ To share your remote settings with another device, follow the directions in this
     
     If in doubt revoke access to the key at [https://developer.apple.com/account/resources/authkeys/list](https://developer.apple.com/account/resources/authkeys/list) and generate a new one.
 
-To show the QR Code, go into Remote settings and click the button Export Remote Settings as QR Code and the QR code will show on screen. This process works for both Loop and for Trio, with the generated QR Code specific to the app that is being followed.
+To show the QR Code, go into Remote settings on the phone that is already configured for remote control. Click the button Export Remote Settings as QR Code and the QR code will show on screen.
+
+> This process works for both Loop Remote Control and for Trio Remote Control, with the generated QR Code specific to the app that is being followed.
 
 ![Export settings](img/export-settings.png){width="600"}
 {align="center"}
@@ -66,7 +68,7 @@ To show the QR Code, go into Remote settings and click the button Export Remote 
     
     Do **not** use this option if the person using the second device only needs to monitor with LoopFollow.
 
-    In that case, just use the Nightscout URL with token as described in [Add Nightscout](../setup/lf-setup.md#add-nightscout).
+    In that case, just use the Nightscout URL with token as described in [Add Nightscout](../setup/lf-setup.md#add-nightscout){: target="_blank" }.
 
 You can scan a QR code from a LoopFollow device that is already configured to get the settings for Nightscout URL, Token and all remote settings. This process works for both Loop and for Trio, with the QR Code specific to the app that is being followed.
 
@@ -85,7 +87,7 @@ Clicking that will take you to the remote screen where you can use the button Im
 
 Use the Camera to scan a QR Code from the other phone.
 
-This will populate the Nightscout URL, token and remote settings.
+This will import the Nightscout URL, token and remote settings.
 
 ![Import remote settings](img/import-from-qr-code.png){width="300"}
 {align="center"}
@@ -101,7 +103,7 @@ Clicking that will take you to the remote screen where you can use the button Im
 
 Use the Camera to scan a QR Code from the other phone.
 
-This will populate the Nightscout URL, token and remote settings.
+This will import the Nightscout URL, token and remote settings.
 
 - - -
 

@@ -174,8 +174,8 @@ Detailed instructions for configuring a phone for remote control are found on th
 
 If you are configuring a second device and already have one device configured for remote control, be sure to review:
 
-* [Export Remote Settings with QR Code](remote-control-overview.md#export-remote-settings-with-qr-code){: target="_blank" }
-* [Import from QR Code](remote-control-overview.md#import-from-qr-code){: target="_blank" }
+* [Export Remote Settings with QR Code](../remote/remote-control-overview.md#export-remote-settings-with-qr-code){: target="_blank" }
+* [Import from QR Code](../remote/remote-control-overview.md#import-from-qr-code){: target="_blank" }
 
 ### Alarms
 
