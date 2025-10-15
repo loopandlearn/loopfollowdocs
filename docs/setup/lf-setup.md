@@ -30,11 +30,6 @@ Tap on the Gear/Settings Icon (⚙️) in the tab bar to get to the Settings scr
 
 - - -
 
-!!! note "Setting up a second device"
-    With version 4.0 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import from QR Code](#import-from-qr-code).
-
-- - -
-
 ### Settings Screen
 
 The full lists of Settings is shown in the composite graphic below.
@@ -58,15 +53,20 @@ You provide *LoopFollow* with information about the person you are following. At
 
 The graphic below shows the display when you tap on the *Nightscout* Settings row. For more information about tokens, keep reading the details below the graphic.
 
-To simplify setup, you can copy your *Nightscout* URL (including the token) from the [Admin Tools in *Nightscout*](https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles). When pasted into *LoopFollow* URL row, the app will automatically extract and fill in both the URL and token.
+!!! tip "Setting up a Second Device for Remote Control"
+    With version 4.0 and newer, you can set up a second device with all the Nightscout and Remote Control Settings by scanning a QR code from a LoopFollow device that is already configured. 
+    
+    * See this section [Import from QR Code](../remote/remote-control-overview.md#import-from-qr-code){: target="_blank" }.
+
+    Do **not** use that option if the person using the second device only needs to monitor with LoopFollow.
+
+When adding the Nightscout information to monitor, you can copy your *Nightscout* URL (including the token) from the [Admin Tools in *Nightscout*](https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles). When pasted into *LoopFollow* URL row, the app will automatically extract and fill in both the URL and token.
 
 ![enter nightscout credentials](img/lf-data-source-ns.svg){width="300"}
 {align="center"}
 
 !!! tip "*Nightscout* Access"
     It is possible to have your *Nightscout* site readable by the world, in which case you do not need to add a token. If you choose to do that, just ignore references to entering the token. The status will show up as `OK (Read)`.
-
-    The only exception is if you choose to use *LoopFollow* [*Nightscout* Remote Control](../remote/remote-control-nightscout.md){: target="_blank" }. In that case, you must have a token with careportal access.
 
     For more information about tokens with *Nightscout*, refer to [Admin Tools in *Nightscout*](https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles).
 
@@ -83,9 +83,9 @@ When you enter your credentials, *LoopFollow* tries to reach the site and then p
 | *LoopFollow* Remote Type | Minimum Token Access| *LoopFollow* Status |
 |:--|:--|:--|
 | **None** | Read | OK (Read) |
-| ***Nightscout*** | Read & Careportal | OK (Read & Write) |
 | ***Loop* Remote Control**| Read | OK (Read) |
 | ***Trio* Remote Control**| Read | OK (Read) |
+| ***Nightscout***<br>Trio 0.2 or older | Read & Careportal | OK (Read & Write) |
 
 #### Add *Dexcom*
 
@@ -134,25 +134,6 @@ Once you’ve configured your settings, your Main screen will look as beautiful 
 
 🚧 Documentation Under Construction 🚧
 
-#### Import from QR Code
-
-When setting up LoopFollow for another caregiver that will use the same nightscout and remote control capabilities, you can scan a QR code from the other phone to get the settings for Nightscout URL, Token and all remote settings.
-
-If you already setup Nightscout and want to share the remote commands capabilities, read this section [Export Remote Settings with QR Code](#export-remote-settings-with-qr-code).
-
-With a device that does not have a Nightscout address set, there will be a button in Settings named Import Settings.
-
-![Import settings](img/import-settings.png){width="300"}
-{align="center"}
-
-Clicking that will take you to the remote screen where you can use the button Import Remote Settings from QR Code.
-
-Use the Camera to scan a QR Code from the other phone.
-
-This will populate the Nightscout URL, token and remote settings.
-
-
-
 ### Background Refresh Settings
 
 🚧 Documentation Under Construction 🚧
@@ -189,19 +170,12 @@ See [Toolbar Tab Settings](lf-features.md#toolbar-tab-customization){: target="_
 
 ### Remote Settings
 
-🚧 Documentation Under Construction 🚧
+Detailed instructions for configuring a phone for remote control are found on the [Remote Control Overview](../remote/remote-control-overview.md){: target="_blank" } page.
 
-#### Export Remote Settings with QR Code
+If you are configuring a second device and already have one device configured for remote control, be sure to review:
 
-To share your remote settings with another device, see the [Import from QR Code](#import-from-qr-code) section.
-
-To show the QR Code, go into Remote settings and click the button Export Remote Settings as QR Code and the QR code will show on screen
-
-![Export settings](img/export-settings.png){width="300"}
-{align="center"}
-
-!!! important "QR Code Contains Secret Information"
-    Never share your QR code as a screenshot online or send it to someone that is not supposed to have access to remote capabilities for your looper. If in doubt revoke access to the key at [https://developer.apple.com/account/resources/authkeys/list](https://developer.apple.com/account/resources/authkeys/list)
+* [Export Remote Settings with QR Code](../remote/remote-control-overview.md#export-remote-settings-with-qr-code){: target="_blank" }
+* [Import from QR Code](../remote/remote-control-overview.md#import-from-qr-code){: target="_blank" }
 
 ### Alarms
 
