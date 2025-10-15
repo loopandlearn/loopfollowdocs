@@ -29,6 +29,8 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
 
 > With the release of *LoopFollow* 3.2, remote options for the *Loop* app are updated.
 
+> With the release of *LoopFollow* 4.0, you can [share remote control configuration](#export-remote-settings-with-qr-code) using a QR code.
+
 The graphic below shows the Remote Settings screen for *LoopFollow*. You must first enter a *Nightscout* URL before any remote options are offered and then only the option suitable for that *Nightscout* site can be selected.
 
 * When following someone running Loop, the options are None or [Loop Remote Control](remote-control-loop.md){: target="_blank" }
@@ -81,7 +83,11 @@ To show the QR Code, go into Remote settings on the phone that is already config
     
     Do **not** use this option if the person using the second device only needs to monitor with LoopFollow.
 
-    In that case, just use the Nightscout URL with token as described in [Add Nightscout](../setup/lf-setup.md#add-nightscout){: target="_blank" }.
+**If a follower only needs to monitor and get alarms**
+
+* Do **not** use the QR code
+* Enter the Nightscout URL with token as described in [Add Nightscout](../setup/lf-setup.md#add-nightscout){: target="_blank" }
+
 
 You can scan a QR code from a LoopFollow device that is already configured to get the settings for Nightscout URL, Token and all remote settings. This process works for both Loop and for Trio, with the QR Code specific to the app that is being followed.
 
