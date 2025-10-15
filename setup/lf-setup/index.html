@@ -725,11 +725,6 @@
 <p>If the far right icons is the … More icon, first tap on that and then choose Settings to get to the Settings screen.</p>
 </div>
 <hr/>
-<div class="admonition note">
-<p class="admonition-title">Setting up a second device</p>
-<p>With version 4.0 and newer, You can set up a second device by scanning a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code from another <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> user. See this section <a href="#import-from-qr-code">Import from <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code</a>.</p>
-</div>
-<hr/>
 <h3 id="settings-screen">Settings Screen<a class="headerlink" href="#settings-screen" title="Link to this section for reference">¶</a></h3>
 <p>The full lists of Settings is shown in the composite graphic below.</p>
 <ul>
@@ -749,12 +744,19 @@
 </ul>
 <h4 id="add-nightscout">Add <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em><a class="headerlink" href="#add-nightscout" title="Link to this section for reference">¶</a></h4>
 <p>The graphic below shows the display when you tap on the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Settings row. For more information about tokens, keep reading the details below the graphic.</p>
-<p>To simplify setup, you can copy your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> (including the token) from the <a href="https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles">Admin Tools in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em></a>. When pasted into <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> row, the app will automatically extract and fill in both the <abbr title="website address (Uniform Resource Locator)">URL</abbr> and token.</p>
+<div class="admonition tip">
+<p class="admonition-title">Setting up a Second Device for Remote Control</p>
+<p>With version 4.0 and newer, you can set up a second device with all the <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> and Remote Control Settings by scanning a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code from a <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> device that is already configured. </p>
+<ul>
+<li>See this section <a href="../../remote/remote-control-overview/#import-from-qr-code" target="_blank">Import from <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code</a>.</li>
+</ul>
+<p>Do <strong>not</strong> use that option if the person using the second device only needs to monitor with <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr>.</p>
+</div>
+<p>When adding the <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> information to monitor, you can copy your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> (including the token) from the <a href="https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles">Admin Tools in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em></a>. When pasted into <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> row, the app will automatically extract and fill in both the <abbr title="website address (Uniform Resource Locator)">URL</abbr> and token.</p>
 <p align="center"><img alt="enter nightscout credentials" src="../img/lf-data-source-ns.svg" width="300"/></p>
 <div class="admonition tip">
 <p class="admonition-title"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Access</p>
 <p>It is possible to have your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site readable by the world, in which case you do not need to add a token. If you choose to do that, just ignore references to entering the token. The status will show up as <code>OK (Read)</code>.</p>
-<p>The only exception is if you choose to use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <a href="../../remote/remote-control-nightscout/" target="_blank"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Remote Control</a>. In that case, you must have a token with careportal access.</p>
 <p>For more information about tokens with <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, refer to <a href="https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles">Admin Tools in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em></a>.</p>
 </div>
 <p>The type of token depends on the type of remote control desired. 
@@ -784,11 +786,6 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <td style="text-align: left;">OK (Read)</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em></strong></td>
-<td style="text-align: left;">Read &amp; <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr></td>
-<td style="text-align: left;">OK (Read &amp; Write)</td>
-</tr>
-<tr>
 <td style="text-align: left;"><strong><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control</strong></td>
 <td style="text-align: left;">Read</td>
 <td style="text-align: left;">OK (Read)</td>
@@ -797,6 +794,11 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <td style="text-align: left;"><strong><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control</strong></td>
 <td style="text-align: left;">Read</td>
 <td style="text-align: left;">OK (Read)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em></strong><br/><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> 0.2 or older</td>
+<td style="text-align: left;">Read &amp; <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr></td>
+<td style="text-align: left;">OK (Read &amp; Write)</td>
 </tr>
 </tbody>
 </table>
@@ -835,14 +837,6 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <hr/>
 <h2 id="app-settings">App Settings<a class="headerlink" href="#app-settings" title="Link to this section for reference">¶</a></h2>
 <p>🚧 Documentation Under Construction 🚧</p>
-<h4 id="import-from-qr-code">Import from <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code<a class="headerlink" href="#import-from-qr-code" title="Link to this section for reference">¶</a></h4>
-<p>When setting up <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> for another caregiver that will use the same nightscout and remote control capabilities, you can scan a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code from the other phone to get the settings for <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr>, Token and all remote settings.</p>
-<p>If you already setup <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> and want to share the remote commands capabilities, read this section <a href="#export-remote-settings-with-qr-code">Export Remote Settings with <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code</a>.</p>
-<p>With a device that does not have a <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> address set, there will be a button in Settings named Import Settings.</p>
-<p align="center"><img alt="Import settings" src="../img/import-settings.png" width="300"/></p>
-<p>Clicking that will take you to the remote screen where you can use the button Import Remote Settings from <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code.</p>
-<p>Use the Camera to scan a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code from the other phone.</p>
-<p>This will populate the <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr>, token and remote settings.</p>
 <h3 id="background-refresh-settings">Background Refresh Settings<a class="headerlink" href="#background-refresh-settings" title="Link to this section for reference">¶</a></h3>
 <p>🚧 Documentation Under Construction 🚧</p>
 <h3 id="general-settings">General Settings<a class="headerlink" href="#general-settings" title="Link to this section for reference">¶</a></h3>
@@ -868,15 +862,12 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <p><strong>Remember: the <code>Rec. Bolus</code> values is from the last AID app update to <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></strong></p>
 </div>
 <h3 id="remote-settings">Remote Settings<a class="headerlink" href="#remote-settings" title="Link to this section for reference">¶</a></h3>
-<p>🚧 Documentation Under Construction 🚧</p>
-<h4 id="export-remote-settings-with-qr-code">Export Remote Settings with <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code<a class="headerlink" href="#export-remote-settings-with-qr-code" title="Link to this section for reference">¶</a></h4>
-<p>To share your remote settings with another device, see the <a href="#import-from-qr-code">Import from <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code</a> section.</p>
-<p>To show the <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code, go into Remote settings and click the button Export Remote Settings as <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code and the <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code will show on screen</p>
-<p align="center"><img alt="Export settings" src="../img/export-settings.png" width="300"/></p>
-<div class="admonition important">
-<p class="admonition-title"><abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code Contains Secret Information</p>
-<p>Never share your <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code as a screenshot online or send it to someone that is not supposed to have access to remote capabilities for your looper. If in doubt revoke access to the key at <a href="https://developer.apple.com/account/resources/authkeys/list">https://developer.apple.com/account/resources/authkeys/list</a></p>
-</div>
+<p>Detailed instructions for configuring a phone for remote control are found on the <a href="../../remote/remote-control-overview/" target="_blank">Remote Control Overview</a> page.</p>
+<p>If you are configuring a second device and already have one device configured for remote control, be sure to review:</p>
+<ul>
+<li><a href="../../remote/remote-control-overview/#export-remote-settings-with-qr-code" target="_blank">Export Remote Settings with <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code</a></li>
+<li><a href="../../remote/remote-control-overview/#import-from-qr-code" target="_blank">Import from <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code</a></li>
+</ul>
 <h3 id="alarms">Alarms<a class="headerlink" href="#alarms" title="Link to this section for reference">¶</a></h3>
 <p>🚧 Documentation Under Construction 🚧</p>
 <h3 id="alarm-settings">Alarm Settings<a class="headerlink" href="#alarm-settings" title="Link to this section for reference">¶</a></h3>
