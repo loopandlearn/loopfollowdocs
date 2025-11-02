@@ -3,7 +3,7 @@
 *LoopFollow* can be built using either the Browser Build or the Mac-Xcode Build method.  A paid Apple Developer account is required to use the Browser Build method.  Regardless of how you build, you can customize your *LoopFollow* app’s name.
 
 * Browser Build: 
-    * If you have never built, see [LoopDocs: Browser Build for Other Apps](https://loopkit.github.io/loopdocs/browser/other-apps/)
+    * If you have never built, see [LoopFollow Browser Build](lf-browser-build.md)
     * If you are a repeat builder, then you need a one-time update [Browser Build Update for *LoopFollow* v4.0](#browser-build-update-for-loopfollow-v40)
 * Mac-Xcode: [Build *LoopFollow* Script for Mac-Xcode](#build-loopfollow-script-for-mac-xcode)
 

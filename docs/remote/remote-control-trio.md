@@ -1,5 +1,3 @@
-🚧 Documentation Under Construction 🚧
-
 ## Remote Control Overview
 
 Trio can accept remote commands from *Nightscout* or from *LoopFollow*. There are a variety of options, but the final control of whether remote commands will be enacted rests with the *Trio* user. They can enable or disable remote control.
@@ -81,6 +79,8 @@ The sequence is *LoopFollow* to *Apple Push Notifications* to *Trio*, which uplo
         * discarded, ignored by *Apple* or the phone
         * significantly slowed down due to network connectivity
     1. The *Trio* app processes the remote command and either **enacts** it or **rejects** it
+        * With *Trio* v0.6 or newer and *LoopFollow* v4.0 or newer, the *Trio* app returns a message to the originating *LoopFollow* phone via APNS indicating the result of the remote command
+        * This response can be much faster, and more definitive, than waiting for the *Nightscout* site and then the *LoopFollow* plot to update
     1. The *Trio* app uploads to *Nightscout* with result shown on *LoopFollow* main screen in a few minutes
         * If the remote request was **enacted**, the result is visible on the *LoopFollow* main plot
         * If the remote request was **rejected**, a gray dot is visible on the *LoopFollow* main plot - touch it to see the reason why the request was rejected

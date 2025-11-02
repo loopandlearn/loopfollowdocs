@@ -1,17 +1,3 @@
-
-🚧 Documentation Under Construction 🚧
-
-<!--todo-->
-<!--Notes: be sure to add this info
-
--->
-
-While this website is under construction, you can find missing information in three places:
-
-* [*Loop and Learn* website: *LoopFollow* page](https://www.loopandlearn.org/loop-follow/)
-* [LoopDocs website: Build Other Apps page](https://loopkit.github.io/loopdocs/browser/other-apps/)
-* [Trio Docs: Loop Follow Remote Control Configuration page](https://triodocs.org/configuration/settings/features/remote-control/)
-
 ## *LoopFollow* 
 
 *LoopFollow* is an open-source DIY (do-it-yourself) app that displays information for a person with diabetes in an easy-to-use interface. 

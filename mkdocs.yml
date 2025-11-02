@@ -195,6 +195,7 @@ nav:
   - 'Nightscout Remote Control': 'remote/remote-control-nightscout.md'
 - Build:
   - 'LoopFollow Build': 'build/build-options.md'
+  - 'LoopFollow Browser Build': 'build/lf-browser-build.md'
 - FAQs:
   - 'LoopFollow FAQs': 'faqs/lf-faqs.md'
   - 'Glossary': faqs/glossary.md
