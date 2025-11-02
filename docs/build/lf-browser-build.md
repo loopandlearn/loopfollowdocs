@@ -53,7 +53,7 @@ You start by opening a browser using the URL from the table below. Most people o
 | <span translate="no">LoopFollow_Second</span> | [https://github.com/loopandlearn/LoopFollow_Second](https://github.com/loopandlearn/LoopFollow_Second) |
 | <span translate="no">LoopFollow_Third</span> | [https://github.com/loopandlearn/LoopFollow_Third](https://github.com/loopandlearn/LoopFollow_Third) | 
 
-??? tips "LoopFollow Builders: Display Name (Click to Open/Close)"
+??? tips "LoopFollow Display Name Customization (Click to Open/Close)"
     * Would you like the name of your LoopFollow app to be personalized?
     * Do you have more than one Looper, so you are using LoopFollow_Second or LoopFollow_Third?
     * The 3 LoopFollow repositories enable you to customize the name shown on your phone
@@ -61,7 +61,7 @@ You start by opening a browser using the URL from the table below. Most people o
     After you `fork` your *LoopFollow* repository, find the file named: `LoopFollowDisplayNameConfig.xcconfig`
 
     * Open it in your browser
-    * Follow the directions to change `display_name`
+    * Follow the directions for [Display Name Customization for `LoopFollow`](#display-name-customization-for-loopfollow){: target="_blank" }
         * "Save the file" means commit the change to your `main` branch
         * It is recommended that you use LF_name, where name is the customized name - that way you can find it in an alphabetic list of apps
 

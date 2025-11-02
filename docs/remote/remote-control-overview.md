@@ -29,7 +29,7 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
 
 > With the release of *LoopFollow* 4.0, you can [share remote control configuration](#export-remote-settings-with-qr-code) using a QR code.
 
-* Keeping checking back on this page, the remote capability is under development and there may be new features for you to read about.
+* Keep checking back on this page, the remote capability is under development and there may be new features for you to read about.
 
 The graphic below shows the Remote Settings screen for *LoopFollow*. You must first enter a *Nightscout* URL before any remote options are offered and then only the option suitable for that *Nightscout* site can be selected.
 
