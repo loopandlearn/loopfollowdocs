@@ -1,5 +1,3 @@
-🚧 Documentation Under Construction 🚧
-
 ## Remote Control with Nightscout
 
 You must configure *LoopFollow* and the *Nightscout* URL to use remote commands. 

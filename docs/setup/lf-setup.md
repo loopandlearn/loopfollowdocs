@@ -1,10 +1,16 @@
-
 🚧 Documentation Under Construction 🚧
 
 <!--todo-->
 <!--Notes: be sure to add this info
 
 -->
+
+While this website is under construction, you can find missing information in three places:
+
+* [*Loop and Learn* website: *LoopFollow* page](https://www.loopandlearn.org/loop-follow/)
+* [LoopDocs website: Build Other Apps page](https://loopkit.github.io/loopdocs/browser/other-apps/)
+* [Trio Docs: Loop Follow Remote Control Configuration page](https://triodocs.org/configuration/settings/features/remote-control/)
+
 
 ## Initial Configuration
 
@@ -21,12 +27,12 @@ You will then be presented with a blank home screen as shown below.
 
 ### Navigate to Settings
 
-Tap on the Gear/Settings Icon (⚙️) in the tab bar to get to the Settings screen.
+Tap on the &hellip;&nbsp;More icon, at bottom right, and then choose Settings to get to the Settings screen.
 
 !!! note "Tab Customization"
     With version 3.1 and newer, you can modify what icons show up in the tab bar. 
     
-    If the far right icons is the &hellip;&nbsp;More icon, first tap on that and then choose Settings to get to the Settings screen.
+    If you prefer the Gear/Settings Icon (⚙️) in the tab bar, follow the directions in [Toolbar Tab Customization](lf-features.md#toolbar-tab-customization){: target="_blank" }.
 
 - - -
 
@@ -120,7 +126,7 @@ The home screen provides a dashboard of important information.
 * Supports Glucose display when Dexcom is available but Nightscout is not
 * Supports Information Display from *Loop* and *Trio* when Nightscout URL is provided
     * *Loop* & *Trio*: common features like status, basal, bolus, carbs and eventual glucose forecast
-    * *Loop*: *Loop* specific features like Profile Name, remote control (in development)
+    * *Loop*: *Loop* specific features like Profile Name, remote control
     * *Trio*: *Trio* specific features like Autosens, TDD, remote control (with *Trio* 0.5.x and newer)
 
 Once you’ve configured your settings, your Main screen will look as beautiful as the example below!
@@ -208,7 +214,7 @@ For more detailed instructions, see [Real-Time Watch Updates using Contact](../)
 
 🚧 Documentation Under Construction 🚧
 
-Allows you to choose what information to download from Nightscout and to*  modify your graph
+Allows you to choose what information to download from Nightscout and to modify your graph
 
 * Download Treatments
 * Download Prediction

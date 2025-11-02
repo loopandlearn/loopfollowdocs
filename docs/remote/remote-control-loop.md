@@ -1,5 +1,3 @@
-🚧 Documentation Under Construction 🚧
-
 ## Remote Control of the *Loop* App
 
 This option is available for remote control of a *Loop* phone using *LoopFollow* 3.2 and newer.
