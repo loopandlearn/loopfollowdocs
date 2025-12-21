@@ -20,12 +20,14 @@ After you build *LoopFollow* the first time, you are asked a few questions (your
 * **Bluetooth Access**: if you want to use an expired Dexcom sensor or a spare RileyLink device to keep *LoopFollow* running in the background while your phone is locked, choose **Allow**
 * **Notifications**: if you want *LoopFollow* to notify you for any of your alarms or if *LoopFollow* stops working, choose **Allow**
 
-You will then be presented with a blank home screen as shown below.
+You will then be presented with a home screen as shown below.
 
-> ![initial screen for LoopFollow](img/initial-screen-no-credentials.png){width="300"}
+![initial screen for LoopFollow](img/initial-screen-no-credentials.png){width="300"}
 {align="center"}
 
-### Navigate to Settings
+### Setup your data source
+
+Tap on the "Setup Nightscout" button or "Setup Dexcom Share" button to enter your credentials for your preferred service.
 
 Tap on the &hellip;&nbsp;More icon, at bottom right, and then choose Settings to get to the Settings screen.
 
@@ -59,16 +61,16 @@ You provide *LoopFollow* with information about the person you are following. At
 
 The graphic below shows the display when you tap on the *Nightscout* Settings row. For more information about tokens, keep reading the details below the graphic.
 
-!!! tip "Setting up a Second Device for Remote Control"
-    With version 4.0 and newer, you can set up a second device with all the Nightscout and Remote Control Settings by scanning a QR code from a LoopFollow device that is already configured. 
-    
-    * See this section [Import from QR Code](../remote/remote-control-overview.md#import-from-qr-code){: target="_blank" }.
-
-    Do **not** use that option if the person using the second device only needs to monitor with LoopFollow.
 
 When adding the Nightscout information to monitor, you can copy your *Nightscout* URL (including the token) from the [Admin Tools in *Nightscout*](https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles). When pasted into *LoopFollow* URL row, the app will automatically extract and fill in both the URL and token.
 
-![enter nightscout credentials](img/lf-data-source-ns.svg){width="300"}
+!!! note "Setting up a second device"
+    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export Settings](#import-export-settings).
+
+- - -
+
+
+![enter nightscout credentials](img/lf-data-source-ns.png){width="300"}
 {align="center"}
 
 !!! tip "*Nightscout* Access"
@@ -99,7 +101,12 @@ The graphic below shows the display when you tap on the *Dexcom* Settings row.
 
 > The *Dexcom* Share credentials are optional, but can be useful when the *Nightscout* URL is unavailable.
 
-![enter dexcom credentials](img/lf-data-source-dexcom.svg){width="300"}
+!!! note "Setting up a second device"
+    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export Settings](#import-export-settings).
+
+- - -
+
+![enter dexcom credentials](img/lf-data-source-dexcom.png){width="300"}
 {align="center"}
 
 - - -
@@ -139,6 +146,47 @@ Once you’ve configured your settings, your Main screen will look as beautiful 
 ## App Settings
 
 🚧 Documentation Under Construction 🚧
+
+#### Import Export settings
+
+##### Import settings
+
+When setting up LoopFollow for another caregiver that will use the same nightscout and remote control capabilities, or you want to share alarms settings, you can scan a QR code from the other phone to get the settings for:
+
+  * Nightscout URL and token
+  * All remote settings
+  * Alarms 
+
+![Import settings](img/import-settings.png){width="300"}
+{align="center"}
+
+On the phone that will recive the settings, Choose the option:
+"Scan QR Code to Import Settings"
+
+Use the Camera to scan a QR Code from the other phone.
+
+##### Exporting settings
+
+!!! important "QR Code Contains Secret Information"
+    Never share your QR code as a screenshot online or send it to someone that is not supposed to have access to remote capabilities for your looper. If in doubt revoke access to the key at [https://developer.apple.com/account/resources/authkeys/list](https://developer.apple.com/account/resources/authkeys/list)
+
+To export settings, select one of the options for
+
+*  Export Nightscout Settings
+*  Export Remote Settings
+*  Export Alarm Settings
+  
+Export Nightscout Settings and Export Remote Settings will show a QR code directly that you can scan with the receiving phone.
+Export Alarm Settings will let you select up to 5 alarms at a time to export. If you re-enter the export screen after a successful export, it will mark the exported alarms so that you can export more alarms if needed
+
+![Alarm Export](img/alarms-export-first.png){width="300"}
+![Alarm Export](img/alarms-export-second.png){width="300"}
+{align="right"}
+
+
+
+
+
 
 ### Background Refresh Settings
 
