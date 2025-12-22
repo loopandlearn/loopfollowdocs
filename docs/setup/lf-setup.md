@@ -147,47 +147,6 @@ Once you’ve configured your settings, your Main screen will look as beautiful 
 
 🚧 Documentation Under Construction 🚧
 
-#### Import Export settings
-
-##### Import settings
-
-When setting up LoopFollow for another caregiver that will use the same nightscout and remote control capabilities, or you want to share alarms settings, you can scan a QR code from the other phone to get the settings for:
-
-  * Nightscout URL and token
-  * All remote settings
-  * Alarms 
-
-![Import settings](img/import-settings.png){width="300"}
-{align="center"}
-
-On the phone that will recive the settings, Choose the option:
-"Scan QR Code to Import Settings"
-
-Use the Camera to scan a QR Code from the other phone.
-
-##### Exporting settings
-
-!!! important "QR Code Contains Secret Information"
-    Never share your QR code as a screenshot online or send it to someone that is not supposed to have access to remote capabilities for your looper. If in doubt revoke access to the key at [https://developer.apple.com/account/resources/authkeys/list](https://developer.apple.com/account/resources/authkeys/list)
-
-To export settings, select one of the options for
-
-*  Export Nightscout Settings
-*  Export Remote Settings
-*  Export Alarm Settings
-  
-Export Nightscout Settings and Export Remote Settings will show a QR code directly that you can scan with the receiving phone.
-Export Alarm Settings will let you select up to 5 alarms at a time to export. If you re-enter the export screen after a successful export, it will mark the exported alarms so that you can export more alarms if needed
-
-![Alarm Export](img/alarms-export-first.png){width="300"}
-![Alarm Export](img/alarms-export-second.png){width="300"}
-{align="right"}
-
-
-
-
-
-
 ### Background Refresh Settings
 
 🚧 Documentation Under Construction 🚧
@@ -205,6 +164,58 @@ Export Alarm Settings will let you select up to 5 alarms at a time to export. If
 The user can modify which icons are displayed in the task bar at the bottom of the screen.
 
 See [Toolbar Tab Settings](lf-features.md#toolbar-tab-customization){: target="_blank" } for more information.
+
+### Import/Export Settings
+
+When setting up LoopFollow for another caregiver that will use some or all of the same configuration settings, you can export or scan a QR code to transfer settings between phones.
+
+* Nightscout URL and token
+* Dexcom Share Settings
+* Remote Configuration Settings
+* Alarms 
+
+
+!!! important "QR Codes Contain Secret Information"
+    Never share a QR code as a screenshot online or send it to someone that is not supposed to have access to your looper's information.
+    
+    In particular, only share a remote configuration QR code with a caregiver authorized and trained to send remote control commands to the looper's phone!
+    
+    If in doubt, you can revoke access to the APNS key at [https://developer.apple.com/account/resources/authkeys/list](https://developer.apple.com/account/resources/authkeys/list)
+
+
+#### Export Settings
+
+To export settings, select one of the options for
+
+*  Export Nightscout Settings
+*  Export Dexcom Share Settings
+*  Export Remote Settings
+*  Export Alarm Settings
+
+![Import settings](img/import-settings.png){width="300"}
+{align="center"}
+
+Export Nightscout Settings, Export Dexcom Share Settings and Export Remote Settings will show a QR code directly that you can scan with the receiving phone.
+
+Export Alarm Settings will let you select up to 5 alarms at a time to export. If you re-enter the export screen after a successful export, it will mark the exported alarms so that you can export more alarms if needed
+
+![Alarm Export](img/alarms-export-first.png){width="300"}
+![Alarm Export](img/alarms-export-second.png){width="300"}
+{align="right"}
+
+#### Import Settings
+
+On the phone that will receive the settings from the QR code, choose the option:
+"Scan QR Code to Import Settings"
+
+The first time you import settings with LoopFollow, you will be required to give permission to use the camera. Once permission is granted, hold the importing phone to view the QR code presented by the exporting phone. 
+
+When the QR code is accepted, you will see a screen indicating what type of settings is being imported. You will be warned that if you accept the import, your current settings will be overwritten.
+
+> Note the QR code for alarms may be slow to import. Just move the phone closer and further away until the code is accepted.
+
+![Import confirmation](img/lf-import-confirm.svg){width="600"}
+{align=center}
 
 ### Information Display Settings
 
