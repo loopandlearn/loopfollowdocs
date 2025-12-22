@@ -29,6 +29,8 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
 
 > With the release of *LoopFollow* 4.0, you can [share remote control configuration](#export-remote-settings-with-qr-code) using a QR code.
 
+> With the release of *LoopFollow* 4.3, [multiple QR codes are provided which are separated by function](../setup/lf-setup.md#importexport-settings){: target="_blank" } so you can share Nightscout URL and Alarm Settings without sharing Remote Control Configurations.
+
 * Keep checking back on this page, the remote capability is under development and there may be new features for you to read about.
 
 The graphic below shows the Remote Settings screen for *LoopFollow*. You must first enter a *Nightscout* URL before any remote options are offered and then only the option suitable for that *Nightscout* site can be selected.
@@ -69,7 +71,7 @@ To share your remote settings with another device, follow the directions in this
     
     If in doubt revoke access to the key at [https://developer.apple.com/account/resources/authkeys/list](https://developer.apple.com/account/resources/authkeys/list) and generate a new one.
 
-To show the QR Code, go into Remote settings on the phone that is already configured for remote control. Click the button Export Remote Settings as QR Code and the QR code will show on screen.
+To show the QR Code, go into Remote settings on the phone that is already configured for remote control. Click the button Import/Export Settings and then choose Export Remote Settings. (The graphic below is out of date). You can access this same function by going to Settings->Import/Export Settings directly.
 
 > This process works for both Loop Remote Control and for Trio Remote Control, with the generated QR Code specific to the app that is being followed.
 
@@ -79,50 +81,20 @@ To show the QR Code, go into Remote settings on the phone that is already config
 ### Import from QR Code
 
 !!! tip "Setting up a Second Device for Remote Control"
-    With version 4.0 and newer, you can set up a second device with all the Nightscout and Remote Control Settings by scanning a QR code from a LoopFollow device that is already configured. 
+    With version 4.3 and newer, you can set up a second device using a selection of QR codes from a LoopFollow phone that is already configured.
     
-    Do **not** use this option if the person using the second device only needs to monitor with LoopFollow.
+    You can share Nightscout URL, Dexcom Share and Alarm Settings if someone only needs to follow the looper.
+    
+    You can share Remote Control Configurations if someone needs to send remote commands.
 
 **If a follower only needs to monitor and get alarms**
 
-* Do **not** use the QR code
-* Enter the Nightscout URL with token as described in [Add Nightscout](../setup/lf-setup.md#add-nightscout){: target="_blank" }
+* Do **not** use the QR code for Remote Control Settings
+* Limit the sharing to the other QR codes for Nightscout URL, Dexcom Share and Alarm Settings
 
+This process works for both Loop and for Trio.
 
-You can scan a QR code from a LoopFollow device that is already configured to get the settings for Nightscout URL, Token and all remote settings. This process works for both Loop and for Trio, with the QR Code specific to the app that is being followed.
-
-> **Only do this for another caregiver who needs the same Nightscout and remote control capabilities.**
-
-There are different directions depending on whether the target phone already has the Nightscout URL entered or not:
-
-* [Nightscout URL Configured](#nightscout-url-configured)
-* [Nightscout URL Not Configured](#nightscout-url-not-configured)
-
-#### Nightscout URL Configured
-
-With a device that already has the Nightscout address set, go to the Settings: Remote Control screen. you must select "None" to reveal the "Import Remote Settings from QR Code" button.
-
-Clicking that will take you to the remote screen where you can use the button Import Remote Settings from QR Code.
-
-Use the Camera to scan a QR Code from the other phone.
-
-This will import the Nightscout URL, token and remote settings.
-
-![Import remote settings](img/import-from-qr-code.png){width="300"}
-{align="center"}
-
-#### Nightscout URL Not Configured
-
-With a device that does not have a Nightscout address set, there will be a button in Settings named Import Settings.
-
-![Import settings](img/import-settings.png){width="600"}
-{align="center"}
-
-Clicking that will take you to the remote screen where you can use the button Import Remote Settings from QR Code.
-
-Use the Camera to scan a QR Code from the other phone.
-
-This will import the Nightscout URL, token and remote settings.
+For more information: see [Import/Export Settings](../setup/lf-setup.md#importexport-settings){ target="_blank" }
 
 - - -
 
