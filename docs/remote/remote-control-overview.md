@@ -29,7 +29,7 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
 
 > With the release of *LoopFollow* 4.0, you can [share remote control configuration](#export-remote-settings-with-qr-code) using a QR code.
 
-> With the release of *LoopFollow* 4.3, [multiple QR codes are provided which are separated by function](../setup/lf-setup.md#importexport-settings){: target="_blank" } so you can share Nightscout URL and Alarm Settings without sharing Remote Control Configurations.
+> With the release of *LoopFollow* 4.3, [multiple QR codes are provided which are separated by function](../setup/lf-setup.md#importexport-settings){: target="_blank" } so you can share Nightscout URL, Dexcom Share and Alarm Settings without sharing Remote Control Configurations.
 
 * Keep checking back on this page, the remote capability is under development and there may be new features for you to read about.
 
@@ -73,7 +73,7 @@ To share your remote settings with another device, follow the directions in this
 
 To show the QR Code, go into Remote settings on the phone that is already configured for remote control. Click the button Import/Export Settings and then choose Export Remote Settings. (The graphic below is out of date). You can access this same function by going to Settings->Import/Export Settings directly.
 
-> This process works for both Loop Remote Control and for Trio Remote Control, with the generated QR Code specific to the app that is being followed.
+> This process works for both Loop Remote Control and for Trio Remote Control.
 
 ![Export settings](img/export-settings.png){width="600"}
 {align="center"}
