@@ -20,12 +20,14 @@ After you build *LoopFollow* the first time, you are asked a few questions (your
 * **Bluetooth Access**: if you want to use an expired Dexcom sensor or a spare RileyLink device to keep *LoopFollow* running in the background while your phone is locked, choose **Allow**
 * **Notifications**: if you want *LoopFollow* to notify you for any of your alarms or if *LoopFollow* stops working, choose **Allow**
 
-You will then be presented with a blank home screen as shown below.
+You will then be presented with a home screen as shown below.
 
-> ![initial screen for LoopFollow](img/initial-screen-no-credentials.png){width="300"}
+![initial screen for LoopFollow](img/initial-screen-no-credentials.png){width="300"}
 {align="center"}
 
-### Navigate to Settings
+### Setup Your Data Source
+
+Tap on the "Setup Nightscout" button or "Setup Dexcom Share" button to enter your credentials for your preferred service.
 
 Tap on the &hellip;&nbsp;More icon, at bottom right, and then choose Settings to get to the Settings screen.
 
@@ -59,16 +61,14 @@ You provide *LoopFollow* with information about the person you are following. At
 
 The graphic below shows the display when you tap on the *Nightscout* Settings row. For more information about tokens, keep reading the details below the graphic.
 
-!!! tip "Setting up a Second Device for Remote Control"
-    With version 4.0 and newer, you can set up a second device with all the Nightscout and Remote Control Settings by scanning a QR code from a LoopFollow device that is already configured. 
-    
-    * See this section [Import from QR Code](../remote/remote-control-overview.md#import-from-qr-code){: target="_blank" }.
-
-    Do **not** use that option if the person using the second device only needs to monitor with LoopFollow.
 
 When adding the Nightscout information to monitor, you can copy your *Nightscout* URL (including the token) from the [Admin Tools in *Nightscout*](https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles). When pasted into *LoopFollow* URL row, the app will automatically extract and fill in both the URL and token.
 
-![enter nightscout credentials](img/lf-data-source-ns.svg){width="300"}
+!!! note "Setting up a second device"
+    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export Settings](#importexport-settings).
+
+
+![enter nightscout credentials](img/lf-data-source-ns.png){width="300"}
 {align="center"}
 
 !!! tip "*Nightscout* Access"
@@ -99,7 +99,12 @@ The graphic below shows the display when you tap on the *Dexcom* Settings row.
 
 > The *Dexcom* Share credentials are optional, but can be useful when the *Nightscout* URL is unavailable.
 
-![enter dexcom credentials](img/lf-data-source-dexcom.svg){width="300"}
+!!! note "Setting up a second device"
+    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export Settings](#import-export-settings).
+
+- - -
+
+![enter dexcom credentials](img/lf-data-source-dexcom.png){width="300"}
 {align="center"}
 
 - - -
@@ -158,6 +163,58 @@ The user can modify which icons are displayed in the task bar at the bottom of t
 
 See [Toolbar Tab Settings](lf-features.md#toolbar-tab-customization){: target="_blank" } for more information.
 
+### Import/Export Settings
+
+When setting up LoopFollow for another caregiver that will use some or all of the same configuration settings, you can export or scan a QR code to transfer settings between phones.
+
+* Nightscout URL and token
+* Dexcom Share Settings
+* Remote Configuration Settings
+* Alarms 
+
+
+!!! important "QR Codes Contain Secret Information"
+    Never share a QR code as a screenshot online or send it to someone that is not supposed to have access to your looper's information.
+    
+    In particular, only share a remote configuration QR code with a caregiver authorized and trained to send remote control commands to the looper's phone!
+    
+    If in doubt, you can revoke access to the APNS key at [https://developer.apple.com/account/resources/authkeys/list](https://developer.apple.com/account/resources/authkeys/list)
+
+
+#### Export Settings
+
+To export settings, select one of the options for
+
+*  Export Nightscout Settings
+*  Export Dexcom Share Settings
+*  Export Remote Settings
+*  Export Alarm Settings
+
+![Import settings](img/import-settings.png){width="300"}
+{align="center"}
+
+Export Nightscout Settings, Export Dexcom Share Settings and Export Remote Settings will show a QR code directly that you can scan with the receiving phone.
+
+Export Alarm Settings will let you select up to 5 alarms at a time to export. If you re-enter the export screen after a successful export, it will mark the exported alarms so that you can export more alarms if needed
+
+![Alarm Export](img/alarms-export-first.png){width="300"}
+![Alarm Export](img/alarms-export-second.png){width="300"}
+{align="right"}
+
+#### Import Settings
+
+On the phone that will receive the settings from the QR code, choose the option:
+"Scan QR Code to Import Settings"
+
+The first time you import settings with LoopFollow, you will be required to give permission to use the camera. Once permission is granted, hold the importing phone to view the QR code presented by the exporting phone. 
+
+When the QR code is accepted, you will see a screen indicating what type of settings is being imported. You will be warned that if you accept the import, your current settings will be overwritten.
+
+> Note the QR code for alarms may be slow to import. Just move the phone closer and further away until the code is accepted.
+
+![Import confirmation](img/lf-import-confirm.svg){width="600"}
+{align=center}
+
 ### Information Display Settings
 
 🚧 Documentation Under Construction 🚧
@@ -165,13 +222,16 @@ See [Toolbar Tab Settings](lf-features.md#toolbar-tab-customization){: target="_
 #### `Rec. Bolus`
 
 !!! warning "LoopFollow Report of Trio Recommended Dose"
-    It happens. We made a mistake. The `Rec. Bolus` feature for *LoopFollow* was reporting a value from the *Trio* app that was never meant to be used as a recommended bolus. 
+    It happens. We made a mistake. In versions before 4.0, the `Rec. Bolus` feature displayed by *LoopFollow* was a value from the *Trio* app that was never meant to be used as a recommended bolus.
+
+    But the mistake has been fixed and an appropriate `Rec. Bolus` is back.
     
-    * With `LoopFollow` 4.0 and newer, users viewing a *Trio* URL will notice the `Rec. Bolus` display is always blank
-        * Updates are planned for *Trio* and *LoopFollow* to provide the last recommended value from the *Trio* app
-    * The value shown to users viewing a *Loop* URL matches what the user of the *Loop* phone would see when asking for a recommendation and is not changed in `LoopFollow` 4.0
+    Make sure you have these version of code before using the recommended bolus. And pay attention to the warnings about how long since that recommendation was calculated by Trio.
     
-    **Remember: the `Rec. Bolus` values is from the last AID app update to Nightscout**
+    * LoopFollow 4.3 or newer
+    * Trio 0.6.0.16 or newer
+    
+    **Remember: the `Rec. Bolus` value is from the last AID app update to Nightscout**
     
 
 ### Remote Settings
