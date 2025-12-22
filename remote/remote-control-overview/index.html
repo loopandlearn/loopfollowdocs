@@ -691,6 +691,7 @@
 <blockquote>
 <p>With the release of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2, remote options for the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app are updated.</p>
 <p>With the release of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 4.0, you can <a href="#export-remote-settings-with-qr-code">share remote control configuration</a> using a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code.</p>
+<p>With the release of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 4.3, <a href="../../setup/lf-setup/#importexport-settings" target="_blank">multiple <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> codes are provided which are separated by function</a> so you can share <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr>, Dexcom Share and Alarm Settings without sharing Remote Control Configurations.</p>
 </blockquote>
 <ul>
 <li>Keep checking back on this page, the remote capability is under development and there may be new features for you to read about.</li>
@@ -726,43 +727,25 @@
 <p>Never share your <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code as a screenshot online or send it to someone that is not supposed to have access to remote capabilities for your looper.</p>
 <p>If in doubt revoke access to the key at <a href="https://developer.apple.com/account/resources/authkeys/list">https://developer.apple.com/account/resources/authkeys/list</a> and generate a new one.</p>
 </div>
-<p>To show the <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code, go into Remote settings on the phone that is already configured for remote control. Click the button Export Remote Settings as <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code and the <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code will show on screen.</p>
+<p>To show the <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code, go into Remote settings on the phone that is already configured for remote control. Click the button Import/Export Settings and then choose Export Remote Settings. (The graphic below is out of date). You can access this same function by going to Settings-&gt;Import/Export Settings directly.</p>
 <blockquote>
-<p>This process works for both <abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr> Remote Control and for <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> Remote Control, with the generated <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code specific to the app that is being followed.</p>
+<p>This process works for both <abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr> Remote Control and for <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> Remote Control.</p>
 </blockquote>
 <p align="center"><img alt="Export settings" src="../img/export-settings.png" width="600"/></p>
 <h3 id="import-from-qr-code">Import from <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code<a class="headerlink" href="#import-from-qr-code" title="Link to this section for reference">¶</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Setting up a Second Device for Remote Control</p>
-<p>With version 4.0 and newer, you can set up a second device with all the <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> and Remote Control Settings by scanning a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code from a <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> device that is already configured. </p>
-<p>Do <strong>not</strong> use this option if the person using the second device only needs to monitor with <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr>.</p>
+<p>With version 4.3 and newer, you can set up a second device using a selection of <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> codes from a <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> phone that is already configured.</p>
+<p>You can share <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr>, Dexcom Share and Alarm Settings if someone only needs to follow the looper.</p>
+<p>You can share Remote Control Configurations if someone needs to send remote commands.</p>
 </div>
 <p><strong>If a follower only needs to monitor and get alarms</strong></p>
 <ul>
-<li>Do <strong>not</strong> use the <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code</li>
-<li>Enter the <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr> with token as described in <a href="../../setup/lf-setup/#add-nightscout" target="_blank">Add <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></a></li>
+<li>Do <strong>not</strong> use the <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code for Remote Control Settings</li>
+<li>Limit the sharing to the other <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> codes for <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr>, Dexcom Share and Alarm Settings</li>
 </ul>
-<p>You can scan a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code from a <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> device that is already configured to get the settings for <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr>, Token and all remote settings. This process works for both <abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr> and for <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr>, with the <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code specific to the app that is being followed.</p>
-<blockquote>
-<p><strong>Only do this for another caregiver who needs the same <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> and remote control capabilities.</strong></p>
-</blockquote>
-<p>There are different directions depending on whether the target phone already has the <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr> entered or not:</p>
-<ul>
-<li><a href="#nightscout-url-configured"><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr> Configured</a></li>
-<li><a href="#nightscout-url-not-configured"><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr> Not Configured</a></li>
-</ul>
-<h4 id="nightscout-url-configured"><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr> Configured<a class="headerlink" href="#nightscout-url-configured" title="Link to this section for reference">¶</a></h4>
-<p>With a device that already has the <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> address set, go to the Settings: Remote Control screen. you must select "None" to reveal the "Import Remote Settings from <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code" button.</p>
-<p>Clicking that will take you to the remote screen where you can use the button Import Remote Settings from <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code.</p>
-<p>Use the Camera to scan a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code from the other phone.</p>
-<p>This will import the <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr>, token and remote settings.</p>
-<p align="center"><img alt="Import remote settings" src="../img/import-from-qr-code.png" width="300"/></p>
-<h4 id="nightscout-url-not-configured"><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr> Not Configured<a class="headerlink" href="#nightscout-url-not-configured" title="Link to this section for reference">¶</a></h4>
-<p>With a device that does not have a <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> address set, there will be a button in Settings named Import Settings.</p>
-<p align="center"><img alt="Import settings" src="../img/import-settings.png" width="600"/></p>
-<p>Clicking that will take you to the remote screen where you can use the button Import Remote Settings from <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code.</p>
-<p>Use the Camera to scan a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code from the other phone.</p>
-<p>This will import the <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr>, token and remote settings.</p>
+<p>This process works for both <abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr> and for <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr>.</p>
+<p>For more information: see <a href="../../setup/lf-setup/#importexport-settings" target="_blank">Import/Export Settings</a></p>
 <hr/>
 <h2 id="apple-push-notifications-system-apns"><em>Apple</em> Push Notifications System (APNS)<a class="headerlink" href="#apple-push-notifications-system-apns" title="Link to this section for reference">¶</a></h2>
 <div class="admonition tip">
