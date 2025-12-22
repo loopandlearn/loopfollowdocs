@@ -25,7 +25,7 @@ You will then be presented with a home screen as shown below.
 ![initial screen for LoopFollow](img/initial-screen-no-credentials.png){width="300"}
 {align="center"}
 
-### Setup your data source
+### Setup Your Data Source
 
 Tap on the "Setup Nightscout" button or "Setup Dexcom Share" button to enter your credentials for your preferred service.
 
@@ -65,9 +65,7 @@ The graphic below shows the display when you tap on the *Nightscout* Settings ro
 When adding the Nightscout information to monitor, you can copy your *Nightscout* URL (including the token) from the [Admin Tools in *Nightscout*](https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles). When pasted into *LoopFollow* URL row, the app will automatically extract and fill in both the URL and token.
 
 !!! note "Setting up a second device"
-    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export Settings](#import-export-settings).
-
-- - -
+    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export Settings](#importexport-settings).
 
 
 ![enter nightscout credentials](img/lf-data-source-ns.png){width="300"}
@@ -224,13 +222,16 @@ When the QR code is accepted, you will see a screen indicating what type of sett
 #### `Rec. Bolus`
 
 !!! warning "LoopFollow Report of Trio Recommended Dose"
-    It happens. We made a mistake. The `Rec. Bolus` feature for *LoopFollow* was reporting a value from the *Trio* app that was never meant to be used as a recommended bolus. 
+    It happens. We made a mistake. In versions before 4.0, the `Rec. Bolus` feature displayed by *LoopFollow* was a value from the *Trio* app that was never meant to be used as a recommended bolus.
+
+    But the mistake has been fixed and an appropriate `Rec. Bolus` is back.
     
-    * With `LoopFollow` 4.0 and newer, users viewing a *Trio* URL will notice the `Rec. Bolus` display is always blank
-        * Updates are planned for *Trio* and *LoopFollow* to provide the last recommended value from the *Trio* app
-    * The value shown to users viewing a *Loop* URL matches what the user of the *Loop* phone would see when asking for a recommendation and is not changed in `LoopFollow` 4.0
+    Make sure you have these version of code before using the recommended bolus. And pay attention to the warnings about how long since that recommendation was calculated by Trio.
     
-    **Remember: the `Rec. Bolus` values is from the last AID app update to Nightscout**
+    * LoopFollow 4.3 or newer
+    * Trio 0.6.0.16 or newer
+    
+    **Remember: the `Rec. Bolus` value is from the last AID app update to Nightscout**
     
 
 ### Remote Settings
