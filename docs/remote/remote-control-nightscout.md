@@ -46,9 +46,9 @@ Only one override can be active at a time. If one is active, you can cancel it. 
 ## *LoopFollow* & Careportal with the *Trio* App
 
 !!! warning "Important"
-    The ability for the *Trio* app to be remotely controlled will be **disabled** when `Enable Remote Control` is turned OFF on the *Trio* phone, even if you have given *LoopFollow* your *Nightscout* URL with Careportal access. This is for the protection of the *Trio* user, so that they **always** are the primary controller of their insulin dosing app.
+    The ability for the *Trio* app to be remotely controlled will be **disabled** when `Enable Remote Control` is turned OFF on the *Trio* phone. This is for the protection of the *Trio* user, so that they **always** are the primary controller of their insulin dosing app.
 
-    For more details, see [*Trio* Remote Control](remote-control-overview.md#trio-remote-control){: target="_blank" }.
+    For more details, see [*Trio* Remote Control](https://triodocs.org/configuration/settings/features/remote-control/#trio-remote-control).
 
 Trio can accept remote commands from *Nightscout* or from *LoopFollow*. There are a variety of options, but the final control of whether remote commands will be enacted rests with the Trio user. They can enable or disable remote control.
 

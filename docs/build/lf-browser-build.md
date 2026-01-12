@@ -194,7 +194,7 @@ Examine the table below for the bundle ID associated with your app.
         * If that is already taken, you can add a number, for example, "App Name ABC 123"
         * This name is what you see on the App Store Connect list and in the *TestFlight* app
         * Once installed on your phone, you will see the actual app name
-        * You can [Change the App Store Connect Name](../browser/phone-install/#change-the-app-store-connect-name) later if you want
+        * You can [Change the App Store Connect Name](https://loopkit.github.io/loopdocs/browser/phone-install/#change-the-app-store-connect-name) later if you want
     * Select your primary language.
     * Choose the bundle ID for your app
     * SKU can be anything; for example "123" but must be unique across all your apps, so try 1234 or 12345 depending on how many apps you build with this method

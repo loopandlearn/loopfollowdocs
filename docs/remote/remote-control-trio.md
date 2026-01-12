@@ -253,7 +253,7 @@ If you took those steps and still have missing rows, return to [Configure *LoopF
 This section covers known troubleshooting issues:
 
 * *Nightscout* not displaying *Trio* data: [Configure for OpenAPS](#configure-for-openaps)
-* Was able to select *Trio* Remote Control in *LoopFollow* but it is no longer working: [Stop *Nightscout* access from the *Loop* app](#stop-nightscout-access-from-the-loop-app)
+* Was able to select *Trio* Remote Control in *LoopFollow* but it is no longer working: [Stop *Nightscout* access from other apps](#stop-nightscout-uploads-from-other-apps)
 * Cannot select *Trio* Remote Control in *LoopFollow*: [Update Profile](#update-profile)
 
 ### Configure for OpenAPS
@@ -285,7 +285,7 @@ In addition to this step, you may need to force the profile (from Trio) to uploa
 ### Update Profile
 
 !!! warning "Must on *Trio* 0.5.x (or newer)"
-    If you are on *Trio* 0.2.x, you might see the option for *Trio* Remote Control in *LoopFollow* Remote Settings, but you can't use it. See [Use *LoopFollow* *Nightscout* Remote Control](#use-loopfollow-nightscout-remote-control).
+    If you are on *Trio* 0.2.x, you might see the option for *Trio* Remote Control in *LoopFollow* Remote Settings, but you can't use it. See [Use *LoopFollow* *Nightscout* Remote Control](remote-control-nightscout.md#loopfollow-careportal-with-the-trio-app).
 
 If you were previously running the *Loop* app or the *iAPS* app, [Stop *Nightscout* upload](#stop-nightscout-uploads-from-other-apps) from those apps and then force the profile to update.
 

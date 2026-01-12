@@ -20,7 +20,7 @@ The bullets below take you to the indicated topics. The configuration step is li
 
 ## Use *LoopFollow* *Loop* Remote Control
 
-Once the *LoopFollow* phone is [configured](#configure-for-remote-control), and while the *Loop* phone is handy, test sending Remote Commands. It is good to also have a browser open with the *Nightscout* URL displayed.
+Once the *LoopFollow* phone is [configured](#configure-loopfollow-for-remote-control), and while the *Loop* phone is handy, test sending Remote Commands. It is good to also have a browser open with the *Nightscout* URL displayed.
 
 ![loopfollow loop remote control choices](img/lf-lrc.png){width="300"}
 {align=center}

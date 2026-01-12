@@ -15,7 +15,7 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
     * Trio 0.6 (or newer) requires LoopFollow 4.0 (or newer)
     * Trio 0.5.1.28 (or older) requires LoopFollow 3.2.11 (or older)
 
-    See [Trio Remote Control](trio-remote-control.md){: target="_blank" } for more information.
+    See [Trio Remote Control](remote-control-trio.md){: target="_blank" } for more information.
 
     For Browser Builders:
 
@@ -38,7 +38,7 @@ The graphic below shows the Remote Settings screen for *LoopFollow*. You must fi
 * When following someone running Loop, the options are None or [Loop Remote Control](remote-control-loop.md){: target="_blank" }
 * When following someone running Trio, the options are None or:
     * Trio 0.5.x and newer: [Trio Remote Control](remote-control-trio.md){: target="_blank" }
-    * Trio 0.2.x: [Nightscout Remote Control](remote-control-nightscout.md#loopfollow--careportal-with-the-trio-app){: target="_blank" }
+    * Trio 0.2.x: [Nightscout Remote Control](remote-control-nightscout.md#loopfollow-careportal-with-the-trio-app){: target="_blank" }
 
 ![LoopFollow remote options - all types](img/lf-remote-options_3.2.svg){width="600"}
 {align="center"}
@@ -172,7 +172,7 @@ If you do not have APNS credentials, you need to create a key and grant it acces
     Highlight the filename and choose rename, then add ".txt" after ".p8". In other words, modify `AuthKey_AAAAAAAAAA.p8` to `AuthKey_AAAAAAAAAA.p8.txt` and click on `Use .txt` when questioned.
 > ![rename the p8 file](img/apns-rename.png){width=200}
 {align=center}
-7. Double-click to open the `AuthKey_AAAAAAAAAA.p8.txt` file. It will look similar to the screenshot below. You need to highlight **ALL OF THE CONTENTS** of that file and copy it and then paste it both into your Secrets Reference file and into the row for *LoopFollow* [APNS Key](#apns-key). Yes, *allllll* of the contents.  
+7. Double-click to open the `AuthKey_AAAAAAAAAA.p8.txt` file. It will look similar to the screenshot below. You need to highlight **ALL OF THE CONTENTS** of that file and copy it and then paste it both into your Secrets Reference file and into the row for *LoopFollow* APNS Key. Yes, *allllll* of the contents.  
     So, the easiest way is to:
       * **Click inside that file**
       * Highlight **all** the text, and then
@@ -182,7 +182,7 @@ If you do not have APNS credentials, you need to create a key and grant it acces
 
     > ![img/apns-copy-key.png](img/apns-copy-key.png)
 
-8. The APNS Key ID is the 10-character name embedded in the filename: `AuthKey_AAAAAAAAAA.p8.txt`. You can also see it if you return to Apple Developer's [`Certificates, Identifiers & Profiles`](https://developer.apple.com/account/resources/authkeys/list) as highlighted in this graphic. You copy that APNS Key ID and then paste it both into your Secrets Reference file and into the row for *LoopFollow* [APNS Key ID](#apns-key-id)
+8. The APNS Key ID is the 10-character name embedded in the filename: `AuthKey_AAAAAAAAAA.p8.txt`. You can also see it if you return to Apple Developer's [`Certificates, Identifiers & Profiles`](https://developer.apple.com/account/resources/authkeys/list) as highlighted in this graphic. You copy that APNS Key ID and then paste it both into your Secrets Reference file and into the row for *LoopFollow* APNS Key ID.
 
     > ![APNS KEY ID is highlighted by red rectangle](img/apns-key-id.png)
 

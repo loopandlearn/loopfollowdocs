@@ -100,7 +100,7 @@ The graphic below shows the display when you tap on the *Dexcom* Settings row.
 > The *Dexcom* Share credentials are optional, but can be useful when the *Nightscout* URL is unavailable.
 
 !!! note "Setting up a second device"
-    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export Settings](#import-export-settings).
+    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export Settings](#importexport-settings).
 
 - - -
 
@@ -266,7 +266,7 @@ It is still useful for Carplay.
 
 The Contact image trick added with v2.2.8 currently works to provide real-time updates on an Apple Watch.
 
-For more detailed instructions, see [Real-Time Watch Updates using Contact](../)
+For more detailed instructions, see [Real-Time Watch Updates using Contact](lf-features.md#real-time-watch-updates-using-contact){: target="_blank" }
 
 - - -
 
