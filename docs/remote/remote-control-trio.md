@@ -24,7 +24,7 @@ Starting with *LoopFollow* v4.0 and *Trio* v0.6, users of remote control are pro
 
     **Question: If I was using Trio / LoopFollow remote control do I need to change my configuration parameters?**: No, the parameters you already set up continue to work. **BUT** you need to update the *LoopFollow* Identifiers if you use Browser Build.
 
-    * [Browser Build Update for LoopFollow v4.0](../build/build-options.md#browser-build-update-for-loopfollow-v40){: target="_blank" }
+    * [Update from *LoopFollow* v3,x](../build/lf-browser-build.md#update-from-loopfollow-v3x){: target="_blank" }
 
 
 ??? question "How does this differ from *Trio* 0.2.x? (Click to Open/Close)"
