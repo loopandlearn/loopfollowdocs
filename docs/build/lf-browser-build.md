@@ -29,7 +29,6 @@ Detailed directions are found in the next sections, this is the summary of what 
 2. `Fork` the repository to your organization
 3. Open your `fork` and enable Actions
 4. `Add Identifiers`
-5. Update Identifiers
 6. Add the App in App Store Connect and configure TestFlight users
 7. `Build LoopFollow`
 
@@ -145,26 +144,6 @@ After successfully performing the `Add Identifiers Action`, you will see the ide
 
 > If you build from a second or third `repository` for `LoopFollow`, the Name will end in `Second` or `Third` and Bundle ID will have `.Second` or `.Third` at the end.
 
-#### Add Push Notifications Capability to LoopFollow Identifiers
-
-For LoopFollow 4.0 and later, you must manually enable the Push Notifications capabilty for the *LoopFollow* Identifier. 
-
-The example graphic below has numbered steps that match these directions:
-
-Click to open the [Certificates, Identifiers & Profiles: Identifiers List](https://developer.apple.com/account/resources/identifiers/list) page. 
-
-1. Locate the LoopFollow Identifer and click on it to open the `Edit your App ID Configuration` screen
-    * The name in the **`NAME`** column may be different if you previously built with a Mac using Xcode, in that case it will start with XC
-2. Looking at the `App Services` column, scroll down to the `Push Notifications` row
-3. If the check box is not checked, you must check it
-4. Scroll back to the top and hit Save if you modified that value or All Identifiers if you made no changes
-
-If you made a change and hit Save, you then need to Tap `Continue` and Tap `Save` to complete the process.
-
-> ![graphic showing selection of the push notifications](img/add-push-notifications.svg){width="600"}
-
-Repeat this step if you use LoopFollow_Second or LoopFollow_Third.
-
 - - -
 
 ## Create App in App Store Connect
@@ -264,4 +243,70 @@ Please do not remove an existing app if you have trouble building a new one. You
 ## Install on Phone
 
 The [LoopDocs instructions: Install on Phone](https://loopkit.github.io/loopdocs/browser/phone-install) walk you through the steps to install the app to a phone. When going through those steps, replace your App Name for&nbsp;_<span translate="no">Loop</span>_. Everything else is the same.
+
+
+!!! success "Adding Push Notifications Simplified with v4.4"
+    Provided in *LoopFollow* v4.4 and newer, you can run Add Identifiers to add the required `Push Notifications` capability.
+    
+    For *LoopFollow* v4.0 through 4.3, you had to manually add that capability to the Identifier. Thanks to our friends at fastlane, who updated their tool, this manual action is no longer necessary.
+
+## Archaic Instructions
+
+Given that a Browser Build must be rebuilt every 90 days, the instructions here are unlikely to be required.
+
+### Update from *LoopFollow* v3.x
+
+When updating from an older version of *LoopFollow*, v3.x or older, you need to add the `Push Notification` to the Identifier Capabilities:
+
+* [Sync Your Fork](#sync-your-fork)
+* [Run Add Identifiers](#run-add-identifiers) to add the new capability
+* [Build Your App](#build-your-app)
+
+> Repeat these steps if you use LoopFollow_Second or LoopFollow_Third.
+
+#### Sync Your Fork
+
+* Go to your *LoopFollow* fork and click on the Sync button
+
+> ![sync the fork](img/github-build-check-fork-status.svg){width="700"}
+
+#### Run Add Identifiers
+
+* In your *LoopFollow* fork, select the Action tab and run the Add Identifiers Action
+* Wait for a successful completion before trying to Build.
+
+??? abstract "Detailed Instructions to Run Add Identifiers (Click to open/close)"
+    Refer to the graphic below for the numbered steps:
+
+    1. Click on the "Actions" tab of your repository
+    1. On the left side, click on "Add Identifiers"
+    1. On the right side, click "Run Workflow" to show a dropdown menu
+        * You will see your default branch (`main`)
+        * You can select a different branch, but typically, you run the default
+    1. Tap the green button that says "Run workflow"
+
+        ![add identifiers using github actions](img/action-02-add-identifiers.svg){width="700"}
+        {align="center"}
+
+    The `Add Identifier` &nbsp;<span class=notranslate>Action</span>&nbsp; should succeed or fail in a few minutes.
+
+    * If you see the green check (:octicons-check-circle-fill-16:{: .passed })  continue to the next section
+    * If you see the red `X` (:octicons-x-circle-fill-16:{: .failed }):
+        * Use the Browser Build Errors page to resolve the error, then repeat the Action
+        * [Quick Reference for Browser Build Errors](https://loopkit.github.io/loopdocs/browser/bb-errors/#quick-reference-for-browser-build-errors)
+
+#### Build Your App
+
+* In your *LoopFollow* fork, select the Action tab and run the Build LoopFollow Action
+* Wait for a successful completion and wait for the TestFlight upload (timing varies from a few minutes to a few hours) until trying to install the new build on your phone
+
+??? abstract "Detailed Instructions to Build LoopFollow (Click to open/close)"
+    1. Click on the Actions tab of your *LoopFollow* repository
+    2. On the left side, click on `4. Build LoopFollow`
+    3. On the right side, click Run Workflow to show a dropdown menu
+    4. Tap the green button that says Run workflow.
+
+    > ![add identifiers](img/action-04-build.svg){width="700"}
+
+**Once this completes, be sure to update from TestFlight to get the updated version of *LoopFollow* on your phone.**
 

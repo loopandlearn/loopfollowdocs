@@ -5,9 +5,9 @@
 The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) support direct APNS from *LoopFollow*.
 
 !!! warning "Browser Build Update"
-    If you use Browser Build, follow the one-time updates needed to transition from *LoopFollow* v3.2 to *LoopFollow* v4.0:
+    If you use Browser Build and your current build is older than v4.0.0, follow the one-time updates needed to transition from *LoopFollow* v3.x:
 
-    * [Browser Build Update for LoopFollow v4.0](../build/build-options.md#browser-build-update-for-loopfollow-v40){: target="_blank" }
+    * [Update from *LoopFollow* v3,x](../build/lf-browser-build.md#update-from-loopfollow-v3x){: target="_blank" }
 
 !!! important "Breaking Change: Trio Remote Command Users"
     Trio users must have matching code for LoopFollow and Trio.
@@ -16,10 +16,6 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
     * Trio 0.5.1.28 (or older) requires LoopFollow 3.2.11 (or older)
 
     See [Trio Remote Control](remote-control-trio.md){: target="_blank" } for more information.
-
-    For Browser Builders:
-
-    * [Browser Build Update for LoopFollow v4.0](../build/build-options.md#browser-build-update-for-loopfollow-v40){: target="_blank" }
 
 - - -
 
