@@ -1,16 +1,17 @@
 ## Remote Control of the *Loop* App
 
-This option is available for remote control of a *Loop* phone using *LoopFollow* 3.2 and newer.
+This option is available for remote control of a *Loop* phone using *LoopFollow* 4.6 and newer. The real-time notifications require *Loop* v3.11.1 and newer.
 
-* *Loop* Remote Control
+* *Loop* Remote Control with Real-Time Notifications
     * Remote control with *LoopFollow* includes adding remote carbs, enacting remote bolus, and starting and canceling Overrides
-    * Available with all versions of *Loop* 3
-    * Requires *LoopFollow* 3.2 or newer
+    * The *LoopFollow* phone sends directly through APNS to the *Loop* phone
+    * The *Loop* phone, if it gets the APNS message, returns an APNS response with success or error message for carb or bolus commands
+    * The override commands do not get an APNS message returned
 
 
 ### Quick Access
 
-The bullets below take you to the indicated topics. The configuration step is listed first but only needs to be done once, so is located at the end of this page:
+The bullets below take you to the indicated topics.
 
 * [Configure *LoopFollow* for Remote Control](#configure-loopfollow-for-remote-control)
 * [Use *LoopFollow* *Loop* Remote Control](#use-loopfollow-loop-remote-control)
@@ -38,11 +39,25 @@ Once the *LoopFollow* phone is [configured](#configure-loopfollow-for-remote-con
         * discarded, ignored by *Apple* or the phone
         * significantly slowed down due to network connectivity
     1. The *Loop* app processes the remote command and either **enacts** it or **rejects** it
+    1. For *Loop* v3.11.1 or newer, an APNS message is returned to the originating *LoopFollow* phone where it is presented as a real-time notification
     1. The *Loop* app uploads to *Nightscout* with result shown on *LoopFollow* main screen in a few minutes
         * If the remote request was **enacted**, the result is visible on the *LoopFollow* main plot
         * If the remote request was **rejected**, a gray dot is visible on the *LoopFollow* main plot - touch it to see the reason why the request was rejected
 
-    > If no result shows up at *LoopFollow* (no gray dot, no response to remote request), then it is most likely step 2 that failed. We have limited control over that.
+    > If no result shows up at *LoopFollow* (no APNS message, no gray dot, no response to remote request), then it is most likely step 2 that failed. We have limited control over that.
+
+### Real-Time Notifications
+
+To improve your ability to see the APNS real-time notifications returned by *Loop* v3.11.1 or newer, be sure to enable persistent notifications.
+
+* iPhone Settings, Apps, *LoopFollow*
+* Notifications, make sure Banner Style is Persistent
+
+Example messages are highlighted by red rectangles in the composite below for remote carb and remote bolus. The example on the right is an example error message that was returned.
+
+![remote real-time-notifications ](img/lf-loop-remote-apns-real-time.png){width="650"}
+{align="center"}
+
 
 ### Remote Meal
 

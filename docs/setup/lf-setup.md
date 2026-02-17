@@ -81,6 +81,7 @@ The table below indicates the minimum token access for each type of remote contr
 When you enter your credentials, *LoopFollow* tries to reach the site and then provides the status. 
 
 * The *Loop* Remote Control option requires *LoopFollow* version 3.2 or newer
+    * With LoopFollow 4.6 and later, the ability to get direct success or failure responses back to the LoopFollow phone is enhanced but requires Loop version 3.11.1 or newer
 * The *Trio* Remote Control option requires the user be on version 0.5.x or newer of Trio
     * **Breaking change** on 2025-October-06
     * *Trio* 0.6 or newer requires *LoopFollow* 4.0 or newer

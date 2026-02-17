@@ -2,7 +2,14 @@
 
 *LoopFollow* remote commands are sent directly using the [Apple Push Notification System (APNS)](#apple-push-notifications-system-apns) for all Open-Source Automated Insulin Delivery systems that support this feature.
 
-The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) support direct APNS from *LoopFollow*.
+* *Trio* and *Loop* accept a direct APNS message sent from *LoopFollow*
+    * minimum versions: *Trio* 0.6.x; all versions of *Loop*
+* *Trio* and *Loop* send a direct APNS message back to the originating *LoopFollow* phone with a success or error message
+    * minimum versions: *Trio* 0.6.x; *Loop* 3.11.1
+* This is subject to the *Apple* APNS servers but tends to be faster and more reliable than going through the Nightscout careportal
+
+> The return APNS message is only available for a meal or bolus entry.
+
 
 !!! warning "Browser Build Update"
     If you use Browser Build and your current build is older than v4.0.0, follow the one-time updates needed to transition from *LoopFollow* v3.x:
@@ -21,11 +28,13 @@ The *Loop* app and the open beta version of the *Trio* app (0.5.x or newer) supp
 
 ## *LoopFollow* Remote Options
 
-> With the release of *LoopFollow* 3.2, remote options for the *Loop* app are updated.
+> With the release of *LoopFollow* 3.2, remote options for the *Loop* app were updated to send directly to the *Loop* phone via APNS
 
 > With the release of *LoopFollow* 4.0, you can [share remote control configuration](#export-remote-settings-with-qr-code) using a QR code.
 
 > With the release of *LoopFollow* 4.3, [multiple QR codes are provided which are separated by function](../setup/lf-setup.md#importexport-settings){: target="_blank" } so you can share Nightscout URL, Dexcom Share and Alarm Settings without sharing Remote Control Configurations.
+
+> With the release of *LoopFollow* 4.6, return messages sent from the *Loop* phone are displayed as notifications (requires *Loop* v3.11.1 or newer)
 
 * Keep checking back on this page, the remote capability is under development and there may be new features for you to read about.
 
