@@ -345,6 +345,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#real-time-notifications">
+<span class="md-ellipsis">
+      
+        Real-Time Notifications
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#remote-meal">
 <span class="md-ellipsis">
       
@@ -642,6 +651,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#real-time-notifications">
+<span class="md-ellipsis">
+      
+        Real-Time Notifications
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#remote-meal">
 <span class="md-ellipsis">
       
@@ -826,17 +844,18 @@
 </a>
 <h1>Loop Remote Control</h1>
 <h2 id="remote-control-of-the-loop-app">Remote Control of the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> App<a class="headerlink" href="#remote-control-of-the-loop-app" title="Link to this section for reference">¶</a></h2>
-<p>This option is available for remote control of a <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone using <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 and newer.</p>
+<p>This option is available for remote control of a <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone using <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 4.6 and newer. The real-time notifications require <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> v3.11.1 and newer.</p>
 <ul>
-<li><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control<ul>
+<li><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control with Real-Time Notifications<ul>
 <li>Remote control with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> includes adding remote carbs, enacting remote bolus, and starting and canceling Overrides</li>
-<li>Available with all versions of <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> 3</li>
-<li>Requires <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 or newer</li>
+<li>The <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> phone sends directly through APNS to the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone</li>
+<li>The <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone, if it gets the APNS message, returns an APNS response with success or error message for carb or bolus commands</li>
+<li>The override commands do not get an APNS message returned</li>
 </ul>
 </li>
 </ul>
 <h3 id="quick-access">Quick Access<a class="headerlink" href="#quick-access" title="Link to this section for reference">¶</a></h3>
-<p>The bullets below take you to the indicated topics. The configuration step is listed first but only needs to be done once, so is located at the end of this page:</p>
+<p>The bullets below take you to the indicated topics.</p>
 <ul>
 <li><a href="#configure-loopfollow-for-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for Remote Control</a></li>
 <li><a href="#use-loopfollow-loop-remote-control">Use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control</a></li>
@@ -862,6 +881,7 @@
 </ul>
 </li>
 <li>The <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app processes the remote command and either <strong>enacts</strong> it or <strong>rejects</strong> it</li>
+<li>For <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> v3.11.1 or newer, an APNS message is returned to the originating <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> phone where it is presented as a real-time notification</li>
 <li>The <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> with result shown on <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main screen in a few minutes<ul>
 <li>If the remote request was <strong>enacted</strong>, the result is visible on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main plot</li>
 <li>If the remote request was <strong>rejected</strong>, a gray dot is visible on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main plot - touch it to see the reason why the request was rejected</li>
@@ -869,9 +889,17 @@
 </li>
 </ol>
 <blockquote>
-<p>If no result shows up at <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> (no gray dot, no response to remote request), then it is most likely step 2 that failed. We have limited control over that.</p>
+<p>If no result shows up at <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> (no APNS message, no gray dot, no response to remote request), then it is most likely step 2 that failed. We have limited control over that.</p>
 </blockquote>
 </div>
+<h3 id="real-time-notifications">Real-Time Notifications<a class="headerlink" href="#real-time-notifications" title="Link to this section for reference">¶</a></h3>
+<p>To improve your ability to see the APNS real-time notifications returned by <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> v3.11.1 or newer, be sure to enable persistent notifications.</p>
+<ul>
+<li>iPhone Settings, Apps, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em></li>
+<li>Notifications, make sure Banner Style is Persistent</li>
+</ul>
+<p>Example messages are highlighted by red rectangles in the composite below for remote carb and remote bolus. The example on the right is an example error message that was returned.</p>
+<p align="center"><img alt="remote real-time-notifications " src="../img/lf-loop-remote-apns-real-time.png" width="650"/></p>
 <h3 id="remote-meal">Remote Meal<a class="headerlink" href="#remote-meal" title="Link to this section for reference">¶</a></h3>
 <p><strong><em>More info coming soon!</em></strong></p>
 <p align="center"><img alt=" remote carb entries" src="../img/lf-lrc-meal.png" width="300"/></p>

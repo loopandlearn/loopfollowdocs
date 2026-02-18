@@ -665,7 +665,20 @@
 <h1>Remote Control Overview</h1>
 <h2 id="remote-control-overview">Remote Control Overview<a class="headerlink" href="#remote-control-overview" title="Link to this section for reference">¶</a></h2>
 <p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> remote commands are sent directly using the <a href="#apple-push-notifications-system-apns">Apple Push Notification System (APNS)</a> for all Open-Source Automated Insulin Delivery systems that support this feature.</p>
-<p>The <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app and the open beta version of the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app (0.5.x or newer) support direct APNS from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>.</p>
+<ul>
+<li><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> and <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> accept a direct APNS message sent from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em><ul>
+<li>minimum versions: <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.6.x; all versions of <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em></li>
+</ul>
+</li>
+<li><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> and <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> send a direct APNS message back to the originating <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> phone with a success or error message<ul>
+<li>minimum versions: <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.6.x; <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> 3.11.1</li>
+</ul>
+</li>
+<li>This is subject to the <em>Apple</em> APNS servers but tends to be faster and more reliable than going through the <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> careportal</li>
+</ul>
+<blockquote>
+<p>The return APNS message is only available for a meal or bolus entry.</p>
+</blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Browser Build Update</p>
 <p>If you use Browser Build and your current build is older than v4.0.0, follow the one-time updates needed to transition from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v3.x:</p>
@@ -685,9 +698,10 @@
 <hr/>
 <h2 id="loopfollow-remote-options"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Options<a class="headerlink" href="#loopfollow-remote-options" title="Link to this section for reference">¶</a></h2>
 <blockquote>
-<p>With the release of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2, remote options for the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app are updated.</p>
+<p>With the release of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2, remote options for the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app were updated to send directly to the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone via APNS</p>
 <p>With the release of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 4.0, you can <a href="#export-remote-settings-with-qr-code">share remote control configuration</a> using a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code.</p>
 <p>With the release of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 4.3, <a href="../../setup/lf-setup/#importexport-settings" target="_blank">multiple <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> codes are provided which are separated by function</a> so you can share <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr>, Dexcom Share and Alarm Settings without sharing Remote Control Configurations.</p>
+<p>With the release of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 4.6, return messages sent from the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone are displayed as notifications (requires <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> v3.11.1 or newer)</p>
 </blockquote>
 <ul>
 <li>Keep checking back on this page, the remote capability is under development and there may be new features for you to read about.</li>
