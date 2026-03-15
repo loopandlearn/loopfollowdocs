@@ -5,9 +5,8 @@ This option is available for remote control of a *Loop* phone using *LoopFollow*
 * *Loop* Remote Control with Real-Time Notifications
     * Remote control with *LoopFollow* includes adding remote carbs, enacting remote bolus, and starting and canceling Overrides
     * The *LoopFollow* phone sends directly through APNS to the *Loop* phone
-    * The *Loop* phone, if it gets the APNS message, returns an APNS response with success or error message for carb or bolus commands
+    * The *Loop* phone, if it gets the APNS message, returns an APNS response with success or error message for carb or bolus commands for *Loop* version v3.11.1 or newer
     * The override commands do not get an APNS message returned
-
 
 ### Quick Access
 
