@@ -1,12 +1,28 @@
 ## *LoopFollow* Features
 
-Most features and the settings that control them are self-explanatory.
+Most features and the settings that control them are self-explanatory and documented within the app. Some documentation is provided below.
 
 - - -
 
 ## Alarms
 
-🚧 Documentation Under Construction 🚧
+When you select the Alarms Feature, the initial screen will be blank. By tapping on the plus sign upper right, you can add as many alarms as desired. There is quick access to the overall [Alarm Settings](lf-setup.md#settings-alarms) by tapping the gear icon on this screen.
+
+The graphic below shows a few typical alarms that might be chosen.
+
+![example alarm screen](img/lf-alarms-screen.png){width="350"}
+{align="center"}
+
+When you tap on a given alarm, you can customize the settings in a number of ways. An example for the Low BG Alert is shown below. Once you customize and alarm, you can enable or disable it quickly while maintaining your custom settings.
+
+![alarms can be customized](img/lf-alarms-example.svg){width="700"}
+{align="center"}
+
+The graphic below shows the many types of alarms that are available with *LoopFollow*.
+
+![alarms to select](img/lf-alarms.svg){width="700"}
+{align="center"}
+
 
 - - -
 
@@ -35,9 +51,9 @@ Quick access is provided using these links once you have configured *LoopFollow*
 
 ## Treatments
 
-The treatments screen display all treatments downloaded from the Nightscout URL.
+The treatments screen displays all treatments downloaded from the Nightscout Site with user-selectable filters on treatment type.
 
-![example treatments screen](img/lf-treatments-screen.png){width=400}
+![example treatments screen](img/lf-treatments-screen.png){width=700}
 {align="center"}
 
 
@@ -46,7 +62,10 @@ The treatments screen display all treatments downloaded from the Nightscout URL.
 ## Statistics
 
 
-🚧 Documentation Under Construction 🚧
+The Statistics screen displays a variety of plots and values. This requires an associated Nightscout Site. If the Nightscout site is limited in the days of data, it will be noticeable in the Data Availability metric on the first row.
+
+![example treatments screen](img/lf-feature-statistics.svg){width=700}
+{align="center"}
 
 
 - - -

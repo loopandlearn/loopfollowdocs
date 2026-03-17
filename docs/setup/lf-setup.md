@@ -31,7 +31,7 @@ The default settings are a fine place to start. As you learn to use *LoopFollow*
 The home screen provides a dashboard of important information.  
 
 * Supports Glucose display when Dexcom is available but Nightscout is not
-* Supports Information Display from *Loop* and *Trio* when Nightscout URL is provided
+* Supports Information Display from *Loop* and *Trio* when Nightscout Site is provided
     * *Loop* & *Trio*: common features like status, basal, bolus, carbs and eventual glucose forecast
     * *Loop*: *Loop* specific features like Profile Name, remote control
     * *Trio*: *Trio* specific features like Autosens, TDD, remote control (with *Trio* 0.5.x and newer)
@@ -52,19 +52,19 @@ The toolbar (tab bar) at the bottom of the Home and Menu screens is configurable
 | Home | Plots and summary display |
 | Alarms | Select and configure Alarms |
 | Remote | Send remote commands to OS-AID, requires Nightscout and secure configuration |
-| Nightscout | Display your Nightscout URL |
+| Nightscout | Display your Nightscout Site |
 | Snoozer | Allows quick "snooze" of alarms, great screen for night use or monitoring | 
 | Treatments | Display Treatments, selectable by type |
-| Statistics | Display Statistics for up to 90 days, requires Nightscout URL |
+| Statistics | Display Statistics for up to 90 days, requires Nightscout Site |
 
 
 ## Menu Screen
 
 The following graphic shows the menu screen. 
 
-* The features on this screen are described on the [*LoopFollow* Features page](lf-features.md){: target="_blank" }. 
-* Settings, Logging and Build Information are covered below. 
-* [Support & Community](../index.md#community-support-and-build-help){: target="_blank" } was already discussed.
+* The features on this screen are described on the [*LoopFollowDocs* Features page](lf-features.md){: target="_blank" }
+* Settings, Logging and Build Information are covered below
+* [Support & Community](../index.md#community-support-and-build-help){: target="_blank" } are discussed on the *LoopFollowDocs* home page
 
 
 ![Menu screen for *LoopFollow*](img/lf-menu.svg){width=400}
@@ -149,15 +149,18 @@ The graphic below shows the display when you tap on the *Dexcom* row.
 
 There are a number of application settings the user can configure. These are summarized in the table below.
 
+* The `Information Display` and `Remote` rows are only display with [Nightscout Credentials](#setup-nightscout).
+
+
 | Name | Description | Link |
 |:--|:--|:--|
-| Background Refresh | Options for keeping *LoopFollow* always alive or allowing it to sleep | [Background Refresh](lf-features.md#background-refresh){: target="_blank" } | 
-| General | Settings that affect the general app behavior | [General](#settings-general) | 
-| Graph | Settings that affect the plots on the Home screen | [Graph](#settings-graph) | 
+| Background Refresh | Configure to keep *LoopFollow* always alive or allow it to sleep and thus conserve phone battery | [Background Refresh](lf-features.md#background-refresh){: target="_blank" } | 
+| General | Adjust settings that affect the general app behavior | [General](#settings-general) | 
+| Graph | Adjust settings that affect the plots on the Home screen | [Graph](#settings-graph) | 
 | Tab Settings | Configure the toolbar displayed on the Home and Menu screens |[Tab](#settings-tab) | 
 | Import/Export | Share configurations among Caregiver phones |[Import/Export](#settings-importexport)| 
-| Information Display | Select which items to display in the Home screen IInformation Table | [Information Display](#settings-information-display) | 
-| Remote | Configure for secure remote control | (../remote/remote-control-overview.md){: target="_blank" } 
+| Information Display | Select which items to display in the Home screen IInformation Table<br>Requires Nightscout Data Source | [Information Display](#settings-information-display) | 
+| Remote | Configure for secure remote control<br>Requires Nightscout Data Source | [Remote Control Overview](../remote/remote-control-overview.md){: target="_blank" } 
 
 ### Settings: General
 
@@ -201,7 +204,7 @@ These settings are accessed through the Graph row in the Settings screen.
 | Min BG Scale | clamp the minimum displayed range for glucose scale |
 | Low BG Line | Choose glucose level to display as low |
 | High BG Line | Choose glucose level to display as high |
-| Show Days Back | Affects the small graph display and adjusts fetch from Nightscout URL |
+| Show Days Back | Affects the small graph display and adjusts fetch from Nightscout Site |
 
 ### Settings: Tab
 
@@ -217,7 +220,7 @@ In the Settings screen, select Tab. Drag any of the options up or down to your p
 
 When setting up LoopFollow for another caregiver that will use some or all of the same configuration settings, you can export or scan a QR code to transfer settings between phones.
 
-* Nightscout URL and token
+* Nightscout Site and token
 * Dexcom Share
 * Remote Configuration
 * Alarms 
@@ -267,38 +270,38 @@ When the QR code is accepted, you will see a screen indicating what type of sett
 
 ### Settings: Information Display
 
-These items can be chosen for display on the Home screen. A Nightscout URL is required and must be accessible or the table is blank. 
+These items can be chosen for display on the Home screen. A Nightscout Site is required and must be accessible or the table is blank. 
 
-| Name | Description | Loop / Trio / Both |
+> A lower case `loop` is used to denote a `closed-loop` cycle for both `Trio` and `Loop`.
+
+!!! note ""
+    The order of rows in the Settings: Information Display screen is reflected in the Information Table on your Home screen.
+    
+    * The order in the table below is the order in the LoopFollow code
+    * You can drag the rows up and down to suit your preferred order
+
+| Name | Description | `Loop` / `Trio` / Both |
 |:--|:--|:-:|
-| | | Both |
-| | | Both |
-| | | Both |
-| | | Both |
-| | | Both |
-| | | Both |
-| | | Both |
-| | | Both |
-| | | Both |
-| | | Both |
-| | | Both |
-
-
-
-#### `Rec. Bolus`
-
-!!! warning "LoopFollow Report of Trio Recommended Dose"
-    It happens. We made a mistake. In versions before 4.0, the `Rec. Bolus` feature displayed by *LoopFollow* was a value from the *Trio* app that was never meant to be used as a recommended bolus.
-
-    But the mistake has been fixed and an appropriate `Rec. Bolus` is back.
-    
-    Make sure you have these version of code before using the recommended bolus. And pay attention to the warnings about how long since that recommendation was calculated by Trio.
-    
-    * LoopFollow 4.3 or newer
-    * Trio 0.6.0.16 or newer
-    
-    **Remember: the `Rec. Bolus` value is from the last AID app update to Nightscout**
-    
+| IOB | Active Insulin, also known as Insulin on Board | Both |
+| COB | Active Carbohydrates, also known as Carbs on Board | Both |
+| Basal | Current Basal Rate running on the pump | Both |
+| Override | Sensitivity (if not 100%) and Target (for `Loop`) <br>Name (for `Trio`)| Both |
+| Battery | Battery level on the OS-AID Phone<br>Trid indicates if currently plugged in | Both |
+| Pump | Reservoir Level | Both |
+| Pump Battery | Battery level on pumps that report levels | Both |
+| SAGE | Sensor Age | Both |
+| CAGE | Cannula Age | Both |
+| Rec. Bolus | Recommended bolus<br>from last `loop` | Both |
+| Min/Max | Minimum and maximum values for glucose from current OS-AID forecast | Both |
+| Carbs today | Total grams of Carbs since Midnight | Both |
+| Autosens | `Trio`: autosens value | `Trio` |
+| Profile | Named Profile<br>`Loop` requires Profile Customization | Both |
+| Target | Correction Range used by OS-AID | Both |
+| ISF | Insulin Sensitivity Factor in therapy settings with modification if appropriate | Both |
+| CR | Carbohydrate Ratio in therapy settings with modification if appropriate | Both |
+| Updated | Time of last `loop` | `Trio` |
+| TDD | Total Daily Dose in the last 24 hours | ``Trio`` |
+| IAGE | Insulin Age | Both |
 
 ### Settings: Remote
 
@@ -310,9 +313,14 @@ If you are configuring a second device and already have one device configured fo
 * [Import from QR Code](../remote/remote-control-overview.md#import-from-qr-code){: target="_blank" }
 
 
-### Settings: Alarm
+### Settings: Alarms
 
-🚧 Documentation Under Construction 🚧
+The Alarms settings allow you to control the behavior of all active alarms. Individual alarms are selected and configured with the [Alarms Feature](lf-features.md#alarms).
+
+* One nice feature you may want to enable is the Volume Buttons Snooze Alarms option.
+
+![overall alarm settings](img/lf-settings-alarms.svg){width="350"}
+{align="center"}
 
 ### Calendar
 
@@ -327,7 +335,7 @@ For more detailed instructions, see [Real-Time Watch Updates using Contact](lf-f
 
 - - -
 
-## Advanced
+### Advanced
 
 Allows you to choose what information to download from Nightscout and to modify your graph
 
@@ -346,17 +354,18 @@ Allows you to choose what information to download from Nightscout and to modify 
 ## Logging
 
 LoopFollow logs activity to a file that can be viewed within the app, and can be shared via email, a Notes file or Facebook messenger if needed.  The log can be filtered and searched. This will aid in troubleshooting and diagnostics. 
+
 Normally, the debug log option is disabled. The log debug option is found in the Advanced section. If the logs seem verbose, check that setting.
 
 ### View Log
 
-🚧 Documentation Under Construction 🚧
+When you select View Log, you see the entire log but can also filter for particular types of activities.
 
 ### Share Logs
 
-🚧 Documentation Under Construction 🚧
+When you choose Share Logs, you can send the log to device or app of your choice.
 
-- - -
+The log is named `LoopFollow YYYY-MM-DD`.
 
 - - -
 
