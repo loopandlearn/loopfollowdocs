@@ -148,7 +148,7 @@ The Remote Settings row in the *LoopFollow* Settings screen is used to select th
 {align="center"}
 
 !!! question "The *Trio* Remote Control option is not available"
-    The `Trio Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* URL](../setup/lf-setup.md#add-nightscout){: target="_blank" } with a default profile recognized as a *Trio* profile. Review [Troubleshooting](#troubleshooting) for possible reasons for not seeing the option.
+    The `Trio Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* Site](../setup/lf-setup.md#setup-nightscout){: target="_blank" } with a default profile recognized as a *Trio* profile. Review [Troubleshooting](#troubleshooting) for possible reasons for not seeing the option.
 
 * *Nightscout* option
     * Remote control with *LoopFollow* is limited to starting and canceling Temp Targets

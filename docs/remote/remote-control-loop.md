@@ -202,7 +202,7 @@ The Remote Settings row in the *LoopFollow* Settings screen is used to select th
 {align="center"}
 
 !!! question "The *Loop* Remote Control option is not available"
-    The `Loop Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* URL](../setup/lf-setup.md#add-nightscout){: target="_blank" } with a default profile recognized as a *Loop* profile. 
+    The `Loop Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* Site](../setup/lf-setup.md#setup-nightscout){: target="_blank" } with a default profile recognized as a *Loop* profile. 
 
 ### Guardrails
 

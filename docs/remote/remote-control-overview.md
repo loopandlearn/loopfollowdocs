@@ -32,7 +32,7 @@
 
 > With the release of *LoopFollow* 4.0, you can [share remote control configuration](#export-remote-settings-with-qr-code) using a QR code.
 
-> With the release of *LoopFollow* 4.3, [multiple QR codes are provided which are separated by function](../setup/lf-setup.md#importexport-settings){: target="_blank" } so you can share Nightscout URL, Dexcom Share and Alarm Settings without sharing Remote Control Configurations.
+> With the release of *LoopFollow* 4.3, [multiple QR codes are provided which are separated by function](../setup/lf-setup.md#importexport){: target="_blank" } so you can share Nightscout URL, Dexcom Share and Alarm Settings without sharing Remote Control Configurations.
 
 > With the release of *LoopFollow* 4.6, return messages sent from the *Loop* phone are displayed as notifications (requires *Loop* v3.11.1 or newer)
 
@@ -99,7 +99,7 @@ To show the QR Code, go into Remote settings on the phone that is already config
 
 This process works for both Loop and for Trio.
 
-For more information: see [Import/Export Settings](../setup/lf-setup.md#importexport-settings){ target="_blank" }
+For more information: see [Import/Export Settings](../setup/lf-setup.md#importexport){ target="_blank" }
 
 - - -
 

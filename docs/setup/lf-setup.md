@@ -45,7 +45,7 @@ Once you’ve configured your settings, your Home screen will look as beautiful 
 
 ## Toolbar
 
-The toolbar (tab bar) at the bottom of the Home and Menu screens is configurable using [Settings: Tab](#settings-tab) for rapid access to four features of your choice. The features that can be selected are:
+The toolbar (tab bar) at the bottom of the Home and Menu screens is configurable using [Settings: Tab](#tab) for rapid access to four features of your choice. The features that can be selected are:
 
 | Name | Description |
 |:--|:--|
@@ -60,7 +60,7 @@ The toolbar (tab bar) at the bottom of the Home and Menu screens is configurable
 
 ## Menu Screen
 
-The following graphic shows the menu screen. 
+The following graphic shows the menu screen. The menu can always be reached using the right button of the toolbar on the Home and Menu screens.
 
 * The features on this screen are described on the [*LoopFollowDocs* Features page](lf-features.md){: target="_blank" }
 * Settings, Logging and Build Information are covered below
@@ -76,7 +76,7 @@ The following graphic shows the menu screen.
 
 The Settings Screen is accessed by tapping on the Menu icon and selecting the Settings row.
 
-* The `Information Display` and `Remote` rows are only available with [Nightscout Credentials](#add-nightscout).
+* The `Information Display` and `Remote` rows are only available with [Nightscout Credentials](#setup-nightscout).
 
 
 ![Setting for LoopFollow v 3.1](img/lf-settings.svg){width="350"}
@@ -88,8 +88,8 @@ The Settings Screen is accessed by tapping on the Menu icon and selecting the Se
 
 You provide *LoopFollow* with information about the person you are following. At least one of these must be entered:
 
-* [*Nightscout* URL](#add-nightscout)
-* [*Dexcom* Share credentials](#add-dexcom)
+* [*Nightscout* URL](#setup-nightscout)
+* [*Dexcom* Share credentials](#setup-dexcom)
 
 #### Setup *Nightscout*
 
@@ -99,7 +99,7 @@ The graphic below shows the display when you tap on the *Nightscout* row. For mo
 When adding the Nightscout information to monitor, you can copy your *Nightscout* URL (including the token) from the [Admin Tools in *Nightscout*](https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles). When pasted into *LoopFollow* URL row, the app will automatically extract and fill in both the URL and token.
 
 !!! note "Setting up a second device"
-    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export](#importexport-settings).
+    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export](#importexport).
 
 
 ![enter nightscout credentials](img/lf-data-source-ns.png){width="300"}
@@ -135,7 +135,7 @@ The graphic below shows the display when you tap on the *Dexcom* row.
 > The *Dexcom* Share credentials are optional, but can be useful when the *Nightscout* URL is unavailable.
 
 !!! note "Setting up a second device"
-    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export](#importexport-settings).
+    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export](#importexport).
 
 - - -
 
@@ -145,24 +145,38 @@ The graphic below shows the display when you tap on the *Dexcom* row.
 
 - - -
 
-### App Settings
+### Display Settings
 
-There are a number of application settings the user can configure. These are summarized in the table below.
+There are a number of display options the user can configure to customize the appearance of the plots, tables and navigation tabs. These are summarized in the table below along with quick links to a more detailed description.
 
-* The `Information Display` and `Remote` rows are only display with [Nightscout Credentials](#setup-nightscout).
+* The `Information Display`row is only displayed with [Nightscout Credentials](#setup-nightscout).
 
 
 | Name | Description | Link |
 |:--|:--|:--|
-| Background Refresh | Configure to keep *LoopFollow* always alive or allow it to sleep and thus conserve phone battery | [Background Refresh](lf-features.md#background-refresh){: target="_blank" } | 
-| General | Adjust settings that affect the general app behavior | [General](#settings-general) | 
-| Graph | Adjust settings that affect the plots on the Home screen | [Graph](#settings-graph) | 
-| Tab Settings | Configure the toolbar displayed on the Home and Menu screens |[Tab](#settings-tab) | 
-| Import/Export | Share configurations among Caregiver phones |[Import/Export](#settings-importexport)| 
-| Information Display | Select which items to display in the Home screen IInformation Table<br>Requires Nightscout Data Source | [Information Display](#settings-information-display) | 
+| General | Adjust settings that affect the general app behavior | [General](#general) | 
+| Graph | Adjust settings that affect the plots on the Home screen | [Graph](#graph) | 
+| Information Display | Select which items to display in the Home screen IInformation Table<br>Requires Nightscout Data Source | [Information Display](#information-display) | 
+| Tab | Configure the toolbar displayed on the Home and Menu screens |[Tab](#tab) | 
+
+- - -
+
+### App Settings
+
+There are a number of application settings the user can configure. These are summarized in the table below along with quick links to a more detailed description.
+
+* The `Remote` row is only displayed with [Nightscout Credentials](#setup-nightscout).
+
+
+| Name | Description | Link |
+|:--|:--|:--|
+| Background Refresh | Configure to keep *LoopFollow* always alive or allow it to sleep and thus conserve phone battery | [Background Refresh](lf-features.md#background-refresh){: target="_blank" } |
+| Import/Export | Share configurations among Caregiver phones |[Import/Export](#importexport)| 
 | Remote | Configure for secure remote control<br>Requires Nightscout Data Source | [Remote Control Overview](../remote/remote-control-overview.md){: target="_blank" } 
 
-### Settings: General
+## Settings Details
+
+### General
 
 These settings are accessed through the General row in the Settings screen.
 
@@ -183,7 +197,7 @@ These settings are accessed through the General row in the Settings screen.
 | Speak BG | When enabled, glucose is spoken aloud in selected language<br>Options are available to limit this but see also Persistent Notification |
 
 
-### Settings: Graph
+### Graph
 
 These settings are accessed through the Graph row in the Settings screen.
 
@@ -206,7 +220,42 @@ These settings are accessed through the Graph row in the Settings screen.
 | High BG Line | Choose glucose level to display as high |
 | Show Days Back | Affects the small graph display and adjusts fetch from Nightscout Site |
 
-### Settings: Tab
+### Information Display
+
+These items can be chosen for display on the Home screen. A Nightscout Site is required and must be accessible or the table is blank. 
+
+> A lower case `loop` is used to denote a `closed-loop` cycle for both `Trio` and `Loop`.
+
+!!! note ""
+    The order of rows in the Settings: Information Display screen is reflected in the Information Table on your Home screen.
+    
+    * The order in the table below is the order in the LoopFollow code
+    * You can drag the rows up and down to suit your preferred order
+
+| Name | Description | `Loop` / `Trio` / Both |
+|:--|:--|:-:|
+| IOB | Active Insulin, also known as Insulin on Board | Both |
+| COB | Active Carbohydrates, also known as Carbs on Board | Both |
+| Basal | Current Basal Rate running on the pump | Both |
+| Override | Sensitivity (if not 100%) and Target (for `Loop`) <br>Name (for `Trio`)| Both |
+| Battery | Battery level on the OS-AID Phone<br>Trid indicates if currently plugged in | Both |
+| Pump | Reservoir Level | Both |
+| Pump Battery | Battery level on pumps that report levels | Both |
+| SAGE | Sensor Age | Both |
+| CAGE | Cannula Age | Both |
+| Rec. Bolus | Recommended bolus<br>from last `loop` | Both |
+| Min/Max | Minimum and maximum values for glucose from current OS-AID forecast | Both |
+| Carbs today | Total grams of Carbs since Midnight | Both |
+| Autosens | `Trio`: autosens value | `Trio` |
+| Profile | Named Profile<br>`Loop` requires Profile Customization | Both |
+| Target | Correction Range used by OS-AID | Both |
+| ISF | Insulin Sensitivity Factor in therapy settings with modification if appropriate | Both |
+| CR | Carbohydrate Ratio in therapy settings with modification if appropriate | Both |
+| Updated | Time of last `loop` | `Trio` |
+| TDD | Total Daily Dose in the last 24 hours | ``Trio`` |
+| IAGE | Insulin Age | Both |
+
+### Tab
 
 The user can modify which icons are displayed in the task bar at the bottom of the screen.
 
@@ -216,7 +265,7 @@ In the Settings screen, select Tab. Drag any of the options up or down to your p
 {align="center"}
 
 
-### Settings: Import/Export
+### Import/Export
 
 When setting up LoopFollow for another caregiver that will use some or all of the same configuration settings, you can export or scan a QR code to transfer settings between phones.
 
@@ -268,42 +317,7 @@ When the QR code is accepted, you will see a screen indicating what type of sett
 ![Import confirmation](img/lf-import-confirm.svg){width="600"}
 {align=center}
 
-### Settings: Information Display
-
-These items can be chosen for display on the Home screen. A Nightscout Site is required and must be accessible or the table is blank. 
-
-> A lower case `loop` is used to denote a `closed-loop` cycle for both `Trio` and `Loop`.
-
-!!! note ""
-    The order of rows in the Settings: Information Display screen is reflected in the Information Table on your Home screen.
-    
-    * The order in the table below is the order in the LoopFollow code
-    * You can drag the rows up and down to suit your preferred order
-
-| Name | Description | `Loop` / `Trio` / Both |
-|:--|:--|:-:|
-| IOB | Active Insulin, also known as Insulin on Board | Both |
-| COB | Active Carbohydrates, also known as Carbs on Board | Both |
-| Basal | Current Basal Rate running on the pump | Both |
-| Override | Sensitivity (if not 100%) and Target (for `Loop`) <br>Name (for `Trio`)| Both |
-| Battery | Battery level on the OS-AID Phone<br>Trid indicates if currently plugged in | Both |
-| Pump | Reservoir Level | Both |
-| Pump Battery | Battery level on pumps that report levels | Both |
-| SAGE | Sensor Age | Both |
-| CAGE | Cannula Age | Both |
-| Rec. Bolus | Recommended bolus<br>from last `loop` | Both |
-| Min/Max | Minimum and maximum values for glucose from current OS-AID forecast | Both |
-| Carbs today | Total grams of Carbs since Midnight | Both |
-| Autosens | `Trio`: autosens value | `Trio` |
-| Profile | Named Profile<br>`Loop` requires Profile Customization | Both |
-| Target | Correction Range used by OS-AID | Both |
-| ISF | Insulin Sensitivity Factor in therapy settings with modification if appropriate | Both |
-| CR | Carbohydrate Ratio in therapy settings with modification if appropriate | Both |
-| Updated | Time of last `loop` | `Trio` |
-| TDD | Total Daily Dose in the last 24 hours | ``Trio`` |
-| IAGE | Insulin Age | Both |
-
-### Settings: Remote
+### Remote
 
 Detailed instructions for configuring a phone for remote control are found on the [Remote Control Overview](../remote/remote-control-overview.md){: target="_blank" } page.
 
@@ -313,7 +327,7 @@ If you are configuring a second device and already have one device configured fo
 * [Import from QR Code](../remote/remote-control-overview.md#import-from-qr-code){: target="_blank" }
 
 
-### Settings: Alarms
+### Alarms
 
 The Alarms settings allow you to control the behavior of all active alarms. Individual alarms are selected and configured with the [Alarms Feature](lf-features.md#alarms).
 

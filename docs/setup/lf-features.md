@@ -6,7 +6,7 @@ Most features and the settings that control them are self-explanatory and docume
 
 ## Alarms
 
-When you select the Alarms Feature, the initial screen will be blank. By tapping on the plus sign upper right, you can add as many alarms as desired. There is quick access to the overall [Alarm Settings](lf-setup.md#settings-alarms) by tapping the gear icon on this screen.
+When you select the Alarms Feature, the initial screen will be blank. By tapping on the plus sign upper right, you can add as many alarms as desired. There is quick access to the overall [Alarm Settings](lf-setup.md#alarms) by tapping the gear icon on this screen.
 
 The graphic below shows a few typical alarms that might be chosen.
 
