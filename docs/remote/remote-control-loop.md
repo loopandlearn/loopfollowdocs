@@ -74,10 +74,6 @@ Example messages are highlighted by red rectangles in the composite below for re
 |:-:|:-:|
 | ![ remote bolus current](img/lf-lrc-bolus.png){width="300"} | ![ remote bolus older than 12 minutes](img/lf-lrc-bolus-old.png){width="300"} |
 
-
-!
-{align=center}
-
 !!! tip "Make sure *Loop* information is up to date"
     The insulin amount is filled out with the last recommended bolus that *LoopFollow* downloaded from the *Nightscout* site, which in turn was uploaded from the *Loop* phone.
 

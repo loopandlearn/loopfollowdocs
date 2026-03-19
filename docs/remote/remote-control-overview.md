@@ -28,15 +28,7 @@
 
 ## *LoopFollow* Remote Options
 
-> With the release of *LoopFollow* 3.2, remote options for the *Loop* app were updated to send directly to the *Loop* phone via APNS
-
-> With the release of *LoopFollow* 4.0, you can [share remote control configuration](#export-remote-settings-with-qr-code) using a QR code.
-
-> With the release of *LoopFollow* 4.3, [multiple QR codes are provided which are separated by function](../setup/lf-setup.md#importexport){: target="_blank" } so you can share Nightscout URL, Dexcom Share and Alarm Settings without sharing Remote Control Configurations.
-
-> With the release of *LoopFollow* 4.6, return messages sent from the *Loop* phone are displayed as notifications (requires *Loop* v3.11.1 or newer)
-
-* Keep checking back on this page, the remote capability is under development and there may be new features for you to read about.
+For a full summary of version requirements and feature history, see [Version Compatibility](../faqs/lf-faqs.md#version-compatibility){: target="_blank" }.
 
 The graphic below shows the Remote Settings screen for *LoopFollow*. You must first enter a *Nightscout* URL before any remote options are offered and then only the option suitable for that *Nightscout* site can be selected.
 
@@ -76,7 +68,7 @@ To share your remote settings with another device, follow the directions in this
     
     If in doubt revoke access to the key at [https://developer.apple.com/account/resources/authkeys/list](https://developer.apple.com/account/resources/authkeys/list) and generate a new one.
 
-To show the QR Code, go into Remote settings on the phone that is already configured for remote control. Click the button Import/Export Settings and then choose Export Remote Settings. (The graphic below is out of date). You can access this same function by going to Settings->Import/Export Settings directly.
+To show the QR Code, go into Remote settings on the phone that is already configured for remote control. Click the button Import/Export Settings and then choose Export Remote Settings. You can access this same function by going to Settings->Import/Export Settings directly.
 
 > This process works for both Loop Remote Control and for Trio Remote Control.
 
@@ -145,7 +137,7 @@ With *LoopFollow* 3.2 and newer, the config vars will not need to be embedded in
 
 If you do not have APNS credentials, you need to create a key and grant it access to the &nbsp;<span translate="no">Apple Push Notification Service (APNS)</span>. 
 
-> Note - these directions are copied from *LoopDocs* so it suggests you name the key *Nightscout*. It is probably best to stick with that naming for APNS keys whether you are using *Loop* or *Trio*.
+> It is recommended to name the key *Nightscout* for APNS keys, whether you are using *Loop* or *Trio*.
 
 !!! info "Reminder"
     This only works with the **paid** Apple Developer ID.
@@ -201,50 +193,4 @@ Depending on the selection you made, continue to one of these pages for more inf
 * [*Trio* Remote Control](remote-control-trio.md)
 * [*Nightscout* Remote Control](remote-control-nightscout.md) (`Trio 0.2.x only`)
 
-## Background Information
-
-There has been a lot of recent changes to remote control with LoopFollow.
-
-The historical notes are in this section.
-
-
-!!! tip "`Loop` Remote Control with *LoopFollow* 3.2"
-    With the release of *LoopFollow* 3.2, the remote control features accessible from LoopFollow match those available from the *LoopCaregiver* app.
-
-    You must update to *LoopFollow* 3.2 or newer and configure remote settings in the *LoopFollow* app to use these features.
-
-
-### Changes for *LoopFollow* Remote Control of the *Loop* App
-
-* With *LoopFollow* 3.2 and newer
-    * *Loop* remote commands from *LoopFollow* include Meal, Bolus and Override control
-        * *LoopFollow* no longer requires the *Nightscout* site be configured with the APNS credentials
-        * Read access for the *Nightscout* URL is sufficient
-* With *LoopFollow* 3.1 and older
-    * *Loop* remote commands were limited to Overrides, required the *Nightscout* site be configured with the APNS credentials and required a token with `careportal` access
-
-> With *Trio* 0.2.x, *LoopFollow* only supports temp targets and requires a token with `careportal` access. Once updated to *Trio* 0.5.x or newer, the full Trio Remote Control options are available.
-
-
-### *LoopFollow* Remote Control
-
-* *LoopFollow* Remote Control sends messages to the loopers phone using APNS
-    * **Loop**: Requires *LoopFollow* 3.2 or newer
-    * **Trio**: Requires matched code versions:
-        * Trio 0.6 (or newer) requires LoopFollow 4.0 (or newer)
-        * Trio 0.5.1.28 (or older) requires LoopFollow 3.2.11 (or older)
-    * Commands go via APNS to the *Loop*/*Trio* phone
-        * An immediate success or failure for **sending** the message to APNS is received
-        * There still could be a communication failure between APNS and the looper's phone or the command could be rejected by the looper's app
-    * **Trio v0.6 or newer** an APNS response is returned to *LoopFollow*
-        * A success or failure message is pushed back to the *LoopFollow* phone from the *Trio* phone when a remote command is received and handled
-    * The results show up in *Nightscout* after being uploaded from the *Loop*/*Trio* phone
-    * The results are plotted or displayed in *LoopFollow* after being downloaded from the *Nightscout* URL as a new treatment
-    * APNS keys do not need to be embedded in the *Nightscout* site
-        * This simplifies configuration of *Nightscout*, especially for those who use a paid service for *Nightscout*
-* For those following a looper using *Trio* 0.2.x, the only option for the Remote Setting is *Nightscout*, which uses Careportal
-    * With this selection, the *LoopFollow* phone sends commands to *Nightscout*, which then sends commands to the *Trio* phone
-    * For that reason, the *Nightscout* display will be updated first
-        * If there is an issue sending the careportal request from *Nightscout*, it might not make it to the *Trio* phone
-        * After the next download from *Nightscout*, the display will update if commands do or do not make it through the full round trip
 

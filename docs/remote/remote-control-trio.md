@@ -3,7 +3,7 @@
 Trio can accept remote commands from *Nightscout* or from *LoopFollow*. There are a variety of options, but the final control of whether remote commands will be enacted rests with the *Trio* user. They can enable or disable remote control.
 
 !!! warning "*Nightscout* version must be 15.0.2 or newer"
-    To properly display the OpenAPS pill with *Trio* 0.5.x (or newer), your *Nightscout* version must be 15.0.2 (or newer). If you do not see the expected treatments or pills in the *Nightscout* dashboard, follow the steps to [Configure for OpenAPS](#configure-for-openaps).
+    To properly display the OpenAPS pill with *Trio* 0.5.x (or newer), your *Nightscout* version must be 15.0.2 (or newer). If you do not see the expected treatments or pills in the *Nightscout* dashboard, follow the steps to [Configure Nightscout for Trio (OpenAPS)](#configure-nightscout-for-trio-openaps).
 
 The most powerful arrangement, for *Trio* 0.5.x (or newer), is to configure the *LoopFollow* app to use the *Trio* Remote Control (TRC) setting.
 
@@ -221,7 +221,7 @@ When you select *Trio* Remote Control as the Remote Type in the *LoopFollow* app
 
 ### APNS Key ID
 
-If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](remote-control-overview.md#existing-apns){: target="_blank" }. The value of the `LOOP_APNS_KEY_ID` goes here. Be sure to read the [Configure for OpenAPS](#configure-for-openaps) section about steps to make *Nightscout* and *LoopFollow* work with Trio.
+If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](remote-control-overview.md#existing-apns){: target="_blank" }. The value of the `LOOP_APNS_KEY_ID` goes here. Be sure to read the [Configure Nightscout for Trio (OpenAPS)](#configure-nightscout-for-trio-openaps) section about steps to make *Nightscout* and *LoopFollow* work with Trio.
 
 If you have never created an APNS (or have lost the credentials), follow the directions in [New APNS](remote-control-overview.md#new-apns){: target="_blank" } and copy the APNS Key ID into *LoopFollow* and save the value in your Secrets Reference file.
 
@@ -252,11 +252,11 @@ If you took those steps and still have missing rows, return to [Configure *LoopF
 
 This section covers known troubleshooting issues:
 
-* *Nightscout* not displaying *Trio* data: [Configure for OpenAPS](#configure-for-openaps)
+* *Nightscout* not displaying *Trio* data: [Configure Nightscout for Trio (OpenAPS)](#configure-nightscout-for-trio-openaps)
 * Was able to select *Trio* Remote Control in *LoopFollow* but it is no longer working: [Stop *Nightscout* access from other apps](#stop-nightscout-uploads-from-other-apps)
 * Cannot select *Trio* Remote Control in *LoopFollow*: [Update Profile](#update-profile)
 
-### Configure for OpenAPS
+### Configure Nightscout for Trio (OpenAPS)
 
 The *Nightscout* version must be 15.0.2 (or newer) to properly display the OpenAPS pill with *Trio* 0.5.x (or newer). Check your revision: *Nightscout* URL, Menu, scroll to bottom and examine the About section.
 
@@ -293,7 +293,7 @@ To force a profile to update to *Nightscout*, go to the *Trio* app and toggle Al
 
 Once the user has toggled "Allow Uploading to Nightscout", *LoopFollow* needs to be refreshed (pull down glucose value to refresh) or re-started in order to fetch the correct information. *LoopFollow* will refresh eventually, but most users are impatient.
 
-If the Debug Info in *LoopFollow* is missing a Device Token or a Bundle ID, as shown on the left side of the graphic, you need to make sure the *Loop* app is no longer uploading to *Nightscout* and force the profile to update.
+If the Debug Info in *LoopFollow* is missing a Device Token or a Bundle ID, as shown on the left side of the graphic, you need to make sure any previous AID app (*Loop*, *iAPS*) is no longer uploading to *Nightscout* and force the profile to update.
 
 ![LoopFollow debug info indicates a problem](img/lf-force-ns-profile.svg){width=600}
 {align=center}
