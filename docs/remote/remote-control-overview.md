@@ -80,14 +80,14 @@ To show the QR Code, go into Remote settings on the phone that is already config
 !!! tip "Setting up a Second Device for Remote Control"
     With version 4.3 and newer, you can set up a second device using a selection of QR codes from a LoopFollow phone that is already configured.
     
-    You can share Nightscout URL, Dexcom Share and Alarm Settings if someone only needs to follow the looper.
+    You can share *Nightscout* Site, Dexcom Share and Alarm Settings if someone only needs to follow the looper.
     
     You can share Remote Control Configurations if someone needs to send remote commands.
 
 **If a follower only needs to monitor and get alarms**
 
 * Do **not** use the QR code for Remote Control Settings
-* Limit the sharing to the other QR codes for Nightscout URL, Dexcom Share and Alarm Settings
+* Limit the sharing to the other QR codes for *Nightscout* Site, Dexcom Share and Alarm Settings
 
 This process works for both Loop and for Trio.
 

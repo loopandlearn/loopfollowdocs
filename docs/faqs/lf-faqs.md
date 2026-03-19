@@ -59,5 +59,5 @@ The APNS credentials only need to be in *Nightscout* if you also use *Nightscout
 |:--|:--|
 | 3.2 | *Loop* remote commands (Meal, Bolus, Override) sent directly via APNS; APNS credentials no longer required in *Nightscout* |
 | 4.0 | *Trio* 0.6 remote control support; share remote configuration via QR code |
-| 4.3 | Separate QR codes for Nightscout URL, Dexcom Share, Remote Settings, and Alarm Settings |
+| 4.3 | Separate QR codes for *Nightscout* Site, Dexcom Share, Remote Settings, and Alarm Settings |
 | 4.6 | Real-time APNS notifications returned from the *Loop* phone (requires *Loop* v3.11.1 or newer) |

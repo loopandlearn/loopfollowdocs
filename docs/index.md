@@ -10,11 +10,11 @@ Many loopers use *LoopFollow* for themselves because of the flexible (and loud) 
 
 *LoopFollow*:
 
-* Displays information from a Nightscout URL or Dexcom Share account
+* Displays information from a *Nightscout* Site or Dexcom Share account
 * Provides flexible alarms with a Snooze screen
-* Displays Treatments and Statistics (requires Nightscout URL)
+* Displays Treatments and Statistics (requires *Nightscout* Site)
 * Supports *Loop* and *Trio* OS-AID systems
-    * Provides secure remote control (requires Nightscout URL and security configuration)
+    * Provides secure remote control (requires *Nightscout* Site and security configuration)
 * Supports up to 3 loopers – each with their own unique app name
 * Works with your Apple Watch
 * Runs on an iPhone, iPad or a Mac computer
