@@ -482,14 +482,14 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#archaic-instructions">
+<a class="md-nav__link" href="#legacy-updating-from-v3x">
 <span class="md-ellipsis">
       
-        Archaic Instructions
+        Legacy: Updating from v3.x
       
     </span>
 </a>
-<nav aria-label="Archaic Instructions" class="md-nav">
+<nav aria-label="Legacy: Updating from v3.x" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#update-from-loopfollow-v3x">
@@ -715,14 +715,14 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#archaic-instructions">
+<a class="md-nav__link" href="#legacy-updating-from-v3x">
 <span class="md-ellipsis">
       
-        Archaic Instructions
+        Legacy: Updating from v3.x
       
     </span>
 </a>
-<nav aria-label="Archaic Instructions" class="md-nav">
+<nav aria-label="Legacy: Updating from v3.x" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#update-from-loopfollow-v3x">
@@ -772,13 +772,14 @@
 <li><code>Fork</code> the <abbr title="contains project files and each file's revision history">repository</abbr> to your organization</li>
 <li>Open your <code>fork</code> and enable Actions</li>
 <li><code>Add Identifiers</code></li>
+<li>Review App Identifier in Apple Developer portal</li>
 <li>Add the App in App Store Connect and configure <abbr title="a method to distribute apps without direct connection">TestFlight</abbr> users</li>
 <li><code>Build LoopFollow</code></li>
 </ol>
-<div class="admonition tips">
+<div class="admonition tip">
 <p class="admonition-title">What About Other Actions</p>
 <ul>
-<li>You already have your organizaton configured, there is no need to run <code>Validate Secrets</code></li>
+<li>You already have your organization configured, there is no need to run <code>Validate Secrets</code></li>
 <li>The Build action includes a <code>Create Certificates</code> step - you can run it separately but it is not necessary</li>
 </ul>
 </div>
@@ -998,17 +999,15 @@
 <p>If you need detailed instruction, visit <a href="https://loopkit.github.io/loopdocs/browser/tf-users/#testflight-overview">Configure to Use Browser: <em><abbr title="a method to distribute apps without direct connection">TestFlight</abbr></em> Users Overview</a>.</p>
 <h2 id="build-app">Build App<a class="headerlink" href="#build-app" title="Link to this section for reference">¶</a></h2>
 <h3 id="display-name-customization-for-loopfollow">Display Name Customization for <code>LoopFollow</code><a class="headerlink" href="#display-name-customization-for-loopfollow" title="Link to this section for reference">¶</a></h3>
-<blockquote>
 <p>If you build <code>LoopFollow</code> for one, two or three loopers, you may choose to customize your <code>fork</code> or <code>forks</code> to insert a custom display name.</p>
 <ul>
 <li>Find and click on the file <code>LoopFollowDisplayNameConfig.xcconfig</code></li>
 <li>Tap the pencil icon so you can edit the file</li>
 <li>The last line says <code>display_name = LoopFollow</code> (or <code>LoopFollow_Second</code> or <code>LoopFollow_Third</code>)</li>
 <li>Insert your custom name so the last line says <code>display_name = LF custom name</code></li>
-<li>Click on <abbr title="a formal change to files in a repository; each commit has an alphanumeric identifier (SHA-1)">commit</abbr> changes and chose to <abbr title="a formal change to files in a repository; each commit has an alphanumeric identifier (SHA-1)">commit</abbr> directly into the <code>main</code> <abbr title="version of code within a single repository or workspace repository">branch</abbr></li>
+<li>Click on <abbr title="a formal change to files in a repository; each commit has an alphanumeric identifier (SHA-1)">commit</abbr> changes and choose to <abbr title="a formal change to files in a repository; each commit has an alphanumeric identifier (SHA-1)">commit</abbr> directly into the <code>main</code> <abbr title="version of code within a single repository or workspace repository">branch</abbr></li>
 </ul>
 <p>Continue to build as instructed below. After you install the app on your phone, iPad or Mac via <em><abbr title="a method to distribute apps without direct connection">TestFlight</abbr></em>, that custom name is what is displayed. The prefix LF is suggested to make it easier to find the custom named <code>LoopFollow</code> app in the list of apps, but is not required.</p>
-</blockquote>
 <h3 id="build-action">Build Action<a class="headerlink" href="#build-action" title="Link to this section for reference">¶</a></h3>
 <ol>
 <li>Click on the Actions tab of your <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="contains project files and each file's revision history">repository</abbr></li>
@@ -1026,7 +1025,7 @@
 </blockquote>
 <h3 id="build-errors">Build Errors<a class="headerlink" href="#build-errors" title="Link to this section for reference">¶</a></h3>
 <p>Refer to the <a href="https://loopkit.github.io/loopdocs/browser/bb-errors">Browser Build: Build Errors</a> to find your error.</p>
-<p>Please do not remove an existing app if you have trouble building a new one. Your build error is not cause by any existing app.</p>
+<p>Please do not remove an existing app if you have trouble building a new one. Your build error is not caused by any existing app.</p>
 <div class="admonition important">
 <p class="admonition-title">Removing App Warning</p>
 <p>If you remove an app and later want to restore that app, you might not be able to.</p>
@@ -1038,7 +1037,7 @@
 <p>Provided in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v4.4 and newer, you can run Add <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> to add the required <code>Push Notifications</code> capability.</p>
 <p>For <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v4.0 through 4.3, you had to manually add that capability to the Identifier. Thanks to our friends at fastlane, who updated their tool, this manual action is no longer necessary.</p>
 </div>
-<h2 id="archaic-instructions">Archaic Instructions<a class="headerlink" href="#archaic-instructions" title="Link to this section for reference">¶</a></h2>
+<h2 id="legacy-updating-from-v3x">Legacy: Updating from v3.x<a class="headerlink" href="#legacy-updating-from-v3x" title="Link to this section for reference">¶</a></h2>
 <p>Given that a Browser Build must be rebuilt every 90 days, the instructions here are unlikely to be required.</p>
 <h3 id="update-from-loopfollow-v3x">Update from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v3.x<a class="headerlink" href="#update-from-loopfollow-v3x" title="Link to this section for reference">¶</a></h3>
 <p>When updating from an older version of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, v3.x or older, you need to add the <code>Push Notification</code> to the Identifier Capabilities:</p>

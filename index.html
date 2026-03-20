@@ -473,22 +473,35 @@
 <p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> is an open-source <abbr title="Do it yourself, a common acronym for the open-source software community (and the maker community)">DIY</abbr> (do-it-yourself) app that displays information for a person with diabetes in an easy-to-use interface. 
 It combines information from multiple other apps and provides custom alerts. It runs on iPhone, iPad or Mac devices. With newer versions, some remote control features are available for the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> apps.</p>
 <p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> was created because using different apps as a parent or caregiver of a person with diabetes can be cumbersome. 
-Add in the extra details from looping with an Open Source Automated Insulin Delivery (OS AID) app 
+Add in the extra details from looping with an Open Source Automated Insulin Delivery (<abbr title="Open Source Automated Insulin Delivery systems">OS-AID</abbr>) app 
 and flipping back and forth between various sources of information can be a challenge. 
 Many loopers use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for themselves because of the flexible (and loud) alarm options.</p>
 <p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>:</p>
 <ul>
-<li>Displays information from a <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="website address (Uniform Resource Locator)">URL</abbr> or Dexcom Share account</li>
-<li>Provides flexible alarm features with a Snooze screen</li>
-<li>Supports <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> OS AID systems and provides remote control features</li>
+<li>Displays information from a <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Site or Dexcom Share account</li>
+<li>Provides flexible alarms with a Snooze screen</li>
+<li>Displays Treatments and Statistics (requires <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Site)</li>
+<li>Supports <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> <abbr title="Open Source Automated Insulin Delivery systems">OS-AID</abbr> systems<ul>
+<li>Provides secure remote control (requires <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Site and security configuration)</li>
+</ul>
+</li>
 <li>Supports up to 3 loopers – each with their own unique app name</li>
 <li>Works with your Apple Watch</li>
 <li>Runs on an iPhone, iPad or a Mac computer</li>
 </ul>
-<p>An example of the main screen for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> is shown in the graphic below:</p>
-<blockquote>
-<p align="center"><img alt="example of main screen for *LoopFollow*" src="img/loopfollow-main-screen.png"/></p>
-</blockquote>
+<h4 id="home">Home<a class="headerlink" href="#home" title="Link to this section for reference">¶</a></h4>
+<p>An example of the Home screen for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v5.0 and newer is shown in the graphic below:</p>
+<p align="center"><img alt="example of Home screen for *LoopFollow*" src="img/loopfollow-home-screen.png" width="400"/></p>
+<p>The toolbar at the bottom of the Home and Menu screens has 4 user-configurable icons in addition to the <code>Menu</code> icon. The icons shown in the graphic above are Home, Alarms, Snoozer and Remote.</p>
+<h4 id="new-features">New Features<a class="headerlink" href="#new-features" title="Link to this section for reference">¶</a></h4>
+<div class="admonition tip">
+<p>New with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v5.0:</p>
+<ul>
+<li><a href="setup/lf-setup/#menu-screen" target="_blank">Menu Screen</a></li>
+<li><a href="setup/lf-features/#treatments" target="_blank">Treatments</a></li>
+<li><a href="setup/lf-features/#statistics" target="_blank">Statistics</a> </li>
+</ul>
+</div>
 <hr/>
 <h2 id="hardware-requirements">Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this section for reference">¶</a></h2>
 <p>The <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app will run on any iPhone or iPad that supports <abbr title="operating system used by Apple Mobile devices (iPhone, iPod, iPad)">iOS</abbr> 16.6 or newer operating system and on any Mac computer with an Apple Silicon chip, i.e., M1, M2, M3, M4, etc.</p>
@@ -496,27 +509,27 @@ Many loopers use <em><abbr title="LoopFollow combines custom alerts and display 
 <h2 id="build-options">Build Options<a class="headerlink" href="#build-options" title="Link to this section for reference">¶</a></h2>
 <p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> can be built with a <a href="build/build-options/#building-options" target="_blank">Browser on any computer</a> or using <a href="build/build-options/#build-loopfollow-script-for-mac-xcode" target="_blank"><abbr title="program used to build an app">Xcode</abbr> on a Mac</a>.</p>
 <h3 id="community-support-and-build-help">Community Support and Build Help<a class="headerlink" href="#community-support-and-build-help" title="Link to this section for reference">¶</a></h3>
-<p>Community support for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> is available on <a href="https://www.facebook.com/groups/loopfollowlnl"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>’s FaceBook page</a>. Please use community support for Build problems. It is very unlikely that a new <abbr title="On github - a formal method to report a problem, either code behavior or documentation">Issue</abbr> needs to be opened when you are having trouble building. </p>
-<p>Remember, for build help with Browser Build, all we need is the <em><abbr title="an online service for storing repositories, accessible from a browser">GitHub</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> to your own <abbr title="a copy of code in a github repository other than the original">fork</abbr> of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>. Just replace <code>docs-test</code> in the example below with your <em><abbr title="an online service for storing repositories, accessible from a browser">GitHub</abbr></em> username:</p>
+<p>Community support for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> is available at</p>
+<ul>
+<li><a href="https://www.facebook.com/groups/loopfollowlnl"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> FaceBook page</a></li>
+<li><a href="https://www.facebook.com/groups/LOOPandLEARN"><em><abbr title="A support group with mentors and developers who support the OS-AID community">Loop and Learn</abbr></em> Facebook</a></li>
+<li><a href="https://discord.gg/KQgk3gzuYU"><em><abbr title="A support group with mentors and developers who support the OS-AID community">Loop and Learn</abbr></em> Discord</a></li>
+</ul>
+<p>Please use community support for Build questions. <strong>Do not ask ChatGPT or any AI system; they tend to provide incorrect answers.</strong></p>
+<p>To get build help with Browser Build, all we need is the <em><abbr title="an online service for storing repositories, accessible from a browser">GitHub</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> for your <abbr title="a copy of code in a github repository other than the original">fork</abbr> of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>. Just replace <code>docs-test</code> in the example below with your <em><abbr title="an online service for storing repositories, accessible from a browser">GitHub</abbr></em> username:</p>
 <ul>
 <li>Example: <a href="https://github.com/docs-test/LoopFollow/actions">https://<abbr title="an online service for storing repositories, accessible from a browser">github.com</abbr>/docs-test/<abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr>/actions</a></li>
 </ul>
-<p>If you choose not to use Facebook, you can reach out on the <a href="https://discord.gg/FnwFEFUwXE"><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Discord server</a> in one of the build channels.</p>
 <h3 id="issues-and-feature-requests">Issues and Feature Requests<a class="headerlink" href="#issues-and-feature-requests" title="Link to this section for reference">¶</a></h3>
-<p>Issues and Feature Requests can be posted at <a href="https://github.com/loopandlearn/LoopFollow/issues"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Issues</a>. Please review open issues and only open a new one if your problem or feature request is not already described. When reporting an issue, please specify the version of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> in which you noticed the issue.</p>
+<p>Issues and Feature Requests can be posted at <a href="https://github.com/loopandlearn/LoopFollow/issues"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Issues</a>. Please review open issues and only open a new one if your problem or feature request is not already described. When reporting an issue, please specify the version of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> in which you noticed the problem.</p>
+<p>It is very unlikely that a new <abbr title="On github - a formal method to report a problem, either code behavior or documentation">Issue</abbr> needs to be opened when you are having trouble building. See <a href="#community-support-and-build-help">Community Support and Build Help</a>.</p>
 <hr/>
 <h2 id="loopfollow-version"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Version<a class="headerlink" href="#loopfollow-version" title="Link to this section for reference">¶</a></h2>
 <p>The <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app <a href="https://github.com/loopandlearn/LoopFollow/releases">release history</a> is located in <abbr title="an online service for storing repositories, accessible from a browser">GitHub</abbr>.</p>
 <p>That link provides a reverse chronological list of all code updates.</p>
 <p>In addition, at the bottom of the Settings screen for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, the version you are using and latest versions are reported. This is an easy way to know if you should update your app.</p>
 <h2 id="history">History<a class="headerlink" href="#history" title="Link to this section for reference">¶</a></h2>
-<p>This code was originally developed by Jon Fawcett who turned over development and management to the <em><abbr title="A support group with mentors and developers who support the OS-AID community">Loop and Learn</abbr></em> team. </p>
-<p>We are happy to respond to bug reports or feature requests.</p>
-<ul>
-<li><a href="https://loopandlearn.org"><em><abbr title="A support group with mentors and developers who support the OS-AID community">Loop and Learn</abbr></em> Website</a></li>
-<li><a href="https://www.facebook.com/groups/LOOPandLEARN"><em><abbr title="A support group with mentors and developers who support the OS-AID community">Loop and Learn</abbr></em> Facebook</a></li>
-<li><a href="https://www.youtube.com/c/loopandlearn"><em><abbr title="A support group with mentors and developers who support the OS-AID community">Loop and Learn</abbr></em> YouTube Channel</a></li>
-</ul>
+<p>This code was originally developed by Jon Fawcett who turned over development and management to the <em><abbr title="A support group with mentors and developers who support the OS-AID community">Loop and Learn</abbr></em> team. The primary developers are parents who love their children.</p>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
