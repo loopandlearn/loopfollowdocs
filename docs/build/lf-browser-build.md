@@ -29,11 +29,12 @@ Detailed directions are found in the next sections, this is the summary of what 
 2. `Fork` the repository to your organization
 3. Open your `fork` and enable Actions
 4. `Add Identifiers`
+5. Review App Identifier in Apple Developer portal
 6. Add the App in App Store Connect and configure TestFlight users
 7. `Build LoopFollow`
 
-!!! tips "What About Other Actions"
-    * You already have your organizaton configured, there is no need to run `Validate Secrets`
+!!! tip "What About Other Actions"
+    * You already have your organization configured, there is no need to run `Validate Secrets`
     * The Build action includes a `Create Certificates` step - you can run it separately but it is not necessary
 
 
@@ -205,19 +206,19 @@ If you need detailed instruction, visit [Configure to Use Browser: *TestFlight* 
 
 ### Display Name Customization for `LoopFollow`
 
-> If you build `LoopFollow` for one, two or three loopers, you may choose to customize your `fork` or `forks` to insert a custom display name.
+If you build `LoopFollow` for one, two or three loopers, you may choose to customize your `fork` or `forks` to insert a custom display name.
 
-> * Find and click on the file `LoopFollowDisplayNameConfig.xcconfig`
-> * Tap the pencil icon so you can edit the file
-> * The last line says `display_name = LoopFollow` (or `LoopFollow_Second` or `LoopFollow_Third`)
-> * Insert your custom name so the last line says `display_name = LF custom name`
-> * Click on commit changes and chose to commit directly into the `main` branch
+* Find and click on the file `LoopFollowDisplayNameConfig.xcconfig`
+* Tap the pencil icon so you can edit the file
+* The last line says `display_name = LoopFollow` (or `LoopFollow_Second` or `LoopFollow_Third`)
+* Insert your custom name so the last line says `display_name = LF custom name`
+* Click on commit changes and choose to commit directly into the `main` branch
 
-> Continue to build as instructed below. After you install the app on your phone, iPad or Mac via *TestFlight*, that custom name is what is displayed. The prefix LF is suggested to make it easier to find the custom named `LoopFollow` app in the list of apps, but is not required.
+Continue to build as instructed below. After you install the app on your phone, iPad or Mac via *TestFlight*, that custom name is what is displayed. The prefix LF is suggested to make it easier to find the custom named `LoopFollow` app in the list of apps, but is not required.
 
 ### Build Action
 
-11. Click on the Actions tab of your *LoopFollow* repository
+1. Click on the Actions tab of your *LoopFollow* repository
 2. On the left side, click on `4. Build LoopFollow`
 3. On the right side, click Run Workflow to show a dropdown menu
 4. Tap the green button that says Run workflow.
@@ -234,7 +235,7 @@ Repeat the build and install from TestFlight steps if you use LoopFollow_Second 
 
 Refer to the [Browser Build: Build Errors](https://loopkit.github.io/loopdocs/browser/bb-errors) to find your error.
 
-Please do not remove an existing app if you have trouble building a new one. Your build error is not cause by any existing app.
+Please do not remove an existing app if you have trouble building a new one. Your build error is not caused by any existing app.
 
 !!! Important "Removing App Warning"
     If you remove an app and later want to restore that app, you might not be able to.
@@ -250,7 +251,7 @@ The [LoopDocs instructions: Install on Phone](https://loopkit.github.io/loopdocs
     
     For *LoopFollow* v4.0 through 4.3, you had to manually add that capability to the Identifier. Thanks to our friends at fastlane, who updated their tool, this manual action is no longer necessary.
 
-## Archaic Instructions
+## Legacy: Updating from v3.x
 
 Given that a Browser Build must be rebuilt every 90 days, the instructions here are unlikely to be required.
 

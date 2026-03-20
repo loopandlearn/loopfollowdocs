@@ -27,7 +27,7 @@ For *Loop* careportal access, your *Nightscout* site must be configured with App
 
 * [*LoopDocs*: Remote Overview](https://loopkit.github.io/loopdocs/nightscout/remote-overview/)
 
-Then once you add the Nightscout URL with at least a careportal token to *LoopFollow* and choose *Nightscout* for the *LoopFollow* Remote Settings, you have the option to set or cancel overrides for the *Loop* app. 
+Then once you add the *Nightscout* Site with at least a careportal token to *LoopFollow* and choose *Nightscout* for the *LoopFollow* Remote Settings, you have the option to set or cancel overrides for the *Loop* app. 
 
 The graphic below shows what the screen looks like when you tap the `Remote` option from the toolbar of *LoopFollow*.
 

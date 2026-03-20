@@ -1,69 +1,76 @@
+## *LoopFollow* Features
+
+Most features and the settings that control them are self-explanatory and documented within the app. Some documentation is provided below.
+
+- - -
+
+## Alarms
+
+When you select the Alarms Feature, the initial screen will be blank. By tapping on the plus sign upper right, you can add as many alarms as desired. There is quick access to the overall [Alarm Settings](lf-setup.md#alarms) by tapping the gear icon on this screen.
+
+The graphic below shows a few typical alarms that might be chosen.
+
+![example alarm screen](img/lf-alarms-screen.png){width="350"}
+{align="center"}
+
+When you tap on a given alarm, you can customize the settings in a number of ways. An example for the Low BG Alert is shown below. Once you customize and alarm, you can enable or disable it quickly while maintaining your custom settings.
+
+![alarms can be customized](img/lf-alarms-example.svg){width="700"}
+{align="center"}
+
+The graphic below shows the many types of alarms that are available with *LoopFollow*.
+
+![alarms to select](img/lf-alarms.svg){width="700"}
+{align="center"}
+
+
+- - -
+
+## Snoozer
 
 🚧 Documentation Under Construction 🚧
 
-<!--todo-->
-<!--Notes: be sure to add this info
+- - -
 
--->
+## Remote Control with *LoopFollow*
 
-## *LoopFollow* Features
+Do not skip the overview page if you have not yet configured *LoopFollow* for Remote Control.
 
-Most features are self-explanatory. Use the [Settings Screen](lf-setup.md#settings-screen){: target="_blank" } to navigate to the appropriate section to adjust the app settings.
+* [Remote Control Overview](../remote/remote-control-overview.md)
 
-Some features require more explanation. 
+There are separate pages for the 3 different remote control options. (No page is provided if `None` is selected).
+Quick access is provided using these links once you have configured *LoopFollow* for Remote Control:
+
+* None
+* [*Nightscout*](../remote/remote-control-nightscout.md){: target="_blank" } (*LoopFollow* offers actions that can be done from a *Nightscout* Careportal)
+* [*Loop* Remote Control](../remote/remote-control-loop.md){: target="_blank" } 
+* [*Trio* Remote Control](../remote/remote-control-trio.md){: target="_blank" }: requires Trio 0.5.x or newer
+
 
 - - -
 
-## Toolbar Tab Customization
+## Treatments
 
-The toolbar or tab bar at the bottom of the *LoopFollow* screen is used for rapid access to specific features. This navigation feature can support up to 5 tabs, but there are 6 options that could be placed there. With version 3.1 and newer, the tabs displayed are customizable.
+The treatments screen displays all treatments downloaded from the Nightscout Site with user-selectable filters on treatment type.
 
-??? tip "Historical Tabs (Click to open/close)"
-    Historically the 5 tabs were:
-
-    * tab 1: Home
-    * tab 2: Alarms or Remote Control
-    * tab 3: Snoozer
-    * tab 4: Nightscout site
-    * tab 5: Settings
-
-    The updated design is that tabs 2 and 4 are optional and tab 5 can be either settings or the &hellip;&nbsp;More icon.
-
-The new arrangement is:
-
-* tab 1: Home
-* tab 2: Configurable
-* tab 3: Snoozer
-* tab 4: Configurable
-* tab 5: Configurable (Settings or &hellip;&nbsp;More)
-
-### Instructions for Tab Selection
-
-After choosing the Tab Selection row from *LoopFollow* Settings, these tab options can be placed as desired in your choice of tab 2, tab 4, the &hellip;&nbsp;More Menu or Hidden. 
-
-* Alarms
-* Remote
-* Nightscout site
-
-> If you tap cancel in upper left - no changes are saved. 
-
-> Once you tap `Apply` in upper right, your toolbar is updated.
-
-> ![Instructions for tab customization](img/lf-tab-custom-instructions.svg){width="350"}
-{align="center"}
-
-
-### Example Tab Choices
-
-To clarify the selection process, the graphic below shows 3 choices for Tab Settings on the left, with the resultant toolbar on the right.
-
-![Several tab selections](img/lf-tab-custom.svg){width="700"}
+![example treatments screen](img/lf-treatments-screen.png){width=700}
 {align="center"}
 
 
 - - -
 
-## Background Refresh Settings
+## Statistics
+
+
+The Statistics screen displays a variety of plots and values. This requires an associated Nightscout Site. If the Nightscout site is limited in the days of data, it will be noticeable in the Data Availability metric on the first row.
+
+![example treatments screen](img/lf-feature-statistics.svg){width=700}
+{align="center"}
+
+
+- - -
+
+## Background Refresh
 
 *LoopFollow* has traditionally provided an option to play a silent audio as a trick to allow it to wake up when in the background or when the phone is locked. This has several drawbacks including battery drain and limited reliability.
 
@@ -151,20 +158,4 @@ Bullet List with Instructions:
 You’re ready to monitor your glucose data directly on your Apple Watch!
 
 🚧 import graphics from lnl 🚧
-
-- - -
-
-## Remote Control with *LoopFollow*
-
-Do not skip the overview page if you have not yet configured *LoopFollow* for Remote Control.
-
-* [Remote Control Overview](../remote/remote-control-overview.md)
-
-There are separate pages for the 3 different remote control options. (No page is provided if `None` is selected).
-Quick access is provided using these links once you have configured *LoopFollow* for Remote Control:
-
-* None
-* [*Nightscout*](../remote/remote-control-nightscout.md){: target="_blank" } (*LoopFollow* offers actions that can be done from a *Nightscout* Careportal)
-* [*Loop* Remote Control](../remote/remote-control-loop.md){: target="_blank" } 
-* [*Trio* Remote Control](../remote/remote-control-trio.md){: target="_blank" }: requires Trio 0.5.x or newer
 

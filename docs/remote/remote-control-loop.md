@@ -5,9 +5,8 @@ This option is available for remote control of a *Loop* phone using *LoopFollow*
 * *Loop* Remote Control with Real-Time Notifications
     * Remote control with *LoopFollow* includes adding remote carbs, enacting remote bolus, and starting and canceling Overrides
     * The *LoopFollow* phone sends directly through APNS to the *Loop* phone
-    * The *Loop* phone, if it gets the APNS message, returns an APNS response with success or error message for carb or bolus commands
+    * The *Loop* phone, if it gets the APNS message, returns an APNS response with success or error message for carb or bolus commands for *Loop* version v3.11.1 or newer
     * The override commands do not get an APNS message returned
-
 
 ### Quick Access
 
@@ -74,10 +73,6 @@ Example messages are highlighted by red rectangles in the composite below for re
 | Recent Rec Bolus | Last `Loop` > 12 minutes |
 |:-:|:-:|
 | ![ remote bolus current](img/lf-lrc-bolus.png){width="300"} | ![ remote bolus older than 12 minutes](img/lf-lrc-bolus-old.png){width="300"} |
-
-
-!
-{align=center}
 
 !!! tip "Make sure *Loop* information is up to date"
     The insulin amount is filled out with the last recommended bolus that *LoopFollow* downloaded from the *Nightscout* site, which in turn was uploaded from the *Loop* phone.
@@ -203,7 +198,7 @@ The Remote Settings row in the *LoopFollow* Settings screen is used to select th
 {align="center"}
 
 !!! question "The *Loop* Remote Control option is not available"
-    The `Loop Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* URL](../setup/lf-setup.md#add-nightscout){: target="_blank" } with a default profile recognized as a *Loop* profile. 
+    The `Loop Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* Site](../setup/lf-setup.md#setup-nightscout){: target="_blank" } with a default profile recognized as a *Loop* profile. 
 
 ### Guardrails
 
