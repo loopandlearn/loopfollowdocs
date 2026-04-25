@@ -89,7 +89,7 @@ You start by opening a browser using the URL from the table below. Most people o
     * Leave the selection that says "`Copy the main branch only`" checked
     * Click on the green `Create fork` button
 
-    ![fork information for LoopWorkspac](img/fork-org.gif){width="700"}
+    ![fork information for LoopWorkspace](img/fork-org.gif){width="700"}
     {align="center"}
 
 #### Successful Fork
