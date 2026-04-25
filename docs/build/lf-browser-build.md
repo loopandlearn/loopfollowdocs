@@ -25,12 +25,10 @@ If you choose, you can:
 
 Detailed directions are found in the next sections, this is the summary of what you will do:
 
-1. Open the *LoopFollow* repository in your browser ([link](#fork-loopfollow))
-1. `Fork` the repository to your organization ([link](#create-the-fork))
+1. `Fork` the repository to your organization ([link](#fork-loopfollow))
 1. `Add Identifiers` ([link](#add-identifiers))
-1. Review App Identifier in Apple Developer portal ([link](#review-app-identifier))
 1. Create a `LoopFollow App Group` ([link](#create-app-group))
-    * One Time Only, New with LoopFollow version 6.0 and newer
+    * New with LoopFollow version 6.0 and newer
 1. Add the App Group to the Identifiers ([link](#add-app-group))
 1. Create the App in App Store Connect and configure TestFlight users ([link](#create-app-in-app-store-connect))
 1. Configure TestFlight users for the *LoopFollow* app ([link](#add-users-to-testflight-for-app))
@@ -41,7 +39,7 @@ Detailed directions are found in the next sections, this is the summary of what 
     * The Build action includes a `Create Certificates` step - you can run it separately but it is not necessary
 
 
-### <span translate="no">Fork LoopFollow</span>
+## <span translate="no">Fork LoopFollow</span>
 
 You start by opening a browser using the URL from the table below. Most people only need the *LoopFollow* app to follow one person. If you need to follow more than one person, then repeat the steps for each of the URL in the table. If you need to follow more than three people, reach out to the developers for help.
 
@@ -136,20 +134,8 @@ The `Add Identifier` &nbsp;<span class=notranslate>Action</span>&nbsp; should su
     * Use the Browser Build Errors page to resolve the error, then repeat the Action
     * [Quick Reference for Browser Build Errors](https://loopkit.github.io/loopdocs/browser/bb-errors/#quick-reference-for-browser-build-errors)
 
-## Review App Identifier
 
-Open this link: [Certificates, Identifiers & Profiles: Identifiers List](https://developer.apple.com/account/resources/identifiers/list){: target="_blank" } on the apple developer site.
-
-After successfully performing the `Add Identifiers Action`, you will see the identifier for your app with a Name and Bundle ID matching that in the table below. You will see your unique TEAMID embedded in the identifier. (If you previously built this App with Xcode, the name may start with XC but the ending should match.)
-
-| Name (Description) | Bundle ID |
-| --- | --- |
-| <span translate="no">LoopFollow</span> | <span translate="no">com.TEAMID.LoopFollow</span> |
-| <span translate="no">LoopFollow Live Activity Extension</span> | <span translate="no">com.TEAMID.LoopFollow.LoopFollowLAExtension</span> |
-
-> If you build from a second or third `repository` for `LoopFollow`, the Name will end in `Second` or `Third` and Bundle ID will have `.Second` or `.Third` at the end.
-
-### Create `App Group`
+## Create `App Group`
 
 !!! important "Updating LoopFollow to version 6.0 and newer"
     New builders - just follow the instructions as provided on this page. 
@@ -201,9 +187,9 @@ If you get an error saying `An Application Group with Identifier 'group.com.TEAM
     |:--|:--|:--|
     | LoopFollow App Group | group com TEAMID LoopFollow| group.com.TEAMID.LoopFollow |
 
-### Add `App Group`
+## Add `App Group`
 
-You will [Add `App Group` to Identifiers](#add-app-group-to-identifiers) for *LoopFollow*.
+You will need to add the `LoopFollow App Group` to the App Group capability for each Identifier.
 
 ### Identifiers for the *LoopFollow* app
 
@@ -238,6 +224,31 @@ The full list of Identifiers should be displayed again.
 Repeat until the 2 Identifiers have the `LoopFollow App Group` configured.
 
 * If you miss an identifier, the `Create Certificates` step will succeed but `Build LoopFollow` will fail.
+
+### LoopFollow Second and Third
+
+If you build LoopFollow Second or Third, each has their own identifiers and their own App Group.
+Refer to the table below to see how the App Group and Identifiers for LoopFollow are modified when building the Second or Third version of the app.
+
+#### App Groups
+
+| Name (Description) | App Group |
+| --- | --- |
+| <span translate="no">LoopFollow App Group</span> | <span translate="no">group.com.TEAMID.LoopFollow</span> |
+| <span translate="no">LoopFollowSecond App Group</span> | <span translate="no">group.com.TEAMID.LoopFollow.Second</span> |
+| <span translate="no">LoopFollowThird App Group</span> | <span translate="no">group.com.TEAMID.LoopFollow.Third</span> |
+
+#### Identifiers
+
+
+| Name (Description) | Bundle ID |
+| --- | --- |
+| <span translate="no">LoopFollow</span> | <span translate="no">com.TEAMID.LoopFollow</span> |
+| <span translate="no">LoopFollow Live Activity Extension</span> | <span translate="no">com.TEAMID.LoopFollow.LoopFollowLAExtension</span> |
+| <span translate="no">LoopFollowSecond</span> | <span translate="no">com.TEAMID.LoopFollow.Second</span> |
+| <span translate="no">LoopFollowSecond Live Activity Extension</span> | <span translate="no">com.TEAMID.LoopFollow.Second.LoopFollowLAExtension</span> |
+| <span translate="no">LoopFollowThird</span> | <span translate="no">com.TEAMID.LoopFollow.Third</span> |
+| <span translate="no">LoopFollowThird Live Activity Extension</span> | <span translate="no">com.TEAMID.LoopFollow.Third.LoopFollowLAExtension</span> |
 
 - - -
 
