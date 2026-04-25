@@ -26,12 +26,15 @@ If you choose, you can:
 Detailed directions are found in the next sections, this is the summary of what you will do:
 
 1. Click on the link to open the repository in your browser
-2. `Fork` the repository to your organization
-3. Open your `fork` and enable Actions
-4. `Add Identifiers`
-5. Review App Identifier in Apple Developer portal
-6. Add the App in App Store Connect and configure TestFlight users
-7. `Build LoopFollow`
+1. `Fork` the repository to your organization
+1. Open your `fork` and enable Actions
+1. `Add Identifiers`
+1. Review App Identifier in Apple Developer portal
+1. Create a `LoopFollow App Group`
+    * One Time Only, New with LoopFollow version 6.0 and newer
+1. Add the App Group to the Identifiers
+1. Add the App in App Store Connect and configure TestFlight users
+1. `Build LoopFollow`
 
 !!! tip "What About Other Actions"
     * You already have your organization configured, there is no need to run `Validate Secrets`
@@ -139,11 +142,102 @@ Open this link: [Certificates, Identifiers & Profiles: Identifiers List](https:/
 
 After successfully performing the `Add Identifiers Action`, you will see the identifier for your app with a Name and Bundle ID matching that in the table below. You will see your unique TEAMID embedded in the identifier. (If you previously built this App with Xcode, the name may start with XC but the ending should match.)
 
-| App Name | Name | Bundle ID |
-| --- | --- | --- |
-| <span translate="no">LoopFollow</span> | <span translate="no">LoopFollow</span> | <span translate="no">com.TEAMID.LoopFollow</span> |
+| Name (Description) | Bundle ID |
+| --- | --- |
+| <span translate="no">LoopFollow</span> | <span translate="no">com.TEAMID.LoopFollow</span> |
+| <span translate="no">LoopFollow Live Activity Extension</span> | <span translate="no">com.TEAMID.LoopFollow.LoopFollowLAExtension</span> |
 
 > If you build from a second or third `repository` for `LoopFollow`, the Name will end in `Second` or `Third` and Bundle ID will have `.Second` or `.Third` at the end.
+
+### Create `App Group`
+
+!!! important "Updating LoopFollow to version 6.0 and newer"
+    New builders - just follow the instructions as provided on this page. 
+    
+    This information admonition is for existing builders who need to update.
+
+    The addition of Live Activity requires adding the LoopFollow App Group. Your build will fail until you take these steps.
+    
+    If you are updating from an earlier version, sync your fork and then:
+    
+    1. Run the `Add Identifiers` action again
+    2. Create the LoopFollow App Group
+    3. Add the LoopFollow App Group to the 2 identifiers:
+        * LoopFollow
+        * LoopFollow Live Activity Extension
+
+
+The `LoopFollow` *App Group* already exists if you previously built the *LoopFollow* app using *Xcode* with this *Apple Developer ID*. In that case, skip ahead to [Optional: App Group Description Modification](#optional-app-group-description-modification) to update the description.
+
+If you have never built the *LoopFollow* app with *Xcode* using your `TEAMID`, you need to create an *App Group* associated with your `TEAMID`.
+
+1. Open this link: [Register an App Group](https://developer.apple.com/account/resources/identifiers/applicationGroup/add/) on the *Apple Developer* site.
+1. For **`Description`**, use `LoopFollow App Group`.
+1. For **`Identifier`**, enter `group.com.TEAMID.LoopFollow`, substituting your team id for `TEAMID`.
+1. Double-check the spelling - your `TEAMID` must be correct and the `LoopFollow` *App Group* must match the format shown in the previous step
+    * A mistake here means you will not be able to build the *LoopFollow* app until you fix it
+1. Click `Continue` and then `Register`.
+
+If this is successful, then [<span class="loop-bigger">:material-skip-forward:</span>](#add-app-group) skip ahead to [Add `App Group`](#add-app-group)
+
+If you get an error saying `An Application Group with Identifier 'group.com.TEAMID.loopkit.LoopGroup' is not available. Please enter a different string`, that means you already have the `Loop App Group` assigned to your account. Continue with the next section.
+
+#### Optional: App Group Description Modification
+
+> This step is not required, but if you previously built using a Mac with Xcode, it is a good idea to update the Name associated with the Identifier for the Loop App Group. Then what you see on your display will match the directions as you continue.
+
+??? tip "Optional Rename Step (click to open/close)"
+    Click to display the [App Group List](https://developer.apple.com/account/resources/identifiers/list/applicationGroup)
+    
+    Tap on the Identifier that shows `group.com.TEAMID.loopkit.LoopGroup` where TEAMID is your Developer ID.
+
+    * This opens the `Edit your Identifier Configuration` screen
+    * In the Description box in the upper left, edit the Description to match the **NAME**
+    * Tap Save in the upper right and confirm the the change for that identifier._
+
+    Notice in the table below that the XCode version of the **NAME** for the `App Group` is the same as the **IDENTIFIER** but with the `.` replaced with a space.
+
+    | NAME | XCode version | IDENTIFIER |
+    |:--|:--|:--|
+    | Loop App Group | group com TEAMID loopkit LoopGroup| group.com.TEAMID.loopkit.LoopGroup |
+
+### Add `App Group`
+
+First, review the Identifiers and then [Add `App Group` to Identifiers](#add-app-group-to-identifiers).
+
+### Identifiers for the *LoopFollow* app
+
+For each identifier in the table below, click on the Identifer and then add the LoopFollow App Group to the App Group capability.
+
+| Name (Description) | Bundle ID |
+| --- | --- |
+| <span translate="no">LoopFollow</span> | <span translate="no">com.TEAMID.LoopFollow</span> |
+| <span translate="no">LoopFollow Live Activity Extension</span> | <span translate="no">com.TEAMID.LoopFollow.LoopFollowLAExtension</span> |
+
+
+The example graphic below has numbered steps that match these directions. The columns from left to right are `Capabilities`, `App Services` and `Capability Requests`. The check box under `Capabilities` will already be checked for you.:
+
+1. Looking at the `App Services` column, scroll down to the `App Groups` row and ensure the check box (under the `Capabilities column`) for `App Groups` is checked
+2. If the word `Configure` shows up, tap on it
+    * This opens the `App Group Assignment` screen
+    * If it said `Edit` instead of `Configure` - you can click to confirm you have the correct App Group but won't need to continue or save if it is correct
+3. Check the box by `LoopFollow App Group` that uses your `TEAMID` in `group.com.TEAMID.LoopFollow`
+    * Note that if you previously built with Xcode, the name may be different, i.e., `XC group com TEAMID LoopFollow`
+4. Tap `Continue`
+5. Tap `Save`
+
+![graphic showing selection of the correct App Group](img/update-identifier-loopfollow-app-group.svg){width="700"}
+{align="center"}
+
+If you did not need to make changes, the `Save` button will not be active.
+
+* Tap on the `< All Identifiers` link at the top left
+
+The full list of Identifiers should be displayed again.
+
+Repeat until the 2 Identifiers have the `LoopFollow App Group` configured.
+
+* If you miss an identifier, the `Create Certificates` step will succeed but `Build LoopFollow` will fail.
 
 - - -
 
