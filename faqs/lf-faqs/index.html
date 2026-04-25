@@ -328,6 +328,15 @@
 <nav aria-label="Version Compatibility" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#loopfollow-version-60-and-newer">
+<span class="md-ellipsis">
+      
+        LoopFollow Version 6.0 and newer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#loopfollow-and-loop-compatibility">
 <span class="md-ellipsis">
       
@@ -422,6 +431,15 @@
 <nav aria-label="Version Compatibility" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#loopfollow-version-60-and-newer">
+<span class="md-ellipsis">
+      
+        LoopFollow Version 6.0 and newer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#loopfollow-and-loop-compatibility">
 <span class="md-ellipsis">
       
@@ -479,6 +497,13 @@
 <hr/>
 <h2 id="version-compatibility">Version Compatibility<a class="headerlink" href="#version-compatibility" title="Link to this section for reference">¶</a></h2>
 <p>This section consolidates version requirements for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> to work with <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>, and provides historical context for how remote control has evolved.</p>
+<p>It also lists updates to the method for using Browser Build.</p>
+<h3 id="loopfollow-version-60-and-newer"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Version 6.0 and newer<a class="headerlink" href="#loopfollow-version-60-and-newer" title="Link to this section for reference">¶</a></h3>
+<p>With the addition of Live Activity to <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, the build directions for browser build were updated.</p>
+<ul>
+<li>If you use Browser Build, your automatic build will fail until you add the new Identifier, create the <code>LoopFollow App Group</code> and include the <code>LoopFollow App Group</code> in the capabilities for the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr>.</li>
+<li>Instructions start here: <a href="../../build/lf-browser-build/#create-app-group" target="_blank">Add <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></a> </li>
+</ul>
 <h3 id="loopfollow-and-loop-compatibility"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Compatibility<a class="headerlink" href="#loopfollow-and-loop-compatibility" title="Link to this section for reference">¶</a></h3>
 <table>
 <thead>
@@ -571,6 +596,10 @@
 <tr>
 <td style="text-align: left;">4.6</td>
 <td style="text-align: left;">Real-time APNS notifications returned from the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone (requires <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> v3.11.1 or newer)</td>
+</tr>
+<tr>
+<td style="text-align: left;">6.0</td>
+<td style="text-align: left;">Live Activity added - must use <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> to build<br/>see <a href="../../build/lf-browser-build/#create-app-group" target="_blank">Add <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></a></td>
 </tr>
 </tbody>
 </table>

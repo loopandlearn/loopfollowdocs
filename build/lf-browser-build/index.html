@@ -364,8 +364,7 @@
       
     </span>
 </a>
-<nav aria-label="Summary of Steps to Build LoopFollow" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#fork-loopfollow">
 <span class="md-ellipsis">
@@ -374,7 +373,8 @@
       
     </span>
 </a>
-</li>
+<nav aria-label="Fork LoopFollow" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#table-of-app-repositories">
 <span class="md-ellipsis">
@@ -406,13 +406,44 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#review-app-identifier">
+<a class="md-nav__link" href="#create-app-group">
 <span class="md-ellipsis">
       
-        Review App Identifier
+        Create App Group
       
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#add-app-group">
+<span class="md-ellipsis">
+      
+        Add App Group
+      
+    </span>
+</a>
+<nav aria-label="Add App Group" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifiers-for-the-loopfollow-app">
+<span class="md-ellipsis">
+      
+        Identifiers for the LoopFollow app
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loopfollow-second-and-third">
+<span class="md-ellipsis">
+      
+        LoopFollow Second and Third
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#create-app-in-app-store-connect">
@@ -597,8 +628,7 @@
       
     </span>
 </a>
-<nav aria-label="Summary of Steps to Build LoopFollow" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#fork-loopfollow">
 <span class="md-ellipsis">
@@ -607,7 +637,8 @@
       
     </span>
 </a>
-</li>
+<nav aria-label="Fork LoopFollow" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#table-of-app-repositories">
 <span class="md-ellipsis">
@@ -639,13 +670,44 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#review-app-identifier">
+<a class="md-nav__link" href="#create-app-group">
 <span class="md-ellipsis">
       
-        Review App Identifier
+        Create App Group
       
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#add-app-group">
+<span class="md-ellipsis">
+      
+        Add App Group
+      
+    </span>
+</a>
+<nav aria-label="Add App Group" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifiers-for-the-loopfollow-app">
+<span class="md-ellipsis">
+      
+        Identifiers for the LoopFollow app
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loopfollow-second-and-third">
+<span class="md-ellipsis">
+      
+        LoopFollow Second and Third
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#create-app-in-app-store-connect">
@@ -768,13 +830,16 @@
 <h2 id="summary-of-steps-to-build-loopfollow">Summary of Steps to Build <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em><a class="headerlink" href="#summary-of-steps-to-build-loopfollow" title="Link to this section for reference">¶</a></h2>
 <p>Detailed directions are found in the next sections, this is the summary of what you will do:</p>
 <ol>
-<li>Click on the link to open the <abbr title="contains project files and each file's revision history">repository</abbr> in your browser</li>
-<li><code>Fork</code> the <abbr title="contains project files and each file's revision history">repository</abbr> to your organization</li>
-<li>Open your <code>fork</code> and enable Actions</li>
-<li><code>Add Identifiers</code></li>
-<li>Review App Identifier in Apple Developer portal</li>
-<li>Add the App in App Store Connect and configure <abbr title="a method to distribute apps without direct connection">TestFlight</abbr> users</li>
-<li><code>Build LoopFollow</code></li>
+<li><code>Fork</code> the <abbr title="contains project files and each file's revision history">repository</abbr> to your organization (<a href="#fork-loopfollow">link</a>)</li>
+<li><code>Add Identifiers</code> (<a href="#add-identifiers">link</a>)</li>
+<li>Create a <code>LoopFollow App Group</code> (<a href="#create-app-group">link</a>)<ul>
+<li>New with <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> version 6.0 and newer</li>
+</ul>
+</li>
+<li>Add the <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> to the <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> (<a href="#add-app-group">link</a>)</li>
+<li>Create the App in App Store Connect and configure <abbr title="a method to distribute apps without direct connection">TestFlight</abbr> users (<a href="#create-app-in-app-store-connect">link</a>)</li>
+<li>Configure <abbr title="a method to distribute apps without direct connection">TestFlight</abbr> users for the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app (<a href="#add-users-to-testflight-for-app">link</a>)</li>
+<li><code>Build LoopFollow</code> (<a href="#build-app">link</a>)</li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">What About Other Actions</p>
@@ -783,7 +848,7 @@
 <li>The Build action includes a <code>Create Certificates</code> step - you can run it separately but it is not necessary</li>
 </ul>
 </div>
-<h3 id="fork-loopfollow"><span translate="no">Fork <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></span><a class="headerlink" href="#fork-loopfollow" title="Link to this section for reference">¶</a></h3>
+<h2 id="fork-loopfollow"><span translate="no">Fork <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></span><a class="headerlink" href="#fork-loopfollow" title="Link to this section for reference">¶</a></h2>
 <p>You start by opening a browser using the <abbr title="website address (Uniform Resource Locator)">URL</abbr> from the table below. Most people only need the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app to follow one person. If you need to follow more than one person, then repeat the steps for each of the <abbr title="website address (Uniform Resource Locator)">URL</abbr> in the table. If you need to follow more than three people, reach out to the developers for help.</p>
 <ul>
 <li>Click on the link to open the <abbr title="contains project files and each file's revision history">repository</abbr> in your browser</li>
@@ -907,28 +972,183 @@
 </ul>
 </li>
 </ul>
-<h2 id="review-app-identifier">Review App Identifier<a class="headerlink" href="#review-app-identifier" title="Link to this section for reference">¶</a></h2>
-<p>Open this link: <a href="https://developer.apple.com/account/resources/identifiers/list" target="_blank">Certificates, <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> &amp; Profiles: <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> List</a> on the apple developer site.</p>
-<p>After successfully performing the <code>Add Identifiers Action</code>, you will see the identifier for your app with a Name and Bundle ID matching that in the table below. You will see your unique <abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr> embedded in the identifier. (If you previously built this App with <abbr title="program used to build an app">Xcode</abbr>, the name may start with XC but the ending should match.)</p>
+<h2 id="create-app-group">Create <code>App Group</code><a class="headerlink" href="#create-app-group" title="Link to this section for reference">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Updating <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> to version 6.0 and newer</p>
+<p>New builders - just follow the instructions as provided on this page. </p>
+<p>This information admonition is for existing builders who need to update.</p>
+<p>The addition of Live Activity requires adding the <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr>. Your build will fail until you take these steps.</p>
+<p>If you are updating from an earlier version, <strong>sync your <abbr title="a copy of code in a github repository other than the original">fork</abbr></strong> and then:</p>
+<ol>
+<li>Run the <code>Add Identifiers</code> action again</li>
+<li>Create the <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></li>
+<li>Add the <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> to the 2 identifiers:<ul>
+<li><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></li>
+<li><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> Live Activity Extension</li>
+</ul>
+</li>
+</ol>
+</div>
+<p>The <code>LoopFollow</code> <em><abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></em> already exists if you previously built the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app using <em><abbr title="program used to build an app">Xcode</abbr></em> with this <em>Apple Developer ID</em>. In that case, skip ahead to <a href="#optional-app-group-description-modification">Optional: <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> Description Modification</a> to update the description.</p>
+<p>If you have never built the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app with <em><abbr title="program used to build an app">Xcode</abbr></em> using your <code>TEAMID</code>, you need to create an <em><abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></em> associated with your <code>TEAMID</code>.</p>
+<ol>
+<li>Open this link: <a href="https://developer.apple.com/account/resources/identifiers/applicationGroup/add/">Register an <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></a> on the <em>Apple Developer</em> site.</li>
+<li>For <strong><code>Description</code></strong>, use <code>LoopFollow App Group</code></li>
+<li>For <strong><code>Identifier</code></strong>, enter <code>group.com.TEAMID.LoopFollow</code>, substituting your Team ID for <code>TEAMID</code><ul>
+<li><strong>You must replace <code>TEAMID</code> with your 10-digit Apple Developer ID - do not just copy the <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> Identifier above</strong></li>
+<li>A mistake here means you will not be able to build the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app until you fix it</li>
+</ul>
+</li>
+<li>Click <code>Continue</code> and then <code>Register</code>.</li>
+</ol>
+<blockquote>
+<p>If you are building Second or Third versions, use the Name (Description) found in the <a href="#app-groups">App Groups</a> table.</p>
+</blockquote>
+<p>If this is successful, then <a href="#add-app-group"><span class="loop-bigger"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 5v14l7-7m7-7v14h2V5m-9 0v14l7-7"></path></svg></span></span></a> skip ahead to <a href="#add-app-group">Add <code>App Group</code></a></p>
+<p>If you get an error saying <code>An Application Group with Identifier 'group.com.TEAMID.LoopFollow' is not available. Please enter a different string</code>, that means you already have the <code>LoopFollow App Group</code> assigned to your account. Continue with the next section.</p>
+<h4 id="optional-app-group-description-modification">Optional: <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> Description Modification<a class="headerlink" href="#optional-app-group-description-modification" title="Link to this section for reference">¶</a></h4>
+<blockquote>
+<p>This step is not required, but if you previously built using a Mac with <abbr title="program used to build an app">Xcode</abbr>, it is a good idea to update the Name associated with the Identifier for the <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr>. Then what you see on your display will match the directions as you continue.</p>
+</blockquote>
+<details class="tip">
+<summary>Optional Rename Step (click to open/close)</summary>
+<p>Click to display the <a href="https://developer.apple.com/account/resources/identifiers/list/applicationGroup"><abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> List</a></p>
+<p>Tap on the Identifier that shows <code>group.com.TEAMID.LoopFollow</code> where <abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr> is your Developer ID.</p>
+<ul>
+<li>This opens the <code>Edit your Identifier Configuration</code> screen</li>
+<li>In the Description box in the upper left, edit the Description to match the <strong>NAME</strong></li>
+<li>Tap Save in the upper right and confirm the the change for that identifier._</li>
+</ul>
+<p>Notice in the table below that the XCode version of the <strong>NAME</strong> for the <code>App Group</code> is the same as the <strong>IDENTIFIER</strong> but with the <code>.</code> replaced with a space.</p>
 <table>
 <thead>
 <tr>
-<th>App Name</th>
-<th>Name</th>
+<th style="text-align: left;">NAME</th>
+<th style="text-align: left;">XCode version</th>
+<th style="text-align: left;">IDENTIFIER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></td>
+<td style="text-align: left;">group com <abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr> <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></td>
+<td style="text-align: left;">group.com.<abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr>.<abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h2 id="add-app-group">Add <code>App Group</code><a class="headerlink" href="#add-app-group" title="Link to this section for reference">¶</a></h2>
+<p>You will need to add the <code>LoopFollow App Group</code> to the <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> capability for each Identifier.</p>
+<h3 id="identifiers-for-the-loopfollow-app"><abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> for the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app<a class="headerlink" href="#identifiers-for-the-loopfollow-app" title="Link to this section for reference">¶</a></h3>
+<p>For each identifier in the table below, click on the Identifer and then add the <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> to the <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> capability.</p>
+<table>
+<thead>
+<tr>
+<th>Name (Description)</th>
 <th>Bundle ID</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><span translate="no"><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></span></td>
-<td><span translate="no"><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></span></td>
 <td><span translate="no">com.<abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr>.<abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></span></td>
+</tr>
+<tr>
+<td><span translate="no"><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> Live Activity Extension</span></td>
+<td><span translate="no">com.<abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr>.<abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr>.LoopFollowLAExtension</span></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>If you build from a second or third <code>repository</code> for <code>LoopFollow</code>, the Name will end in <code>Second</code> or <code>Third</code> and Bundle ID will have <code>.Second</code> or <code>.Third</code> at the end.</p>
+<p>If you are building Second or Third versions, use the Name (Description) found in the <a href="#identifiers"><abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr></a> table.</p>
 </blockquote>
+<p>The example graphic below has numbered steps that match these directions. The columns from left to right are <code>Capabilities</code>, <code>App Services</code> and <code>Capability Requests</code>. The check box under <code>Capabilities</code> will already be checked for you.:</p>
+<ol>
+<li>Looking at the <code>App Services</code> column, scroll down to the <code>App Groups</code> row and ensure the check box (under the <code>Capabilities column</code>) for <code>App Groups</code> is checked</li>
+<li>If the word <code>Configure</code> shows up, tap on it<ul>
+<li>This opens the <code>App Group Assignment</code> screen</li>
+<li>If it said <code>Edit</code> instead of <code>Configure</code> - you can click to confirm you have the correct <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> but won't need to continue or save if it is correct</li>
+</ul>
+</li>
+<li>Check the box by <code>LoopFollow App Group</code> that uses your <code>TEAMID</code> in <code>group.com.TEAMID.LoopFollow</code><ul>
+<li>Note that if you previously built with <abbr title="program used to build an app">Xcode</abbr>, the name may be different, i.e., <code>XC group com TEAMID LoopFollow</code></li>
+</ul>
+</li>
+<li>Tap <code>Continue</code></li>
+<li>Tap <code>Save</code></li>
+<li>Tap <code>Confirm</code></li>
+</ol>
+<p align="center"><img alt="graphic showing selection of the correct App Group" src="../img/update-identifier-loopfollow-app-group.svg" width="700"/></p>
+<p>If you did not need to make changes, the <code>Save</code> button will not be active.</p>
+<ul>
+<li>Tap on the <code>&lt; All Identifiers</code> link at the top left</li>
+</ul>
+<p>The full list of <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> should be displayed again.</p>
+<p>Repeat until the 2 <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> have the <code>LoopFollow App Group</code> configured.</p>
+<ul>
+<li>If you miss an identifier, the <code>Create Certificates</code> step will succeed but <code>Build LoopFollow</code> will fail.</li>
+</ul>
+<h3 id="loopfollow-second-and-third"><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> Second and Third<a class="headerlink" href="#loopfollow-second-and-third" title="Link to this section for reference">¶</a></h3>
+<p>If you build <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> Second or Third, each has their own identifiers and their own <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr>.
+Refer to the table below to see how the <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> and <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> for <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> are modified when building the Second or Third version of the app.</p>
+<h4 id="app-groups">App Groups<a class="headerlink" href="#app-groups" title="Link to this section for reference">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name (Description)</th>
+<th><abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span translate="no"><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></span></td>
+<td><span translate="no">group.com.<abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr>.<abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></span></td>
+</tr>
+<tr>
+<td><span translate="no">LoopFollowSecond <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></span></td>
+<td><span translate="no">group.com.<abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr>.<abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr>.Second</span></td>
+</tr>
+<tr>
+<td><span translate="no">LoopFollowThird <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></span></td>
+<td><span translate="no">group.com.<abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr>.<abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr>.Third</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="identifiers"><abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr><a class="headerlink" href="#identifiers" title="Link to this section for reference">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name (Description)</th>
+<th>Bundle ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span translate="no"><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></span></td>
+<td><span translate="no">com.<abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr>.<abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></span></td>
+</tr>
+<tr>
+<td><span translate="no"><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> Live Activity Extension</span></td>
+<td><span translate="no">com.<abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr>.<abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr>.LoopFollowLAExtension</span></td>
+</tr>
+<tr>
+<td><span translate="no">LoopFollowSecond</span></td>
+<td><span translate="no">com.<abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr>.<abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr>.Second</span></td>
+</tr>
+<tr>
+<td><span translate="no">LoopFollowSecond Live Activity Extension</span></td>
+<td><span translate="no">com.<abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr>.<abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr>.Second.LoopFollowLAExtension</span></td>
+</tr>
+<tr>
+<td><span translate="no">LoopFollowThird</span></td>
+<td><span translate="no">com.<abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr>.<abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr>.Third</span></td>
+</tr>
+<tr>
+<td><span translate="no">LoopFollowThird Live Activity Extension</span></td>
+<td><span translate="no">com.<abbr title="One of 6 Secrets: Apple Developer account member number">TEAMID</abbr>.<abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr>.Third.LoopFollowLAExtension</span></td>
+</tr>
+</tbody>
+</table>
 <hr/>
 <h2 id="create-app-in-app-store-connect">Create App in App Store Connect<a class="headerlink" href="#create-app-in-app-store-connect" title="Link to this section for reference">¶</a></h2>
 <p>You must create an App in App Store Connect if you don't already have one.</p>
