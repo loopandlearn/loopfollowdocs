@@ -25,16 +25,16 @@ If you choose, you can:
 
 Detailed directions are found in the next sections, this is the summary of what you will do:
 
-1. Click on the link to open the repository in your browser
-1. `Fork` the repository to your organization
-1. Open your `fork` and enable Actions
-1. `Add Identifiers`
-1. Review App Identifier in Apple Developer portal
-1. Create a `LoopFollow App Group`
+1. Open the *LoopFollow* repository in your browser ([link](#fork-loopfollow))
+1. `Fork` the repository to your organization ([link](#create-the-fork))
+1. `Add Identifiers` ([link](#add-identifiers))
+1. Review App Identifier in Apple Developer portal ([link](#review-app-identifier))
+1. Create a `LoopFollow App Group` ([link](#create-app-group))
     * One Time Only, New with LoopFollow version 6.0 and newer
-1. Add the App Group to the Identifiers
-1. Add the App in App Store Connect and configure TestFlight users
-1. `Build LoopFollow`
+1. Add the App Group to the Identifiers ([link](#add-app-group))
+1. Create the App in App Store Connect and configure TestFlight users ([link](#create-app-in-app-store-connect))
+1. Configure TestFlight users for the *LoopFollow* app ([link](#add-users-to-testflight-for-app))
+1. `Build LoopFollow` ([link](#build-app))
 
 !!! tip "What About Other Actions"
     * You already have your organization configured, there is no need to run `Validate Secrets`
@@ -158,7 +158,7 @@ After successfully performing the `Add Identifiers Action`, you will see the ide
 
     The addition of Live Activity requires adding the LoopFollow App Group. Your build will fail until you take these steps.
     
-    If you are updating from an earlier version, sync your fork and then:
+    If you are updating from an earlier version, **sync your fork** and then:
     
     1. Run the `Add Identifiers` action again
     2. Create the LoopFollow App Group
@@ -180,7 +180,7 @@ If you have never built the *LoopFollow* app with *Xcode* using your `TEAMID`, y
 
 If this is successful, then [<span class="loop-bigger">:material-skip-forward:</span>](#add-app-group) skip ahead to [Add `App Group`](#add-app-group)
 
-If you get an error saying `An Application Group with Identifier 'group.com.TEAMID.loopkit.LoopGroup' is not available. Please enter a different string`, that means you already have the `Loop App Group` assigned to your account. Continue with the next section.
+If you get an error saying `An Application Group with Identifier 'group.com.TEAMID.LoopFollow' is not available. Please enter a different string`, that means you already have the `LoopFollow App Group` assigned to your account. Continue with the next section.
 
 #### Optional: App Group Description Modification
 
@@ -203,7 +203,7 @@ If you get an error saying `An Application Group with Identifier 'group.com.TEAM
 
 ### Add `App Group`
 
-First, review the Identifiers and then [Add `App Group` to Identifiers](#add-app-group-to-identifiers).
+You will [Add `App Group` to Identifiers](#add-app-group-to-identifiers) for *LoopFollow*.
 
 ### Identifiers for the *LoopFollow* app
 
