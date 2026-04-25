@@ -158,11 +158,13 @@ The `LoopFollow` *App Group* already exists if you previously built the *LoopFol
 If you have never built the *LoopFollow* app with *Xcode* using your `TEAMID`, you need to create an *App Group* associated with your `TEAMID`.
 
 1. Open this link: [Register an App Group](https://developer.apple.com/account/resources/identifiers/applicationGroup/add/) on the *Apple Developer* site.
-1. For **`Description`**, use `LoopFollow App Group`.
-1. For **`Identifier`**, enter `group.com.TEAMID.LoopFollow`, substituting your team id for `TEAMID`.
-1. Double-check the spelling - your `TEAMID` must be correct and the `LoopFollow` *App Group* must match the format shown in the previous step
+1. For **`Description`**, use `LoopFollow App Group`
+1. For **`Identifier`**, enter `group.com.TEAMID.LoopFollow`, substituting your Team ID for `TEAMID`
+    * **You must replace `TEAMID` with your 10-digit Apple Developer ID - do not just copy the App Group Identifier above**
     * A mistake here means you will not be able to build the *LoopFollow* app until you fix it
 1. Click `Continue` and then `Register`.
+
+> If you are building Second or Third versions, use the Name (Description) found in the [App Groups](#app-groups) table.
 
 If this is successful, then [<span class="loop-bigger">:material-skip-forward:</span>](#add-app-group) skip ahead to [Add `App Group`](#add-app-group)
 
@@ -200,6 +202,7 @@ For each identifier in the table below, click on the Identifer and then add the 
 | <span translate="no">LoopFollow</span> | <span translate="no">com.TEAMID.LoopFollow</span> |
 | <span translate="no">LoopFollow Live Activity Extension</span> | <span translate="no">com.TEAMID.LoopFollow.LoopFollowLAExtension</span> |
 
+> If you are building Second or Third versions, use the Name (Description) found in the [Identifiers](#identifiers) table.
 
 The example graphic below has numbered steps that match these directions. The columns from left to right are `Capabilities`, `App Services` and `Capability Requests`. The check box under `Capabilities` will already be checked for you.:
 
