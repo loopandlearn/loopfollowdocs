@@ -214,6 +214,7 @@ The example graphic below has numbered steps that match these directions. The co
     * Note that if you previously built with Xcode, the name may be different, i.e., `XC group com TEAMID LoopFollow`
 4. Tap `Continue`
 5. Tap `Save`
+6. Tap `Confirm`
 
 ![graphic showing selection of the correct App Group](img/update-identifier-loopfollow-app-group.svg){width="700"}
 {align="center"}
