@@ -10,6 +10,15 @@
 
 This section consolidates version requirements for *LoopFollow* to work with *Loop* and *Trio*, and provides historical context for how remote control has evolved.
 
+It also lists updates to the method for using Browser Build.
+
+### *LoopFollow* Version 6.0 and newer
+
+With the addition of Live Activity to *LoopFollow*, the build directions for browser build were updated.
+
+* If you use Browser Build, your automatic build will fail until you add the new Identifier, create the `LoopFollow App Group` and include the `LoopFollow App Group` in the capabilities for the *LoopFollow* Identifiers.
+* Instructions start here: [Add LoopFollow App Group](../build/lf-browser-build.md#create-app-group){: target="_blank" } 
+
 ### *LoopFollow* and *Loop* Compatibility
 
 | Feature | Minimum Versions Required |
@@ -61,3 +70,4 @@ The APNS credentials only need to be in *Nightscout* if you also use *Nightscout
 | 4.0 | *Trio* 0.6 remote control support; share remote configuration via QR code |
 | 4.3 | Separate QR codes for *Nightscout* Site, Dexcom Share, Remote Settings, and Alarm Settings |
 | 4.6 | Real-time APNS notifications returned from the *Loop* phone (requires *Loop* v3.11.1 or newer) |
+| 6.0 | Live Activity added - must use LoopFollow App Group to build<br>see [Add LoopFollow App Group](../build/lf-browser-build.md#create-app-group){: target="_blank" } |
