@@ -89,7 +89,7 @@ You start by opening a browser using the URL from the table below. Most people o
     * Leave the selection that says "`Copy the main branch only`" checked
     * Click on the green `Create fork` button
 
-    ![fork information for LoopWorkspace](img/fork-org.gif){width="700"}
+    ![fork information for LoopWorkspac](img/fork-org.gif){width="700"}
     {align="center"}
 
 #### Successful Fork
@@ -184,12 +184,12 @@ If you get an error saying `An Application Group with Identifier 'group.com.TEAM
 
 #### Optional: App Group Description Modification
 
-> This step is not required, but if you previously built using a Mac with Xcode, it is a good idea to update the Name associated with the Identifier for the Loop App Group. Then what you see on your display will match the directions as you continue.
+> This step is not required, but if you previously built using a Mac with Xcode, it is a good idea to update the Name associated with the Identifier for the LoopFollow App Group. Then what you see on your display will match the directions as you continue.
 
 ??? tip "Optional Rename Step (click to open/close)"
     Click to display the [App Group List](https://developer.apple.com/account/resources/identifiers/list/applicationGroup)
     
-    Tap on the Identifier that shows `group.com.TEAMID.loopkit.LoopGroup` where TEAMID is your Developer ID.
+    Tap on the Identifier that shows `group.com.TEAMID.LoopFollow` where TEAMID is your Developer ID.
 
     * This opens the `Edit your Identifier Configuration` screen
     * In the Description box in the upper left, edit the Description to match the **NAME**
@@ -199,7 +199,7 @@ If you get an error saying `An Application Group with Identifier 'group.com.TEAM
 
     | NAME | XCode version | IDENTIFIER |
     |:--|:--|:--|
-    | Loop App Group | group com TEAMID loopkit LoopGroup| group.com.TEAMID.loopkit.LoopGroup |
+    | LoopFollow App Group | group com TEAMID LoopFollow| group.com.TEAMID.LoopFollow |
 
 ### Add `App Group`
 
