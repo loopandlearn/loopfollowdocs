@@ -62,12 +62,14 @@ With *LoopFollow* 3.2 and newer, the APNS credentials are entered directly in th
 
 The APNS credentials only need to be in *Nightscout* if you also use *Nightscout* Careportal or the *LoopCaregiver* app to send remote commands.
 
-### *LoopFollow* Feature History
+## *LoopFollow* Feature History
+
+The feature history is summarized below in reverse chronological order.
 
 | *LoopFollow* Version | Feature Added |
 |:--|:--|
-| 3.2 | *Loop* remote commands (Meal, Bolus, Override) sent directly via APNS; APNS credentials no longer required in *Nightscout* |
-| 4.0 | *Trio* 0.6 remote control support; share remote configuration via QR code |
-| 4.3 | Separate QR codes for *Nightscout* Site, Dexcom Share, Remote Settings, and Alarm Settings |
-| 4.6 | Real-time APNS notifications returned from the *Loop* phone (requires *Loop* v3.11.1 or newer) |
 | 6.0 | Live Activity added - must use LoopFollow App Group to build<br>see [Add LoopFollow App Group](../build/lf-browser-build.md#create-app-group){: target="_blank" } |
+| 4.6 | Real-time APNS notifications returned from the *Loop* phone (requires *Loop* v3.11.1 or newer) |
+| 4.3 | Separate QR codes for *Nightscout* Site, Dexcom Share, Remote Settings, and Alarm Settings |
+| 4.0 | *Trio* 0.6 remote control support; share remote configuration via QR code |
+| 3.2 | *Loop* remote commands (Meal, Bolus, Override) sent directly via APNS; APNS credentials no longer required in *Nightscout* |
