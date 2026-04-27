@@ -192,7 +192,6 @@ nav:
   - 'Remote Control Overview': 'remote/remote-control-overview.md'
   - 'Loop Remote Control': 'remote/remote-control-loop.md'
   - 'Trio Remote Control': 'remote/remote-control-trio.md'
-  - 'Nightscout Remote Control': 'remote/remote-control-nightscout.md'
 - Build:
   - 'LoopFollow Build': 'build/build-options.md'
   - 'LoopFollow Browser Build': 'build/lf-browser-build.md'

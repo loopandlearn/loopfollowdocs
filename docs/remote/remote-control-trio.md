@@ -1,6 +1,9 @@
 ## Remote Control Overview
 
-Trio can accept remote commands from *Nightscout* or from *LoopFollow*. There are a variety of options, but the final control of whether remote commands will be enacted rests with the *Trio* user. They can enable or disable remote control.
+*Trio* accepts remote commands from *LoopFollow* via direct APNS. The final control of whether remote commands will be enacted rests with the *Trio* user — they can enable or disable remote control.
+
+!!! note "*Nightscout* Careportal Remote Commands Removed"
+    As of *LoopFollow* 6.x, *Nightscout* remote commands are no longer supported in *LoopFollow*. Use *Trio* Remote Control (TRC) below, which requires *Trio* 0.5.x or newer.
 
 !!! warning "*Nightscout* version must be 15.0.2 or newer"
     To properly display the OpenAPS pill with *Trio* 0.5.x (or newer), your *Nightscout* version must be 15.0.2 (or newer). If you do not see the expected treatments or pills in the *Nightscout* dashboard, follow the steps to [Configure Nightscout for Trio (OpenAPS)](#configure-nightscout-for-trio-openaps).
@@ -26,17 +29,6 @@ Starting with *LoopFollow* v4.0 and *Trio* v0.6, users of remote control are pro
 
     * [Update from *LoopFollow* v3,x](../build/lf-browser-build.md#update-from-loopfollow-v3x){: target="_blank" }
 
-
-??? question "How does this differ from *Trio* 0.2.x? (Click to Open/Close)"
-    *Trio* can use *Nightscout* Careportal to enter `Carb Correction`, and start and cancel `Temporary Target`.
-    
-    * This was available in *Trio* 0.2.x and continues to be available in *Trio* 0.5.x (or newer).
-    * See [*Nightscout* Remote Control](remote-control-nightscout.md#loopfollow-careportal-with-the-trio-app){: target="_blank" }
-
-    *Trio* 0.2.x supported other remote options (using announcements via Careportal). 
-    
-    * Those options were replaced by the more secure *Trio* Remote Control for *Trio* 0.5.x (or newer)
-    * **Using announcements to provide remote control of the *Trio* phone is no longer supported**
 
 ### Quick Access
 
@@ -150,9 +142,6 @@ The Remote Settings row in the *LoopFollow* Settings screen is used to select th
 !!! question "The *Trio* Remote Control option is not available"
     The `Trio Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* Site](../setup/lf-setup.md#setup-nightscout){: target="_blank" } with a default profile recognized as a *Trio* profile. Review [Troubleshooting](#troubleshooting) for possible reasons for not seeing the option.
 
-* *Nightscout* option
-    * Remote control with *LoopFollow* is limited to starting and canceling Temp Targets
-    * Available with *Trio* 0.2.x and newer
 * *Trio* Remote Control option
     * Remote control with *LoopFollow* includes adding remote carbs, enacting remote bolus, and starting and canceling Temp Targets and Overrides
     * Requires *Trio* 0.5.x (or newer) and *LoopFollow* 2.4.x (or newer)
@@ -285,7 +274,7 @@ In addition to this step, you may need to force the profile (from Trio) to uploa
 ### Update Profile
 
 !!! warning "Must on *Trio* 0.5.x (or newer)"
-    If you are on *Trio* 0.2.x, you might see the option for *Trio* Remote Control in *LoopFollow* Remote Settings, but you can't use it. See [Use *LoopFollow* *Nightscout* Remote Control](remote-control-nightscout.md#loopfollow-careportal-with-the-trio-app).
+    If you are on *Trio* 0.2.x, *LoopFollow* 6.x can no longer remotely control *Trio* — upgrade *Trio* to 0.5.x or newer to use *Trio* Remote Control.
 
 If you were previously running the *Loop* app or the *iAPS* app, [Stop *Nightscout* upload](#stop-nightscout-uploads-from-other-apps) from those apps and then force the profile to update.
 

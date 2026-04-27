@@ -44,17 +44,10 @@ With *LoopFollow* 3.1 and older, *Loop* remote commands were limited to Override
 |:--|:--|
 | *Trio* Remote Control via APNS | *LoopFollow* 4.0 or newer; *Trio* 0.6 or newer |
 | Real-time APNS response from *Trio* phone | *LoopFollow* 4.0 or newer; *Trio* 0.6 or newer |
-| Nightscout Careportal (Temp Targets only) | Available for all *Trio* versions |
 | *Nightscout* OpenAPS pill display | *Nightscout* 15.0.2 or newer with *Trio* 0.5.x or newer |
 
-With *Trio* 0.2.x, *LoopFollow* only supports Temp Targets via the *Nightscout* Careportal, which requires a token with `careportal` access. Once updated to *Trio* 0.5.x or newer, the full *Trio* Remote Control options are available.
-
-For those following a looper using *Trio* 0.2.x, the only remote setting option in *LoopFollow* is *Nightscout* (Careportal). With this selection:
-
-* The *LoopFollow* phone sends commands to *Nightscout*, which then forwards commands to the *Trio* phone
-* The *Nightscout* display will be updated first
-* If there is an issue sending the Careportal request, it might not reach the *Trio* phone
-* After the next *Nightscout* download, *LoopFollow* display will reflect whether commands completed the full round trip
+!!! note "*Nightscout* Careportal Remote Commands Removed"
+    As of *LoopFollow* 6.x, *Nightscout* remote commands are no longer supported in *LoopFollow*. To remotely control *Trio* you must run *Trio* 0.5.x or newer and use *Trio* Remote Control (TRC) via APNS.
 
 ### APNS Keys Do Not Need to Be in Nightscout
 
@@ -68,6 +61,7 @@ The feature history is summarized below in reverse chronological order.
 
 | *LoopFollow* Version | Feature Added |
 |:--|:--|
+| 6.x | *Nightscout* Careportal remote commands removed; remote control is exclusively via direct APNS to *Loop* or *Trio* |
 | 6.0 | Live Activity added - must use LoopFollow App Group to build<br>see [Add LoopFollow App Group](../build/lf-browser-build.md#create-app-group){: target="_blank" } |
 | 4.6 | Real-time APNS notifications returned from the *Loop* phone (requires *Loop* v3.11.1 or newer) |
 | 4.3 | Separate QR codes for *Nightscout* Site, Dexcom Share, Remote Settings, and Alarm Settings |

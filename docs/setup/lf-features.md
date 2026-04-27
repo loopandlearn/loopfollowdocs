@@ -38,13 +38,14 @@ Do not skip the overview page if you have not yet configured *LoopFollow* for Re
 
 * [Remote Control Overview](../remote/remote-control-overview.md)
 
-There are separate pages for the 3 different remote control options. (No page is provided if `None` is selected).
+There are separate pages for the different remote control options. (No page is provided if `None` is selected).
 Quick access is provided using these links once you have configured *LoopFollow* for Remote Control:
 
 * None
-* [*Nightscout*](../remote/remote-control-nightscout.md){: target="_blank" } (*LoopFollow* offers actions that can be done from a *Nightscout* Careportal)
-* [*Loop* Remote Control](../remote/remote-control-loop.md){: target="_blank" } 
+* [*Loop* Remote Control](../remote/remote-control-loop.md){: target="_blank" }
 * [*Trio* Remote Control](../remote/remote-control-trio.md){: target="_blank" }: requires Trio 0.5.x or newer
+
+> As of *LoopFollow* 6.x, *Nightscout* remote commands are no longer supported in *LoopFollow*.
 
 
 - - -
