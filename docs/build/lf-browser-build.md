@@ -160,7 +160,7 @@ If you have never built the *LoopFollow* app with *Xcode* using your `TEAMID`, y
 1. Open this link: [Register an App Group](https://developer.apple.com/account/resources/identifiers/applicationGroup/add/) on the *Apple Developer* site.
 1. For **`Description`**, use `LoopFollow App Group`
 1. For **`Identifier`**, enter `group.com.TEAMID.LoopFollow`, substituting your Team ID for `TEAMID`
-    * **You must replace `TEAMID` with your 10-digit Apple Developer ID - do not just copy the App Group Identifier above**
+    * **You must replace `TEAMID` with your 10-character Apple Developer ID - do not just copy the App Group Identifier above**
     * A mistake here means you will not be able to build the *LoopFollow* app until you fix it
 1. Click `Continue` and then `Register`.
 
