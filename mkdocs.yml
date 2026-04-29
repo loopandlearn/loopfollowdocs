@@ -196,6 +196,8 @@ nav:
 - Build:
   - 'LoopFollow Build': 'build/build-options.md'
   - 'LoopFollow Browser Build': 'build/lf-browser-build.md'
+- Privacy:
+  - 'Anonymous Telemetry': 'privacy/lf-telemetry.md'
 - FAQs:
   - 'LoopFollow FAQs': 'faqs/lf-faqs.md'
   - 'Glossary': faqs/glossary.md
