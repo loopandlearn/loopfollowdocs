@@ -27,9 +27,8 @@ own install would send under *Settings* > *General Settings* >
 | Build branch and commit | `dev`, `d691b34` | The git branch and short commit SHA of the build. |
 | Build date | `2026-04-15` | |
 | TestFlight or not | `true` / `false` | Whether the install came from TestFlight or a local Xcode build. |
-| Install ID | random UUID | Generated locally on first launch. Has no link to your device, account, or hardware. |
 | Instance | `LoopFollow` / `LoopFollow_2` / ... | If you have multiple *LoopFollow* installs side by side, this distinguishes them. |
-| IDFV | Apple per-vendor UUID | Apple's `identifierForVendor` — opaque, scoped to *LoopFollow*'s bundle prefix, and resets when all of this developer's apps are removed from the device. |
+| IDFV | Apple per-vendor UUID | Apple's `identifierForVendor` — opaque, scoped to *LoopFollow*'s bundle prefix, and resets when all of this developer's apps are removed from the device. Combined with the *Instance* field above, identifies a specific install. |
 | Device | `iPhone15,2` | Apple's hardware identifier (not the marketing name). |
 | Platform | `iOS` / `iPadOS` / `macCatalyst` | |
 | iOS version | `17.5` | |
