@@ -1,7 +1,7 @@
 ---
 ## *LoopFollow* Anonymous Telemetry
 
-*LoopFollow* can send a small anonymous report once a week so the
+*LoopFollow* can send a small anonymous report once a day so the
 maintainers can see which app and *iOS* versions are still in active use.
 The data helps make decisions like when it's safe to drop support for
 older *iOS* releases. **No glucose data, no credentials, no logs leave
@@ -29,10 +29,13 @@ own install would send under *Settings* > *General Settings* >
 | TestFlight or not | `true` / `false` | Whether the install came from TestFlight or a local Xcode build. |
 | Install ID | random UUID | Generated locally on first launch. Has no link to your device, account, or hardware. |
 | Instance | `LoopFollow` / `LoopFollow_2` / ... | If you have multiple *LoopFollow* installs side by side, this distinguishes them. |
+| IDFV | Apple per-vendor UUID | Apple's `identifierForVendor` — opaque, scoped to *LoopFollow*'s bundle prefix, and resets when all of this developer's apps are removed from the device. |
 | Device | `iPhone15,2` | Apple's hardware identifier (not the marketing name). |
 | Platform | `iOS` / `iPadOS` / `macCatalyst` | |
 | iOS version | `17.5` | |
-| Time zone | `Europe/Stockholm` | Coarse — not GPS-precise. |
+| Following app | `Loop` / `Trio` / ... | Which closed-loop app *LoopFollow* is following, if known. Field is omitted when not yet detected. |
+| Uses *Dexcom* | `true` / `false` | Whether *Dexcom Share* is configured. **No username or password.** |
+| Uses *Nightscout* | `true` / `false` | Whether a *Nightscout* site is configured. **No URL or API token.** |
 | Background-refresh method | `Silent Tune` | Which background-refresh strategy is selected. |
 | Display units | `mg/dL` / `mmol/L` | |
 | Remote-command type | `none` / `Loop APNS` / ... | Which remote-command path is configured. |
@@ -40,16 +43,10 @@ own install would send under *Settings* > *General Settings* >
 | Calendar / Contact integrations | `true` / `false` | Whether those features are turned on. |
 | Cold launches in past 7 days | `12` | A count of process restarts; high values can flag stability issues. |
 
-For your *Dexcom Share* and *Nightscout* setup, an **anonymized
-identifier** is included only when those backends are configured —
-specifically, a salted, truncated cryptographic hash of your *Dexcom*
-username and your *Nightscout* host. The actual username, password,
-URL, and API token never leave your device.
-
 The server adds two fields when it stores each report:
 
 * `receivedAt` — the time the report was received.
-* `weekBucket` — an ISO-week label (e.g. `2026-W17`) used to deduplicate.
+* `dayBucket` — a date label (e.g. `2026-04-29`) used to deduplicate.
 
 - - -
 
@@ -58,8 +55,9 @@ The server adds two fields when it stores each report:
 Specifically and explicitly:
 
 * No glucose values, insulin or carb data, treatments, or any other health data.
-* No *Nightscout* URL or API token.
-* No *Dexcom* credentials. (The username is replaced with an anonymized identifier — see above.)
+* No *Nightscout* URL or API token. Only a yes/no flag for whether *Nightscout* is configured.
+* No *Dexcom* credentials. Only a yes/no flag for whether *Dexcom Share* is configured.
+* No time zone.
 * No remote-command secrets, no APNS keys.
 * No GPS or location data.
 * **No logs.** Logs are never sent automatically. The existing *Settings* > *Logs* sharing flow is unchanged and only triggered by you.
@@ -93,14 +91,16 @@ The *Diagnostics* section also has:
 
 ## How often
 
-A check-in is sent at most once every 7 days, or once after the app's
-build SHA changes (whichever fires first). The check runs on every app
-launch — including silent-push wake-ups and background-app-refresh
-launches — so the cadence stays honest even if you rarely foreground
-the app.
+A check-in is sent at most once every 24 hours, or once after the app's
+build SHA changes (whichever fires first). It runs in the background
+while the app is active or refreshing in the background — *LoopFollow*
+schedules the next check-in based on when the last one was actually
+sent, so a relaunch a few hours after the previous send simply waits
+out the remainder of the 24 hours.
 
 If a send fails (network error, the server is unreachable, etc.) the
-last-sent timestamp is not updated, so the next launch tries again.
+last-sent timestamp is not updated, so the next scheduled check tries
+again.
 
 - - -
 
