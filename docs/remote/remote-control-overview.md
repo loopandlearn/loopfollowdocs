@@ -185,6 +185,23 @@ If you do not have APNS credentials, you need to create a key and grant it acces
 
 - - -
 
+## Quick-Pick Boluses and Meals
+
+When you open a remote bolus or meal screen, *LoopFollow* may show a row of **Quick-Pick** buttons at the top. Tapping a button fills in the entry fields with that amount — nothing is sent until you review and confirm on the screen as usual.
+
+Quick-Picks are shown on:
+
+* *Trio* Remote Control: **Bolus** screen and **Meal** screen
+* *Loop* Remote Control: **Bolus** screen and **Carbs** screen
+
+The buttons are built from the entries you have successfully sent in the past, scored by:
+
+* **Time of day** — entries used at similar times score higher
+* **Day of week** — weekday and weekend patterns are kept separate
+* **Recency** — older entries gradually fade out
+
+Up to five suggestions are shown, and the section is hidden entirely until there is enough history. The history is stored only on this device.
+
 ## Next Step
 
 Depending on the selection you made, continue to one of these pages for more information on how to configure *LoopFollow* for your desired remote control option.
