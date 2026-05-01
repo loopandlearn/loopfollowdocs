@@ -6,6 +6,30 @@
 
 - - -
 
+## Why do I keep getting "App inactive for X minutes. Open to resume."? { #app-inactive-silent-tune }
+
+This happens when *LoopFollow* isn't able to stay running in the background as intended. When *LoopFollow* is configured to use the *Silent Tune* method (playing silent audio to stay alive), the notification fires if that silent audio gets interrupted and the app becomes inactive.
+
+A common reason is that another app temporarily takes control of audio — for example the iPhone alarm or apps like Microsoft Teams. While that other app holds the audio session, *LoopFollow* can't keep itself alive in the background. If it's just temporary, you can simply tap the notification to reopen the app and it will resume normally.
+
+Another reason is if the app has been manually closed (swiping it away from the app switcher). In that case, the background activity stops completely, including *Silent Tune*, and the app needs to be opened again.
+
+- - -
+
+## Why do I keep getting "App inactive for X minutes. Verify Bluetooth connectivity."? { #app-inactive-bluetooth }
+
+This happens when *LoopFollow* isn't able to stay running in the background as intended. When *LoopFollow* is configured to use a Bluetooth heartbeat (RileyLink, Dexcom, or Omnipod Dash), it relies on regular Bluetooth signals from that device to wake itself up in the background. The notification fires when those signals stop arriving for several minutes.
+
+Common reasons:
+
+* **The Bluetooth device is out of range.** The phone and the heartbeat device need to stay within Bluetooth range — typically a few meters and worse through walls.
+* **Bluetooth is turned off** on the phone, or the phone is in Airplane Mode without Bluetooth re-enabled.
+* **The Bluetooth device has a low or dead battery.** RileyLink-style devices and expired Dexcom transmitters/sensors keep working only as long as their internal battery has enough power to advertise.
+
+If the connection comes back on its own, the alert will stop. If it does not, check Bluetooth on the phone, move closer to the heartbeat device, and consider whether the device's battery has run out.
+
+- - -
+
 ## Version Compatibility
 
 This section consolidates version requirements for *LoopFollow* to work with *Loop* and *Trio*, and provides historical context for how remote control has evolved.
