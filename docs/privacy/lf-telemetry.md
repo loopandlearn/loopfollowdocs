@@ -23,8 +23,6 @@ own install would send under *Settings* > *General Settings* >
 | Field | Example | Notes |
 |:--|:--|:--|
 | App version | `6.0.7` | |
-| Build number | `100` | |
-| Build branch and commit | `dev`, `d691b34` | The git branch and short commit SHA of the build. |
 | Build date | `2026-04-15` | |
 | TestFlight or not | `true` / `false` | Whether the install came from TestFlight or a local Xcode build. |
 | Instance | `LoopFollow` / `LoopFollow_2` / ... | If you have multiple *LoopFollow* installs side by side, this distinguishes them. |
@@ -90,8 +88,8 @@ The *Diagnostics* section also has:
 
 ## How often
 
-A check-in is sent at most once every 24 hours, or once after the app's
-build SHA changes (whichever fires first). It runs in the background
+A check-in is sent at most once every 24 hours, or once after a new
+build is installed (whichever fires first). It runs in the background
 while the app is active or refreshing in the background — *LoopFollow*
 schedules the next check-in based on when the last one was actually
 sent, so a relaunch a few hours after the previous send simply waits
