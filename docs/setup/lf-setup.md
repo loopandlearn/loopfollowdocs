@@ -152,6 +152,7 @@ There are a number of display options the user can configure to customize the ap
 | General | Adjust settings that affect the general app behavior | [General](#general) | 
 | Graph | Adjust settings that affect the plots on the Home screen | [Graph](#graph) | 
 | Information Display | Select which items to display in the Home screen Information Table<br>Requires Nightscout Data Source | [Information Display](#information-display) |
+| Units and Metrics | Choose glucose unit, Time in Range mode, and how glycemic and variability metrics are reported | [Units and Metrics](#units-and-metrics) |
 | Tab | Configure the toolbar displayed on the Home and Menu screens |[Tab](#tab) | 
 
 ### App Settings
@@ -192,7 +193,6 @@ These settings are accessed through the General row in the Settings screen.
 | Persistent Notification | Typically disabled<br> When enabled, glucose is reported with every update |
 | Appearance | Choose Light, Dark or System for appearance |
 | Display Stats | When enabled, statistics for the last 24 hours are displayed on Home screen |
-| Use IFCC A1C | When enabled, display estimated A1C using mmol/mol units |
 | Display Small Graph | When enabled, a full history graph is displayed under the main plot. The history is determined by the Number of Days Back chosen in the Graph screen |
 | Color BG Text | When enabled, use colors to highlight low, in-range and high values |
 | Keep Screen Active | When enabled, override the auto-lock setting<br>This works whether the phone is plugged in or not, so be sure to lock screen manually|
@@ -222,8 +222,6 @@ These settings are accessed through the Graph row in the Settings screen.
 | Hours of Prediction | Select prediction extent on main plot |
 | Min Basal | clamp the minimum displayed range for basal rate plot |
 | Min BG Scale | clamp the minimum displayed range for glucose scale |
-| Low BG Line | Choose glucose level to display as low |
-| High BG Line | Choose glucose level to display as high |
 | Show Days Back | Affects the small graph display and adjusts fetch from Nightscout Site |
 
 ### Information Display
@@ -260,6 +258,69 @@ These items can be chosen for display on the Home screen. A Nightscout Site is r
 | Updated | Time of last `loop` | `Trio` |
 | TDD | Total Daily Dose in the last 24 hours | `Trio` |
 | IAGE | Insulin Age | Both |
+
+### Units and Metrics
+
+These settings are accessed through the *Units and Metrics* row in the Settings screen. They control how glucose is displayed throughout the app, the range used for Time in Range, and how long-term glycemic and variability metrics are reported.
+
+![Units and Metrics screen](img/lf-units-and-metrics.png){width="300"}
+{align="center"}
+
+#### Glucose
+
+Selects the unit used everywhere in *LoopFollow* for glucose values, target ranges and graphs.
+
+| Option | Example reading |
+|:--|:--|
+| `mg/dL` | `120 mg/dL` |
+| `mmol/L` | `6.7 mmol/L` |
+
+The same reading is shown in either unit — switching the unit does not change any underlying data.
+
+#### Range
+
+Selects the Low and High thresholds that define your target interval. The percentage of readings within this interval is shown on the Home screen.
+
+| Option   | Name                  | Low – High                          |
+|:--|:--|:--|
+| `TIR`    | Time in Range         | 70 – 180 mg/dL (3.9 – 10.0 mmol/L)  |
+| `TITR`   | Time in Tighter Range | 70 – 140 mg/dL (3.9 – 7.8 mmol/L)   |
+| `Custom` | —                     | Values you enter below              |
+
+When `Custom` is selected, two extra rows appear — **Low** and **High** — entered in the glucose unit you chose above. These same Low and High values also drive the Low and High BG lines drawn on the main graph.
+
+#### Glycemic Metrics
+
+A long-term estimate of average glycemia, computed from the average glucose for the displayed period.
+
+| Metric | What it is |
+|:--|:--|
+| `eHbA1c` | Estimated HbA1c, derived from average glucose using the ADAG-style formula |
+| `GMI`    | Glucose Management Indicator, derived from average CGM glucose |
+
+Either metric can be reported in:
+
+* `%` — for example `7.0 %`
+* `mmol/mol` — for example `53 mmol/mol`
+
+Example values for three different average glucose levels:
+
+| Mean glucose | eHbA1c (%) | GMI (%) | eHbA1c (mmol/mol) | GMI (mmol/mol) |
+|:--|:--|:--|:--|:--|
+| 120 mg/dL  /  6.7 mmol/L | 5.8 | 6.2 | 40 | 44 |
+| 154 mg/dL  /  8.6 mmol/L | 7.0 | 7.0 | 53 | 53 |
+| 180 mg/dL  / 10.0 mmol/L | 7.9 | 7.6 | 63 | 60 |
+
+#### Variability
+
+Selects how variability of glucose is reported.
+
+| Option | What it is | Example |
+|:--|:--|:--|
+| `Std Dev` | Standard deviation of glucose, in the selected glucose unit | `40 mg/dL` or `2.2 mmol/L` |
+| `CV`      | Coefficient of Variation — standard deviation divided by mean glucose, expressed as a percent | `35 %` |
+
+CV is reported as a percentage and is independent of the glucose unit.
 
 ### Tab
 
