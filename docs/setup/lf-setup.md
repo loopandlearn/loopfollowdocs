@@ -279,13 +279,13 @@ The same reading is shown in either unit — switching the unit does not change 
 
 #### Range
 
-Selects the Low and High thresholds used for Time in Range on the Home screen and on the TIR feature page.
+Selects the Low and High thresholds that define your target interval. The percentage of readings within this interval is shown on the Home screen.
 
-| Option | Low – High |
-|:--|:--|
-| `TIR`  | 70 – 180 mg/dL (3.9 – 10.0 mmol/L) |
-| `TITR` | 70 – 140 mg/dL (3.9 – 7.8 mmol/L)  |
-| `Custom` | Values you enter below |
+| Option   | Name                  | Low – High                          |
+|:--|:--|:--|
+| `TIR`    | Time in Range         | 70 – 180 mg/dL (3.9 – 10.0 mmol/L)  |
+| `TITR`   | Time in Tighter Range | 70 – 140 mg/dL (3.9 – 7.8 mmol/L)   |
+| `Custom` | —                     | Values you enter below              |
 
 When `Custom` is selected, two extra rows appear — **Low** and **High** — entered in the glucose unit you chose above. These same Low and High values also drive the Low and High BG lines drawn on the main graph.
 
