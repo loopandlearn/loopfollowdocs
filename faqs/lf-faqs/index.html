@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#version-compatibility">
+<a class="md-skip" href="#app-inactive-silent-tune">
           Skip to content
         </a>
 </div>
@@ -318,6 +318,24 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#app-inactive-silent-tune">
+<span class="md-ellipsis">
+      
+        Why do I keep getting "App inactive for X minutes. Open to resume."?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#app-inactive-bluetooth">
+<span class="md-ellipsis">
+      
+        Why do I keep getting "App inactive for X minutes. Verify Bluetooth connectivity."?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#version-compatibility">
 <span class="md-ellipsis">
       
@@ -421,6 +439,24 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#app-inactive-silent-tune">
+<span class="md-ellipsis">
+      
+        Why do I keep getting "App inactive for X minutes. Open to resume."?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#app-inactive-bluetooth">
+<span class="md-ellipsis">
+      
+        Why do I keep getting "App inactive for X minutes. Verify Bluetooth connectivity."?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#version-compatibility">
 <span class="md-ellipsis">
       
@@ -494,6 +530,21 @@
 <p>If you are experiencing audible and visible glucose alerts every single minute, disable the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> &gt; Settings &gt; General &gt; Persistent Notifications slider.</p>
 <p>Note: this is completely different from the persistent notifications you may want enabled to see APNS messages returned from real-time responses to remote commands.</p>
 </div>
+<hr/>
+<h2 id="app-inactive-silent-tune">Why do I keep getting "App inactive for X minutes. Open to resume."?<a class="headerlink" href="#app-inactive-silent-tune" title="Link to this section for reference">¶</a></h2>
+<p>This happens when <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> isn't able to stay running in the background as intended. When <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> is configured to use the <em>Silent Tune</em> method (playing silent audio to stay alive), the notification fires if that silent audio gets interrupted and the app becomes inactive.</p>
+<p>A common reason is that another app temporarily takes control of audio — for example the iPhone alarm or apps like Microsoft Teams. While that other app holds the audio session, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> can't keep itself alive in the background. If it's just temporary, you can simply tap the notification to reopen the app and it will resume normally.</p>
+<p>Another reason is if the app has been manually closed (swiping it away from the app switcher). In that case, the background activity stops completely, including <em>Silent Tune</em>, and the app needs to be opened again.</p>
+<hr/>
+<h2 id="app-inactive-bluetooth">Why do I keep getting "App inactive for X minutes. Verify Bluetooth connectivity."?<a class="headerlink" href="#app-inactive-bluetooth" title="Link to this section for reference">¶</a></h2>
+<p>This happens when <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> isn't able to stay running in the background as intended. When <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> is configured to use a Bluetooth heartbeat (RileyLink, Dexcom, or <abbr title="Insulet tubeless insulin pump">Omnipod</abbr> Dash), it relies on regular Bluetooth signals from that device to wake itself up in the background. The notification fires when those signals stop arriving for several minutes.</p>
+<p>Common reasons:</p>
+<ul>
+<li><strong>The Bluetooth device is out of range.</strong> The phone and the heartbeat device need to stay within Bluetooth range — typically a few meters and worse through walls.</li>
+<li><strong>Bluetooth is turned off</strong> on the phone, or the phone is in Airplane Mode without Bluetooth re-enabled.</li>
+<li><strong>The Bluetooth device has a low or dead battery.</strong> RileyLink-style devices and expired Dexcom transmitters/sensors keep working only as long as their internal battery has enough power to advertise.</li>
+</ul>
+<p>If the connection comes back on its own, the alert will stop. If it does not, check Bluetooth on the phone, move closer to the heartbeat device, and consider whether the device's battery has run out.</p>
 <hr/>
 <h2 id="version-compatibility">Version Compatibility<a class="headerlink" href="#version-compatibility" title="Link to this section for reference">¶</a></h2>
 <p>This section consolidates version requirements for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> to work with <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>, and provides historical context for how remote control has evolved.</p>
