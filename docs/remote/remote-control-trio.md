@@ -120,6 +120,18 @@ Remote control must be enabled on the *Trio* phone or no remote information is a
 
 > You can search for this screen in *Trio* settings or go through the sequence: Trio, Settings, Features, Remote Control.
 
+
+When you select *Trio* Remote Control as the Remote Type in the *LoopFollow* app, you must fill in the following under *LoopFollow* Settings, APN and *LoopFollow* Settings, Remote Control.
+
+* Settings: APN
+    * [APNS Key ID](#apns-key-id)
+    * [APNS Key](#apns-key)
+
+* Settings: Remote Control
+
+    * [User](#user)
+    * [Shared Secret](#shared-secret)
+ 
 ### Shared Secret
 
 Once Remote Control is enabled, a Shared Secret is available. This is only used if you want to use *Trio* Remote Control with *LoopFollow*.
@@ -213,7 +225,9 @@ This is the unique shared secret that can be generated or entered into the *Trio
 
 ### APNS Credentials
 
-When you select *Trio* Remote Control as the Remote Type in the *LoopFollow* app, you must fill in the (1) [Shared Secret](#shared-secret), (2) [APNS Key ID](#apns-key-id) and (3) [APNS Key](#apns-key).
+When you select *Trio* Remote Control as the Remote Type in the *LoopFollow* app, you must fill in the [Shared Secret](#shared-secret) on the *LoopFollow* Settings, Remote screen and the [APNS Key ID](#apns-key-id) and [APNS Key](#apns-key) on the *LoopFollow* Settings, APN screen.
+
+> The graphics below are out of date. As of version 6.0.0, the APN entries are in their own setting location.
 
 | Default Remote Settings | Configured Remote Settings |
 |:-:|:-:|

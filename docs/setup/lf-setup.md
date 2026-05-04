@@ -166,6 +166,8 @@ There are a number of application settings the user can configure. These are sum
 |:--|:--|:--|
 | Background Refresh | Configure to keep *LoopFollow* always alive or allow it to sleep and thus conserve phone battery | [Background Refresh](lf-features.md#background-refresh){: target="_blank" } |
 | Import/Export | Share configurations among Caregiver phones | [Import/Export](#importexport) |
+| APN | Enter Apple Push Notification Credentials for Remote Control and Live Activity | [APN](#apn)|
+| Live Activity | Enable and Configure Live Activity | [Live Activity](#live-activity) |
 | Remote | Configure for secure remote control<br>Requires Nightscout Data Source | [Remote Control Overview](../remote/remote-control-overview.md){: target="_blank" } |
 
 ### Other Settings
@@ -322,7 +324,7 @@ Selects how variability of glucose is reported.
 
 CV is reported as a percentage and is independent of the glucose unit.
 
-### Tab
+### Tabs
 
 The user can modify which icons are displayed in the task bar at the bottom of the screen.
 
@@ -330,6 +332,13 @@ In the Settings screen, select Tab. Drag any of the options up or down to your p
 
 ![tab customization](img/lf-tab-configuration.png){width=400}
 {align="center"}
+
+
+### Background Refresh
+
+There are several options for keeping *LoopFollow* up to date. If you rely on *LoopFollow* Alarms or Live Activity, you must configure a Background Refresh setting.
+
+For more information, see [Background Refresh](lf-features.md#background-refresh){: target="_blank" }.
 
 
 ### Import/Export
@@ -383,6 +392,38 @@ When the QR code is accepted, you will see a screen indicating what type of sett
 
 ![Import confirmation](img/lf-import-confirm.svg){width="600"}
 {align=center}
+
+### APN
+
+You must create and enter Apple Push Notification (APN) credentials if you want to make use of several features offered by *LoopFollow*. If you choose not to use these features, no credentials are required.
+
+Features which need APN:
+
+* Live Activity
+* Remote Control
+
+Details about creating APN credentials are found in the [Remote Control Overview](../remote/remote-control-overview.md#apple-push-notifications-system-apns){: target="_blank" }
+
+### Live Activity
+
+The Live Activity feature for *LoopFollow* has the following requirements or it will not update reliably and should not be used.
+
+* Background Refresh must be enabled
+    * Typically caregivers use Silent Tunes to keep the app alive in the background
+    * If background refresh is not working, the app notifies the user and they should assume Live Activity is also not refreshing
+* APN Credentials must be entered
+* Live Activity must be enabled
+
+#### Live Activity Options
+
+The Live Activity screen allows the following selections:
+
+* Enable Live Activity (slider)
+* Restart Live Activity (manual button if needed)
+* Grid Slots for Live Activity
+    * There are 4 slots available
+    * There are over 20 options to choose from for the 4 slots
+    * The options are the same as are found in the [Information Display](#information-display)
 
 ### Remote
 

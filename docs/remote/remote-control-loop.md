@@ -222,9 +222,19 @@ These guardrails are for sending remote commands with *LoopFollow*. There are se
 
 ### Credentials to Enable Loop Remote Control
 
-When you select *Loop* Remote Control as the Remote Type in the *LoopFollow* app, you must fill in the (1) [Developer Team ID](#developer-team-id), (2) [APNS Key ID](#apns-key-id) and (3) [APNS Key](#apns-key).
+When you select *Loop* Remote Control as the Remote Type in the *LoopFollow* app, you must fill in the following under *LoopFollow* Settings, APN and *LoopFollow* Settings, Remote Control.
 
-![remote lrc settings ](img/lf-lrc-credentials.png){width="300"}
+* Settings: APN
+    * [APNS Key ID](#apns-key-id)
+    * [APNS Key](#apns-key)
+
+* Settings: Remote Control
+
+    * [Developer Team ID](#developer-team-id)
+    * [QR Code URL](#qr-code-url)
+    * [Environment Production](#environment-production)
+
+![remote lrc settings ](img/lf-lrc-credentials.png){width="700"}
 {align="center"}
 
 ### Developer Team ID

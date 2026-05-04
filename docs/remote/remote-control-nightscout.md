@@ -1,5 +1,8 @@
 ## Remote Control with Nightscout
 
+!!! warning "Nightscout Remote Control will be removed"
+    With the update of Trio main to version 0.7.0, Remote Control with Nightscout is no longer needed and will be removed as an option from *LoopFollow*.
+
 You must configure *LoopFollow* and the *Nightscout* URL to use remote commands. 
 Please review the [Remote Control Overview](remote-control-overview.md) if terms on this page are not familiar.
 
