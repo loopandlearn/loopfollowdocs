@@ -45,7 +45,7 @@ Once you’ve configured your settings, your Home screen will look as beautiful 
 
 ## Toolbar
 
-The toolbar (tab bar) at the bottom of the Home and Menu screens is configurable using [Settings: Tab](#tab). Four icons are displayed at a time — choose from the options below. The features that can be selected are:
+The toolbar (tab bar) at the bottom of the Home and Menu screens is configurable using [Settings: Tabs](#tabs). Four icons are displayed at a time — choose from the options below. The features that can be selected are:
 
 | Name | Description |
 |:--|:--|
@@ -114,7 +114,7 @@ The type of token depends on the type of remote control desired.
 The table below indicates the minimum token access for each type of remote control available with *LoopFollow*. 
 When you enter your credentials, *LoopFollow* tries to reach the site and then provides the status. 
 
-For a full summary of version requirements for *Loop* and *Trio* remote control, see [Version Compatibility](../faqs/lf-faqs.md#version-compatibility){: target="_blank" }.
+For a full summary of version requirements for *Loop* and *Trio* remote control, see [Version Compatibility](../faqs/lf-history.md#version-compatibility){: target="_blank" }.
 
 | *LoopFollow* Remote Type | Minimum Token Access| *LoopFollow* Status |
 |:--|:--|:--|
@@ -153,7 +153,7 @@ There are a number of display options the user can configure to customize the ap
 | Graph | Adjust settings that affect the plots on the Home screen | [Graph](#graph) | 
 | Information Display | Select which items to display in the Home screen Information Table<br>Requires Nightscout Data Source | [Information Display](#information-display) |
 | Units and Metrics | Choose glucose unit, Time in Range mode, and how glycemic and variability metrics are reported | [Units and Metrics](#units-and-metrics) |
-| Tab | Configure the toolbar displayed on the Home and Menu screens |[Tab](#tab) | 
+| Tabs | Configure the toolbar displayed on the Home and Menu screens |[Tabs](#tabs) | 
 
 ### App Settings
 
@@ -328,7 +328,7 @@ CV is reported as a percentage and is independent of the glucose unit.
 
 The user can modify which icons are displayed in the task bar at the bottom of the screen.
 
-In the Settings screen, select Tab. Drag any of the options up or down to your preferred configuration.
+In the Settings screen, select Tabs. Drag any of the options up or down to your preferred configuration.
 
 ![tab customization](img/lf-tab-configuration.png){width=400}
 {align="center"}

@@ -31,6 +31,13 @@ LoopFollow tagging along should be not affect the battery at all.
 
 - - -
 
+## Why do I need APN credentials to use Live Activity?
+
+* When *LoopFollow* uses Silent Tunes as Background Refresh, it is not able to update the Live Activity display while the phone is locked unless APN are available
+* The decision was made to require APN for Live Activity regardless of Background Refresh selection
+
+- - -
+
 ## Why do I keep getting "App inactive for X minutes. Open to resume."? { #app-inactive-silent-tune }
 
 This happens when *LoopFollow* isn't able to stay running in the background as intended. When *LoopFollow* is configured to use the *Silent Tune* method (playing silent audio to stay alive), the notification fires if that silent audio gets interrupted and the app becomes inactive.
