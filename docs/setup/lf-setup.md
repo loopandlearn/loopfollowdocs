@@ -121,7 +121,6 @@ For a full summary of version requirements for *Loop* and *Trio* remote control,
 | **None** | Read | OK (Read) |
 | ***Loop* Remote Control**| Read | OK (Read) |
 | ***Trio* Remote Control**| Read | OK (Read) |
-| ***Nightscout***<br>Trio 0.2 or older | Read & Careportal | OK (Read & Write) |
 
 #### Setup *Dexcom*
 

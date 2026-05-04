@@ -33,9 +33,10 @@ For a full summary of version requirements and feature history, see [Version Com
 The graphic below shows the Remote Settings screen for *LoopFollow*. You must first enter a *Nightscout* URL before any remote options are offered and then only the option suitable for that *Nightscout* site can be selected.
 
 * When following someone running Loop, the options are None or [Loop Remote Control](remote-control-loop.md){: target="_blank" }
-* When following someone running Trio, the options are None or:
-    * Trio 0.5.x and newer: [Trio Remote Control](remote-control-trio.md){: target="_blank" }
-    * Trio 0.2.x: [Nightscout Remote Control](remote-control-nightscout.md#loopfollow-careportal-with-the-trio-app){: target="_blank" }
+* When following someone running Trio 0.5.x or newer, the options are None or [Trio Remote Control](remote-control-trio.md){: target="_blank" }
+
+!!! note "*Nightscout* Careportal Remote Commands Removed"
+    As of *LoopFollow* 6.x, *Nightscout* remote commands are no longer supported in *LoopFollow*. Remote control is now exclusively via direct APNS to the *Loop* or *Trio* app.
 
 ![LoopFollow remote options - all types](img/lf-remote-options_3.2.svg){width="600"}
 {align="center"}
@@ -43,10 +44,6 @@ The graphic below shows the Remote Settings screen for *LoopFollow*. You must fi
 ### Critical Configuration Information
 
 If you plan to use *LoopFollow* Remote Control with a looper using the *Loop* app version 3.x or the *Trio* app version 0.5 or newer, and you don't have your APNS key information recorded or configured, see the instructions in [*Apple* Push Notifications System (APNS)](#apple-push-notifications-system-apns).
-
-If your looper is using *Trio* 0.2.x, use this link for configuration:
-
-* [*Nightscout* Remote Control](remote-control-nightscout.md){: target="_blank" }
 
 - - -
 
@@ -191,6 +188,5 @@ Depending on the selection you made, continue to one of these pages for more inf
 
 * [*Loop* Remote Control](remote-control-loop.md)
 * [*Trio* Remote Control](remote-control-trio.md)
-* [*Nightscout* Remote Control](remote-control-nightscout.md) (`Trio 0.2.x only`)
 
 
