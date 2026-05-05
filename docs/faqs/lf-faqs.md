@@ -23,11 +23,11 @@ Note: this is completely different from the persistent notifications you may wan
 
 No, it shouldn't.
 
-What is happening under the hood: when you pick Dash as your heartbeat, LoopFollow connects to the pod's normal BLE service and just listens in on the same notifications Loop/Trio is already getting. It's not poking the pod or asking it for anything extra — it's eavesdropping on traffic that is happening anyway.
+What is happening under the hood: when you pick DASH as your heartbeat, *LoopFollow* connects to the pod's normal BLE service and just listens in on the same notifications *Loop*/*Trio* is already getting. It's not poking the pod or asking it for anything extra — it's eavesdropping on traffic that is happening anyway.
 
-Because both apps, LoopFollow + (Trio or Loop), are on the same phone, iOS only opens one actual BLE connection to the pod and shares it between them. So from the pod's perspective there is just one controller talking to it, same as always. Whether one app is listening or two, the pod is doing the exact same radio work.
+Because both apps, *LoopFollow* + (*Trio* or *Loop*), are on the same phone, iOS only opens one actual BLE connection to the pod and shares it between them. So from the pod's perspective there is just one controller talking to it, same as always. Whether one app is listening or two, the pod is doing the exact same radio work.
 
-LoopFollow tagging along will not affect the pod battery.
+*LoopFollow* tagging along will not affect the pod battery.
 
 - - -
 
