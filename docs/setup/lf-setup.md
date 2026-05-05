@@ -477,7 +477,7 @@ Allows you to choose what information to download from Nightscout and to modify 
 
 LoopFollow logs activity to a file that can be viewed within the app, and can be shared via email, a Notes file or Facebook messenger if needed.  The log can be filtered and searched. This will aid in troubleshooting and diagnostics. 
 
-Normally, the debug log option is disabled. The log debug option is found in the Advanced section. If the logs seem verbose, check that setting.
+The debug log option is enabled by default so that detailed information is available if you need to ask for help. The setting is found in the Advanced section and can be turned off if the logs seem too verbose.
 
 ### View Log
 
@@ -485,9 +485,11 @@ When you select View Log, you see the entire log but can also filter for particu
 
 ### Share Logs
 
-When you choose Share Logs, you can send the log to device or app of your choice.
+When you choose Share Logs, *LoopFollow* first asks you to describe the problem — what time it happened, what you did, and what you expected to happen that didn't. A short description makes it much easier for someone to help.
 
-The log is named `LoopFollow YYYY-MM-DD`.
+After you tap **Share**, the description is saved to a small notice file (with the current date, app version, and build identifier) and the iOS share sheet opens with that file together with today's and yesterday's log files. You can then send everything to the device or app of your choice. Leaving the description empty is allowed; the notice file simply records that no description was provided.
+
+The log files are named `LoopFollow YYYY-MM-DD`.
 
 - - -
 
