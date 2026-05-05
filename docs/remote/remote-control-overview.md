@@ -10,12 +10,6 @@
 
 > The return APNS message is only available for a meal or bolus entry.
 
-
-!!! warning "Browser Build Update"
-    If you use Browser Build and your current build is older than v4.0.0, follow the one-time updates needed to transition from *LoopFollow* v3.x:
-
-    * [Update from *LoopFollow* v3,x](../build/lf-browser-build.md#update-from-loopfollow-v3x){: target="_blank" }
-
 !!! important "Breaking Change: Trio Remote Command Users"
     Trio users must have matching code for LoopFollow and Trio.
 
@@ -28,7 +22,7 @@
 
 ## *LoopFollow* Remote Options
 
-For a full summary of version requirements and feature history, see [Version Compatibility](../faqs/lf-faqs.md#version-compatibility){: target="_blank" }.
+For a full summary of version requirements and feature history, see [Version Compatibility](../faqs/lf-history.md#version-compatibility){: target="_blank" }.
 
 The graphic below shows the Remote Settings screen for *LoopFollow*. You must first enter a *Nightscout* URL before any remote options are offered and then only the option suitable for that *Nightscout* site can be selected.
 
@@ -124,8 +118,8 @@ When you configured APNS for the *Loop* app and saved information in your *Night
 
 Note that the `LOOP_DEVELOPER_TEAM_ID` is the Apple Developer ID used to build the *Loop* app.
 
-* When using *LoopFollow* 3.2 or newer, the addition of those `config` variables in *Nightscout* is only required to support sending remote commands to the *Loop* app from *Nightscout* `Careportal` and from *LoopCaregiver*.
-* With *LoopFollow* 3.2 and newer versions, the *LoopFollow* Remote Control features are available for both the *Loop* and *Trio* apps when the APNS credentials are entered in the *LoopFollow* app, along with other specific credentials for each app.
+* When using *LoopFollow* for remote control, the addition of those `config` variables in *Nightscout* is only required to support sending remote commands to the *Loop* app from *Nightscout* `Careportal` and from *LoopCaregiver*.
+* The *LoopFollow* Remote Control features are available for both the *Loop* and *Trio* apps when the APNS credentials are entered in the *LoopFollow* app in the [APN Settings](../setup/lf-setup.md#apn){: target="_blank" }, along with other specific credentials for each app under [Remote Settings](../setup/lf-setup.md#remote){: target="_blank" }.
 
 If you are configuring for *Trio* remote control with *LoopFollow*, you do not need to enter the Apple Developer ID explicitly because it is included in the information *Trio* uploads to *Nightscout*.
 
@@ -133,7 +127,7 @@ If you are configuring for *Trio* remote control with *LoopFollow*, you do not n
 
 When using *Trio*, you do not need to add the config vars to *Nightscout* that are required for *Loop* remote control from *Nightscout* `Careportal` and *LoopCaregiver*. If you already have them, it doesn't hurt anything, but you do not need to add them to use remote control with *Trio*. 
 
-With *LoopFollow* 3.2 and newer, the config vars will not need to be embedded in *Nightscout* for *Loop* Remote Control from *LoopFollow*, although they are still needed to issue remote commands with the *Nightscout* *Careportal* and the *LoopCaregiver* app.
+When using *Loop* Remote Control from *LoopFollow*, the config vars do not need to be embedded in *Nightscout*; although they are still needed to issue remote commands with the *Nightscout* *Careportal* and the *LoopCaregiver* app.
 
 If you do not have APNS credentials, you need to create a key and grant it access to the &nbsp;<span translate="no">Apple Push Notification Service (APNS)</span>. 
 
@@ -188,6 +182,10 @@ If you do not have APNS credentials, you need to create a key and grant it acces
 ## Next Step
 
 Depending on the selection you made, continue to one of these pages for more information on how to configure *LoopFollow* for your desired remote control option.
+
+The APN credentials are entered in *LoopFollow* under Settings in the APN row.
+
+The other remote credential are entered as described in the appropriate link.
 
 * [*Loop* Remote Control](remote-control-loop.md)
 * [*Trio* Remote Control](remote-control-trio.md)

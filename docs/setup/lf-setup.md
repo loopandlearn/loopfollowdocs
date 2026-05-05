@@ -45,7 +45,7 @@ Once you’ve configured your settings, your Home screen will look as beautiful 
 
 ## Toolbar
 
-The toolbar (tab bar) at the bottom of the Home and Menu screens is configurable using [Settings: Tab](#tab). Four icons are displayed at a time — choose from the options below. The features that can be selected are:
+The toolbar (tab bar) at the bottom of the Home and Menu screens is configurable using [Settings: Tabs](#tabs). Four icons are displayed at a time — choose from the options below. The features that can be selected are:
 
 | Name | Description |
 |:--|:--|
@@ -114,7 +114,7 @@ The type of token depends on the type of remote control desired.
 The table below indicates the minimum token access for each type of remote control available with *LoopFollow*. 
 When you enter your credentials, *LoopFollow* tries to reach the site and then provides the status. 
 
-For a full summary of version requirements for *Loop* and *Trio* remote control, see [Version Compatibility](../faqs/lf-faqs.md#version-compatibility){: target="_blank" }.
+For a full summary of version requirements for *Loop* and *Trio* remote control, see [Version Compatibility](../faqs/lf-history.md#version-compatibility){: target="_blank" }.
 
 | *LoopFollow* Remote Type | Minimum Token Access| *LoopFollow* Status |
 |:--|:--|:--|
@@ -152,7 +152,8 @@ There are a number of display options the user can configure to customize the ap
 | General | Adjust settings that affect the general app behavior | [General](#general) | 
 | Graph | Adjust settings that affect the plots on the Home screen | [Graph](#graph) | 
 | Information Display | Select which items to display in the Home screen Information Table<br>Requires Nightscout Data Source | [Information Display](#information-display) |
-| Tab | Configure the toolbar displayed on the Home and Menu screens |[Tab](#tab) | 
+| Units and Metrics | Choose glucose unit, Time in Range mode, and how glycemic and variability metrics are reported | [Units and Metrics](#units-and-metrics) |
+| Tabs | Configure the toolbar displayed on the Home and Menu screens |[Tabs](#tabs) | 
 
 ### App Settings
 
@@ -165,6 +166,8 @@ There are a number of application settings the user can configure. These are sum
 |:--|:--|:--|
 | Background Refresh | Configure to keep *LoopFollow* always alive or allow it to sleep and thus conserve phone battery | [Background Refresh](lf-features.md#background-refresh){: target="_blank" } |
 | Import/Export | Share configurations among Caregiver phones | [Import/Export](#importexport) |
+| APN | Enter Apple Push Notification Credentials for Remote Control and Live Activity | [APN](#apn)|
+| Live Activity | Enable and Configure Live Activity | [Live Activity](#live-activity) |
 | Remote | Configure for secure remote control<br>Requires Nightscout Data Source | [Remote Control Overview](../remote/remote-control-overview.md){: target="_blank" } |
 
 ### Other Settings
@@ -192,7 +195,6 @@ These settings are accessed through the General row in the Settings screen.
 | Persistent Notification | Typically disabled<br> When enabled, glucose is reported with every update |
 | Appearance | Choose Light, Dark or System for appearance |
 | Display Stats | When enabled, statistics for the last 24 hours are displayed on Home screen |
-| Use IFCC A1C | When enabled, display estimated A1C using mmol/mol units |
 | Display Small Graph | When enabled, a full history graph is displayed under the main plot. The history is determined by the Number of Days Back chosen in the Graph screen |
 | Color BG Text | When enabled, use colors to highlight low, in-range and high values |
 | Keep Screen Active | When enabled, override the auto-lock setting<br>This works whether the phone is plugged in or not, so be sure to lock screen manually|
@@ -222,8 +224,6 @@ These settings are accessed through the Graph row in the Settings screen.
 | Hours of Prediction | Select prediction extent on main plot |
 | Min Basal | clamp the minimum displayed range for basal rate plot |
 | Min BG Scale | clamp the minimum displayed range for glucose scale |
-| Low BG Line | Choose glucose level to display as low |
-| High BG Line | Choose glucose level to display as high |
 | Show Days Back | Affects the small graph display and adjusts fetch from Nightscout Site |
 
 ### Information Display
@@ -261,14 +261,84 @@ These items can be chosen for display on the Home screen. A Nightscout Site is r
 | TDD | Total Daily Dose in the last 24 hours | `Trio` |
 | IAGE | Insulin Age | Both |
 
-### Tab
+### Units and Metrics
+
+These settings are accessed through the *Units and Metrics* row in the Settings screen. They control how glucose is displayed throughout the app, the range used for Time in Range, and how long-term glycemic and variability metrics are reported.
+
+![Units and Metrics screen](img/lf-units-and-metrics.png){width="300"}
+{align="center"}
+
+#### Glucose
+
+Selects the unit used everywhere in *LoopFollow* for glucose values, target ranges and graphs.
+
+| Option | Example reading |
+|:--|:--|
+| `mg/dL` | `120 mg/dL` |
+| `mmol/L` | `6.7 mmol/L` |
+
+The same reading is shown in either unit — switching the unit does not change any underlying data.
+
+#### Range
+
+Selects the Low and High thresholds that define your target interval. The percentage of readings within this interval is shown on the Home screen.
+
+| Option   | Name                  | Low – High                          |
+|:--|:--|:--|
+| `TIR`    | Time in Range         | 70 – 180 mg/dL (3.9 – 10.0 mmol/L)  |
+| `TITR`   | Time in Tighter Range | 70 – 140 mg/dL (3.9 – 7.8 mmol/L)   |
+| `Custom` | —                     | Values you enter below              |
+
+When `Custom` is selected, two extra rows appear — **Low** and **High** — entered in the glucose unit you chose above. These same Low and High values also drive the Low and High BG lines drawn on the main graph.
+
+#### Glycemic Metrics
+
+A long-term estimate of average glycemia, computed from the average glucose for the displayed period.
+
+| Metric | What it is |
+|:--|:--|
+| `eHbA1c` | Estimated HbA1c, derived from average glucose using the ADAG-style formula |
+| `GMI`    | Glucose Management Indicator, derived from average CGM glucose |
+
+Either metric can be reported in:
+
+* `%` — for example `7.0 %`
+* `mmol/mol` — for example `53 mmol/mol`
+
+Example values for three different average glucose levels:
+
+| Mean glucose | eHbA1c (%) | GMI (%) | eHbA1c (mmol/mol) | GMI (mmol/mol) |
+|:--|:--|:--|:--|:--|
+| 120 mg/dL  /  6.7 mmol/L | 5.8 | 6.2 | 40 | 44 |
+| 154 mg/dL  /  8.6 mmol/L | 7.0 | 7.0 | 53 | 53 |
+| 180 mg/dL  / 10.0 mmol/L | 7.9 | 7.6 | 63 | 60 |
+
+#### Variability
+
+Selects how variability of glucose is reported.
+
+| Option | What it is | Example |
+|:--|:--|:--|
+| `Std Dev` | Standard deviation of glucose, in the selected glucose unit | `40 mg/dL` or `2.2 mmol/L` |
+| `CV`      | Coefficient of Variation — standard deviation divided by mean glucose, expressed as a percent | `35 %` |
+
+CV is reported as a percentage and is independent of the glucose unit.
+
+### Tabs
 
 The user can modify which icons are displayed in the task bar at the bottom of the screen.
 
-In the Settings screen, select Tab. Drag any of the options up or down to your preferred configuration.
+In the Settings screen, select Tabs. Drag any of the options up or down to your preferred configuration.
 
 ![tab customization](img/lf-tab-configuration.png){width=400}
 {align="center"}
+
+
+### Background Refresh
+
+There are several options for keeping *LoopFollow* up to date. If you rely on *LoopFollow* Alarms or Live Activity, you must configure a Background Refresh setting.
+
+For more information, see [Background Refresh](lf-features.md#background-refresh){: target="_blank" }.
 
 
 ### Import/Export
@@ -322,6 +392,38 @@ When the QR code is accepted, you will see a screen indicating what type of sett
 
 ![Import confirmation](img/lf-import-confirm.svg){width="600"}
 {align=center}
+
+### APN
+
+You must create and enter Apple Push Notification (APN) credentials if you want to make use of several features offered by *LoopFollow*. If you choose not to use these features, no credentials are required.
+
+Features which need APN:
+
+* Live Activity
+* Remote Control
+
+Details about creating APN credentials are found in the [Remote Control Overview](../remote/remote-control-overview.md#apple-push-notifications-system-apns){: target="_blank" }
+
+### Live Activity
+
+The Live Activity feature for *LoopFollow* has the following requirements or it will not update reliably and should not be used.
+
+* Background Refresh must be enabled
+    * Typically caregivers use Silent Tunes to keep the app alive in the background
+    * If background refresh is not working, the app notifies the user and they should assume Live Activity is also not refreshing
+* APN Credentials must be entered
+* Live Activity must be enabled
+
+#### Live Activity Options
+
+The Live Activity screen allows the following selections:
+
+* Enable Live Activity (slider)
+* Restart Live Activity (manual button if needed)
+* Grid Slots for Live Activity
+    * There are 4 slots available
+    * There are over 20 options to choose from for the 4 slots
+    * The options are the same as are found in the [Information Display](#information-display)
 
 ### Remote
 

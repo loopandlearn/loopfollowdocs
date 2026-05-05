@@ -196,8 +196,11 @@ nav:
 - Build:
   - 'LoopFollow Build': 'build/build-options.md'
   - 'LoopFollow Browser Build': 'build/lf-browser-build.md'
-- FAQs:
-  - 'LoopFollow FAQs': 'faqs/lf-faqs.md'
+- Privacy:
+  - 'Anonymous Telemetry': 'privacy/lf-telemetry.md'
+- Reference:
+  - 'FAQs': 'faqs/lf-faqs.md'
+  - 'History': 'faqs/lf-history.md'
   - 'Glossary': faqs/glossary.md
 - Translate:
   - 'Translation': 'translate.md'
