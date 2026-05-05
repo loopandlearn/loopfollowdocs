@@ -28,13 +28,11 @@ An example of the Home screen for *LoopFollow* v5.0 and newer is shown in the gr
 
 The toolbar at the bottom of the Home and Menu screens has 4 user-configurable icons in addition to the `Menu` icon. The icons shown in the graphic above are Home, Alarms, Snoozer and Remote.
 
-#### New Features 
-!!! tip ""
-    New with *LoopFollow* v5.0:
-    
-    * [Menu Screen](setup/lf-setup.md#menu-screen){: target="_blank"}
-    * [Treatments](setup/lf-features.md#treatments){: target="_blank"}
-    * [Statistics](setup/lf-features.md#statistics){: target="_blank"} 
+#### New Features
+
+The released version of *LoopFollow* is 6.1.0 and is built with the `main` branch.
+
+See [New Feature Hightlights](faqs/lf-history.md#new-feature-highlights){: target="_blank" }
 
 - - -
 

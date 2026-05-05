@@ -24,8 +24,6 @@ Starting with *LoopFollow* v4.0 and *Trio* v0.6, users of remote control are pro
 
     **Question: If I was using Trio / LoopFollow remote control do I need to change my configuration parameters?**: No, the parameters you already set up continue to work. **BUT** you need to update the *LoopFollow* Identifiers if you use Browser Build.
 
-    * [Update from *LoopFollow* v3,x](../build/lf-browser-build.md#update-from-loopfollow-v3x){: target="_blank" }
-
 
 ??? question "How does this differ from *Trio* 0.2.x? (Click to Open/Close)"
     *Trio* can use *Nightscout* Careportal to enter `Carb Correction`, and start and cancel `Temporary Target`.

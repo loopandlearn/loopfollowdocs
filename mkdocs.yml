@@ -200,7 +200,7 @@ nav:
   - 'Anonymous Telemetry': 'privacy/lf-telemetry.md'
 - Reference:
   - 'FAQs': 'faqs/lf-faqs.md'
-  - 'Version History': 'faqs/lf-history.md'
+  - 'History': 'faqs/lf-history.md'
   - 'Glossary': faqs/glossary.md
 - Translate:
   - 'Translation': 'translate.md'

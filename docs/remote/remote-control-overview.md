@@ -10,12 +10,6 @@
 
 > The return APNS message is only available for a meal or bolus entry.
 
-
-!!! warning "Browser Build Update"
-    If you use Browser Build and your current build is older than v4.0.0, follow the one-time updates needed to transition from *LoopFollow* v3.x:
-
-    * [Update from *LoopFollow* v3,x](../build/lf-browser-build.md#update-from-loopfollow-v3x){: target="_blank" }
-
 !!! important "Breaking Change: Trio Remote Command Users"
     Trio users must have matching code for LoopFollow and Trio.
 

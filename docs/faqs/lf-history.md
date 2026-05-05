@@ -1,3 +1,41 @@
+- - -
+
+## New Feature Highlights
+
+!!! tip ""
+    New with *LoopFollow* v6.0 and v6.1:
+    
+    * Live Activity and Live Activity upgrades
+    * More accurate statistics with user choice of range
+    * Smarter unit handling
+    * Fixes for alarms, the graphs, and the remote-command UI
+    * Settings rows updated for clarity
+    * For Trio users: choice of cone of uncertainty or forecast lines
+
+!!! tip ""
+    New with *LoopFollow* v5.0:
+    
+    * [Menu Screen](../setup/lf-setup.md#menu-screen){: target="_blank"}
+    * [Treatments](../setup/lf-features.md#treatments){: target="_blank"}
+    * [Statistics](../setup/lf-features.md#statistics){: target="_blank"} 
+
+- - -
+
+## *LoopFollow* Feature History
+
+The feature history is summarized below in reverse chronological order.
+
+| *LoopFollow* Version | Feature Added |
+|:--|:--|
+| 6.1 | Live Activity requires APN credentials<br>see [APN Settings](../setup/lf-setup.md#apn){: target="_blank" } |
+| 6.0 | Live Activity added - Browser Builders must use LoopFollow App Group to build<br>see [Browser Build: Add LoopFollow App Group](../build/lf-browser-build.md#create-app-group){: target="_blank" } |
+| 4.6 | Real-time APNS notifications returned from the *Loop* phone (requires *Loop* v3.11.1 or newer) |
+| 4.3 | Separate QR codes for *Nightscout* Site, Dexcom Share, Remote Settings, and Alarm Settings |
+| 4.0 | *Trio* 0.6 remote control support; share remote configuration via QR code |
+| 3.2 | *Loop* remote commands (Meal, Bolus, Override) sent directly via APNS; APNS credentials no longer required in *Nightscout* |
+
+- - -
+
 ## Version Compatibility
 
 This section consolidates version requirements for *LoopFollow* to work with *Loop* and *Trio*, and provides historical context for how remote control has evolved.
@@ -36,7 +74,7 @@ With *LoopFollow* 3.1 and older, *Loop* remote commands were limited to Override
     * *Trio* 0.6 (or newer) requires *LoopFollow* 4.0 (or newer)
     * *Trio* 0.5.1.28 (or older) requires *LoopFollow* 3.2.11 (or older)
 
-    Remote control commands stop working if versions are not matched. You do **not** need to reconfigure your credentials when upgrading — your existing settings continue to work. However, *LoopFollow* Browser Build users must update their Identifiers when upgrading from v3.x: see [Legacy: Updating from v3.x](../build/lf-browser-build.md#legacy-updating-from-v3x){: target="_blank" }.
+    Remote control commands stop working if versions are not matched. You do **not** need to reconfigure your credentials when upgrading — your existing settings continue to work. However, *LoopFollow* Browser Build users had to update their Identifiers when upgrading from v3.x to add Push Notification capability. This is automatic when running Add Identifiers.
 
 | Feature | Minimum Versions Required |
 |:--|:--|
@@ -60,15 +98,3 @@ With *LoopFollow* 3.2 and newer, the APNS credentials are entered directly in th
 
 The APNS credentials only need to be in *Nightscout* if you also use *Nightscout* Careportal or the *LoopCaregiver* app to send remote commands.
 
-## *LoopFollow* Feature History
-
-The feature history is summarized below in reverse chronological order.
-
-| *LoopFollow* Version | Feature Added |
-|:--|:--|
-| 6.1 | Live Activity requires APN credentials<br>see [APN Settings](../setup/lf-setup.md#apn){: target="_blank" } |
-| 6.0 | Live Activity added - Browser Builders must use LoopFollow App Group to build<br>see [Browser Build: Add LoopFollow App Group](../build/lf-browser-build.md#create-app-group){: target="_blank" } |
-| 4.6 | Real-time APNS notifications returned from the *Loop* phone (requires *Loop* v3.11.1 or newer) |
-| 4.3 | Separate QR codes for *Nightscout* Site, Dexcom Share, Remote Settings, and Alarm Settings |
-| 4.0 | *Trio* 0.6 remote control support; share remote configuration via QR code |
-| 3.2 | *Loop* remote commands (Meal, Bolus, Override) sent directly via APNS; APNS credentials no longer required in *Nightscout* |

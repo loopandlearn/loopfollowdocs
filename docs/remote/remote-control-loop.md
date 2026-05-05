@@ -237,12 +237,6 @@ When you select *Loop* Remote Control as the Remote Type in the *LoopFollow* app
 ![remote lrc settings ](img/lf-lrc-credentials.png){width="700"}
 {align="center"}
 
-### Developer Team ID
-
-This is the *Apple* Developer ID for whoever created the APNS Key. The developer must be the same as the developer who built the *Loop* app.
-
-Note that the *Nightscout* app and the *LoopFollow* app do not need to be built by this developer. It is only the *Loop* app that has this requirement.
-
 ### APNS Key ID
 
 If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](remote-control-overview.md#existing-apns){: target="_blank" }. The value of the `LOOP_APNS_KEY_ID` goes here. 
@@ -258,6 +252,12 @@ The APNS Key ID and APNS Key only need to be added to *LoopFollow* to enable *Lo
 If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](remote-control-overview.md#existing-apns){: target="_blank" }. The value of the `LOOP_APNS_KEY` goes here.
 
 If you have never created an APNS (or have lost the credentials), follow the directions in [New APNS](remote-control-overview.md#new-apns){: target="_blank" } and copy the APNS Key into *LoopFollow* and save the value in your Secrets Reference file.
+
+### Developer Team ID
+
+This is the *Apple* Developer ID for whoever created the APNS Key. The developer must be the same as the developer who built the *Loop* app.
+
+Note that the *Nightscout* app and the *LoopFollow* app do not need to be built by this developer. It is only the *Loop* app that has this requirement.
 
 ### QR Code URL
 
