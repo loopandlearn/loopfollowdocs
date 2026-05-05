@@ -165,13 +165,24 @@
         </a>
 </li>
 <li class="md-tabs__item">
+<a class="md-tabs__link" href="../../privacy/lf-telemetry/">
+          
+  
+  
+    
+  
+  Privacy
+
+        </a>
+</li>
+<li class="md-tabs__item">
 <a class="md-tabs__link" href="../../faqs/lf-faqs/">
           
   
   
     
   
-  FAQs
+  Reference
 
         </a>
 </li>
@@ -461,15 +472,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#developer-team-id">
-<span class="md-ellipsis">
-      
-        Developer Team ID
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#apns-key-id">
 <span class="md-ellipsis">
       
@@ -483,6 +485,15 @@
 <span class="md-ellipsis">
       
         APNS Key
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#developer-team-id">
+<span class="md-ellipsis">
+      
+        Developer Team ID
       
     </span>
 </a>
@@ -570,11 +581,24 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../privacy/lf-telemetry/">
+<span class="md-ellipsis">
+    
+  
+    Privacy
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../faqs/lf-faqs/">
 <span class="md-ellipsis">
     
   
-    FAQs
+    Reference
   
 
     
@@ -767,15 +791,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#developer-team-id">
-<span class="md-ellipsis">
-      
-        Developer Team ID
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#apns-key-id">
 <span class="md-ellipsis">
       
@@ -789,6 +804,15 @@
 <span class="md-ellipsis">
       
         APNS Key
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#developer-team-id">
+<span class="md-ellipsis">
+      
+        Developer Team ID
       
     </span>
 </a>
@@ -1064,11 +1088,25 @@
 </ul>
 </div>
 <h3 id="credentials-to-enable-loop-remote-control">Credentials to Enable <abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr> Remote Control<a class="headerlink" href="#credentials-to-enable-loop-remote-control" title="Link to this section for reference">¶</a></h3>
-<p>When you select <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control as the Remote Type in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app, you must fill in the (1) <a href="#developer-team-id">Developer Team ID</a>, (2) <a href="#apns-key-id">APNS Key ID</a> and (3) <a href="#apns-key">APNS Key</a>.</p>
-<p align="center"><img alt="remote lrc settings " src="../img/lf-lrc-credentials.png" width="300"/></p>
-<h3 id="developer-team-id">Developer Team ID<a class="headerlink" href="#developer-team-id" title="Link to this section for reference">¶</a></h3>
-<p>This is the <em>Apple</em> Developer ID for whoever created the APNS Key. The developer must be the same as the developer who built the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app.</p>
-<p>Note that the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> app and the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app do not need to be built by this developer. It is only the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app that has this requirement.</p>
+<p>When you select <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control as the Remote Type in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app, you must fill in the following under <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Settings, <abbr title="Apple Push Notification service">APN</abbr> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Settings, Remote Control.</p>
+<ul>
+<li>
+<p>Settings: <abbr title="Apple Push Notification service">APN</abbr></p>
+<ul>
+<li><a href="#apns-key-id">APNS Key ID</a></li>
+<li><a href="#apns-key">APNS Key</a></li>
+</ul>
+</li>
+<li>
+<p>Settings: Remote Control</p>
+<ul>
+<li><a href="#developer-team-id">Developer Team ID</a></li>
+<li><a href="#qr-code-url"><abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code <abbr title="website address (Uniform Resource Locator)">URL</abbr></a></li>
+<li><a href="#environment-production">Environment Production</a></li>
+</ul>
+</li>
+</ul>
+<p align="center"><img alt="remote lrc settings " src="../img/lf-lrc-credentials.png" width="700"/></p>
 <h3 id="apns-key-id">APNS Key ID<a class="headerlink" href="#apns-key-id" title="Link to this section for reference">¶</a></h3>
 <p>If you previously configured remote control with the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app, you already have an <em>Apple</em> Push Notification System (APNS) Key ID and Key. These were added to the config vars in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site. See <a href="../remote-control-overview/#existing-apns" target="_blank">Existing APNS</a>. The value of the <code>LOOP_APNS_KEY_ID</code> goes here. </p>
 <p>If you have never created an APNS (or have lost the credentials), follow the directions in <a href="../remote-control-overview/#new-apns" target="_blank">New APNS</a> and copy the APNS Key ID into <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and save the value in your Secrets Reference file.</p>
@@ -1079,6 +1117,9 @@
 <h3 id="apns-key">APNS Key<a class="headerlink" href="#apns-key" title="Link to this section for reference">¶</a></h3>
 <p>If you previously configured remote control with the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app, you already have an <em>Apple</em> Push Notification System (APNS) Key ID and Key. These were added to the config vars in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site. See <a href="../remote-control-overview/#existing-apns" target="_blank">Existing APNS</a>. The value of the <code>LOOP_APNS_KEY</code> goes here.</p>
 <p>If you have never created an APNS (or have lost the credentials), follow the directions in <a href="../remote-control-overview/#new-apns" target="_blank">New APNS</a> and copy the APNS Key into <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and save the value in your Secrets Reference file.</p>
+<h3 id="developer-team-id">Developer Team ID<a class="headerlink" href="#developer-team-id" title="Link to this section for reference">¶</a></h3>
+<p>This is the <em>Apple</em> Developer ID for whoever created the APNS Key. The developer must be the same as the developer who built the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app.</p>
+<p>Note that the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> app and the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app do not need to be built by this developer. It is only the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app that has this requirement.</p>
 <h3 id="qr-code-url"><abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code <abbr title="website address (Uniform Resource Locator)">URL</abbr><a class="headerlink" href="#qr-code-url" title="Link to this section for reference">¶</a></h3>
 <p>This provides the One-Time Password needed for the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app to accept the APNS input as valid.</p>
 <p>On the <em><span translate="no"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></span></em> phone, <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> must be included under the <code>Loop</code> -&gt; Settings -&gt; Services section. Navigate to Services and select <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>. Tap on the One-Time Password row to view the <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code.</p>

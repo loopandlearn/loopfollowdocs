@@ -165,13 +165,24 @@
         </a>
 </li>
 <li class="md-tabs__item">
+<a class="md-tabs__link" href="../../privacy/lf-telemetry/">
+          
+  
+  
+    
+  
+  Privacy
+
+        </a>
+</li>
+<li class="md-tabs__item">
 <a class="md-tabs__link" href="../../faqs/lf-faqs/">
           
   
   
     
   
-  FAQs
+  Reference
 
         </a>
 </li>
@@ -623,11 +634,24 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../privacy/lf-telemetry/">
+<span class="md-ellipsis">
+    
+  
+    Privacy
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../faqs/lf-faqs/">
 <span class="md-ellipsis">
     
   
-    FAQs
+    Reference
   
 
     
@@ -971,9 +995,6 @@
 </ul>
 <p><strong>Question: What happens if versions are not correct?</strong>: Remote control commands stop working.</p>
 <p><strong>Question: If I was using <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> / <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> remote control do I need to change my configuration parameters?</strong>: No, the parameters you already set up continue to work. <strong>BUT</strong> you need to update the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> if you use Browser Build.</p>
-<ul>
-<li><a href="../../build/lf-browser-build/#update-from-loopfollow-v3x" target="_blank">Update from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v3,x</a></li>
-</ul>
 </div>
 <details class="question">
 <summary>How does this differ from <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x? (Click to Open/Close)</summary>
@@ -1057,6 +1078,23 @@
 <blockquote>
 <p>You can search for this screen in <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> settings or go through the sequence: <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr>, Settings, Features, Remote Control.</p>
 </blockquote>
+<p>When you select <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control as the Remote Type in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app, you must fill in the following under <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Settings, <abbr title="Apple Push Notification service">APN</abbr> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Settings, Remote Control.</p>
+<ul>
+<li>
+<p>Settings: <abbr title="Apple Push Notification service">APN</abbr></p>
+<ul>
+<li><a href="#apns-key-id">APNS Key ID</a></li>
+<li><a href="#apns-key">APNS Key</a></li>
+</ul>
+</li>
+<li>
+<p>Settings: Remote Control</p>
+<ul>
+<li><a href="#user">User</a></li>
+<li><a href="#shared-secret">Shared Secret</a></li>
+</ul>
+</li>
+</ul>
 <h3 id="shared-secret">Shared Secret<a class="headerlink" href="#shared-secret" title="Link to this section for reference">¶</a></h3>
 <p>Once Remote Control is enabled, a Shared Secret is available. This is only used if you want to use <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>.</p>
 <p>The graphic below is on the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone:</p>
@@ -1138,7 +1176,10 @@
 <p>Please use a secure secret - the <a href="#configure-trio-phone-for-remote-control">automatically generated secret</a> is recommended.</p>
 </blockquote>
 <h3 id="apns-credentials">APNS Credentials<a class="headerlink" href="#apns-credentials" title="Link to this section for reference">¶</a></h3>
-<p>When you select <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control as the Remote Type in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app, you must fill in the (1) <a href="#shared-secret">Shared Secret</a>, (2) <a href="#apns-key-id">APNS Key ID</a> and (3) <a href="#apns-key">APNS Key</a>.</p>
+<p>When you select <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control as the Remote Type in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app, you must fill in the <a href="#shared-secret">Shared Secret</a> on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Settings, Remote screen and the <a href="#apns-key-id">APNS Key ID</a> and <a href="#apns-key">APNS Key</a> on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Settings, <abbr title="Apple Push Notification service">APN</abbr> screen.</p>
+<blockquote>
+<p>The graphics below are out of date. As of version 6.0.0, the <abbr title="Apple Push Notification service">APN</abbr> entries are in their own setting location.</p>
+</blockquote>
 <table>
 <thead>
 <tr>

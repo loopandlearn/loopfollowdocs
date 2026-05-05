@@ -7,7 +7,7 @@
 <meta content="Loop and Learn" name="author"/>
 <link href="https://loopfollowdocs.org/build/lf-browser-build/" rel="canonical"/>
 <link href="../build-options/" rel="prev"/>
-<link href="../../faqs/lf-faqs/" rel="next"/>
+<link href="../../privacy/lf-telemetry/" rel="next"/>
 <link href="../../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator"/>
 <title>LoopFollow Browser Build - LoopFollowDocs</title>
@@ -165,13 +165,24 @@
         </a>
 </li>
 <li class="md-tabs__item">
+<a class="md-tabs__link" href="../../privacy/lf-telemetry/">
+          
+  
+  
+    
+  
+  Privacy
+
+        </a>
+</li>
+<li class="md-tabs__item">
 <a class="md-tabs__link" href="../../faqs/lf-faqs/">
           
   
   
     
   
-  FAQs
+  Reference
 
         </a>
 </li>
@@ -413,6 +424,19 @@
       
     </span>
 </a>
+<nav aria-label="Create App Group" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-to-loopfollow-v6x">
+<span class="md-ellipsis">
+      
+        Update to LoopFollow v6.x
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#add-app-group">
@@ -512,28 +536,6 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#legacy-updating-from-v3x">
-<span class="md-ellipsis">
-      
-        Legacy: Updating from v3.x
-      
-    </span>
-</a>
-<nav aria-label="Legacy: Updating from v3.x" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#update-from-loopfollow-v3x">
-<span class="md-ellipsis">
-      
-        Update from LoopFollow v3.x
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
 </ul>
 </nav>
 </li>
@@ -541,11 +543,24 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../privacy/lf-telemetry/">
+<span class="md-ellipsis">
+    
+  
+    Privacy
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../faqs/lf-faqs/">
 <span class="md-ellipsis">
     
   
-    FAQs
+    Reference
   
 
     
@@ -677,6 +692,19 @@
       
     </span>
 </a>
+<nav aria-label="Create App Group" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-to-loopfollow-v6x">
+<span class="md-ellipsis">
+      
+        Update to LoopFollow v6.x
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#add-app-group">
@@ -775,28 +803,6 @@
       
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#legacy-updating-from-v3x">
-<span class="md-ellipsis">
-      
-        Legacy: Updating from v3.x
-      
-    </span>
-</a>
-<nav aria-label="Legacy: Updating from v3.x" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#update-from-loopfollow-v3x">
-<span class="md-ellipsis">
-      
-        Update from LoopFollow v3.x
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -973,11 +979,12 @@
 </li>
 </ul>
 <h2 id="create-app-group">Create <code>App Group</code><a class="headerlink" href="#create-app-group" title="Link to this section for reference">¶</a></h2>
+<p>New builders - just continue with the instructions as provided on this page. </p>
+<h3 id="update-to-loopfollow-v6x">Update to <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v6.x<a class="headerlink" href="#update-to-loopfollow-v6x" title="Link to this section for reference">¶</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Updating <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> to version 6.0 and newer</p>
-<p>New builders - just follow the instructions as provided on this page. </p>
 <p>This information admonition is for existing builders who need to update.</p>
-<p>The addition of Live Activity requires adding the <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr>. Your build will fail until you take these steps.</p>
+<p>The addition of Live Activity requires adding the <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr>. Your build will fail until you take these one-time steps.</p>
 <p>If you are updating from an earlier version, <strong>sync your <abbr title="a copy of code in a github repository other than the original">fork</abbr></strong> and then:</p>
 <ol>
 <li>Run the <code>Add Identifiers</code> action again</li>
@@ -995,7 +1002,7 @@
 <li>Open this link: <a href="https://developer.apple.com/account/resources/identifiers/applicationGroup/add/">Register an <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></a> on the <em>Apple Developer</em> site.</li>
 <li>For <strong><code>Description</code></strong>, use <code>LoopFollow App Group</code></li>
 <li>For <strong><code>Identifier</code></strong>, enter <code>group.com.TEAMID.LoopFollow</code>, substituting your Team ID for <code>TEAMID</code><ul>
-<li><strong>You must replace <code>TEAMID</code> with your 10-digit Apple Developer ID - do not just copy the <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> Identifier above</strong></li>
+<li><strong>You must replace <code>TEAMID</code> with your 10-character Apple Developer ID - do not just copy the <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> Identifier above</strong></li>
 <li>A mistake here means you will not be able to build the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app until you fix it</li>
 </ul>
 </li>
@@ -1252,79 +1259,6 @@ Refer to the table below to see how the <abbr title="a unique identifier that Ap
 </div>
 <h2 id="install-on-phone">Install on Phone<a class="headerlink" href="#install-on-phone" title="Link to this section for reference">¶</a></h2>
 <p>The <a href="https://loopkit.github.io/loopdocs/browser/phone-install">LoopDocs instructions: Install on Phone</a> walk you through the steps to install the app to a phone. When going through those steps, replace your App Name for <em><span translate="no"><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></span></em>. Everything else is the same.</p>
-<div class="admonition success">
-<p class="admonition-title">Adding Push Notifications Simplified with v4.4</p>
-<p>Provided in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v4.4 and newer, you can run Add <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> to add the required <code>Push Notifications</code> capability.</p>
-<p>For <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v4.0 through 4.3, you had to manually add that capability to the Identifier. Thanks to our friends at fastlane, who updated their tool, this manual action is no longer necessary.</p>
-</div>
-<h2 id="legacy-updating-from-v3x">Legacy: Updating from v3.x<a class="headerlink" href="#legacy-updating-from-v3x" title="Link to this section for reference">¶</a></h2>
-<p>Given that a Browser Build must be rebuilt every 90 days, the instructions here are unlikely to be required.</p>
-<h3 id="update-from-loopfollow-v3x">Update from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v3.x<a class="headerlink" href="#update-from-loopfollow-v3x" title="Link to this section for reference">¶</a></h3>
-<p>When updating from an older version of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, v3.x or older, you need to add the <code>Push Notification</code> to the Identifier Capabilities:</p>
-<ul>
-<li><a href="#sync-your-fork">Sync Your Fork</a></li>
-<li><a href="#run-add-identifiers">Run Add <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr></a> to add the new capability</li>
-<li><a href="#build-your-app">Build Your App</a></li>
-</ul>
-<blockquote>
-<p>Repeat these steps if you use LoopFollow_Second or LoopFollow_Third.</p>
-</blockquote>
-<h4 id="sync-your-fork">Sync Your Fork<a class="headerlink" href="#sync-your-fork" title="Link to this section for reference">¶</a></h4>
-<ul>
-<li>Go to your <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="a copy of code in a github repository other than the original">fork</abbr> and click on the Sync button</li>
-</ul>
-<blockquote>
-<p><img alt="sync the fork" src="../img/github-build-check-fork-status.svg" width="700"/></p>
-</blockquote>
-<h4 id="run-add-identifiers">Run Add <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr><a class="headerlink" href="#run-add-identifiers" title="Link to this section for reference">¶</a></h4>
-<ul>
-<li>In your <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="a copy of code in a github repository other than the original">fork</abbr>, select the Action tab and run the Add <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> Action</li>
-<li>Wait for a successful completion before trying to Build.</li>
-</ul>
-<details class="abstract">
-<summary>Detailed Instructions to Run Add <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> (Click to open/close)</summary>
-<p>Refer to the graphic below for the numbered steps:</p>
-<ol>
-<li>Click on the "Actions" tab of your <abbr title="contains project files and each file's revision history">repository</abbr></li>
-<li>On the left side, click on "Add <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr>"</li>
-<li>On the right side, click "Run Workflow" to show a dropdown menu<ul>
-<li>You will see your default <abbr title="version of code within a single repository or workspace repository">branch</abbr> (<code>main</code>)</li>
-<li>You can select a different <abbr title="version of code within a single repository or workspace repository">branch</abbr>, but typically, you run the default</li>
-</ul>
-</li>
-<li>
-<p>Tap the green button that says "Run <abbr title="a set of instructions to GitHub to perform an action; the instruction files are found in the .github/workflows folder of the repository">workflow</abbr>"</p>
-<p align="center"><img alt="add identifiers using github actions" src="../img/action-02-add-identifiers.svg" width="700"/></p>
-</li>
-</ol>
-<p>The <code>Add Identifier</code>  <span class="notranslate">Action</span>  should succeed or fail in a few minutes.</p>
-<ul>
-<li>If you see the green check (<span class="twemoji passed"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16m3.78-9.72a.75.75 0 0 0-.018-1.042.75.75 0 0 0-1.042-.018L6.75 9.19 5.28 7.72a.75.75 0 0 0-1.042.018.75.75 0 0 0-.018 1.042l2 2a.75.75 0 0 0 1.06 0Z"></path></svg></span>)  continue to the next section</li>
-<li>If you see the red <code>X</code> (<span class="twemoji failed"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.343 13.657A8 8 0 1 1 13.658 2.343 8 8 0 0 1 2.343 13.657M6.03 4.97a.75.75 0 0 0-1.042.018.75.75 0 0 0-.018 1.042L6.94 8 4.97 9.97a.749.749 0 0 0 .326 1.275.75.75 0 0 0 .734-.215L8 9.06l1.97 1.97a.749.749 0 0 0 1.275-.326.75.75 0 0 0-.215-.734L9.06 8l1.97-1.97a.749.749 0 0 0-.326-1.275.75.75 0 0 0-.734.215L8 6.94Z"></path></svg></span>):<ul>
-<li>Use the Browser Build Errors page to resolve the error, then repeat the Action</li>
-<li><a href="https://loopkit.github.io/loopdocs/browser/bb-errors/#quick-reference-for-browser-build-errors">Quick Reference for Browser Build Errors</a></li>
-</ul>
-</li>
-</ul>
-</details>
-<h4 id="build-your-app">Build Your App<a class="headerlink" href="#build-your-app" title="Link to this section for reference">¶</a></h4>
-<ul>
-<li>In your <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="a copy of code in a github repository other than the original">fork</abbr>, select the Action tab and run the Build <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> Action</li>
-<li>Wait for a successful completion and wait for the <abbr title="a method to distribute apps without direct connection">TestFlight</abbr> upload (timing varies from a few minutes to a few hours) until trying to install the new build on your phone</li>
-</ul>
-<details class="abstract">
-<summary>Detailed Instructions to Build <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> (Click to open/close)</summary>
-<ol>
-<li>Click on the Actions tab of your <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="contains project files and each file's revision history">repository</abbr></li>
-<li>On the left side, click on <code>4. Build LoopFollow</code></li>
-<li>On the right side, click Run Workflow to show a dropdown menu</li>
-<li>Tap the green button that says Run <abbr title="a set of instructions to GitHub to perform an action; the instruction files are found in the .github/workflows folder of the repository">workflow</abbr>.</li>
-</ol>
-<blockquote>
-<p><img alt="add identifiers" src="../img/action-04-build.svg" width="700"/></p>
-</blockquote>
-</details>
-<p><strong>Once this completes, be sure to update from <abbr title="a method to distribute apps without direct connection">TestFlight</abbr> to get the updated version of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> on your phone.</strong></p>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
@@ -1350,13 +1284,13 @@ Refer to the table below to see how the <abbr title="a unique identifier that Ap
               </div>
 </div>
 </a>
-<a aria-label="Next: LoopFollow FAQs" class="md-footer__link md-footer__link--next" href="../../faqs/lf-faqs/">
+<a aria-label="Next: Anonymous Telemetry" class="md-footer__link md-footer__link--next" href="../../privacy/lf-telemetry/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                LoopFollow FAQs
+                Anonymous Telemetry
               </div>
 </div>
 <div class="md-footer__button md-icon">
