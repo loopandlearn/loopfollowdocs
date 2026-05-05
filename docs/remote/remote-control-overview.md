@@ -116,7 +116,7 @@ When you configured APNS for the *Loop* app and saved information in your *Night
 | `LOOP_APNS_KEY`|-----BEGIN PRIVATE KEY-----<br>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<br>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<br>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<br>AAAAAAAA<br>-----END PRIVATE KEY-----|
 | `LOOP_DEVELOPER_TEAM_ID`|AAAAAAAAAA|
 
-Note that the `LOOP_DEVELOPER_TEAM_ID` is the Apple Developer ID used to build the *Loop* app. 
+Note that the `LOOP_DEVELOPER_TEAM_ID` is the Apple Developer ID used to build the *Loop* app.
 
 * When using *LoopFollow* for remote control, the addition of those `config` variables in *Nightscout* is only required to support sending remote commands to the *Loop* app from *Nightscout* `Careportal` and from *LoopCaregiver*.
 * The *LoopFollow* Remote Control features are available for both the *Loop* and *Trio* apps when the APNS credentials are entered in the *LoopFollow* app in the [APN Settings](../setup/lf-setup.md#apn){: target="_blank" }, along with other specific credentials for each app under [Remote Settings](../setup/lf-setup.md#remote){: target="_blank" }.

@@ -27,7 +27,7 @@ What is happening under the hood: when you pick Dash as your heartbeat, LoopFoll
 
 Because both apps, LoopFollow + (Trio or Loop), are on the same phone, iOS only opens one actual BLE connection to the pod and shares it between them. So from the pod's perspective there is just one controller talking to it, same as always. Whether one app is listening or two, the pod is doing the exact same radio work.
 
-LoopFollow tagging along should be not affect the battery at all.
+LoopFollow tagging along will not affect the pod battery.
 
 - - -
 
