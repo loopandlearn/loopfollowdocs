@@ -123,6 +123,12 @@ For a full summary of version requirements for *Loop* and *Trio* remote control,
 | ***Trio* Remote Control**| Read | OK (Read) |
 | ***Nightscout***<br>Trio 0.2 or older | Read & Careportal | OK (Read & Write) |
 
+##### WebSocket
+
+Below the URL and Token rows, the *Nightscout* setup screen has an **Enable WebSocket** toggle. When enabled, *LoopFollow* opens a live connection to your *Nightscout* server while the app is in the foreground, so new readings, treatments, and device status arrive within seconds of being posted to *Nightscout* — close to real-time. The status row underneath the toggle shows whether the connection is *Connecting…*, *Connected*, *Disconnected*, or in *Error*.
+
+When *LoopFollow* moves to the background, the WebSocket disconnects and the app falls back to its normal scheduled polling so the persistent connection doesn't drain the battery. The connection is re-established automatically when you return to the app. If the connection drops while you are still in the foreground, normal polling resumes immediately as a safety net.
+
 #### Setup *Dexcom*
 
 The graphic below shows the display when you tap on the *Dexcom* row.
