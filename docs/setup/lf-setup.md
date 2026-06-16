@@ -225,6 +225,7 @@ These settings are accessed through the Graph row in the Settings screen.
 | Show Midnight Lines | Enable or Disable |
 | Show Calibration | Enable or Disable |
 | Show Carb Absorption | Enable or Disable |
+| Show Yesterday's BG | When enabled, yesterday's glucose is overlaid on the main graph as a dimmed gray line, time-shifted 24 hours so it aligns with the same clock time today, for visual comparison<br>*Nightscout* only (Dexcom Share does not return enough history); default off |
 | Treatments on Small Graph | Enable or Disable |
 | Height | Select height of small Graph |
 | Hours of Prediction | Select prediction extent on main plot |
