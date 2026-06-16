@@ -98,6 +98,54 @@ When entering meals and choosing to schedule the meal, any bolus included in the
 
 ***More info coming soon!***
 
+### Quick-Pick Boluses and Meals
+
+!!! info "Available in *LoopFollow* 6.2 and newer"
+    <!-- TODO: confirm the exact release version before publishing -->
+
+To save a step when sending a remote command, *LoopFollow* shows **Quick-Pick**
+buttons at the top of the Bolus and Meal screens. Each button fills in the
+amounts from one of your recent entries with a single tap.
+
+* **Quick-Pick Boluses** appear on the Bolus screen and fill in an insulin amount.
+* **Quick-Pick Meals** appear on the Meal screen and fill in carbs, and — when
+  enabled in [Meal Settings](#meal-settings) — fat, protein, and the meal bolus.
+
+| Quick-Pick Boluses | Quick-Pick Meals |
+|:--:|:--:|
+| ![Quick-Pick Boluses on the remote Bolus screen](img/lf-quick-pick-bolus.png){width="300"} | ![Quick-Pick Meals on the remote Meal screen](img/lf-quick-pick-meal.png){width="300"} |
+{align="center"}
+
+Tapping a button only **fills in** the fields — nothing is sent until you review
+the values and tap **Send Bolus** / **Send Meal**, exactly as with a manual entry.
+Guardrails still apply.
+
+#### How the suggestions are chosen
+
+Every bolus or meal you successfully send is stored **locally on your phone**.
+When you open a remote screen, that history is scored to surface the most
+relevant options for the current moment, considering:
+
+* **Time of day** — entries sent around this time of day score higher
+* **Day of week** — weekday and weekend patterns are kept separate
+* **Recency** — older entries gradually fade out
+
+Up to five buttons are shown, and the Quick-Pick section is hidden entirely
+until you have history to draw from. So if you usually send the same breakfast
+on weekday mornings, that entry tends to appear as an option on weekday mornings.
+
+A bolus that was part of a meal is stored with that meal, so it does **not**
+appear among your standalone Quick-Pick Boluses.
+
+!!! note
+    The history is private to the device and stored in *LoopFollow* only.
+    *Nightscout* cannot tell remote entries apart from manual ones, so it is not
+    used as a source — a freshly installed or reset phone starts with no
+    Quick-Pick suggestions until you send a few commands.
+
+Tap the :material-information-outline: info icon next to **Quick-Pick Boluses**
+or **Quick-Pick Meals** in the app for a short in-screen explanation.
+
 ### Temp Target
 
 ***More info coming soon!***
