@@ -92,16 +92,14 @@ buttons at the top of the Bolus and Carbs screens. Each button fills in the
 amounts from one of your recent entries with a single tap.
 
 * **Quick-Pick Boluses** appear on the Bolus screen and fill in an insulin amount.
-* **Quick-Pick Meals** appear on the Carbs screen and fill in **carbs only**,
-  since *Loop* remote carb entries do not include fat or protein.
+* **Quick-Pick Meals** appear on the Carbs screen and fill in **carbs only**.
 
 | Quick-Pick Boluses | Quick-Pick Meals |
 |:--:|:--:|
-| ![Quick-Pick Boluses on the remote Bolus screen](img/lf-quick-pick-bolus.png){width="300"} | ![Quick-Pick Meals on the remote Carbs screen](img/lf-quick-pick-meal.png){width="300"} |
-{align="center"}
+| ![Quick-Pick Boluses on the remote Bolus screen](img/lf-quick-pick-bolus.png){width="300"} | ![Quick-Pick Meals on the remote Carbs screen](img/lf-quick-pick-carbs.png){width="300"} |
 
 Tapping a button only **fills in** the fields — nothing is sent until you review
-the values and tap **Send Bolus** / **Send Meal**, exactly as with a manual entry.
+the values and tap **Send Bolus** / **Send Carbs**, exactly as with a manual entry.
 Guardrails still apply.
 
 #### How the suggestions are chosen

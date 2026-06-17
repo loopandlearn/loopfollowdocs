@@ -45,7 +45,7 @@ Quick access is provided using these links once you have configured *LoopFollow*
 * [*Loop* Remote Control](../remote/remote-control-loop.md){: target="_blank" }
 * [*Trio* Remote Control](../remote/remote-control-trio.md){: target="_blank" }: requires Trio 0.5.x or newer
 
-> As of *LoopFollow* 6.x, *Nightscout* remote commands are no longer supported in *LoopFollow*.
+> As of *LoopFollow* 6.2, *Nightscout* remote commands are no longer supported in *LoopFollow*.
 
 
 - - -

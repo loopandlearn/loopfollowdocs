@@ -3,7 +3,7 @@
 *Trio* accepts remote commands from *LoopFollow* via direct APNS. The final control of whether remote commands will be enacted rests with the *Trio* user — they can enable or disable remote control.
 
 !!! note "*Nightscout* Careportal Remote Commands Removed"
-    As of *LoopFollow* 6.x, *Nightscout* remote commands are no longer supported in *LoopFollow*. Use *Trio* Remote Control (TRC) below, which requires *Trio* 0.5.x or newer.
+    As of *LoopFollow* 6.2, *Nightscout* remote commands are no longer supported in *LoopFollow*. Use *Trio* Remote Control (TRC) below, which requires *Trio* 0.5.x or newer.
 
 !!! warning "*Nightscout* version must be 15.0.2 or newer"
     To properly display the OpenAPS pill with *Trio* 0.5.x (or newer), your *Nightscout* version must be 15.0.2 (or newer). If you do not see the expected treatments or pills in the *Nightscout* dashboard, follow the steps to [Configure Nightscout for Trio (OpenAPS)](#configure-nightscout-for-trio-openaps).
@@ -334,7 +334,7 @@ In addition to this step, you may need to force the profile (from Trio) to uploa
 ### Update Profile
 
 !!! warning "Must on *Trio* 0.5.x (or newer)"
-    If you are on *Trio* 0.2.x, *LoopFollow* 6.x can no longer remotely control *Trio* — upgrade *Trio* to 0.5.x or newer to use *Trio* Remote Control.
+    If you are on *Trio* 0.2.x, *LoopFollow* 6.2 can no longer remotely control *Trio* — upgrade *Trio* to 0.5.x or newer to use *Trio* Remote Control.
 
 If you were previously running the *Loop* app or the *iAPS* app, [Stop *Nightscout* upload](#stop-nightscout-uploads-from-other-apps) from those apps and then force the profile to update.
 

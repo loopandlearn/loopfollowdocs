@@ -30,10 +30,14 @@ The graphic below shows the Remote Settings screen for *LoopFollow*. You must fi
 * When following someone running Trio 0.5.x or newer, the options are None or [Trio Remote Control](remote-control-trio.md){: target="_blank" }
 
 !!! note "*Nightscout* Careportal Remote Commands Removed"
-    As of *LoopFollow* 6.x, *Nightscout* remote commands are no longer supported in *LoopFollow*. Remote control is now exclusively via direct APNS to the *Loop* or *Trio* app.
+    As of *LoopFollow* 6.2, *Nightscout* remote commands are no longer supported in *LoopFollow*. Remote control is now exclusively via direct APNS to the *Loop* or *Trio* app.
 
-![LoopFollow remote options - all types](img/lf-remote-options_3.2.svg){width="600"}
-{align="center"}
+
+| **Following *Loop*** | **Following *Trio*** |
+|:--:|:--:|
+| ![Loop remote control options](img/lf-remote-options-loop.png){width="300"} | ![Loop remote control options](img/lf-remote-options-trio.png){width="300"} |
+
+
 
 ### Critical Configuration Information
 
