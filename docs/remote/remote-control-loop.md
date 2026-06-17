@@ -82,6 +82,51 @@ Example messages are highlighted by red rectangles in the composite below for re
     If the last update was more than 12 minutes ago, that line is not prefilled.
 
 
+### Quick-Pick Boluses and Meals
+
+!!! info "Available in *LoopFollow* 6.2 and newer"
+    <!-- TODO: confirm the exact release version before publishing -->
+
+To save a step when sending a remote command, *LoopFollow* shows **Quick-Pick**
+buttons at the top of the Bolus and Carbs screens. Each button fills in the
+amounts from one of your recent entries with a single tap.
+
+* **Quick-Pick Boluses** appear on the Bolus screen and fill in an insulin amount.
+* **Quick-Pick Meals** appear on the Carbs screen and fill in **carbs only**,
+  since *Loop* remote carb entries do not include fat or protein.
+
+| Quick-Pick Boluses | Quick-Pick Meals |
+|:--:|:--:|
+| ![Quick-Pick Boluses on the remote Bolus screen](img/lf-quick-pick-bolus.png){width="300"} | ![Quick-Pick Meals on the remote Carbs screen](img/lf-quick-pick-meal.png){width="300"} |
+{align="center"}
+
+Tapping a button only **fills in** the fields — nothing is sent until you review
+the values and tap **Send Bolus** / **Send Meal**, exactly as with a manual entry.
+Guardrails still apply.
+
+#### How the suggestions are chosen
+
+Every bolus or carb entry you successfully send is stored **locally on your
+phone**. When you open a remote screen, that history is scored to surface the
+most relevant options for the current moment, considering:
+
+* **Time of day** — entries sent around this time of day score higher
+* **Day of week** — weekday and weekend patterns are kept separate
+* **Recency** — older entries gradually fade out
+
+Up to five buttons are shown, and the Quick-Pick section is hidden entirely
+until you have history to draw from. So if you usually send the same breakfast
+on weekday mornings, that entry tends to appear as an option on weekday mornings.
+
+!!! note
+    The history is private to the device and stored in *LoopFollow* only.
+    *Nightscout* cannot tell remote entries apart from manual ones, so it is not
+    used as a source — a freshly installed or reset phone starts with no
+    Quick-Pick suggestions until you send a few commands.
+
+Tap the :material-information-outline: info icon next to **Quick-Pick Boluses**
+or **Quick-Pick Meals** in the app for a short in-screen explanation.
+
 ### Overrides
 
 ***More info coming soon!***
@@ -222,16 +267,20 @@ These guardrails are for sending remote commands with *LoopFollow*. There are se
 
 ### Credentials to Enable Loop Remote Control
 
-When you select *Loop* Remote Control as the Remote Type in the *LoopFollow* app, you must fill in the (1) [Developer Team ID](#developer-team-id), (2) [APNS Key ID](#apns-key-id) and (3) [APNS Key](#apns-key).
+When you select *Loop* Remote Control as the Remote Type in the *LoopFollow* app, you must fill in the following under *LoopFollow* Settings, APN and *LoopFollow* Settings, Remote Control.
 
-![remote lrc settings ](img/lf-lrc-credentials.png){width="300"}
+* Settings: APN
+    * [APNS Key ID](#apns-key-id)
+    * [APNS Key](#apns-key)
+
+* Settings: Remote Control
+
+    * [Developer Team ID](#developer-team-id)
+    * [QR Code URL](#qr-code-url)
+    * [Environment Production](#environment-production)
+
+![remote lrc settings ](img/lf-lrc-credentials.png){width="700"}
 {align="center"}
-
-### Developer Team ID
-
-This is the *Apple* Developer ID for whoever created the APNS Key. The developer must be the same as the developer who built the *Loop* app.
-
-Note that the *Nightscout* app and the *LoopFollow* app do not need to be built by this developer. It is only the *Loop* app that has this requirement.
 
 ### APNS Key ID
 
@@ -248,6 +297,12 @@ The APNS Key ID and APNS Key only need to be added to *LoopFollow* to enable *Lo
 If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site. See [Existing APNS](remote-control-overview.md#existing-apns){: target="_blank" }. The value of the `LOOP_APNS_KEY` goes here.
 
 If you have never created an APNS (or have lost the credentials), follow the directions in [New APNS](remote-control-overview.md#new-apns){: target="_blank" } and copy the APNS Key into *LoopFollow* and save the value in your Secrets Reference file.
+
+### Developer Team ID
+
+This is the *Apple* Developer ID for whoever created the APNS Key. The developer must be the same as the developer who built the *Loop* app.
+
+Note that the *Nightscout* app and the *LoopFollow* app do not need to be built by this developer. It is only the *Loop* app that has this requirement.
 
 ### QR Code URL
 

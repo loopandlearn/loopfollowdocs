@@ -27,8 +27,6 @@ Starting with *LoopFollow* v4.0 and *Trio* v0.6, users of remote control are pro
 
     **Question: If I was using Trio / LoopFollow remote control do I need to change my configuration parameters?**: No, the parameters you already set up continue to work. **BUT** you need to update the *LoopFollow* Identifiers if you use Browser Build.
 
-    * [Update from *LoopFollow* v3,x](../build/lf-browser-build.md#update-from-loopfollow-v3x){: target="_blank" }
-
 
 ### Quick Access
 
@@ -92,6 +90,54 @@ When entering meals and choosing to schedule the meal, any bolus included in the
 
 ***More info coming soon!***
 
+### Quick-Pick Boluses and Meals
+
+!!! info "Available in *LoopFollow* 6.2 and newer"
+    <!-- TODO: confirm the exact release version before publishing -->
+
+To save a step when sending a remote command, *LoopFollow* shows **Quick-Pick**
+buttons at the top of the Bolus and Meal screens. Each button fills in the
+amounts from one of your recent entries with a single tap.
+
+* **Quick-Pick Boluses** appear on the Bolus screen and fill in an insulin amount.
+* **Quick-Pick Meals** appear on the Meal screen and fill in carbs, and — when
+  enabled in [Meal Settings](#meal-settings) — fat, protein, and the meal bolus.
+
+| Quick-Pick Boluses | Quick-Pick Meals |
+|:--:|:--:|
+| ![Quick-Pick Boluses on the remote Bolus screen](img/lf-quick-pick-bolus.png){width="300"} | ![Quick-Pick Meals on the remote Meal screen](img/lf-quick-pick-meal.png){width="300"} |
+{align="center"}
+
+Tapping a button only **fills in** the fields — nothing is sent until you review
+the values and tap **Send Bolus** / **Send Meal**, exactly as with a manual entry.
+Guardrails still apply.
+
+#### How the suggestions are chosen
+
+Every bolus or meal you successfully send is stored **locally on your phone**.
+When you open a remote screen, that history is scored to surface the most
+relevant options for the current moment, considering:
+
+* **Time of day** — entries sent around this time of day score higher
+* **Day of week** — weekday and weekend patterns are kept separate
+* **Recency** — older entries gradually fade out
+
+Up to five buttons are shown, and the Quick-Pick section is hidden entirely
+until you have history to draw from. So if you usually send the same breakfast
+on weekday mornings, that entry tends to appear as an option on weekday mornings.
+
+A bolus that was part of a meal is stored with that meal, so it does **not**
+appear among your standalone Quick-Pick Boluses.
+
+!!! note
+    The history is private to the device and stored in *LoopFollow* only.
+    *Nightscout* cannot tell remote entries apart from manual ones, so it is not
+    used as a source — a freshly installed or reset phone starts with no
+    Quick-Pick suggestions until you send a few commands.
+
+Tap the :material-information-outline: info icon next to **Quick-Pick Boluses**
+or **Quick-Pick Meals** in the app for a short in-screen explanation.
+
 ### Temp Target
 
 ***More info coming soon!***
@@ -112,6 +158,18 @@ Remote control must be enabled on the *Trio* phone or no remote information is a
 
 > You can search for this screen in *Trio* settings or go through the sequence: Trio, Settings, Features, Remote Control.
 
+
+When you select *Trio* Remote Control as the Remote Type in the *LoopFollow* app, you must fill in the following under *LoopFollow* Settings, APN and *LoopFollow* Settings, Remote Control.
+
+* Settings: APN
+    * [APNS Key ID](#apns-key-id)
+    * [APNS Key](#apns-key)
+
+* Settings: Remote Control
+
+    * [User](#user)
+    * [Shared Secret](#shared-secret)
+ 
 ### Shared Secret
 
 Once Remote Control is enabled, a Shared Secret is available. This is only used if you want to use *Trio* Remote Control with *LoopFollow*.
@@ -202,7 +260,9 @@ This is the unique shared secret that can be generated or entered into the *Trio
 
 ### APNS Credentials
 
-When you select *Trio* Remote Control as the Remote Type in the *LoopFollow* app, you must fill in the (1) [Shared Secret](#shared-secret), (2) [APNS Key ID](#apns-key-id) and (3) [APNS Key](#apns-key).
+When you select *Trio* Remote Control as the Remote Type in the *LoopFollow* app, you must fill in the [Shared Secret](#shared-secret) on the *LoopFollow* Settings, Remote screen and the [APNS Key ID](#apns-key-id) and [APNS Key](#apns-key) on the *LoopFollow* Settings, APN screen.
+
+> The graphics below are out of date. As of version 6.0.0, the APN entries are in their own setting location.
 
 | Default Remote Settings | Configured Remote Settings |
 |:-:|:-:|

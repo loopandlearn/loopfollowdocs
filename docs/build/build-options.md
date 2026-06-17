@@ -4,7 +4,7 @@
 
 * Browser Build: 
     * If you have never built, see [*LoopFollow* Browser Build](lf-browser-build.md)
-    * If you are updating from v3.x or older, you need follow the one-time steps to [Update from *LoopFollow* v3.x](lf-browser-build.md#update-from-loopfollow-v3x){: target="_blank" }
+    * If you are updating from v5.x or older, you need follow the one-time steps to [Update to *LoopFollow* v6.x](lf-browser-build.md#update-to-loopfollow-v6x){: target="_blank" }
 * Mac-Xcode: [Build *LoopFollow* Script for Mac-Xcode](#build-loopfollow-script-for-mac-xcode)
 
 ### Build *LoopFollow* Script for Mac-Xcode
