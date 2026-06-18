@@ -10,14 +10,6 @@
 
 > The return APNS message is only available for a meal or bolus entry.
 
-!!! important "Breaking Change: Trio Remote Command Users"
-    Trio users must have matching code for LoopFollow and Trio.
-
-    * Trio 0.6 (or newer) requires LoopFollow 4.0 (or newer)
-    * Trio 0.5.1.28 (or older) requires LoopFollow 3.2.11 (or older)
-
-    See [Trio Remote Control](remote-control-trio.md){: target="_blank" } for more information.
-
 - - -
 
 ## *LoopFollow* Remote Options
@@ -27,7 +19,7 @@ For a full summary of version requirements and feature history, see [Version Com
 The graphic below shows the Remote Settings screen for *LoopFollow*. You must first enter a *Nightscout* URL before any remote options are offered and then only the option suitable for that *Nightscout* site can be selected.
 
 * When following someone running Loop, the options are None or [Loop Remote Control](remote-control-loop.md){: target="_blank" }
-* When following someone running Trio 0.5.x or newer, the options are None or [Trio Remote Control](remote-control-trio.md){: target="_blank" }
+* When following someone running Trio, the options are None or [Trio Remote Control](remote-control-trio.md){: target="_blank" }
 
 !!! note "*Nightscout* Careportal Remote Commands Removed"
     As of *LoopFollow* 6.2, *Nightscout* remote commands are no longer supported in *LoopFollow*. Remote control is now exclusively via direct APNS to the *Loop* or *Trio* app.

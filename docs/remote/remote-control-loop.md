@@ -237,7 +237,7 @@ You can see the danger of sending duplicate bolus/carbs so be careful. If a remo
 
 The Remote Settings row in the *LoopFollow* Settings screen is used to select the type of remote access you wish to use.
 
-![LoopFollow remote settings type](img/lf-lrc-selection.png){width="300"}
+![LoopFollow remote settings type](img/lf-remote-options-loop.png){width="300"}
 {align="center"}
 
 !!! question "The *Loop* Remote Control option is not available"

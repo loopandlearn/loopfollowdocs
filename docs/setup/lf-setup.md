@@ -34,7 +34,7 @@ The home screen provides a dashboard of important information.
 * Supports Information Display from *Loop* and *Trio* when Nightscout Site is provided
     * *Loop* & *Trio*: common features like status, basal, bolus, carbs and eventual glucose forecast
     * *Loop*: *Loop* specific features like Profile Name, remote control
-    * *Trio*: *Trio* specific features like Autosens, TDD, remote control (with *Trio* 0.5.x and newer)
+    * *Trio*: *Trio* specific features like Autosens, TDD, remote control
 
 Once you’ve configured your settings, your Home screen will look as beautiful as the example below!
 
@@ -110,8 +110,7 @@ When adding the Nightscout information to monitor, you can copy your *Nightscout
 
     For more information about tokens with *Nightscout*, refer to [Admin Tools in *Nightscout*](https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles).
 
-The type of token depends on the type of remote control desired. 
-The table below indicates the minimum token access for each type of remote control available with *LoopFollow*. 
+If your Nightscout site is protected, which is recommended, you need to create a **readable** token to use with *LoopFollow*.
 When you enter your credentials, *LoopFollow* tries to reach the site and then provides the status. 
 
 For a full summary of version requirements for *Loop* and *Trio* remote control, see [Version Compatibility](../faqs/lf-history.md#version-compatibility){: target="_blank" }.
@@ -414,11 +413,11 @@ Details about creating APN credentials are found in the [Remote Control Overview
 
 The Live Activity feature for *LoopFollow* has the following requirements or it will not update reliably and should not be used.
 
-* Background Refresh must be enabled
+* **APN Credentials** must be entered
+* **Background Refresh** must be enabled
     * Typically caregivers use Silent Tunes to keep the app alive in the background
     * If background refresh is not working, the app notifies the user and they should assume Live Activity is also not refreshing
-* APN Credentials must be entered
-* Live Activity must be enabled
+* **Live Activity** must be enabled
 
 #### Live Activity Options
 

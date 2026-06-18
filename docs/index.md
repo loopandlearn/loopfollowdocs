@@ -30,7 +30,7 @@ The toolbar at the bottom of the Home and Menu screens has 4 user-configurable i
 
 #### New Features
 
-The released version of *LoopFollow* is 6.1.0 and is built with the `main` branch.
+The released version of *LoopFollow* is 6.2.0 and is built with the `main` branch.
 
 See [New Feature Hightlights](faqs/lf-history.md#new-feature-highlights){: target="_blank" }
 

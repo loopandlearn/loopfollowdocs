@@ -3,12 +3,12 @@
 *Trio* accepts remote commands from *LoopFollow* via direct APNS. The final control of whether remote commands will be enacted rests with the *Trio* user — they can enable or disable remote control.
 
 !!! note "*Nightscout* Careportal Remote Commands Removed"
-    As of *LoopFollow* 6.2, *Nightscout* remote commands are no longer supported in *LoopFollow*. Use *Trio* Remote Control (TRC) below, which requires *Trio* 0.5.x or newer.
+    As of *LoopFollow* 6.2, *Nightscout* remote commands are no longer supported in *LoopFollow*. Use *Trio* Remote Control (TRC) below.
 
 !!! warning "*Nightscout* version must be 15.0.2 or newer"
-    To properly display the OpenAPS pill with *Trio* 0.5.x (or newer), your *Nightscout* version must be 15.0.2 (or newer). If you do not see the expected treatments or pills in the *Nightscout* dashboard, follow the steps to [Configure Nightscout for Trio (OpenAPS)](#configure-nightscout-for-trio-openaps).
+    To properly display the OpenAPS pill with *Trio*, your *Nightscout* version must be 15.0.2 (or newer). If you do not see the expected treatments or pills in the *Nightscout* dashboard, follow the steps to [Configure Nightscout for Trio (OpenAPS)](#configure-nightscout-for-trio-openaps).
 
-The most powerful arrangement, for *Trio* 0.5.x (or newer), is to configure the *LoopFollow* app to use the *Trio* Remote Control (TRC) setting.
+- - -
 
 ### Real-time Notifications for *Trio*
 
@@ -17,16 +17,7 @@ Starting with *LoopFollow* v4.0 and *Trio* v0.6, users of remote control are pro
 * This change enables *Trio* to send a push notification back to the *LoopFollow* app on the originating phone, immediately informing the user whether their command (e.g., meal, bolus, override) was successfully processed or if an error occurred
 * This greatly improves the user experience compared to waiting for Nightscout being updated
 
-!!! important "Breaking Change: *Trio* Remote Command Users"
-    *Trio* users must have matching code for LoopFollow and *Trio*.
-
-    * LoopFollow v4.0 (or newer) works with *Trio* v0.6 (or newer)
-    * LoopFollow v3.2.3 (or older) works with *Trio* v0.5.1 (or older)
-
-    **Question: What happens if versions are not correct?**: Remote control commands stop working.
-
-    **Question: If I was using Trio / LoopFollow remote control do I need to change my configuration parameters?**: No, the parameters you already set up continue to work. **BUT** you need to update the *LoopFollow* Identifiers if you use Browser Build.
-
+- - -
 
 ### Quick Access
 
@@ -150,8 +141,6 @@ or **Quick-Pick Meals** in the app for a short in-screen explanation.
 
 ## Configure *Trio* Phone for Remote Control
 
-> The graphics displayed on this page are associated with *Trio* version 0.5.x or newer. The same setting is available in older version of *Trio* but in a different location in the menu structure.
-
 **Default:** _OFF_
 
 Remote control must be enabled on the *Trio* phone or no remote information is accepted by the *Trio* phone.
@@ -194,7 +183,7 @@ The `SHARED SECRET` should be copied from the *Trio* phone and added to the [`Sh
 
 The Remote Settings row in the *LoopFollow* Settings screen is used to select the type of remote access you wish to use.
 
-![LoopFollow remote settings type](img/lf-trc-selection.jpg){width="300"}
+![LoopFollow remote settings type](img/lf-remote-options-trio.png){width="300"}
 {align="center"}
 
 !!! question "The *Trio* Remote Control option is not available"
@@ -202,14 +191,11 @@ The Remote Settings row in the *LoopFollow* Settings screen is used to select th
 
 * *Trio* Remote Control option
     * Remote control with *LoopFollow* includes adding remote carbs, enacting remote bolus, and starting and canceling Temp Targets and Overrides
-    * Requires *Trio* 0.5.x (or newer) and *LoopFollow* 2.4.x (or newer)
     * Continue with [Configure *LoopFollow* *Trio* Remote Control](#configure-loopfollow-trio-remote-control) to finish the configuration process
 
 - - -
 
 ## Configure *LoopFollow* *Trio* Remote Control
-
-> This is supported for *Trio* 0.5.x (or newer) when using *LoopFollow* 2.4.0 (or newer).
 
 ### Meal Settings
 
@@ -307,7 +293,7 @@ This section covers known troubleshooting issues:
 
 ### Configure Nightscout for Trio (OpenAPS)
 
-The *Nightscout* version must be 15.0.2 (or newer) to properly display the OpenAPS pill with *Trio* 0.5.x (or newer). Check your revision: *Nightscout* URL, Menu, scroll to bottom and examine the About section.
+The *Nightscout* version must be 15.0.2 (or newer) to properly display the OpenAPS pill. Check your revision: *Nightscout* URL, Menu, scroll to bottom and examine the About section.
 
 If you transitioned from the *Loop* app, you must make some modifications to *Nightscout* before you will be successful viewing your *Trio* data in your *Nightscout* site.
 
@@ -332,9 +318,6 @@ If you were previously running the *Loop* app or the *iAPS* app:
 In addition to this step, you may need to force the profile (from Trio) to upload to *Nightscout* and overwrite the one stored as the default profile in *Nightscout*.
 
 ### Update Profile
-
-!!! warning "Must on *Trio* 0.5.x (or newer)"
-    If you are on *Trio* 0.2.x, *LoopFollow* 6.2 can no longer remotely control *Trio* — upgrade *Trio* to 0.5.x or newer to use *Trio* Remote Control.
 
 If you were previously running the *Loop* app or the *iAPS* app, [Stop *Nightscout* upload](#stop-nightscout-uploads-from-other-apps) from those apps and then force the profile to update.
 

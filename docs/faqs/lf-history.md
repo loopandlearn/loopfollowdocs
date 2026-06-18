@@ -3,6 +3,22 @@
 ## New Feature Highlights
 
 !!! tip ""
+    New with *LoopFollow* v6.2:
+
+    * [WebSocket](../setup/lf-setup.md#websocket){: target="_blank" }, enabled by default, allows near real-time updates from Nightscout
+    * [Show Yesterday's BG](../setup/lf-setup.md#graph){: target="_blank" } can be enabled using Settings: Graph
+    * [Information Display](../setup/lf-setup.md#information-display){: target="_blank" } supports large fonts; when needed, the label and value are split into two rows
+    * Remote Quick Pick buttons are now available for [Loop](../remote/remote-control-loop.md#quick-pick-boluses-and-meals){: target="_blank" } and [Trio](../remote/remote-control-trio.md#quick-pick-boluses-and-meals){: target="_blank" } 
+    * Handle glucose duplicates to fix delta glucose always showing zero
+    * Improve auto-restart for Live Activity
+    * Improve handling of profiles from Nightscout
+    * Trio Updates:
+        * Trio Remote Control is the only option offered for Trio (Nightscout option is removed)
+        * Trio forecast cone display truncated to match Trio method
+        * Trio forecast lines match Trio colors
+        * Trio Override / Temp Target display colors match Trio colors
+
+!!! tip ""
     New with *LoopFollow* v6.0 and v6.1:
     
     * Live Activity and Live Activity upgrades

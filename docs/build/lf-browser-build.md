@@ -139,7 +139,7 @@ The `Add Identifier` &nbsp;<span class=notranslate>Action</span>&nbsp; should su
 
 New builders - just continue with the instructions as provided on this page. 
 
-### Update to *LoopFollow* v6.2
+### Update to *LoopFollow* v6
 
 !!! important "Updating LoopFollow to version 6.0 and newer"
     This information admonition is for existing builders who need to update.
