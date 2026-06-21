@@ -57,7 +57,7 @@ The feature history is summarized below in reverse chronological order.
 
 ## APNS Keys Do Not Need to Be in Nightscout
 
-With *LoopFollow* 3.2 and newer, the APNS credentials are entered directly in the *LoopFollow* app. They do **not** need to be embedded in the *Nightscout* site for remote control to work. This simplifies *Nightscout* configuration, especially for those using a paid *Nightscout* service.
+With *LoopFollow* 3.2 and newer, the APNS credentials are entered directly in the *LoopFollow* app. They do **not** need to be embedded in the *Nightscout* site for remote control to work. This simplifies *Nightscout* configuration.
 
 The APNS credentials only need to be in *Nightscout* if you also use *Nightscout* Careportal or the *LoopCaregiver* app to send remote commands.
 
