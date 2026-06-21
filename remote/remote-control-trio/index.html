@@ -7,7 +7,7 @@
 <meta content="Loop and Learn" name="author"/>
 <link href="https://loopfollowdocs.org/remote/remote-control-trio/" rel="canonical"/>
 <link href="../remote-control-loop/" rel="prev"/>
-<link href="../remote-control-nightscout/" rel="next"/>
+<link href="../../build/build-options/" rel="next"/>
 <link href="../../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator"/>
 <title>Trio Remote Control - LoopFollowDocs</title>
@@ -395,6 +395,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#quick-pick-boluses-and-meals">
+<span class="md-ellipsis">
+      
+        Quick-Pick Boluses and Meals
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#temp-target">
 <span class="md-ellipsis">
       
@@ -605,18 +614,6 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../remote-control-nightscout/">
-<span class="md-ellipsis">
-    
-  
-    Nightscout Remote Control
-  
-
-    
-  </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -750,6 +747,15 @@
 <span class="md-ellipsis">
       
         Remote Bolus
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-pick-boluses-and-meals">
+<span class="md-ellipsis">
+      
+        Quick-Pick Boluses and Meals
       
     </span>
 </a>
@@ -974,67 +980,49 @@
 </a>
 <h1>Trio Remote Control</h1>
 <h2 id="remote-control-overview">Remote Control Overview<a class="headerlink" href="#remote-control-overview" title="Link to this section for reference">¶</a></h2>
-<p><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> can accept remote commands from <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> or from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>. There are a variety of options, but the final control of whether remote commands will be enacted rests with the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> user. They can enable or disable remote control.</p>
+<p><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> accepts remote commands from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> via direct APNS. The final control of whether remote commands will be enacted rests with the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> user — they can enable or disable remote control.</p>
+<div class="admonition note">
+<p class="admonition-title"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr> Remote Commands Removed</p>
+<p>As of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 6.2, <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> remote commands are no longer supported in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>. Use <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control (TRC) below.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> version must be 15.0.2 or newer</p>
-<p>To properly display the OpenAPS pill with <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.x (or newer), your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> version must be 15.0.2 (or newer). If you do not see the expected treatments or pills in the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> dashboard, follow the steps to <a href="#configure-nightscout-for-trio-openaps">Configure <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> for <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> (OpenAPS)</a>.</p>
+<p>To properly display the OpenAPS pill with <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>, your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> version must be 15.0.2 (or newer). If you do not see the expected treatments or pills in the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> dashboard, follow the steps to <a href="#configure-nightscout-for-trio-openaps">Configure <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> for <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> (OpenAPS)</a>.</p>
 </div>
-<p>The most powerful arrangement, for <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.x (or newer), is to configure the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app to use the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control (TRC) setting.</p>
+<hr/>
 <h3 id="real-time-notifications-for-trio">Real-time Notifications for <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em><a class="headerlink" href="#real-time-notifications-for-trio" title="Link to this section for reference">¶</a></h3>
-<p>Starting with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v4.0 and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> v0.6, users of remote control are provided with real-time notifications for the results of remote commands. This requires a paired change to both <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>.</p>
+<p>Starting with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> v4.0 and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> v0.6, users of remote control are provided with real-time notifications for the results of remote commands. This requires a paired change to both <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>.</p>
 <ul>
-<li>This change enables <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> to send a push notification back to the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app on the originating phone, immediately informing the user whether their command (e.g., meal, bolus, override) was successfully processed or if an error occurred</li>
+<li>This change enables <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> to send a push notification back to the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> app on the originating phone, immediately informing the user whether their command (e.g., meal, bolus, override) was successfully processed or if an error occurred</li>
 <li>This greatly improves the user experience compared to waiting for <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> being updated</li>
 </ul>
-<div class="admonition important">
-<p class="admonition-title">Breaking Change: <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Command Users</p>
-<p><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> users must have matching code for <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>.</p>
-<ul>
-<li><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> v4.0 (or newer) works with <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> v0.6 (or newer)</li>
-<li><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> v3.2.3 (or older) works with <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> v0.5.1 (or older)</li>
-</ul>
-<p><strong>Question: What happens if versions are not correct?</strong>: Remote control commands stop working.</p>
-<p><strong>Question: If I was using <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> / <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> remote control do I need to change my configuration parameters?</strong>: No, the parameters you already set up continue to work. <strong>BUT</strong> you need to update the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> if you use Browser Build.</p>
-</div>
-<details class="question">
-<summary>How does this differ from <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x? (Click to Open/Close)</summary>
-<p><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> can use <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr> to enter <code>Carb Correction</code>, and start and cancel <code>Temporary Target</code>.</p>
-<ul>
-<li>This was available in <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x and continues to be available in <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.x (or newer).</li>
-<li>See <a href="../remote-control-nightscout/#loopfollow-careportal-with-the-trio-app" target="_blank"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Remote Control</a></li>
-</ul>
-<p><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x supported other remote options (using announcements via <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr>). </p>
-<ul>
-<li>Those options were replaced by the more secure <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control for <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.x (or newer)</li>
-<li><strong>Using announcements to provide remote control of the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone is no longer supported</strong></li>
-</ul>
-</details>
+<hr/>
 <h3 id="quick-access">Quick Access<a class="headerlink" href="#quick-access" title="Link to this section for reference">¶</a></h3>
 <p>The bullets below take you to the indicated topics. The configuration steps are listed first but only need to be done once:</p>
 <ul>
 <li><a href="#configure-trio-phone-for-remote-control">Configure <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Phone for Remote Control</a></li>
-<li><a href="#configure-loopfollow-for-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for Remote Control</a></li>
-<li><a href="#use-loopfollow-trio-remote-control">Use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control</a></li>
+<li><a href="#configure-loopfollow-for-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> for Remote Control</a></li>
+<li><a href="#use-loopfollow-trio-remote-control">Use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a></li>
 </ul>
 <hr/>
-<h2 id="use-loopfollow-trio-remote-control">Use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control<a class="headerlink" href="#use-loopfollow-trio-remote-control" title="Link to this section for reference">¶</a></h2>
+<h2 id="use-loopfollow-trio-remote-control">Use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control<a class="headerlink" href="#use-loopfollow-trio-remote-control" title="Link to this section for reference">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
-<p>The ability for the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app to be remotely controlled will be <strong>disabled</strong> when <code>Enable Remote Control</code> is turned OFF on the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone, even if you have <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> configured with the correct credentials. This is for the protection of the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> user, so that they <strong>always</strong> are the primary controller of their insulin dosing app.</p>
-<p>The APNS commands will report success on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app, but you will see a gray dot on the plot. The message is "Remote command received, but remote control is disabled in settings. Ignoring the command."</p>
+<p>The ability for the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app to be remotely controlled will be <strong>disabled</strong> when <code>Enable Remote Control</code> is turned OFF on the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone, even if you have <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> configured with the correct credentials. This is for the protection of the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> user, so that they <strong>always</strong> are the primary controller of their insulin dosing app.</p>
+<p>The APNS commands will report success on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> app, but you will see a gray dot on the plot. The message is "Remote command received, but remote control is disabled in settings. Ignoring the command."</p>
 </div>
-<p>Once the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app is configured, and while the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone is handy, test sending Remote Commands. It is good to also have a browser open with the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> displayed.</p>
+<p>Once the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> app is configured, and while the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone is handy, test sending Remote Commands. It is good to also have a browser open with the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> displayed.</p>
 <p>Remember to give the system time to update.</p>
-<p>The sequence is <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> to <em>Apple Push Notifications</em> to <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>, which uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> and then is displayed in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main screen.</p>
+<p>The sequence is <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> to <em>Apple Push Notifications</em> to <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>, which uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> and then is displayed in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> main screen.</p>
 <p align="center"><img alt="loopfollow trio remote control choices" src="../img/lf-trc.jpg" width="300"/></p>
 <h3 id="remote-sequence-steps">Remote Sequence Steps<a class="headerlink" href="#remote-sequence-steps" title="Link to this section for reference">¶</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Wait for the Result</p>
 <p>The remote control sequence requires several steps:</p>
 <ol>
-<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> device to <em>Apple Push Notifications</em><ul>
-<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> provides an immediate success or failure message</li>
+<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> device to <em>Apple Push Notifications</em><ul>
+<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> provides an immediate success or failure message</li>
 </ul>
 </li>
 <li><em>Apple Push Notifications</em> to <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone where the message could be:<ul>
@@ -1044,18 +1032,18 @@
 </ul>
 </li>
 <li>The <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app processes the remote command and either <strong>enacts</strong> it or <strong>rejects</strong> it<ul>
-<li>With <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> v0.6 or newer and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v4.0 or newer, the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app returns a message to the originating <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> phone via APNS indicating the result of the remote command</li>
-<li>This response can be much faster, and more definitive, than waiting for the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site and then the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> plot to update</li>
+<li>With <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> v0.6 or newer and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> v4.0 or newer, the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app returns a message to the originating <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> phone via APNS indicating the result of the remote command</li>
+<li>This response can be much faster, and more definitive, than waiting for the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site and then the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> plot to update</li>
 </ul>
 </li>
-<li>The <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> with result shown on <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main screen in a few minutes<ul>
-<li>If the remote request was <strong>enacted</strong>, the result is visible on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main plot</li>
-<li>If the remote request was <strong>rejected</strong>, a gray dot is visible on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> main plot - touch it to see the reason why the request was rejected</li>
+<li>The <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> with result shown on <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> main screen in a few minutes<ul>
+<li>If the remote request was <strong>enacted</strong>, the result is visible on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> main plot</li>
+<li>If the remote request was <strong>rejected</strong>, a gray dot is visible on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> main plot - touch it to see the reason why the request was rejected</li>
 </ul>
 </li>
 </ol>
 <blockquote>
-<p>If no result shows up at <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> (no gray dot, no response to remote request), then it is most likely step 2 that failed. We have limited control over that.</p>
+<p>If no result shows up at <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> (no gray dot, no response to remote request), then it is most likely step 2 that failed. We have limited control over that.</p>
 </blockquote>
 </div>
 <h3 id="remote-meal">Remote Meal<a class="headerlink" href="#remote-meal" title="Link to this section for reference">¶</a></h3>
@@ -1064,21 +1052,74 @@
 <p align="center"><img alt="scheduled meal warning" src="../img/lf-trc-scheduled-meal.png" width="300"/></p>
 <h3 id="remote-bolus">Remote Bolus<a class="headerlink" href="#remote-bolus" title="Link to this section for reference">¶</a></h3>
 <p><strong><em>More info coming soon!</em></strong></p>
+<h3 id="quick-pick-boluses-and-meals">Quick-Pick Boluses and Meals<a class="headerlink" href="#quick-pick-boluses-and-meals" title="Link to this section for reference">¶</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Available in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 6.2 and newer</p>
+</div>
+<p>To save a step when sending a remote command, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> shows <strong>Quick-Pick</strong>
+buttons at the top of the Bolus and Meal screens. Each button fills in the
+amounts from one of your recent entries with a single tap.</p>
+<ul>
+<li><strong>Quick-Pick Boluses</strong> appear on the Bolus screen and fill in an insulin amount.</li>
+<li><strong>Quick-Pick Meals</strong> appear on the Meal screen and fill in carbs, and — when
+  enabled in <a href="#meal-settings">Meal Settings</a> — fat, protein, and the meal bolus.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Quick-Pick Boluses</th>
+<th style="text-align: center;">Quick-Pick Meals</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img alt="Quick-Pick Boluses on the remote Bolus screen" src="../img/lf-quick-pick-bolus.png" width="300"/></td>
+<td style="text-align: center;"><img alt="Quick-Pick Meals on the remote Meal screen" src="../img/lf-quick-pick-meal.png" width="300"/></td>
+</tr>
+<tr>
+<td style="text-align: center;">{align="center"}</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Tapping a button only <strong>fills in</strong> the fields — nothing is sent until you review
+the values and tap <strong>Send Bolus</strong> / <strong>Send Meal</strong>, exactly as with a manual entry.
+<abbr title="limits in the code for user selected settings, recommended and absolute limits are provided">Guardrails</abbr> still apply.</p>
+<h4 id="how-the-suggestions-are-chosen">How the suggestions are chosen<a class="headerlink" href="#how-the-suggestions-are-chosen" title="Link to this section for reference">¶</a></h4>
+<p>Every bolus or meal you successfully send is stored <strong>locally on your phone</strong>.
+When you open a remote screen, that history is scored to surface the most
+relevant options for the current moment, considering:</p>
+<ul>
+<li><strong>Time of day</strong> — entries sent around this time of day score higher</li>
+<li><strong>Day of week</strong> — weekday and weekend patterns are kept separate</li>
+<li><strong>Recency</strong> — older entries gradually fade out</li>
+</ul>
+<p>Up to five buttons are shown, and the Quick-Pick section is hidden entirely
+until you have history to draw from. So if you usually send the same breakfast
+on weekday mornings, that entry tends to appear as an option on weekday mornings.</p>
+<p>A bolus that was part of a meal is stored with that meal, so it does <strong>not</strong>
+appear among your standalone Quick-Pick Boluses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The history is private to the device and stored in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> only.
+<em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> cannot tell remote entries apart from manual ones, so it is not
+used as a source — a freshly installed or reset phone starts with no
+Quick-Pick suggestions until you send a few commands.</p>
+</div>
+<p>Tap the <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"></path></svg></span> info icon next to <strong>Quick-Pick Boluses</strong>
+or <strong>Quick-Pick Meals</strong> in the app for a short in-screen explanation.</p>
 <h3 id="temp-target">Temp Target<a class="headerlink" href="#temp-target" title="Link to this section for reference">¶</a></h3>
 <p><strong><em>More info coming soon!</em></strong></p>
 <h3 id="overrides">Overrides<a class="headerlink" href="#overrides" title="Link to this section for reference">¶</a></h3>
 <p><strong><em>More info coming soon!</em></strong></p>
 <hr/>
 <h2 id="configure-trio-phone-for-remote-control">Configure <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Phone for Remote Control<a class="headerlink" href="#configure-trio-phone-for-remote-control" title="Link to this section for reference">¶</a></h2>
-<blockquote>
-<p>The graphics displayed on this page are associated with <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> version 0.5.x or newer. The same setting is available in older version of <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> but in a different location in the menu structure.</p>
-</blockquote>
 <p><strong>Default:</strong> <em>OFF</em></p>
 <p>Remote control must be enabled on the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone or no remote information is accepted by the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone.</p>
 <blockquote>
 <p>You can search for this screen in <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> settings or go through the sequence: <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr>, Settings, Features, Remote Control.</p>
 </blockquote>
-<p>When you select <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control as the Remote Type in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app, you must fill in the following under <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Settings, <abbr title="Apple Push Notification service">APN</abbr> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Settings, Remote Control.</p>
+<p>When you select <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control as the Remote Type in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> app, you must fill in the following under <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Settings, <abbr title="Apple Push Notification service">APN</abbr> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Settings, Remote Control.</p>
 <ul>
 <li>
 <p>Settings: <abbr title="Apple Push Notification service">APN</abbr></p>
@@ -1096,42 +1137,33 @@
 </li>
 </ul>
 <h3 id="shared-secret">Shared Secret<a class="headerlink" href="#shared-secret" title="Link to this section for reference">¶</a></h3>
-<p>Once Remote Control is enabled, a Shared Secret is available. This is only used if you want to use <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>.</p>
+<p>Once Remote Control is enabled, a Shared Secret is available. This is only used if you want to use <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>.</p>
 <p>The graphic below is on the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone:</p>
 <p align="center"><img alt="Trio remote control settings" src="../img/trio-enable-remote-control.png" width="300"/></p>
-<p>When Remote Control is enabled on the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app and the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app is properly configured, you can add carbs, send boluses, set or cancel overrides or temporary targets from the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app to the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone via <em>Apple</em> push notifications.</p>
-<p>The <code>SHARED SECRET</code> should be copied from the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone and added to the <a href="#shared-secret_1"><code>Shared Secret</code></a> row of the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Settings screen as part of the configuration for using <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>.</p>
+<p>When Remote Control is enabled on the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app and the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> app is properly configured, you can add carbs, send boluses, set or cancel overrides or temporary targets from the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> app to the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone via <em>Apple</em> push notifications.</p>
+<p>The <code>SHARED SECRET</code> should be copied from the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone and added to the <a href="#shared-secret_1"><code>Shared Secret</code></a> row of the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Remote Settings screen as part of the configuration for using <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
-<p>The ability for the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app to be remotely controlled will be <strong>disabled</strong> when <code>Enable Remote Control</code> is turned OFF on the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone, even if you have <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> configured with the correct shared secret or your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> has <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr> access. This is for the protection of the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> user, so that they <strong>always</strong> are the primary controller of their insulin dosing app.</p>
+<p>The ability for the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app to be remotely controlled will be <strong>disabled</strong> when <code>Enable Remote Control</code> is turned OFF on the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone, even if you have <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> configured with the correct shared secret or your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> has <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr> access. This is for the protection of the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> user, so that they <strong>always</strong> are the primary controller of their insulin dosing app.</p>
 </div>
 <hr/>
-<h2 id="configure-loopfollow-for-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for Remote Control<a class="headerlink" href="#configure-loopfollow-for-remote-control" title="Link to this section for reference">¶</a></h2>
-<h3 id="loopfollow-remote-setting-type"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Setting Type<a class="headerlink" href="#loopfollow-remote-setting-type" title="Link to this section for reference">¶</a></h3>
-<p>The Remote Settings row in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Settings screen is used to select the type of remote access you wish to use.</p>
-<p align="center"><img alt="LoopFollow remote settings type" src="../img/lf-trc-selection.jpg" width="300"/></p>
+<h2 id="configure-loopfollow-for-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> for Remote Control<a class="headerlink" href="#configure-loopfollow-for-remote-control" title="Link to this section for reference">¶</a></h2>
+<h3 id="loopfollow-remote-setting-type"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Remote Setting Type<a class="headerlink" href="#loopfollow-remote-setting-type" title="Link to this section for reference">¶</a></h3>
+<p>The Remote Settings row in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Settings screen is used to select the type of remote access you wish to use.</p>
+<p align="center"><img alt="LoopFollow remote settings type" src="../img/lf-remote-options-trio.png" width="300"/></p>
 <div class="admonition question">
 <p class="admonition-title">The <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control option is not available</p>
-<p>The <code>Trio Remote Control</code> option is only available in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> if you have already entered a <a href="../../setup/lf-setup/#setup-nightscout" target="_blank"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Site</a> with a default profile recognized as a <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> profile. Review <a href="#troubleshooting">Troubleshooting</a> for possible reasons for not seeing the option.</p>
+<p>The <code>Trio Remote Control</code> option is only available in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> if you have already entered a <a href="../../setup/lf-setup/#setup-nightscout" target="_blank"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Site</a> with a default profile recognized as a <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> profile. Review <a href="#troubleshooting">Troubleshooting</a> for possible reasons for not seeing the option.</p>
 </div>
 <ul>
-<li><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> option<ul>
-<li>Remote control with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> is limited to starting and canceling Temp Targets</li>
-<li>Available with <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x and newer</li>
-</ul>
-</li>
 <li><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control option<ul>
-<li>Remote control with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> includes adding remote carbs, enacting remote bolus, and starting and canceling Temp Targets and Overrides</li>
-<li>Requires <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.x (or newer) and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 2.4.x (or newer)</li>
-<li>Continue with <a href="#configure-loopfollow-trio-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control</a> to finish the configuration process</li>
+<li>Remote control with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> includes adding remote carbs, enacting remote bolus, and starting and canceling Temp Targets and Overrides</li>
+<li>Continue with <a href="#configure-loopfollow-trio-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control</a> to finish the configuration process</li>
 </ul>
 </li>
 </ul>
 <hr/>
-<h2 id="configure-loopfollow-trio-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control<a class="headerlink" href="#configure-loopfollow-trio-remote-control" title="Link to this section for reference">¶</a></h2>
-<blockquote>
-<p>This is supported for <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.x (or newer) when using <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 2.4.0 (or newer).</p>
-</blockquote>
+<h2 id="configure-loopfollow-trio-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control<a class="headerlink" href="#configure-loopfollow-trio-remote-control" title="Link to this section for reference">¶</a></h2>
 <h3 id="meal-settings">Meal Settings<a class="headerlink" href="#meal-settings" title="Link to this section for reference">¶</a></h3>
 <p>The user can decide to enable or disable two features independently.</p>
 <ul>
@@ -1148,35 +1180,35 @@
 <p align="center"><img alt="default meal settings and guardrails" src="../img/lf-trc-meal-default.png" width="300"/></p>
 <h3 id="guardrails"><abbr title="limits in the code for user selected settings, recommended and absolute limits are provided">Guardrails</abbr><a class="headerlink" href="#guardrails" title="Link to this section for reference">¶</a></h3>
 <p>The maximum allowed entries for Bolus, Carbs, Protein, and Fat are configured in the guardrails section. The default values are shown in the graphic in the <a href="#meal-settings">Meal Settings</a> section. Adjust this to what is appropriate for the individual.</p>
-<p>These guardrails are for sending remote commands with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>. There are separate guardrails in the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app itself. Be sure the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> guardrails are at least as conservative as the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> guardrails.</p>
+<p>These guardrails are for sending remote commands with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>. There are separate guardrails in the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app itself. Be sure the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> guardrails are at least as conservative as the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> guardrails.</p>
 <div class="admonition warning">
 <p class="admonition-title">Do not exceed <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> <abbr title="limits in the code for user selected settings, recommended and absolute limits are provided">Guardrails</abbr></p>
 <p>Example:</p>
 <ul>
-<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> guardrail is 10 U bolus</li>
+<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> guardrail is 10 U bolus</li>
 <li><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> guardrail is 8 U bolus</li>
-<li>Send remote bolus amount of 10 U from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em><ul>
-<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> shows a success message, meaning the APNS request was successfully sent to the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone</li>
+<li>Send remote bolus amount of 10 U from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em><ul>
+<li><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> shows a success message, meaning the APNS request was successfully sent to the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone</li>
 <li>The <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone rejects the request because it exceeds the guardrail</li>
-<li>A gray dot shows up on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> screen, tapping it shows the message "Command rejected: bolus amount (10 units) exceeds the maximum allowed (8 units)"</li>
+<li>A gray dot shows up on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> screen, tapping it shows the message "Command rejected: bolus amount (10 units) exceeds the maximum allowed (8 units)"</li>
 </ul>
 </li>
 </ul>
 </div>
 <h3 id="user">User<a class="headerlink" href="#user" title="Link to this section for reference">¶</a></h3>
-<p>The person using the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app should enter the name they want to show up as having entered this entry. </p>
+<p>The person using the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> app should enter the name they want to show up as having entered this entry. </p>
 <ul>
-<li>At the current time, this is not used by <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> for <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></li>
+<li>At the current time, this is not used by <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> for <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></li>
 </ul>
 <p>Refer to the graphic in the <a href="#meal-settings">Meal Settings</a> section.</p>
 <h3 id="credentials">Credentials<a class="headerlink" href="#credentials" title="Link to this section for reference">¶</a></h3>
 <h3 id="shared-secret_1">Shared Secret<a class="headerlink" href="#shared-secret_1" title="Link to this section for reference">¶</a></h3>
-<p>This is the unique shared secret that can be generated or entered into the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app in the Remote Control screen. The shared secret in <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> must match to provide the ability to remotely send commands to this <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app.</p>
+<p>This is the unique shared secret that can be generated or entered into the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app in the Remote Control screen. The shared secret in <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> must match to provide the ability to remotely send commands to this <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app.</p>
 <blockquote>
 <p>Please use a secure secret - the <a href="#configure-trio-phone-for-remote-control">automatically generated secret</a> is recommended.</p>
 </blockquote>
 <h3 id="apns-credentials">APNS Credentials<a class="headerlink" href="#apns-credentials" title="Link to this section for reference">¶</a></h3>
-<p>When you select <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control as the Remote Type in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app, you must fill in the <a href="#shared-secret">Shared Secret</a> on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Settings, Remote screen and the <a href="#apns-key-id">APNS Key ID</a> and <a href="#apns-key">APNS Key</a> on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Settings, <abbr title="Apple Push Notification service">APN</abbr> screen.</p>
+<p>When you select <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control as the Remote Type in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> app, you must fill in the <a href="#shared-secret">Shared Secret</a> on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Settings, Remote screen and the <a href="#apns-key-id">APNS Key ID</a> and <a href="#apns-key">APNS Key</a> on the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Settings, <abbr title="Apple Push Notification service">APN</abbr> screen.</p>
 <blockquote>
 <p>The graphics below are out of date. As of version 6.0.0, the <abbr title="Apple Push Notification service">APN</abbr> entries are in their own setting location.</p>
 </blockquote>
@@ -1195,31 +1227,31 @@
 </tbody>
 </table>
 <h3 id="apns-key-id">APNS Key ID<a class="headerlink" href="#apns-key-id" title="Link to this section for reference">¶</a></h3>
-<p>If you previously configured remote control with the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app, you already have an <em>Apple</em> Push Notification System (APNS) Key ID and Key. These were added to the config vars in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site. See <a href="../remote-control-overview/#existing-apns" target="_blank">Existing APNS</a>. The value of the <code>LOOP_APNS_KEY_ID</code> goes here. Be sure to read the <a href="#configure-nightscout-for-trio-openaps">Configure <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> for <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> (OpenAPS)</a> section about steps to make <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> work with <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr>.</p>
-<p>If you have never created an APNS (or have lost the credentials), follow the directions in <a href="../remote-control-overview/#new-apns" target="_blank">New APNS</a> and copy the APNS Key ID into <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and save the value in your Secrets Reference file.</p>
+<p>If you previously configured remote control with the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> app, you already have an <em>Apple</em> Push Notification System (APNS) Key ID and Key. These were added to the config vars in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site. See <a href="../remote-control-overview/#existing-apns" target="_blank">Existing APNS</a>. The value of the <code>LOOP_APNS_KEY_ID</code> goes here. Be sure to read the <a href="#configure-nightscout-for-trio-openaps">Configure <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> for <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> (OpenAPS)</a> section about steps to make <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> work with <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr>.</p>
+<p>If you have never created an APNS (or have lost the credentials), follow the directions in <a href="../remote-control-overview/#new-apns" target="_blank">New APNS</a> and copy the APNS Key ID into <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> and save the value in your Secrets Reference file.</p>
 <blockquote>
 <p>When creating the APNS, you must be logged in as a developer. The developer ID for the APNS must be the same as the one used for creating your <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app or remote control will not work.</p>
 </blockquote>
 <h3 id="apns-key">APNS Key<a class="headerlink" href="#apns-key" title="Link to this section for reference">¶</a></h3>
-<p>If you previously configured remote control with the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app, you already have an <em>Apple</em> Push Notification System (APNS) Key ID and Key. These were added to the config vars in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site. See <a href="../remote-control-overview/#existing-apns" target="_blank">Existing APNS</a>. The value of the <code>LOOP_APNS_KEY</code> goes here.</p>
-<p>If you have never created an APNS (or have lost the credentials), follow the directions in <a href="../remote-control-overview/#new-apns" target="_blank">New APNS</a> and copy the APNS Key into <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and save the value in your Secrets Reference file.</p>
+<p>If you previously configured remote control with the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> app, you already have an <em>Apple</em> Push Notification System (APNS) Key ID and Key. These were added to the config vars in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site. See <a href="../remote-control-overview/#existing-apns" target="_blank">Existing APNS</a>. The value of the <code>LOOP_APNS_KEY</code> goes here.</p>
+<p>If you have never created an APNS (or have lost the credentials), follow the directions in <a href="../remote-control-overview/#new-apns" target="_blank">New APNS</a> and copy the APNS Key into <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> and save the value in your Secrets Reference file.</p>
 <h3 id="debug-info">Debug / Info<a class="headerlink" href="#debug-info" title="Link to this section for reference">¶</a></h3>
 <p>This section indicates if <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> has uploaded required information to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>.</p>
-<p>The graphic below shows a properly configured <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> when the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app was built using the Browser Build method.</p>
+<p>The graphic below shows a properly configured <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> when the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app was built using the Browser Build method.</p>
 <p align="center"><img alt="shows credentials entered into loopfollow are correct" src="../img/lf-trc-debug-blurred.png" width="300"/></p>
 <p>If you have empty rows in the Debug / Info screen, the most likely problem is the default profile is not coming from <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr>. See <a href="#update-profile">Update Profile</a>. 
-If you took those steps and still have missing rows, return to <a href="#configure-loopfollow-trio-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control</a> and try again.</p>
+If you took those steps and still have missing rows, return to <a href="#configure-loopfollow-trio-remote-control">Configure <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control</a> and try again.</p>
 <hr/>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this section for reference">¶</a></h2>
 <p>This section covers known troubleshooting issues:</p>
 <ul>
 <li><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> not displaying <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> data: <a href="#configure-nightscout-for-trio-openaps">Configure <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> for <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> (OpenAPS)</a></li>
-<li>Was able to select <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> but it is no longer working: <a href="#stop-nightscout-uploads-from-other-apps">Stop <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> access from other apps</a></li>
-<li>Cannot select <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>: <a href="#update-profile">Update Profile</a></li>
+<li>Was able to select <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> but it is no longer working: <a href="#stop-nightscout-uploads-from-other-apps">Stop <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> access from other apps</a></li>
+<li>Cannot select <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>: <a href="#update-profile">Update Profile</a></li>
 </ul>
 <h3 id="configure-nightscout-for-trio-openaps">Configure <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> for <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> (OpenAPS)<a class="headerlink" href="#configure-nightscout-for-trio-openaps" title="Link to this section for reference">¶</a></h3>
-<p>The <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> version must be 15.0.2 (or newer) to properly display the OpenAPS pill with <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.x (or newer). Check your revision: <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr>, Menu, scroll to bottom and examine the About section.</p>
-<p>If you transitioned from the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app, you must make some modifications to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> before you will be successful viewing your <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> data in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site.</p>
+<p>The <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> version must be 15.0.2 (or newer) to properly display the OpenAPS pill. Check your revision: <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr>, Menu, scroll to bottom and examine the About section.</p>
+<p>If you transitioned from the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> app, you must make some modifications to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> before you will be successful viewing your <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> data in your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site.</p>
 <p>In <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, you need to modify these config vars:</p>
 <table>
 <thead>
@@ -1249,9 +1281,9 @@ If you took those steps and still have missing rows, return to <a href="#configu
 </table>
 <p>Remember to restart the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> server (restart dynos) after updating these variables.</p>
 <h3 id="stop-nightscout-uploads-from-other-apps">Stop <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> uploads from other apps<a class="headerlink" href="#stop-nightscout-uploads-from-other-apps" title="Link to this section for reference">¶</a></h3>
-<p>If you were previously running the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app or the <em>iAPS</em> app:</p>
+<p>If you were previously running the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> app or the <em>iAPS</em> app:</p>
 <ul>
-<li>Remove <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> from <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Services or <em>iAPS</em> services</li>
+<li>Remove <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> from <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> Services or <em>iAPS</em> services</li>
 <li>Add <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> as a Service to <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em><ul>
 <li>You need the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> and the API_SECRET</li>
 </ul>
@@ -1259,17 +1291,13 @@ If you took those steps and still have missing rows, return to <a href="#configu
 </ul>
 <p>In addition to this step, you may need to force the profile (from <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr>) to upload to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> and overwrite the one stored as the default profile in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>.</p>
 <h3 id="update-profile">Update Profile<a class="headerlink" href="#update-profile" title="Link to this section for reference">¶</a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Must on <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.x (or newer)</p>
-<p>If you are on <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x, you might see the option for <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Remote Settings, but you can't use it. See <a href="../remote-control-nightscout/#loopfollow-careportal-with-the-trio-app">Use <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Remote Control</a>.</p>
-</div>
-<p>If you were previously running the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> app or the <em>iAPS</em> app, <a href="#stop-nightscout-uploads-from-other-apps">Stop <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> upload</a> from those apps and then force the profile to update.</p>
+<p>If you were previously running the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> app or the <em>iAPS</em> app, <a href="#stop-nightscout-uploads-from-other-apps">Stop <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> upload</a> from those apps and then force the profile to update.</p>
 <p>To force a profile to update to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, go to the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> app and toggle Allow Uploading to <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> off (disable) and then enable it again.</p>
-<p>Once the user has toggled "Allow Uploading to <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr>", <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> needs to be refreshed (pull down glucose value to refresh) or re-started in order to fetch the correct information. <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> will refresh eventually, but most users are impatient.</p>
-<p>If the Debug Info in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> is missing a Device Token or a Bundle ID, as shown on the left side of the graphic, you need to make sure any previous AID app (<em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em>, <em>iAPS</em>) is no longer uploading to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> and force the profile to update.</p>
+<p>Once the user has toggled "Allow Uploading to <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr>", <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> needs to be refreshed (pull down glucose value to refresh) or re-started in order to fetch the correct information. <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> will refresh eventually, but most users are impatient.</p>
+<p>If the Debug Info in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> is missing a Device Token or a Bundle ID, as shown on the left side of the graphic, you need to make sure any previous AID app (<em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em>, <em>iAPS</em>) is no longer uploading to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> and force the profile to update.</p>
 <p align="center"><img alt="LoopFollow debug info indicates a problem" src="../img/lf-force-ns-profile.svg" width="600"/></p>
 <h3 id="trio-remote-control-stops-working"><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control Stops Working<a class="headerlink" href="#trio-remote-control-stops-working" title="Link to this section for reference">¶</a></h3>
-<p>Other signatures that you need to <a href="#update-profile">force the update</a> are shown in the graphics below - for both these instances, <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control (TRC) was working with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and then stopped working:</p>
+<p>Other signatures that you need to <a href="#update-profile">force the update</a> are shown in the graphics below - for both these instances, <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control (TRC) was working with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> and then stopped working:</p>
 <table>
 <thead>
 <tr>
@@ -1310,13 +1338,13 @@ If you took those steps and still have missing rows, return to <a href="#configu
               </div>
 </div>
 </a>
-<a aria-label="Next: Nightscout Remote Control" class="md-footer__link md-footer__link--next" href="../remote-control-nightscout/">
+<a aria-label="Next: LoopFollow Build" class="md-footer__link md-footer__link--next" href="../../build/build-options/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                Nightscout Remote Control
+                LoopFollow Build
               </div>
 </div>
 <div class="md-footer__button md-icon">

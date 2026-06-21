@@ -372,6 +372,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#apns-keys-do-not-need-to-be-in-nightscout">
+<span class="md-ellipsis">
+      
+        APNS Keys Do Not Need to Be in Nightscout
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#version-compatibility">
 <span class="md-ellipsis">
       
@@ -413,15 +422,6 @@
 <span class="md-ellipsis">
       
         LoopFollow and Trio Compatibility
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#apns-keys-do-not-need-to-be-in-nightscout">
-<span class="md-ellipsis">
-      
-        APNS Keys Do Not Need to Be in Nightscout
       
     </span>
 </a>
@@ -493,6 +493,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#apns-keys-do-not-need-to-be-in-nightscout">
+<span class="md-ellipsis">
+      
+        APNS Keys Do Not Need to Be in Nightscout
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#version-compatibility">
 <span class="md-ellipsis">
       
@@ -538,15 +547,6 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#apns-keys-do-not-need-to-be-in-nightscout">
-<span class="md-ellipsis">
-      
-        APNS Keys Do Not Need to Be in Nightscout
-      
-    </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -564,7 +564,29 @@
 <hr/>
 <h2 id="new-feature-highlights">New Feature Highlights<a class="headerlink" href="#new-feature-highlights" title="Link to this section for reference">¶</a></h2>
 <div class="admonition tip">
-<p>New with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v6.0 and v6.1:</p>
+<p>New with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> v6.2:</p>
+<ul>
+<li><a href="../../setup/lf-setup/#websocket" target="_blank">WebSocket</a>, enabled by default, allows near real-time updates from <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></li>
+<li><a href="../../setup/lf-setup/#graph" target="_blank">Show Yesterday's BG</a> can be enabled using Settings: Graph</li>
+<li><a href="../../setup/lf-setup/#information-display" target="_blank">Information Display</a> supports large fonts; when needed, the label and value are split into two rows</li>
+<li>Remote Quick Pick buttons are now available for <a href="../../remote/remote-control-loop/#quick-pick-boluses-and-meals" target="_blank"><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></a> and <a href="../../remote/remote-control-trio/#quick-pick-boluses-and-meals" target="_blank"><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></a> </li>
+<li>Handle glucose duplicates to fix delta glucose always showing zero</li>
+<li>Fix glucose history being truncated when multiple apps upload to the same account</li>
+<li>Improve auto-restart for Live Activity</li>
+<li>Suppress an audible banner that could sound during silent Live Activity renewal</li>
+<li>Improve handling of profiles from <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr>, including a new Run Diagnostics button in Remote Settings that detects common remote-command failures</li>
+<li>Debug logging is now on by default, and Share Logs prompts for a short problem description that is bundled with the logs</li>
+<li><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> Updates:<ul>
+<li><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> Remote Control is the only option offered for <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> (<abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> option is removed)</li>
+<li><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> forecast cone display truncated to match <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> method</li>
+<li><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> forecast lines match <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> colors</li>
+<li><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> Override / Temp Target display colors match <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> colors</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p>New with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> v6.0 and v6.1:</p>
 <ul>
 <li>Live Activity and Live Activity upgrades</li>
 <li>More accurate statistics with user choice of range</li>
@@ -575,7 +597,7 @@
 </ul>
 </div>
 <div class="admonition tip">
-<p>New with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> v5.0:</p>
+<p>New with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> v5.0:</p>
 <ul>
 <li><a href="../../setup/lf-setup/#menu-screen" target="_blank">Menu Screen</a></li>
 <li><a href="../../setup/lf-features/#treatments" target="_blank">Treatments</a></li>
@@ -583,12 +605,12 @@
 </ul>
 </div>
 <hr/>
-<h2 id="loopfollow-feature-history"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Feature History<a class="headerlink" href="#loopfollow-feature-history" title="Link to this section for reference">¶</a></h2>
+<h2 id="loopfollow-feature-history"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Feature History<a class="headerlink" href="#loopfollow-feature-history" title="Link to this section for reference">¶</a></h2>
 <p>The feature history is summarized below in reverse chronological order.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Version</th>
+<th style="text-align: left;"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Version</th>
 <th style="text-align: left;">Feature Added</th>
 </tr>
 </thead>
@@ -599,11 +621,11 @@
 </tr>
 <tr>
 <td style="text-align: left;">6.0</td>
-<td style="text-align: left;">Live Activity added - Browser Builders must use <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> to build<br/>see <a href="../../build/lf-browser-build/#create-app-group" target="_blank">Browser Build: Add <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></a></td>
+<td style="text-align: left;">Live Activity added - Browser Builders must use <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> to build<br/>see <a href="../../build/lf-browser-build/#create-app-group" target="_blank">Browser Build: Add <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></a></td>
 </tr>
 <tr>
 <td style="text-align: left;">4.6</td>
-<td style="text-align: left;">Real-time APNS notifications returned from the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone (requires <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> v3.11.1 or newer)</td>
+<td style="text-align: left;">Real-time APNS notifications returned from the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> phone (requires <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> v3.11.1 or newer)</td>
 </tr>
 <tr>
 <td style="text-align: left;">4.3</td>
@@ -615,24 +637,28 @@
 </tr>
 <tr>
 <td style="text-align: left;">3.2</td>
-<td style="text-align: left;"><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> remote commands (Meal, Bolus, Override) sent directly via APNS; APNS credentials no longer required in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em></td>
+<td style="text-align: left;"><em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> remote commands (Meal, Bolus, Override) sent directly via APNS; APNS credentials no longer required in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em></td>
 </tr>
 </tbody>
 </table>
 <hr/>
+<h2 id="apns-keys-do-not-need-to-be-in-nightscout">APNS Keys Do Not Need to Be in <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr><a class="headerlink" href="#apns-keys-do-not-need-to-be-in-nightscout" title="Link to this section for reference">¶</a></h2>
+<p>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 3.2 and newer, the APNS credentials are entered directly in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> app. They do <strong>not</strong> need to be embedded in the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site for remote control to work. This simplifies <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> configuration.</p>
+<p>The APNS credentials only need to be in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> if you also use <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr> or the <em>LoopCaregiver</em> app to send remote commands.</p>
+<hr/>
 <h2 id="version-compatibility">Version Compatibility<a class="headerlink" href="#version-compatibility" title="Link to this section for reference">¶</a></h2>
-<p>This section consolidates version requirements for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> to work with <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>, and provides historical context for how remote control has evolved.</p>
+<p>This section consolidates version requirements for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> to work with <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>, and provides historical context for how remote control has evolved.</p>
 <p>It also lists updates to the method for using Browser Build.</p>
-<h3 id="loopfollow-version-61-and-newer"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Version 6.1 and newer<a class="headerlink" href="#loopfollow-version-61-and-newer" title="Link to this section for reference">¶</a></h3>
-<p>After testing <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Live Activity in version 6.0.0 and doing extensive research, it became clear that Live Activity with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> is not reliable without the use of Apple Push Notification credentials.</p>
-<p>This means that if you want to use Live Activity with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, you need to create those credentials and enter them in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <a href="../../setup/lf-setup/#apn" target="_blank"><abbr title="Apple Push Notification service">APN</abbr> Settings</a>.</p>
-<h3 id="loopfollow-version-60-and-newer"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Version 6.0 and newer<a class="headerlink" href="#loopfollow-version-60-and-newer" title="Link to this section for reference">¶</a></h3>
-<p>With the addition of Live Activity to <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em>, the build directions for browser build were updated.</p>
+<h3 id="loopfollow-version-61-and-newer"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Version 6.1 and newer<a class="headerlink" href="#loopfollow-version-61-and-newer" title="Link to this section for reference">¶</a></h3>
+<p>After testing <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Live Activity in version 6.0.0 and doing extensive research, it became clear that Live Activity with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> is not reliable without the use of Apple Push Notification credentials.</p>
+<p>This means that if you want to use Live Activity with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>, you need to create those credentials and enter them in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> <a href="../../setup/lf-setup/#apn" target="_blank"><abbr title="Apple Push Notification service">APN</abbr> Settings</a>.</p>
+<h3 id="loopfollow-version-60-and-newer"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Version 6.0 and newer<a class="headerlink" href="#loopfollow-version-60-and-newer" title="Link to this section for reference">¶</a></h3>
+<p>With the addition of Live Activity to <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>, the build directions for browser build were updated.</p>
 <ul>
-<li>If you use Browser Build, your automatic build will fail until you add the new Identifier, create the <code>LoopFollow App Group</code> and include the <code>LoopFollow App Group</code> in the capabilities for the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr>.</li>
-<li>Instructions start here: <a href="../../build/lf-browser-build/#create-app-group" target="_blank">Add <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></a> </li>
+<li>If you use Browser Build, your automatic build will fail until you add the new Identifier, create the <code>LoopFollow App Group</code> and include the <code>LoopFollow App Group</code> in the capabilities for the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr>.</li>
+<li>Instructions start here: <a href="../../build/lf-browser-build/#create-app-group" target="_blank">Add <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr></a> </li>
 </ul>
-<h3 id="loopfollow-and-loop-compatibility"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Compatibility<a class="headerlink" href="#loopfollow-and-loop-compatibility" title="Link to this section for reference">¶</a></h3>
+<h3 id="loopfollow-and-loop-compatibility"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> and <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> Compatibility<a class="headerlink" href="#loopfollow-and-loop-compatibility" title="Link to this section for reference">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -642,26 +668,26 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> Remote Control via APNS</td>
-<td style="text-align: left;"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 or newer; any version of <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em></td>
+<td style="text-align: left;"><em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> Remote Control via APNS</td>
+<td style="text-align: left;"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 3.2 or newer; any version of <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em></td>
 </tr>
 <tr>
-<td style="text-align: left;">Real-time APNS response from <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> phone</td>
-<td style="text-align: left;"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 4.6 or newer; <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> v3.11.1 or newer</td>
+<td style="text-align: left;">Real-time APNS response from <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> phone</td>
+<td style="text-align: left;"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 4.6 or newer; <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> v3.11.1 or newer</td>
 </tr>
 </tbody>
 </table>
-<p>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 and newer, <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> remote commands include Meal, Bolus and Override control. <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> no longer requires the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site to be configured with the APNS credentials — Read access for the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> is sufficient.</p>
-<p>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.1 and older, <em><abbr title="With a capital L, Loop is one of several do-it-yourself artifical pancreas systems">Loop</abbr></em> remote commands were limited to Overrides, required the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site to be configured with the APNS credentials, and required a token with <code>careportal</code> access.</p>
-<h3 id="loopfollow-and-trio-compatibility"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Compatibility<a class="headerlink" href="#loopfollow-and-trio-compatibility" title="Link to this section for reference">¶</a></h3>
+<p>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 3.2 and newer, <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> remote commands include Meal, Bolus and Override control. <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> no longer requires the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site to be configured with the APNS credentials — Read access for the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> is sufficient.</p>
+<p>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 3.1 and older, <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> remote commands were limited to Overrides, required the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site to be configured with the APNS credentials, and required a token with <code>careportal</code> access.</p>
+<h3 id="loopfollow-and-trio-compatibility"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Compatibility<a class="headerlink" href="#loopfollow-and-trio-compatibility" title="Link to this section for reference">¶</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Breaking Change: <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Command Users</p>
-<p><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> users must have matching versions of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> for remote control to work.</p>
+<p><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> users must have matching versions of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> for remote control to work.</p>
 <ul>
-<li><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.6 (or newer) requires <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 4.0 (or newer)</li>
-<li><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.1.28 (or older) requires <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2.11 (or older)</li>
+<li><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.6 (or newer) requires <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 4.0 (or newer)</li>
+<li><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.1.28 (or older) requires <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 3.2.11 (or older)</li>
 </ul>
-<p>Remote control commands stop working if versions are not matched. You do <strong>not</strong> need to reconfigure your credentials when upgrading — your existing settings continue to work. However, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> Browser Build users had to update their <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> when upgrading from v3.x to add Push Notification capability. This is automatic when running Add <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr>.</p>
+<p>Remote control commands stop working if versions are not matched. You do <strong>not</strong> need to reconfigure your credentials when upgrading — your existing settings continue to work. However, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Browser Build users had to update their <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr> when upgrading from v3.x to add Push Notification capability. This is automatic when running Add <abbr title="names of modules found on your Apple Developer Identifiers page that are required for GitHub build method">Identifiers</abbr>.</p>
 </div>
 <table>
 <thead>
@@ -673,11 +699,11 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control via APNS</td>
-<td style="text-align: left;"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 4.0 or newer; <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.6 or newer</td>
+<td style="text-align: left;"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 4.0 or newer; <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.6 or newer</td>
 </tr>
 <tr>
 <td style="text-align: left;">Real-time APNS response from <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone</td>
-<td style="text-align: left;"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 4.0 or newer; <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.6 or newer</td>
+<td style="text-align: left;"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 4.0 or newer; <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.6 or newer</td>
 </tr>
 <tr>
 <td style="text-align: left;"><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr> (Temp Targets only)</td>
@@ -689,17 +715,16 @@
 </tr>
 </tbody>
 </table>
-<p>With <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> only supports Temp Targets via the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr>, which requires a token with <code>careportal</code> access. Once updated to <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.x or newer, the full <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control options are available.</p>
-<p>For those following a looper using <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x, the only remote setting option in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> is <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> (<abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr>). With this selection:</p>
+<h4 id="very-old-configurations">Very Old Configurations<a class="headerlink" href="#very-old-configurations" title="Link to this section for reference">¶</a></h4>
+<p>The information below is of historical interest only.</p>
+<p>With <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> only supported Temp Targets via the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr>, which required a token with <code>careportal</code> access. Once updated to <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.5.x or newer, the full <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Remote Control options are available.</p>
+<p>For those following a looper using <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> 0.2.x, the only remote setting option in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> is <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> (<abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr>). With this selection:</p>
 <ul>
-<li>The <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> phone sends commands to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, which then forwards commands to the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone</li>
+<li>The <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> phone sends commands to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, which then forwards commands to the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone</li>
 <li>The <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> display will be updated first</li>
 <li>If there is an issue sending the <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr> request, it might not reach the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone</li>
-<li>After the next <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> download, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> display will reflect whether commands completed the full round trip</li>
+<li>After the next <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> download, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> display will reflect whether commands completed the full round trip</li>
 </ul>
-<h3 id="apns-keys-do-not-need-to-be-in-nightscout">APNS Keys Do Not Need to Be in <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr><a class="headerlink" href="#apns-keys-do-not-need-to-be-in-nightscout" title="Link to this section for reference">¶</a></h3>
-<p>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> 3.2 and newer, the APNS credentials are entered directly in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout">LoopFollow</abbr></em> app. They do <strong>not</strong> need to be embedded in the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site for remote control to work. This simplifies <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> configuration, especially for those using a paid <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> service.</p>
-<p>The APNS credentials only need to be in <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> if you also use <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="A Nightscout site, properly authorized, allows a user to enter information in the Careportal; some entries to the Careportal can remotely command the app connected to Nightscout">Careportal</abbr> or the <em>LoopCaregiver</em> app to send remote commands.</p>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
