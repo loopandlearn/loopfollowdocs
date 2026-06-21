@@ -99,7 +99,7 @@ The graphic below shows the display when you tap on the *Nightscout* row. For mo
 When adding the Nightscout information to monitor, you can copy your *Nightscout* URL (including the token) from the [Admin Tools in *Nightscout*](https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles). When pasted into *LoopFollow* URL row, the app will automatically extract and fill in both the URL and token.
 
 !!! note "Setting up a second device"
-    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export](#importexport).
+    With version 4.3 and newer, you can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export](#importexport).
 
 
 ![enter nightscout credentials](img/lf-data-source-ns.png){width="300"}
@@ -134,7 +134,7 @@ The graphic below shows the display when you tap on the *Dexcom* row.
 > The *Dexcom* Share credentials are optional, but can be useful when the *Nightscout* URL is unavailable.
 
 !!! note "Setting up a second device"
-    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export](#importexport).
+    With version 4.3 and newer, you can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export](#importexport).
 
 - - -
 
@@ -331,7 +331,7 @@ CV is reported as a percentage and is independent of the glucose unit.
 
 ### Tabs
 
-The user can modify which icons are displayed in the task bar at the bottom of the screen.
+The user can modify which icons are displayed in the tab bar at the bottom of the screen.
 
 In the Settings screen, select Tabs. Drag any of the options up or down to your preferred configuration.
 
@@ -426,9 +426,37 @@ The Live Activity screen allows the following selections:
 * Enable Live Activity (slider)
 * Restart Live Activity (manual button if needed)
 * Grid Slots for Live Activity
-    * There are 4 slots available
-    * There are over 20 options to choose from for the 4 slots
+    * There are 4 slots available, plus 1 additional slot for the small widget (CarPlay / Watch Smart Stack)
     * The options are the same as are found in the [Information Display](#information-display)
+    * Each option can only appear in one slot at a time
+    * The default slots are: IOB (top left), COB (bottom left), Projected BG (top right), Empty (bottom right)
+
+The following options are available for each grid slot:
+
+| Option | Description |
+|:--|:--|
+| Empty | Leave the slot blank |
+| Delta | Change in glucose since previous reading |
+| Projected BG | Projected glucose value |
+| Min/Max | Minimum and maximum values from the current OS-AID forecast |
+| IOB | Insulin on Board |
+| COB | Carbs on Board |
+| Rec. Bolus | Recommended bolus from last loop |
+| Autosens | Autosens value (*Trio* only) |
+| TDD | Total Daily Dose in the last 24 hours (*Trio* only) |
+| Basal | Current basal rate |
+| Pump | Reservoir level |
+| Pump Battery | Pump battery level |
+| Battery | Phone battery level |
+| Target | Correction range used by OS-AID |
+| ISF | Insulin Sensitivity Factor |
+| CR | Carbohydrate Ratio |
+| SAGE | Sensor Age |
+| CAGE | Cannula Age |
+| IAGE | Insulin Age |
+| Carbs today | Total grams of carbs since midnight |
+| Override | Active override information |
+| Profile | Named profile |
 
 ### Remote
 

@@ -54,7 +54,7 @@ You start by opening a browser using the URL from the table below. Most people o
 | <span translate="no">LoopFollow_Second</span> | [https://github.com/loopandlearn/LoopFollow_Second](https://github.com/loopandlearn/LoopFollow_Second) |
 | <span translate="no">LoopFollow_Third</span> | [https://github.com/loopandlearn/LoopFollow_Third](https://github.com/loopandlearn/LoopFollow_Third) | 
 
-??? tips "LoopFollow Display Name Customization (Click to Open/Close)"
+??? tip "LoopFollow Display Name Customization (Click to Open/Close)"
     * Would you like the name of your LoopFollow app to be personalized?
     * Do you have more than one Looper, so you are using LoopFollow_Second or LoopFollow_Third?
     * The 3 LoopFollow repositories enable you to customize the name shown on your phone

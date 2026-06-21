@@ -13,7 +13,7 @@ The graphic below shows a few typical alarms that might be chosen.
 ![example alarm screen](img/lf-alarms-screen.png){width="350"}
 {align="center"}
 
-When you tap on a given alarm, you can customize the settings in a number of ways. An example for the Low BG Alert is shown below. Once you customize and alarm, you can enable or disable it quickly while maintaining your custom settings.
+When you tap on a given alarm, you can customize the settings in a number of ways. An example for the Low BG Alert is shown below. Once you customize an alarm, you can enable or disable it quickly while maintaining your custom settings.
 
 ![alarms can be customized](img/lf-alarms-example.svg){width="700"}
 {align="center"}
@@ -22,6 +22,53 @@ The graphic below shows the many types of alarms that are available with *LoopFo
 
 ![alarms to select](img/lf-alarms.svg){width="700"}
 {align="center"}
+
+### Alarm Types Reference
+
+The table below lists every alarm type available in *LoopFollow*, organized by group.
+
+#### Glucose
+
+| Alarm | Description |
+|:--|:--|
+| Low BG Alert | Alerts when BG goes below a limit |
+| High BG Alert | Alerts when BG rises above a limit |
+| Fast Drop Alert | Rapid downward BG trend |
+| Fast Rise Alert | Rapid upward BG trend |
+| Missed Reading Alert | No CGM data for a configurable number of minutes |
+| Temporary Alert | One-time BG limit alert (above and/or below) |
+
+#### Insulin / Food
+
+| Alarm | Description |
+|:--|:--|
+| IOB Alert | High insulin-on-board |
+| COB Alert | High carbs-on-board |
+| Missed Bolus Alert | Carbs entered without a matching bolus |
+| Future Carbs Alert | Reminder when future carbs are due |
+| Rec. Bolus | Recommended bolus issued |
+
+#### Device / System
+
+| Alarm | Description |
+|:--|:--|
+| Low Battery | Phone battery low |
+| Battery Drop | Phone battery drops quickly within a monitoring window |
+| Pump Insulin Alert | Reservoir level low |
+| Pump Battery Alert | Pump battery low |
+| Pump Change Alert | Pump change due |
+| Sensor Change Alert | Sensor change due |
+| Not Looping Alert | Loop hasn't completed within a configurable number of minutes |
+| Looping app expiration | Looping-app build is expiring soon |
+
+#### Override / Target
+
+| Alarm | Description |
+|:--|:--|
+| Override Started | An override just started |
+| Override Ended | An override ended |
+| Temp Target Started | A temp target started |
+| Temp Target Ended | A temp target ended |
 
 
 - - -

@@ -4,7 +4,7 @@ You need to modify your iPhone settings to make the banners persistent.
 
 In iPhone Settings, select Notifications, then Apps and then *LoopFollow*.
 
-For the banner style, select Persistent. Then each notification remains visibile until you swipe up.
+For the banner style, select Persistent. Then each notification remains visible until you swipe up.
 
 This also means that the current banner might be out of date if you haven't looked at your phone for a while.
 
