@@ -54,7 +54,7 @@ You start by opening a browser using the URL from the table below. Most people o
 | <span translate="no">LoopFollow_Second</span> | [https://github.com/loopandlearn/LoopFollow_Second](https://github.com/loopandlearn/LoopFollow_Second) |
 | <span translate="no">LoopFollow_Third</span> | [https://github.com/loopandlearn/LoopFollow_Third](https://github.com/loopandlearn/LoopFollow_Third) | 
 
-??? tips "LoopFollow Display Name Customization (Click to Open/Close)"
+??? tip "LoopFollow Display Name Customization (Click to Open/Close)"
     * Would you like the name of your LoopFollow app to be personalized?
     * Do you have more than one Looper, so you are using LoopFollow_Second or LoopFollow_Third?
     * The 3 LoopFollow repositories enable you to customize the name shown on your phone
@@ -139,7 +139,7 @@ The `Add Identifier` &nbsp;<span class=notranslate>Action</span>&nbsp; should su
 
 New builders - just continue with the instructions as provided on this page. 
 
-### Update to *LoopFollow* v6.x
+### Update to *LoopFollow* v6
 
 !!! important "Updating LoopFollow to version 6.0 and newer"
     This information admonition is for existing builders who need to update.

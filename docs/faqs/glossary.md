@@ -75,9 +75,9 @@ When Google Translate is selected:
 
 **<span translate="no">Loop and Learn</span>**&nbsp; (Loop and Learn): A support group with mentors and developers who support the OS-AID community
 
-**<span translate="no">Loop</span>**&nbsp; (Loop): With a capital L, Loop is one of several do-it-yourself artifical pancreas systems
+**<span translate="no">Loop</span>**&nbsp; (Loop): With a capital L, Loop is one of several do-it-yourself artificial pancreas systems
 
-**<span translate="no">LoopFollow</span>**&nbsp; (LoopFollow): LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nigthscout
+**<span translate="no">LoopFollow</span>**&nbsp; (LoopFollow): LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout
 
 **<span translate="no">Match-Secrets</span>**&nbsp; (Match-Secrets): a private repository you must create in your github account, stores keys required to build with github Build Actions
 

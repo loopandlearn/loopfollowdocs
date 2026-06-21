@@ -3,6 +3,25 @@
 ## New Feature Highlights
 
 !!! tip ""
+    New with *LoopFollow* v6.2:
+
+    * [WebSocket](../setup/lf-setup.md#websocket){: target="_blank" }, enabled by default, allows near real-time updates from Nightscout
+    * [Show Yesterday's BG](../setup/lf-setup.md#graph){: target="_blank" } can be enabled using Settings: Graph
+    * [Information Display](../setup/lf-setup.md#information-display){: target="_blank" } supports large fonts; when needed, the label and value are split into two rows
+    * Remote Quick Pick buttons are now available for [Loop](../remote/remote-control-loop.md#quick-pick-boluses-and-meals){: target="_blank" } and [Trio](../remote/remote-control-trio.md#quick-pick-boluses-and-meals){: target="_blank" } 
+    * Handle glucose duplicates to fix delta glucose always showing zero
+    * Fix glucose history being truncated when multiple apps upload to the same account
+    * Improve auto-restart for Live Activity
+    * Suppress an audible banner that could sound during silent Live Activity renewal
+    * Improve handling of profiles from Nightscout, including a new Run Diagnostics button in Remote Settings that detects common remote-command failures
+    * Debug logging is now on by default, and Share Logs prompts for a short problem description that is bundled with the logs
+    * Trio Updates:
+        * Trio Remote Control is the only option offered for Trio (Nightscout option is removed)
+        * Trio forecast cone display truncated to match Trio method
+        * Trio forecast lines match Trio colors
+        * Trio Override / Temp Target display colors match Trio colors
+
+!!! tip ""
     New with *LoopFollow* v6.0 and v6.1:
     
     * Live Activity and Live Activity upgrades
@@ -33,6 +52,14 @@ The feature history is summarized below in reverse chronological order.
 | 4.3 | Separate QR codes for *Nightscout* Site, Dexcom Share, Remote Settings, and Alarm Settings |
 | 4.0 | *Trio* 0.6 remote control support; share remote configuration via QR code |
 | 3.2 | *Loop* remote commands (Meal, Bolus, Override) sent directly via APNS; APNS credentials no longer required in *Nightscout* |
+
+- - -
+
+## APNS Keys Do Not Need to Be in Nightscout
+
+With *LoopFollow* 3.2 and newer, the APNS credentials are entered directly in the *LoopFollow* app. They do **not** need to be embedded in the *Nightscout* site for remote control to work. This simplifies *Nightscout* configuration.
+
+The APNS credentials only need to be in *Nightscout* if you also use *Nightscout* Careportal or the *LoopCaregiver* app to send remote commands.
 
 - - -
 
@@ -83,7 +110,11 @@ With *LoopFollow* 3.1 and older, *Loop* remote commands were limited to Override
 | Nightscout Careportal (Temp Targets only) | Available for all *Trio* versions |
 | *Nightscout* OpenAPS pill display | *Nightscout* 15.0.2 or newer with *Trio* 0.5.x or newer |
 
-With *Trio* 0.2.x, *LoopFollow* only supports Temp Targets via the *Nightscout* Careportal, which requires a token with `careportal` access. Once updated to *Trio* 0.5.x or newer, the full *Trio* Remote Control options are available.
+#### Very Old Configurations
+
+The information below is of historical interest only.
+
+With *Trio* 0.2.x, *LoopFollow* only supported Temp Targets via the *Nightscout* Careportal, which required a token with `careportal` access. Once updated to *Trio* 0.5.x or newer, the full *Trio* Remote Control options are available.
 
 For those following a looper using *Trio* 0.2.x, the only remote setting option in *LoopFollow* is *Nightscout* (Careportal). With this selection:
 
@@ -91,10 +122,4 @@ For those following a looper using *Trio* 0.2.x, the only remote setting option 
 * The *Nightscout* display will be updated first
 * If there is an issue sending the Careportal request, it might not reach the *Trio* phone
 * After the next *Nightscout* download, *LoopFollow* display will reflect whether commands completed the full round trip
-
-### APNS Keys Do Not Need to Be in Nightscout
-
-With *LoopFollow* 3.2 and newer, the APNS credentials are entered directly in the *LoopFollow* app. They do **not** need to be embedded in the *Nightscout* site for remote control to work. This simplifies *Nightscout* configuration, especially for those using a paid *Nightscout* service.
-
-The APNS credentials only need to be in *Nightscout* if you also use *Nightscout* Careportal or the *LoopCaregiver* app to send remote commands.
 

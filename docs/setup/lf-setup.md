@@ -34,7 +34,7 @@ The home screen provides a dashboard of important information.
 * Supports Information Display from *Loop* and *Trio* when Nightscout Site is provided
     * *Loop* & *Trio*: common features like status, basal, bolus, carbs and eventual glucose forecast
     * *Loop*: *Loop* specific features like Profile Name, remote control
-    * *Trio*: *Trio* specific features like Autosens, TDD, remote control (with *Trio* 0.5.x and newer)
+    * *Trio*: *Trio* specific features like Autosens, TDD, remote control
 
 Once you’ve configured your settings, your Home screen will look as beautiful as the example below!
 
@@ -99,7 +99,7 @@ The graphic below shows the display when you tap on the *Nightscout* row. For mo
 When adding the Nightscout information to monitor, you can copy your *Nightscout* URL (including the token) from the [Admin Tools in *Nightscout*](https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles). When pasted into *LoopFollow* URL row, the app will automatically extract and fill in both the URL and token.
 
 !!! note "Setting up a second device"
-    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export](#importexport).
+    With version 4.3 and newer, you can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export](#importexport).
 
 
 ![enter nightscout credentials](img/lf-data-source-ns.png){width="300"}
@@ -110,8 +110,7 @@ When adding the Nightscout information to monitor, you can copy your *Nightscout
 
     For more information about tokens with *Nightscout*, refer to [Admin Tools in *Nightscout*](https://nightscout.github.io/nightscout/admin_tools/#subjects-and-roles).
 
-The type of token depends on the type of remote control desired. 
-The table below indicates the minimum token access for each type of remote control available with *LoopFollow*. 
+If your Nightscout site is protected, which is recommended, you need to create a **readable** token to use with *LoopFollow*.
 When you enter your credentials, *LoopFollow* tries to reach the site and then provides the status. 
 
 For a full summary of version requirements for *Loop* and *Trio* remote control, see [Version Compatibility](../faqs/lf-history.md#version-compatibility){: target="_blank" }.
@@ -121,7 +120,12 @@ For a full summary of version requirements for *Loop* and *Trio* remote control,
 | **None** | Read | OK (Read) |
 | ***Loop* Remote Control**| Read | OK (Read) |
 | ***Trio* Remote Control**| Read | OK (Read) |
-| ***Nightscout***<br>Trio 0.2 or older | Read & Careportal | OK (Read & Write) |
+
+##### WebSocket
+
+Below the URL and Token rows, the *Nightscout* setup screen has an **Enable WebSocket** toggle. When enabled, *LoopFollow* opens a live connection to your *Nightscout* server while the app is in the foreground, so new readings, treatments, and device status arrive within seconds of being posted to *Nightscout* — close to real-time. The status row underneath the toggle shows whether the connection is *Connecting…*, *Connected*, *Disconnected*, or in *Error*.
+
+When *LoopFollow* moves to the background, the WebSocket disconnects and the app falls back to its normal scheduled polling so the persistent connection doesn't drain the battery. The connection is re-established automatically when you return to the app. If the connection drops while you are still in the foreground, normal polling resumes immediately as a safety net.
 
 #### Setup *Dexcom*
 
@@ -130,7 +134,7 @@ The graphic below shows the display when you tap on the *Dexcom* row.
 > The *Dexcom* Share credentials are optional, but can be useful when the *Nightscout* URL is unavailable.
 
 !!! note "Setting up a second device"
-    With version 4.3 and newer, You can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export](#importexport).
+    With version 4.3 and newer, you can set up a second device by scanning a QR code from another LoopFollow user. See this section [Import/Export](#importexport).
 
 - - -
 
@@ -219,6 +223,7 @@ These settings are accessed through the Graph row in the Settings screen.
 | Show Midnight Lines | Enable or Disable |
 | Show Calibration | Enable or Disable |
 | Show Carb Absorption | Enable or Disable |
+| Show Yesterday's BG | When enabled, yesterday's glucose is overlaid on the main graph as a dimmed gray line, time-shifted 24 hours so it aligns with the same clock time today, for visual comparison<br>*Nightscout* only (Dexcom Share does not return enough history); default off |
 | Treatments on Small Graph | Enable or Disable |
 | Height | Select height of small Graph |
 | Hours of Prediction | Select prediction extent on main plot |
@@ -326,7 +331,7 @@ CV is reported as a percentage and is independent of the glucose unit.
 
 ### Tabs
 
-The user can modify which icons are displayed in the task bar at the bottom of the screen.
+The user can modify which icons are displayed in the tab bar at the bottom of the screen.
 
 In the Settings screen, select Tabs. Drag any of the options up or down to your preferred configuration.
 
@@ -408,11 +413,11 @@ Details about creating APN credentials are found in the [Remote Control Overview
 
 The Live Activity feature for *LoopFollow* has the following requirements or it will not update reliably and should not be used.
 
-* Background Refresh must be enabled
+* **APN Credentials** must be entered
+* **Background Refresh** must be enabled
     * Typically caregivers use Silent Tunes to keep the app alive in the background
     * If background refresh is not working, the app notifies the user and they should assume Live Activity is also not refreshing
-* APN Credentials must be entered
-* Live Activity must be enabled
+* **Live Activity** must be enabled
 
 #### Live Activity Options
 
@@ -421,9 +426,37 @@ The Live Activity screen allows the following selections:
 * Enable Live Activity (slider)
 * Restart Live Activity (manual button if needed)
 * Grid Slots for Live Activity
-    * There are 4 slots available
-    * There are over 20 options to choose from for the 4 slots
+    * There are 4 slots available, plus 1 additional slot for the small widget (CarPlay / Watch Smart Stack)
     * The options are the same as are found in the [Information Display](#information-display)
+    * Each option can only appear in one slot at a time
+    * The default slots are: IOB (top left), COB (bottom left), Projected BG (top right), Empty (bottom right)
+
+The following options are available for each grid slot:
+
+| Option | Description |
+|:--|:--|
+| Empty | Leave the slot blank |
+| Delta | Change in glucose since previous reading |
+| Projected BG | Projected glucose value |
+| Min/Max | Minimum and maximum values from the current OS-AID forecast |
+| IOB | Insulin on Board |
+| COB | Carbs on Board |
+| Rec. Bolus | Recommended bolus from last loop |
+| Autosens | Autosens value (*Trio* only) |
+| TDD | Total Daily Dose in the last 24 hours (*Trio* only) |
+| Basal | Current basal rate |
+| Pump | Reservoir level |
+| Pump Battery | Pump battery level |
+| Battery | Phone battery level |
+| Target | Correction range used by OS-AID |
+| ISF | Insulin Sensitivity Factor |
+| CR | Carbohydrate Ratio |
+| SAGE | Sensor Age |
+| CAGE | Cannula Age |
+| IAGE | Insulin Age |
+| Carbs today | Total grams of carbs since midnight |
+| Override | Active override information |
+| Profile | Named profile |
 
 ### Remote
 
@@ -477,7 +510,7 @@ Allows you to choose what information to download from Nightscout and to modify 
 
 LoopFollow logs activity to a file that can be viewed within the app, and can be shared via email, a Notes file or Facebook messenger if needed.  The log can be filtered and searched. This will aid in troubleshooting and diagnostics. 
 
-Normally, the debug log option is disabled. The log debug option is found in the Advanced section. If the logs seem verbose, check that setting.
+The debug log option is enabled by default so that detailed information is available if you need to ask for help. The setting is found in the Advanced section and can be turned off if the logs seem too verbose.
 
 ### View Log
 
@@ -485,9 +518,11 @@ When you select View Log, you see the entire log but can also filter for particu
 
 ### Share Logs
 
-When you choose Share Logs, you can send the log to device or app of your choice.
+When you choose Share Logs, *LoopFollow* first asks you to describe the problem — what time it happened, what you did, and what you expected to happen that didn't. A short description makes it much easier for someone to help.
 
-The log is named `LoopFollow YYYY-MM-DD`.
+After you tap **Share**, the description is saved to a small notice file (with the current date, app version, and build identifier) and the iOS share sheet opens with that file together with today's and yesterday's log files. You can then send everything to the device or app of your choice. Leaving the description empty is allowed; the notice file simply records that no description was provided.
+
+The log files are named `LoopFollow YYYY-MM-DD`.
 
 - - -
 

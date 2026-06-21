@@ -82,6 +82,48 @@ Example messages are highlighted by red rectangles in the composite below for re
     If the last update was more than 12 minutes ago, that line is not prefilled.
 
 
+### Quick-Pick Boluses and Meals
+
+!!! info "Available in *LoopFollow* 6.2 and newer"
+
+To save a step when sending a remote command, *LoopFollow* shows **Quick-Pick**
+buttons at the top of the Bolus and Carbs screens. Each button fills in the
+amounts from one of your recent entries with a single tap.
+
+* **Quick-Pick Boluses** appear on the Bolus screen and fill in an insulin amount.
+* **Quick-Pick Meals** appear on the Carbs screen and fill in **carbs only**.
+
+| Quick-Pick Boluses | Quick-Pick Meals |
+|:--:|:--:|
+| ![Quick-Pick Boluses on the remote Bolus screen](img/lf-quick-pick-bolus.png){width="300"} | ![Quick-Pick Meals on the remote Carbs screen](img/lf-quick-pick-carbs.png){width="300"} |
+
+Tapping a button only **fills in** the fields — nothing is sent until you review
+the values and tap **Send Bolus** / **Send Carbs**, exactly as with a manual entry.
+Guardrails still apply.
+
+#### How the suggestions are chosen
+
+Every bolus or carb entry you successfully send is stored **locally on your
+phone**. When you open a remote screen, that history is scored to surface the
+most relevant options for the current moment, considering:
+
+* **Time of day** — entries sent around this time of day score higher
+* **Day of week** — weekday and weekend patterns are kept separate
+* **Recency** — older entries gradually fade out
+
+Up to five buttons are shown, and the Quick-Pick section is hidden entirely
+until you have history to draw from. So if you usually send the same breakfast
+on weekday mornings, that entry tends to appear as an option on weekday mornings.
+
+!!! note
+    The history is private to the device and stored in *LoopFollow* only.
+    *Nightscout* cannot tell remote entries apart from manual ones, so it is not
+    used as a source — a freshly installed or reset phone starts with no
+    Quick-Pick suggestions until you send a few commands.
+
+Tap the :material-information-outline: info icon next to **Quick-Pick Boluses**
+or **Quick-Pick Meals** in the app for a short in-screen explanation.
+
 ### Overrides
 
 ***More info coming soon!***
@@ -181,7 +223,7 @@ You can see the danger of sending duplicate bolus/carbs so be careful. If a remo
     2. The carbs, when accepted, will cause the app to respond to the carbs
     3. In this case, the prediction includes both carbs and bolus
     
-    ❗️ Remember - you must wait pause at least 30 seconds between remote commands or the One-Time-Password (OTP) will be rejected as having already been used.
+    ❗️ Remember - you must wait at least 30 seconds between remote commands or the One-Time-Password (OTP) will be rejected as having already been used.
 
      ❗️ *Apple* can decide to limit the number of APNS commands it services. Make your remote requests count.
    
@@ -194,7 +236,7 @@ You can see the danger of sending duplicate bolus/carbs so be careful. If a remo
 
 The Remote Settings row in the *LoopFollow* Settings screen is used to select the type of remote access you wish to use.
 
-![LoopFollow remote settings type](img/lf-lrc-selection.png){width="300"}
+![LoopFollow remote settings type](img/lf-remote-options-loop.png){width="300"}
 {align="center"}
 
 !!! question "The *Loop* Remote Control option is not available"

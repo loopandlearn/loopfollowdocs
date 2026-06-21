@@ -1,11 +1,14 @@
 ## Remote Control Overview
 
-Trio can accept remote commands from *Nightscout* or from *LoopFollow*. There are a variety of options, but the final control of whether remote commands will be enacted rests with the *Trio* user. They can enable or disable remote control.
+*Trio* accepts remote commands from *LoopFollow* via direct APNS. The final control of whether remote commands will be enacted rests with the *Trio* user — they can enable or disable remote control.
+
+!!! note "*Nightscout* Careportal Remote Commands Removed"
+    As of *LoopFollow* 6.2, *Nightscout* remote commands are no longer supported in *LoopFollow*. Use *Trio* Remote Control (TRC) below.
 
 !!! warning "*Nightscout* version must be 15.0.2 or newer"
-    To properly display the OpenAPS pill with *Trio* 0.5.x (or newer), your *Nightscout* version must be 15.0.2 (or newer). If you do not see the expected treatments or pills in the *Nightscout* dashboard, follow the steps to [Configure Nightscout for Trio (OpenAPS)](#configure-nightscout-for-trio-openaps).
+    To properly display the OpenAPS pill with *Trio*, your *Nightscout* version must be 15.0.2 (or newer). If you do not see the expected treatments or pills in the *Nightscout* dashboard, follow the steps to [Configure Nightscout for Trio (OpenAPS)](#configure-nightscout-for-trio-openaps).
 
-The most powerful arrangement, for *Trio* 0.5.x (or newer), is to configure the *LoopFollow* app to use the *Trio* Remote Control (TRC) setting.
+- - -
 
 ### Real-time Notifications for *Trio*
 
@@ -14,27 +17,7 @@ Starting with *LoopFollow* v4.0 and *Trio* v0.6, users of remote control are pro
 * This change enables *Trio* to send a push notification back to the *LoopFollow* app on the originating phone, immediately informing the user whether their command (e.g., meal, bolus, override) was successfully processed or if an error occurred
 * This greatly improves the user experience compared to waiting for Nightscout being updated
 
-!!! important "Breaking Change: *Trio* Remote Command Users"
-    *Trio* users must have matching code for LoopFollow and *Trio*.
-
-    * LoopFollow v4.0 (or newer) works with *Trio* v0.6 (or newer)
-    * LoopFollow v3.2.3 (or older) works with *Trio* v0.5.1 (or older)
-
-    **Question: What happens if versions are not correct?**: Remote control commands stop working.
-
-    **Question: If I was using Trio / LoopFollow remote control do I need to change my configuration parameters?**: No, the parameters you already set up continue to work. **BUT** you need to update the *LoopFollow* Identifiers if you use Browser Build.
-
-
-??? question "How does this differ from *Trio* 0.2.x? (Click to Open/Close)"
-    *Trio* can use *Nightscout* Careportal to enter `Carb Correction`, and start and cancel `Temporary Target`.
-    
-    * This was available in *Trio* 0.2.x and continues to be available in *Trio* 0.5.x (or newer).
-    * See [*Nightscout* Remote Control](remote-control-nightscout.md#loopfollow-careportal-with-the-trio-app){: target="_blank" }
-
-    *Trio* 0.2.x supported other remote options (using announcements via Careportal). 
-    
-    * Those options were replaced by the more secure *Trio* Remote Control for *Trio* 0.5.x (or newer)
-    * **Using announcements to provide remote control of the *Trio* phone is no longer supported**
+- - -
 
 ### Quick Access
 
@@ -98,6 +81,53 @@ When entering meals and choosing to schedule the meal, any bolus included in the
 
 ***More info coming soon!***
 
+### Quick-Pick Boluses and Meals
+
+!!! info "Available in *LoopFollow* 6.2 and newer"
+
+To save a step when sending a remote command, *LoopFollow* shows **Quick-Pick**
+buttons at the top of the Bolus and Meal screens. Each button fills in the
+amounts from one of your recent entries with a single tap.
+
+* **Quick-Pick Boluses** appear on the Bolus screen and fill in an insulin amount.
+* **Quick-Pick Meals** appear on the Meal screen and fill in carbs, and — when
+  enabled in [Meal Settings](#meal-settings) — fat, protein, and the meal bolus.
+
+| Quick-Pick Boluses | Quick-Pick Meals |
+|:--:|:--:|
+| ![Quick-Pick Boluses on the remote Bolus screen](img/lf-quick-pick-bolus.png){width="300"} | ![Quick-Pick Meals on the remote Meal screen](img/lf-quick-pick-meal.png){width="300"} |
+{align="center"}
+
+Tapping a button only **fills in** the fields — nothing is sent until you review
+the values and tap **Send Bolus** / **Send Meal**, exactly as with a manual entry.
+Guardrails still apply.
+
+#### How the suggestions are chosen
+
+Every bolus or meal you successfully send is stored **locally on your phone**.
+When you open a remote screen, that history is scored to surface the most
+relevant options for the current moment, considering:
+
+* **Time of day** — entries sent around this time of day score higher
+* **Day of week** — weekday and weekend patterns are kept separate
+* **Recency** — older entries gradually fade out
+
+Up to five buttons are shown, and the Quick-Pick section is hidden entirely
+until you have history to draw from. So if you usually send the same breakfast
+on weekday mornings, that entry tends to appear as an option on weekday mornings.
+
+A bolus that was part of a meal is stored with that meal, so it does **not**
+appear among your standalone Quick-Pick Boluses.
+
+!!! note
+    The history is private to the device and stored in *LoopFollow* only.
+    *Nightscout* cannot tell remote entries apart from manual ones, so it is not
+    used as a source — a freshly installed or reset phone starts with no
+    Quick-Pick suggestions until you send a few commands.
+
+Tap the :material-information-outline: info icon next to **Quick-Pick Boluses**
+or **Quick-Pick Meals** in the app for a short in-screen explanation.
+
 ### Temp Target
 
 ***More info coming soon!***
@@ -109,8 +139,6 @@ When entering meals and choosing to schedule the meal, any bolus included in the
 - - -
 
 ## Configure *Trio* Phone for Remote Control
-
-> The graphics displayed on this page are associated with *Trio* version 0.5.x or newer. The same setting is available in older version of *Trio* but in a different location in the menu structure.
 
 **Default:** _OFF_
 
@@ -154,25 +182,19 @@ The `SHARED SECRET` should be copied from the *Trio* phone and added to the [`Sh
 
 The Remote Settings row in the *LoopFollow* Settings screen is used to select the type of remote access you wish to use.
 
-![LoopFollow remote settings type](img/lf-trc-selection.jpg){width="300"}
+![LoopFollow remote settings type](img/lf-remote-options-trio.png){width="300"}
 {align="center"}
 
 !!! question "The *Trio* Remote Control option is not available"
     The `Trio Remote Control` option is only available in *LoopFollow* if you have already entered a [*Nightscout* Site](../setup/lf-setup.md#setup-nightscout){: target="_blank" } with a default profile recognized as a *Trio* profile. Review [Troubleshooting](#troubleshooting) for possible reasons for not seeing the option.
 
-* *Nightscout* option
-    * Remote control with *LoopFollow* is limited to starting and canceling Temp Targets
-    * Available with *Trio* 0.2.x and newer
 * *Trio* Remote Control option
     * Remote control with *LoopFollow* includes adding remote carbs, enacting remote bolus, and starting and canceling Temp Targets and Overrides
-    * Requires *Trio* 0.5.x (or newer) and *LoopFollow* 2.4.x (or newer)
     * Continue with [Configure *LoopFollow* *Trio* Remote Control](#configure-loopfollow-trio-remote-control) to finish the configuration process
 
 - - -
 
 ## Configure *LoopFollow* *Trio* Remote Control
-
-> This is supported for *Trio* 0.5.x (or newer) when using *LoopFollow* 2.4.0 (or newer).
 
 ### Meal Settings
 
@@ -270,7 +292,7 @@ This section covers known troubleshooting issues:
 
 ### Configure Nightscout for Trio (OpenAPS)
 
-The *Nightscout* version must be 15.0.2 (or newer) to properly display the OpenAPS pill with *Trio* 0.5.x (or newer). Check your revision: *Nightscout* URL, Menu, scroll to bottom and examine the About section.
+The *Nightscout* version must be 15.0.2 (or newer) to properly display the OpenAPS pill. Check your revision: *Nightscout* URL, Menu, scroll to bottom and examine the About section.
 
 If you transitioned from the *Loop* app, you must make some modifications to *Nightscout* before you will be successful viewing your *Trio* data in your *Nightscout* site.
 
@@ -295,9 +317,6 @@ If you were previously running the *Loop* app or the *iAPS* app:
 In addition to this step, you may need to force the profile (from Trio) to upload to *Nightscout* and overwrite the one stored as the default profile in *Nightscout*.
 
 ### Update Profile
-
-!!! warning "Must on *Trio* 0.5.x (or newer)"
-    If you are on *Trio* 0.2.x, you might see the option for *Trio* Remote Control in *LoopFollow* Remote Settings, but you can't use it. See [Use *LoopFollow* *Nightscout* Remote Control](remote-control-nightscout.md#loopfollow-careportal-with-the-trio-app).
 
 If you were previously running the *Loop* app or the *iAPS* app, [Stop *Nightscout* upload](#stop-nightscout-uploads-from-other-apps) from those apps and then force the profile to update.
 
