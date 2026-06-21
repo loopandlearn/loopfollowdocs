@@ -96,8 +96,8 @@ For more information: see [Import/Export Settings](../setup/lf-setup.md#importex
 
 If you previously configured remote control with the *Loop* app, you already have an *Apple* Push Notification System (APNS) Key ID and Key. These were added to the config vars in your *Nightscout* site.
 
-* For *Loop*, these keys must be added to Nightscout for you to use the Careportal feature
-* For *Trio*, these keys do not need to be added to Nightscout to use the Careportal feature
+* For *Loop*, these keys must be added to Nightscout for you to use the Careportal feature with Nightscout
+* For *Trio*, these keys do not need to be added to Nightscout to use the Careportal feature with Nightscout
 
 If you do not have existing APNS Keys, skip ahead to [New APNS](#new-apns).
 
