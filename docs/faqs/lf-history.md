@@ -10,8 +10,11 @@
     * [Information Display](../setup/lf-setup.md#information-display){: target="_blank" } supports large fonts; when needed, the label and value are split into two rows
     * Remote Quick Pick buttons are now available for [Loop](../remote/remote-control-loop.md#quick-pick-boluses-and-meals){: target="_blank" } and [Trio](../remote/remote-control-trio.md#quick-pick-boluses-and-meals){: target="_blank" } 
     * Handle glucose duplicates to fix delta glucose always showing zero
+    * Fix glucose history being truncated when multiple apps upload to the same account
     * Improve auto-restart for Live Activity
-    * Improve handling of profiles from Nightscout
+    * Suppress an audible banner that could sound during silent Live Activity renewal
+    * Improve handling of profiles from Nightscout, including a new Run Diagnostics button in Remote Settings that detects common remote-command failures
+    * Debug logging is now on by default, and Share Logs prompts for a short problem description that is bundled with the logs
     * Trio Updates:
         * Trio Remote Control is the only option offered for Trio (Nightscout option is removed)
         * Trio forecast cone display truncated to match Trio method
