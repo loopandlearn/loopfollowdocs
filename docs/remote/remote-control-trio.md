@@ -84,7 +84,6 @@ When entering meals and choosing to schedule the meal, any bolus included in the
 ### Quick-Pick Boluses and Meals
 
 !!! info "Available in *LoopFollow* 6.2 and newer"
-    <!-- TODO: confirm the exact release version before publishing -->
 
 To save a step when sending a remote command, *LoopFollow* shows **Quick-Pick**
 buttons at the top of the Bolus and Meal screens. Each button fills in the
