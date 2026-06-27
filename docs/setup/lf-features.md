@@ -184,7 +184,8 @@ Bullet List with Instructions:
     * Open the *LoopFollow* app on your iPhone
     * Go to Settings > Integrations > Contact
     * Toggle on “Enable Contact BG Updates”
-        * If a permission prompt appears, tap “Allow” to let *LoopFollow* access your contacts
+        * If a permission prompt appears, choose **“Allow Full Access”** (do **not** choose “Select Contacts…” / Limited Access)
+            * *LoopFollow* needs Full Access because it creates and keeps its own *LoopFollow* – BG contact up to date; Limited Access will prevent the complication from updating
         * (The app will automatically create a contact named *LoopFollow* – BG for you.)
 2. Open the Watch App
     * On your iPhone, open the Watch app
