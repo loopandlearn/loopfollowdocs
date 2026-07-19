@@ -500,7 +500,9 @@ Allows you to choose what information to download from Nightscout and to modify 
 * Graph Bolus
 * Graph Carbs
 * Graph Other Treatments
-* BG Update Delay
+* **BG Update Delay**: how many seconds *LoopFollow* waits, after a new reading is expected (about every 5 minutes), before it fetches it from your data source. *LoopFollow* is a follower, so a reading must first reach your source (*Nightscout* / *Dexcom Share*) before it can be pulled — this short buffer gives the value time to land before *LoopFollow* polls. The default is **10 seconds**, and the range is 1–30.
+    * Lowering it does not reliably make updates faster. If *LoopFollow* polls before the new value has arrived, it just re-reads the previous value and retries a few seconds later, which mainly adds extra polls (battery and network) without helping.
+    * When *Nightscout* is your source with [WebSocket](#websocket) enabled and the app in the foreground, new values are pushed to *LoopFollow* as soon as they arrive, so this delay is not applied. It only affects background polling.
 * Logging options (turn on debug option)
 
 
