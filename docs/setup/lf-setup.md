@@ -490,31 +490,43 @@ For more detailed instructions, see [Real-Time Watch Updates using Contact](lf-f
 
 - - -
 
-### Advanced
+### Advanced Settings
 
-Allows you to choose what information to download from Nightscout and to modify your graph
+A number of different options can be adjusted in this screen.
 
-* Download Treatments
-* Download Prediction
-* Graph Basal
-* Graph Bolus
-* Graph Carbs
-* Graph Other Treatments
-* BG Update Delay
-* Logging options (turn on debug option)
+| Advanced Setting | Default | Description |
+|:--|:-:|:--|
+| Download Treatments | enabled | Treatments from Nightscout, if available, are downloaded and displayed |
+| Download Prediction | enabled | Predictions (forecast), if available, are downloaded and displayed |
+| Graph Basal | enabled | Actual Basal Rates, if available, are downloaded and displayed |
+| Graph Bolus | enabled | Manual and Automatic Bolus values, if available, are downloaded and displayed |
+| Graph Carbs | enabled | Meal Entries, if available, are downloaded and displayed |
+| Graph Other Treatments | enabled | Treatment notes, if available, are downloaded and displayed |
+| BG Update Delay | 10 sec | how many seconds *LoopFollow* waits before it fetches it from your data source<br>See [Update Delay Explained](#update-delay-explained)|
+| Debug Log Level | enabled | Allows you to enable or disable debug logging<br>See [Debug Log Level](#debug-log-level) |
 
+#### Update Delay Explained
+
+The Update Delay is how many seconds *LoopFollow* waits, after a new reading is expected (about every 5 minutes), before it fetches it from your data source. *LoopFollow* is a follower, so a reading must first reach your source (*Nightscout* / *Dexcom Share*) before it can be pulled — this short buffer gives the value time to land before *LoopFollow* polls. The default is **10 seconds**, and the range is 1–30 seconds.
+
+* Lowering it does not reliably make updates faster. If *LoopFollow* polls before the new value has arrived, it just re-reads the previous value and retries a few seconds later, which mainly adds extra polls (battery and network) without helping.
+* When *Nightscout* is your source with [WebSocket](#websocket) enabled and the app in the foreground, new values are pushed to *LoopFollow* as soon as they arrive, so this delay is not applied. It only affects background polling.
+
+#### Debug Log Level
+
+The debug log option is enabled by default so that detailed information is available if you need to ask for help. The setting is found in the Advanced section and can be turned off if the logs seem too verbose.
 
 - - -
 
 ## Logging
 
-LoopFollow logs activity to a file that can be viewed within the app, and can be shared via email, a Notes file or Facebook messenger if needed.  The log can be filtered and searched. This will aid in troubleshooting and diagnostics. 
-
-The debug log option is enabled by default so that detailed information is available if you need to ask for help. The setting is found in the Advanced section and can be turned off if the logs seem too verbose.
-
 ### View Log
 
+LoopFollow logs activity to a file that can be viewed within the app, and can be shared if needed. Example ways to share are email, a Notes file or Facebook messenger.  The log can be filtered and searched. This will aid in troubleshooting and diagnostics. 
+
 When you select View Log, you see the entire log but can also filter for particular types of activities.
+
+If you want to modify whether Debug Log Level is enabled, go to [Settings, Advanced](#advanced-settings). But please read [Debug Log Level](#debug-log-level) before disabling this option.
 
 ### Share Logs
 
