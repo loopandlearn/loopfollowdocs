@@ -515,10 +515,10 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#advanced">
+<a class="md-nav__link" href="#advanced-settings">
 <span class="md-ellipsis">
       
-        Advanced
+        Advanced Settings
       
     </span>
 </a>
@@ -889,10 +889,10 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#advanced">
+<a class="md-nav__link" href="#advanced-settings">
 <span class="md-ellipsis">
       
-        Advanced
+        Advanced Settings
       
     </span>
 </a>
@@ -1808,24 +1808,73 @@ It is still useful for Carplay.</p>
 <p>The Contact image trick added with v2.2.8 currently works to provide real-time updates on an Apple Watch.</p>
 <p>For more detailed instructions, see <a href="../lf-features/#real-time-watch-updates-using-contact" target="_blank">Real-Time Watch Updates using Contact</a></p>
 <hr/>
-<h3 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Link to this section for reference">¶</a></h3>
-<p>Allows you to choose what information to download from <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> and to modify your graph</p>
+<h3 id="advanced-settings">Advanced Settings<a class="headerlink" href="#advanced-settings" title="Link to this section for reference">¶</a></h3>
+<p>A number of different options can be adjusted in this screen.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Advanced Setting</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Download Treatments</td>
+<td style="text-align: center;">enabled</td>
+<td style="text-align: left;">Treatments from <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr>, if available, are downloaded and displayed</td>
+</tr>
+<tr>
+<td style="text-align: left;">Download Prediction</td>
+<td style="text-align: center;">enabled</td>
+<td style="text-align: left;">Predictions (forecast), if available, are downloaded and displayed</td>
+</tr>
+<tr>
+<td style="text-align: left;">Graph Basal</td>
+<td style="text-align: center;">enabled</td>
+<td style="text-align: left;">Actual Basal Rates, if available, are downloaded and displayed</td>
+</tr>
+<tr>
+<td style="text-align: left;">Graph Bolus</td>
+<td style="text-align: center;">enabled</td>
+<td style="text-align: left;">Manual and Automatic Bolus values, if available, are downloaded and displayed</td>
+</tr>
+<tr>
+<td style="text-align: left;">Graph Carbs</td>
+<td style="text-align: center;">enabled</td>
+<td style="text-align: left;">Meal Entries, if available, are downloaded and displayed</td>
+</tr>
+<tr>
+<td style="text-align: left;">Graph Other Treatments</td>
+<td style="text-align: center;">enabled</td>
+<td style="text-align: left;">Treatment notes, if available, are downloaded and displayed</td>
+</tr>
+<tr>
+<td style="text-align: left;">BG Update Delay</td>
+<td style="text-align: center;">10 sec</td>
+<td style="text-align: left;">how many seconds <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> waits before it fetches it from your data source<br/>See <a href="#update-delay-explained">Update Delay Explained</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Debug Log Level</td>
+<td style="text-align: center;">enabled</td>
+<td style="text-align: left;">Allows you to enable or disable debug logging<br/>See <a href="#debug-log-level">Debug Log Level</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="update-delay-explained">Update Delay Explained<a class="headerlink" href="#update-delay-explained" title="Link to this section for reference">¶</a></h4>
+<p>The Update Delay is how many seconds <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> waits, after a new reading is expected (about every 5 minutes), before it fetches it from your data source. <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> is a follower, so a reading must first reach your source (<em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> / <em>Dexcom Share</em>) before it can be pulled — this short buffer gives the value time to land before <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> polls. The default is <strong>10 seconds</strong>, and the range is 1–30 seconds.</p>
 <ul>
-<li>Download Treatments</li>
-<li>Download Prediction</li>
-<li>Graph Basal</li>
-<li>Graph Bolus</li>
-<li>Graph Carbs</li>
-<li>Graph Other Treatments</li>
-<li>BG Update Delay</li>
-<li>Logging options (turn on debug option)</li>
+<li>Lowering it does not reliably make updates faster. If <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> polls before the new value has arrived, it just re-reads the previous value and retries a few seconds later, which mainly adds extra polls (battery and network) without helping.</li>
+<li>When <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> is your source with <a href="#websocket">WebSocket</a> enabled and the app in the foreground, new values are pushed to <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> as soon as they arrive, so this delay is not applied. It only affects background polling.</li>
 </ul>
+<h4 id="debug-log-level">Debug Log Level<a class="headerlink" href="#debug-log-level" title="Link to this section for reference">¶</a></h4>
+<p>The debug log option is enabled by default so that detailed information is available if you need to ask for help. The setting is found in the Advanced section and can be turned off if the logs seem too verbose.</p>
 <hr/>
 <h2 id="logging">Logging<a class="headerlink" href="#logging" title="Link to this section for reference">¶</a></h2>
-<p><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr> logs activity to a file that can be viewed within the app, and can be shared via email, a Notes file or Facebook messenger if needed.  The log can be filtered and searched. This will aid in troubleshooting and diagnostics. </p>
-<p>The debug log option is enabled by default so that detailed information is available if you need to ask for help. The setting is found in the Advanced section and can be turned off if the logs seem too verbose.</p>
 <h3 id="view-log">View Log<a class="headerlink" href="#view-log" title="Link to this section for reference">¶</a></h3>
+<p><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr> logs activity to a file that can be viewed within the app, and can be shared if needed. Example ways to share are email, a Notes file or Facebook messenger.  The log can be filtered and searched. This will aid in troubleshooting and diagnostics. </p>
 <p>When you select View Log, you see the entire log but can also filter for particular types of activities.</p>
+<p>If you want to modify whether Debug Log Level is enabled, go to <a href="#advanced-settings">Settings, Advanced</a>. But please read <a href="#debug-log-level">Debug Log Level</a> before disabling this option.</p>
 <h3 id="share-logs">Share Logs<a class="headerlink" href="#share-logs" title="Link to this section for reference">¶</a></h3>
 <p>When you choose Share Logs, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> first asks you to describe the problem — what time it happened, what you did, and what you expected to happen that didn't. A short description makes it much easier for someone to help.</p>
 <p>After you tap <strong>Share</strong>, the description is saved to a small notice file (with the current date, app version, and build identifier) and the <abbr title="operating system used by Apple Mobile devices (iPhone, iPod, iPad)">iOS</abbr> share sheet opens with that file together with today's and yesterday's log files. You can then send everything to the device or app of your choice. Leaving the description empty is allowed; the notice file simply records that no description was provided.</p>
