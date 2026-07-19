@@ -38,7 +38,7 @@ See [New Feature Highlights](faqs/lf-history.md#new-feature-highlights){: target
 
 ## Hardware Requirements
 
-The *LoopFollow* app will run on any iPhone or iPad that supports iOS 16.6 or newer operating system and on any Mac computer with an Apple Silicon chip, i.e., M1, M2, M3, M4, etc.
+The *LoopFollow* app will run on any iPhone or iPad that supports iOS 18 or newer operating system and on any Mac computer with an Apple Silicon chip, i.e., M1, M2, M3, M4, etc.
 
 - - -
 
