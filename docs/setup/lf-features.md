@@ -23,6 +23,21 @@ The graphic below shows the many types of alarms that are available with *LoopFo
 ![alarms to select](img/lf-alarms.svg){width="700"}
 {align="center"}
 
+### Alarm Sounds
+
+Each alarm plays a tone that you choose in the alarm's settings. Tap **Choose Tone** to open the tone picker, where you can preview and select from the built-in tones.
+
+#### Custom Sounds
+
+You can also use your own audio as an alarm tone. In the tone picker, the **Custom** section at the top offers two ways to add sounds:
+
+* **Import Sound…** — opens the Files browser so you can pick an audio file.
+* **Shared folder** — drop audio files into *LoopFollow*'s folder in the Files app; they are picked up automatically the next time you open the tone picker.
+
+Imported sounds must be a supported audio format (mp3, wav, m4a, aac, aif/aiff, caf), no larger than **2 MB**, and no longer than **30 seconds**.
+
+Custom sounds are stored on your device only and are **not** included in a settings export. Swipe a custom sound to delete it; any alarm still using a deleted sound falls back to a built-in tone.
+
 ### Alarm Types Reference
 
 The table below lists every alarm type available in *LoopFollow*, organized by group.
