@@ -4,6 +4,24 @@ Most features and the settings that control them are self-explanatory and docume
 
 - - -
 
+## Status Banner
+
+When *LoopFollow* has trouble reaching your data source or keeping itself awake in the background, it shows a dismissable banner across the top of the screen, above the tab bar. The banner is visible on every tab and pushes the content down rather than covering it. It explains *what* went wrong so you can fix it, instead of the app silently showing no data.
+
+### What it reports
+
+* **Nightscout problems** — after a failed download, *LoopFollow* checks your site and reports the cause, for example *"The token is invalid."*, *"A token is required."*, *"The site was not found."*, or *"A network error occurred."* If the site is reachable but the data still didn't load, a softer warning says so.
+* **Dexcom Share problems** — a failed *Dexcom Share* login is explained in plain language (account not found, incorrect username or password, or too many failed attempts). If *Nightscout* is also configured, *LoopFollow* falls back to it and the banner notes that data keeps flowing using *Nightscout* as backup.
+* **Frequent heartbeat dropouts** — when a [Bluetooth heartbeat](#bluetooth-heartbeat) device starts arriving late repeatedly within the last hour — a typical sign of a dying transmitter battery — the banner suggests checking the transmitter/RileyLink/pod battery or Bluetooth range. A single late beat never triggers it.
+
+### Clearing and dismissing
+
+* A banner clears **automatically** when its source recovers (the next successful download, or a clean heartbeat window) or when you remove that source (URL/credentials cleared, device disconnected).
+* Tapping **✕** hides the banner. The same problem stays hidden for about 30 minutes and then reappears if it is still occurring; a *different* problem appears right away.
+* When more than one source has a problem, the most serious message is shown first; dismissing it reveals the next one.
+
+- - -
+
 ## Alarms
 
 When you select the Alarms Feature, the initial screen will be blank. By tapping on the plus sign upper right, you can add as many alarms as desired. There is quick access to the overall [Alarm Settings](lf-setup.md#alarms) by tapping the gear icon on this screen.
