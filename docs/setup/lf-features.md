@@ -38,6 +38,18 @@ Imported sounds must be a supported audio format (mp3, wav, m4a, aac, aif/aiff, 
 
 Custom sounds are stored on your device only and are **not** included in a settings export. Swipe a custom sound to delete it; any alarm still using a deleted sound falls back to a built-in tone.
 
+### Skip Options
+
+Some alarms can be told to stay quiet when the situation is already correcting itself. These toggles are **off by default**, so existing alarms behave exactly as before.
+
+| Alarm | Option | Behavior |
+|:--|:--|:--|
+| Low BG | **Skip if BG is rising** | Stays silent while glucose is rising; only sounds when the latest reading is flat or still falling. |
+| High BG | **Skip if BG is falling** | Stays silent while glucose is falling; only sounds when the latest reading is flat or still rising. |
+| Low Battery (phone) | **Skip while charging** | Stays silent while the phone is charging. Requires the uploader to report charging status; if it doesn't, the alert still sounds. |
+
+For the two BG alarms, the direction is judged from the last two readings.
+
 ### Alarm Types Reference
 
 The table below lists every alarm type available in *LoopFollow*, organized by group.
