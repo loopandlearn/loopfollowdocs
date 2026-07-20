@@ -6,7 +6,7 @@ Most features and the settings that control them are self-explanatory and docume
 
 ## Status Banner
 
-When *LoopFollow* has trouble reaching your data source or keeping itself awake in the background, it shows a dismissable banner across the top of the screen, above the tab bar. The banner is visible on every tab and pushes the content down rather than covering it. It explains *what* went wrong so you can fix it, instead of the app silently showing no data.
+When *LoopFollow* has trouble reaching your data source or keeping itself awake in the background, it shows a dismissable banner across the top of the screen. The banner is visible on every tab and pushes the content down rather than covering it. It explains *what* went wrong so you can fix it, instead of the app silently showing no data.
 
 ### What it reports
 
