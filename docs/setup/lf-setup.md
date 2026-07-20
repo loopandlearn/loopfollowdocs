@@ -353,6 +353,7 @@ When setting up LoopFollow for another caregiver that will use some or all of th
 * Nightscout Site and token
 * Dexcom Share
 * Remote Configuration
+* APNS credentials (APNS Key ID and Key)
 * Alarms 
 
 
@@ -371,12 +372,15 @@ To export settings, select one of the options for
 *  Export Nightscout Settings
 *  Export Dexcom Share Settings
 *  Export Remote Settings
+*  Export APNS Settings
 *  Export Alarm Settings
 
 ![Export settings](img/import-settings.png){width="300"}
 {align="center"}
 
-Export Nightscout Settings, Export Dexcom Share Settings and Export Remote Settings will show a QR code directly that you can scan with the receiving phone.
+Export Nightscout Settings, Export Dexcom Share Settings, Export Remote Settings and Export APNS Settings will show a QR code directly that you can scan with the receiving phone.
+
+> Export APNS Settings requires a valid APNS Key ID and APNS Key to be configured first. It transfers only the APNS credentials, so a caregiver setting up a second device can reuse the same key without re-entering it. Importing APNS settings overwrites the existing APNS Key ID and APNS Key on the receiving phone.
 
 Export Alarm Settings will let you select up to 5 alarms at a time to export. If you re-enter the export screen after a successful export, it will mark the exported alarms so that you can export more alarms if needed
 
