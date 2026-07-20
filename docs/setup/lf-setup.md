@@ -1,19 +1,53 @@
 ## Initial Configuration
 
-After you build *LoopFollow* the first time, you are asked a few questions (your initial choices can always be modified later):
+The first time you open *LoopFollow*, a short **onboarding guide** walks you through the essentials. It takes about five minutes, and anything you choose can be changed later in Settings. If you are already familiar with *LoopFollow* — for example when setting up a second phone — tap **Skip** at the top of any step to jump straight to the app.
 
-* **Calendar Access**: if you want to allow *LoopFollow* to provide real-time updates to carplay using the Calendar, choose **Allow Full Access**
-* **Bluetooth Access**: if you want to use an expired Dexcom sensor or a spare RileyLink device to keep *LoopFollow* running in the background while your phone is locked, choose **Allow**
-* **Notifications**: if you want *LoopFollow* to notify you for any of your alarms or if *LoopFollow* stops working, choose **Allow**
+!!! note "Permissions are no longer requested at launch"
+    *LoopFollow* does not ask for Notifications, Calendar, or Bluetooth permission when it first starts. Each is requested only when you first use the feature that needs it — see [Deferred permissions](#deferred-permissions) below — so a fresh install opens with the guide instead of a stack of prompts.
 
-You will then be presented with a home screen as shown below.
+### The Onboarding Guide
 
-![initial screen for LoopFollow](img/initial-screen-no-credentials.png){width="300"}
+![Welcome step](img/onboarding-welcome.png){width="280"}
+![Overview step](img/onboarding-overview.png){width="280"}
 {align="center"}
+
+The guide steps through:
+
+1. **Welcome** — a short introduction with a **Get Started** button.
+2. **Overview** — *"Here's what we'll do"*: connect your data, units & metrics, recommended alarms, and finish up.
+3. **Choose a data source** — *LoopFollow* needs a glucose source. Pick one (you can change or add more later):
+    * **Nightscout**
+    * **Dexcom Share**
+    * **Copy from another phone** — scan a QR code exported from a phone that is already set up
+4. **Connect** — enter credentials for the source you picked:
+    * *Nightscout*: enter or paste your **Site URL**. For the access token, choose **I have a token** (paste a token, or a URL that already includes one) or **Create one for me**, which uses your Nightscout **API secret** once to create a read-only token. The API secret only authorizes that request and is never stored.
+    * *Dexcom Share*: enter your **Username** and **Password**, and choose **US** or **Outside US**.
+5. **Units & metrics** — choose your glucose unit and how statistics are measured and displayed. See [Units and Metrics](#units-and-metrics).
+6. **Alarm basics** — set when your day and night begin, and how alarm sound behaves (for example, overriding the system volume so alarms are heard when the phone is silenced or in a Focus mode).
+7. **Recommended alarms** — a few useful alarms are offered with sensible defaults and a single control each: **Low**, **High**, **Missed Reading**, **Not Looping**, and **Phone Battery**. The device/system alarms (Not Looping, Phone Battery) rely on loop/uploader data and are only offered when following Nightscout.
+8. **Tabs** — arrange which features sit in the tab bar. You can always reach everything through the [Menu](#menu-screen).
+9. **Notifications** — *LoopFollow* explains why it needs notifications for alarms, then asks iOS for permission. Choose **Enable Notifications** or **Not now**.
+10. **Privacy** — optionally share anonymous diagnostics to help improve *LoopFollow*. Choose **Yes, send anonymous stats** or **No thanks**; you can change this any time in Settings → General → Diagnostics. See [Telemetry](../privacy/lf-telemetry.md){: target="_blank" } for exactly what is and isn't shared.
+11. **You're all set** — a summary with a **Finish** button, plus a few features worth exploring next.
+
+![Choose a data source step](img/onboarding-data-source.png){width="280"}
+![Nightscout connect step](img/onboarding-nightscout.png){width="280"}
+{align="center"}
+
+### Deferred permissions
+
+*LoopFollow* asks for each system permission only when it is first needed:
+
+* **Notifications** — requested when you set up alarms in the guide, or the first time you add an alarm.
+* **Calendar** — requested from the [Calendar](#calendar) settings screen when you enable calendar updates for CarPlay.
+* **Bluetooth** — requested only when you choose a Bluetooth [Background Refresh](lf-features.md#background-refresh){: target="_blank" } mode (an expired Dexcom sensor or a RileyLink device).
 
 ### Setup Your Data Source
 
-Tap on the "Setup Nightscout" button or "Setup Dexcom Share" button to enter your credentials for your preferred service.
+If you skip the guide, or finish it without adding a source, you land on the home screen below. Tap the **Setup Nightscout** button or **Setup Dexcom Share** button to enter your credentials for your preferred service.
+
+![initial screen for LoopFollow](img/initial-screen-no-credentials.png){width="300"}
+{align="center"}
 
 For more information about how to configure your data source, refer to these sections:
 
