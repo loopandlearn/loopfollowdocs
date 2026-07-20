@@ -75,6 +75,7 @@ The table below lists every alarm type available in *LoopFollow*, organized by g
 | Sensor Change Alert | Sensor change due |
 | Not Looping Alert | Loop hasn't completed within a configurable number of minutes |
 | Looping app expiration | Looping-app build is expiring soon |
+| Nightscout Database Size | *Nightscout* database has filled to or above a chosen percentage of its configured size limit (defaults to 75%, daytime only) |
 
 #### Override / Target
 

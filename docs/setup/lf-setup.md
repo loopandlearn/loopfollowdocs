@@ -265,6 +265,10 @@ These items can be chosen for display on the Home screen. A Nightscout Site is r
 | Updated | Time of last `loop` | `Trio` |
 | TDD | Total Daily Dose in the last 24 hours | `Trio` |
 | IAGE | Insulin Age | Both |
+| DB Size | *Nightscout* database size: used MiB and the percentage of the site's configured limit. Hidden by default | Both |
+
+!!! note "DB Size"
+    The **DB Size** row and the [*Nightscout* Database Size alarm](lf-features.md#alarms){: target="_blank" } both read from *Nightscout*'s `dbsize` plugin, so your site must have that plugin enabled. The percentage is measured against the site's `DBSIZE_MAX` setting, which is **496 MiB** unless the site owner changed it. Because that setting may not match your hosting plan's real limit, the row leads with the absolute used MiB figure, which is always meaningful.
 
 ### Units and Metrics
 
