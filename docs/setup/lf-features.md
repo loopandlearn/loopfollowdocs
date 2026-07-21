@@ -8,6 +8,8 @@ Most features and the settings that control them are self-explanatory and docume
 
 When you select the Alarms Feature, the initial screen will be blank. By tapping on the plus sign upper right, you can add as many alarms as desired. There is quick access to the overall [Alarm Settings](lf-setup.md#alarms) by tapping the gear icon on this screen.
 
+Both the alarms list and the **Add Alarm** sheet have a search field. On the alarms list, type to filter your configured alarms by name or alarm type. In the **Add Alarm** sheet, type to filter the available alarm types by name, description, or group — non-matching groups are hidden. When nothing matches, a **No Results** message is shown.
+
 The graphic below shows a few typical alarms that might be chosen.
 
 ![example alarm screen](img/lf-alarms-screen.png){width="350"}

@@ -66,6 +66,8 @@ The following graphic shows the menu screen. The menu can always be reached usin
 * Settings, Logging and Build Information are covered below
 * [Support & Community](../index.md#community-support-and-build-help){: target="_blank" } are discussed on the *LoopFollowDocs* home page
 
+The Menu has a search field. Type to filter the menu's own rows (Settings, the tab features, View Log / Share Logs, and the support links) as well as the rows inside the Settings screen (General, Graph, Units and Metrics, Alarms, …). Selecting a Settings result opens that screen directly. An empty search shows the normal menu; a query with no matches shows a **No Results** state.
+
 
 ![Menu screen for *LoopFollow*](img/lf-menu.svg){width=400}
 {align="center"}
