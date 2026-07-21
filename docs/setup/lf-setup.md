@@ -244,6 +244,7 @@ These items can be chosen for display on the Home screen. A Nightscout Site is r
     
     * The order in the table below is the order in the LoopFollow code
     * You can drag the rows up and down to suit your preferred order
+    * Tap a row to open its detail, where you set its visibility and, for supported rows, [color thresholds](#color-thresholds)
 
 | Name | Description | `Loop` / `Trio` / Both |
 |:--|:--|:-:|
@@ -271,6 +272,30 @@ These items can be chosen for display on the Home screen. A Nightscout Site is r
 
 !!! note "DB Size"
     The **DB Size** row and the [*Nightscout* Database Size alarm](lf-features.md#alarms){: target="_blank" } both read from *Nightscout*'s `dbsize` plugin, so your site must have that plugin enabled. The percentage is measured against the site's `DBSIZE_MAX` setting, which is **496 MB** unless the site owner changed it. Because that setting may not match your hosting plan's real limit, the row leads with the absolute used MB figure, which is always meaningful.
+
+#### Color Thresholds
+
+Rows that show a single number can optionally turn **yellow** or **red** when their value crosses a threshold you set. This is a purely visual cue — it never triggers an alarm. Values that are in range stay green.
+
+To set them up, open a row's detail from the Information Display screen, turn on **Coloring**, and set the **Yellow at** and **Red at** thresholds. Each supported row starts with sensible defaults you can adjust.
+
+The "concerning" direction is fixed per row: battery and reservoir rows color when the value is **low**, while insulin/carb load and the age rows color when the value is **high**. *LoopFollow* keeps the Red threshold on the correct side of Yellow for that direction.
+
+Rows that support color thresholds:
+
+| Row | Colors when | Default Yellow / Red |
+|:--|:-:|:--|
+| IOB | high | 3 / 5 U |
+| COB | high | 30 / 60 g |
+| Battery (phone) | low | 30 / 15 % |
+| Pump Battery | low | 30 / 15 % |
+| Pump (reservoir) | low | 20 / 10 U |
+| TDD | high | 60 / 80 U |
+| Rec. Bolus | high | 1 / 2 U |
+| Carbs today | high | 150 / 250 g |
+| SAGE (sensor age) | high | 9 / 9.5 days |
+| CAGE (cannula age) | high | 2.5 / 3 days |
+| IAGE (insulin age) | high | 2.5 / 3 days |
 
 ### Units and Metrics
 
