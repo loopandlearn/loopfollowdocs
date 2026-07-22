@@ -236,7 +236,7 @@ These settings are accessed through the General row in the Settings screen.
 | Persistent Notification | Typically disabled<br> When enabled, glucose is reported with every update |
 | Appearance | Choose Light, Dark or System for appearance |
 | Display Stats | When enabled, statistics for the last 24 hours are displayed on Home screen |
-| Display Small Graph | When enabled, a full history graph is displayed under the main plot. The history is determined by the Number of Days Back chosen in the Graph screen |
+| Display Small Graph | When enabled, a full history graph is displayed under the main plot. The history is determined by the Number of Days Back chosen in the Graph screen. Tap the small graph to move the main graph to that point in time; drag your finger across it to scrub the main graph in real time |
 | Color BG Text | When enabled, use colors to highlight low, in-range and high values |
 | Keep Screen Active | When enabled, override the auto-lock setting<br>This works whether the phone is plugged in or not, so be sure to lock screen manually|
 | Show Display Name | When enabled, the app name is shown on the Home screen<br>Very useful if more than one person is being followed|
@@ -292,7 +292,7 @@ These items can be chosen for display on the Home screen. A Nightscout Site is r
 | Pump Battery | Battery level on pumps that report levels | Both |
 | SAGE | Sensor Age | Both |
 | CAGE | Cannula Age | Both |
-| Rec. Bolus | Recommended bolus<br>from last `loop` | Both |
+| Rec. Bolus | Recommended bolus<br>from last `loop`, shown using the pump's bolus increment | Both |
 | Min/Max | Minimum and maximum values for glucose from current OS-AID forecast | Both |
 | Carbs today | Total grams of Carbs since Midnight | Both |
 | Autosens | `Trio`: autosens value | `Trio` |

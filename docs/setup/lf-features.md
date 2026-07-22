@@ -70,6 +70,13 @@ Some alarms can be told to stay quiet when the situation is already correcting i
 
 For the two BG alarms, the direction is judged from the last two readings.
 
+### Predictive Low Alert
+
+The Low BG Alert can warn you *before* glucose actually goes low, based on the forecast from the looping app. In the alarm's settings, set **Predictive** to the number of minutes to look ahead in the forecast (up to 60); if any forecast value in that window is at or below the alarm's threshold, you are warned early. Set it to 0 to alert only on actual readings.
+
+* For *Loop*, the forecast that *Loop* uploads is used.
+* For *Trio*, the lowest of *Trio*'s four forecast lines (ZT, IOB, COB, UAM) at each point in time is used.
+
 ### Alarm Types Reference
 
 The table below lists every alarm type available in *LoopFollow*, organized by group.
@@ -78,7 +85,7 @@ The table below lists every alarm type available in *LoopFollow*, organized by g
 
 | Alarm | Description |
 |:--|:--|
-| Low BG Alert | Alerts when BG goes below a limit |
+| Low BG Alert | Alerts when BG goes below a limit, now or in the [forecast](#predictive-low-alert) |
 | High BG Alert | Alerts when BG rises above a limit |
 | Fast Drop Alert | Rapid downward BG trend |
 | Fast Rise Alert | Rapid upward BG trend |
