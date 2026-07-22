@@ -220,7 +220,7 @@ There are a few more sections on the Settings screen. These are summarized in th
 | Alarms | Control overall alarm behavior; individual alarms are configured in the Alarms feature | [Alarms](#alarms) |
 | Calendar | Configure calendar updates for CarPlay | [Calendar](#calendar) |
 | Contact | Configure real-time glucose updates on Apple Watch | [Contact](#contact) |
-| Advanced | Control which data is downloaded from Nightscout and adjust graph options | [Advanced](#advanced) |
+| Advanced | Control which data is downloaded from Nightscout and adjust graph options | [Advanced](#advanced-settings) |
 
 - - -
 
