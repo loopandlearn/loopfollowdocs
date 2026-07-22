@@ -2,6 +2,28 @@
 
 ## New Feature Highlights
 
+### Version 7.0.0
+
+!!! tip ""
+    New with *LoopFollow* v7.0.0:
+
+    * Requires iOS 18 or newer
+    * A [first-run onboarding guide](../setup/lf-setup.md#the-onboarding-guide){: target="_blank" } walks new users through setup; system permissions are requested only when first needed
+    * A [status banner](../setup/lf-features.md#status-banner){: target="_blank" } explains Nightscout, Dexcom Share, and heartbeat problems instead of silently showing no data
+    * [Custom alarm sounds](../setup/lf-features.md#custom-sounds){: target="_blank" } — use your own audio files as alarm tones
+    * [Skip options](../setup/lf-features.md#skip-options){: target="_blank" } keep Low/High BG alarms silent while glucose is already correcting, and the phone battery alarm silent while charging
+    * The [predictive Low BG alert](../setup/lf-features.md#predictive-low-alert){: target="_blank" } now works for *Trio* (watching all four forecast lines) and is fixed for *Loop*
+    * New [*Nightscout* Database Size](../setup/lf-setup.md#information-display){: target="_blank" } information row and alarm
+    * [Color thresholds](../setup/lf-setup.md#color-thresholds){: target="_blank" } for Information Display rows
+    * Search added to the alarms list, the Add Alarm sheet, and the [Menu](../setup/lf-setup.md#menu-screen){: target="_blank" }
+    * [APNS credentials can be exported/imported](../setup/lf-setup.md#importexport){: target="_blank" } via QR code
+    * Graph updates:
+        * All graphs rebuilt on native Swift Charts
+        * Dragging on the small graph moves the main chart in real time
+    * Rec. Bolus is shown using the pump's bolus increment
+
+### Version 6.2
+
 !!! tip ""
     New with *LoopFollow* v6.2:
 
@@ -21,6 +43,8 @@
         * Trio forecast lines match Trio colors
         * Trio Override / Temp Target display colors match Trio colors
 
+### Versions 6.0 and 6.1
+
 !!! tip ""
     New with *LoopFollow* v6.0 and v6.1:
     
@@ -30,6 +54,8 @@
     * Fixes for alarms, the graphs, and the remote-command UI
     * Settings rows updated for clarity
     * For Trio users: choice of cone of uncertainty or forecast lines
+
+### Version 5.0
 
 !!! tip ""
     New with *LoopFollow* v5.0:
@@ -46,6 +72,8 @@ The feature history is summarized below in reverse chronological order.
 
 | *LoopFollow* Version | Feature Added |
 |:--|:--|
+| 7.0 | Requires iOS 18 or newer; first-run onboarding guide; graphs rebuilt on native Swift Charts |
+| 6.2 | WebSocket for near real-time *Nightscout* updates; Quick Pick remote buttons; Run Diagnostics for remote setup |
 | 6.1 | Live Activity requires APN credentials<br>see [APN Settings](../setup/lf-setup.md#apn){: target="_blank" } |
 | 6.0 | Live Activity added - Browser Builders must use LoopFollow App Group to build<br>see [Browser Build: Add LoopFollow App Group](../build/lf-browser-build.md#create-app-group){: target="_blank" } |
 | 4.6 | Real-time APNS notifications returned from the *Loop* phone (requires *Loop* v3.11.1 or newer) |
