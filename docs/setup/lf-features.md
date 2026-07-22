@@ -194,16 +194,25 @@ These devices can provide a constant Bluetooth connection for your *LoopFollow* 
 * Dexcom Device (the battery can last for months after it is no longer in service with a sensor)
     * Dexcom G5/G6/ONE/Anubis transmitter
     * Dexcom G7/ONE+ sensor
+* Omnipod DASH pod within Bluetooth range (provides a heartbeat about every 3 minutes)
 
 If you use *LoopFollow* on your Looping phone for the features offered, you can connect to your own Dexcom device. You don’t need to use an expired device in addition.
 
 #### How do I configure Bluetooth Heartbeat?
 
-These graphics walk you through how to select the Background Refresh Type.  The example shows the steps if you choose to use a Dexcom Device (G5/G6/ONE/G7/ONE+). A similar process is used for a radiolink device.
+Open Settings: Background Refresh and tap **Background Refresh Type** to pick a mode. The example below shows the steps if you choose to use a Dexcom Device (G6/ONE/G7/ONE+). A similar process is used for a radiolink device or an Omnipod DASH pod.
+
+![Background Refresh Type picker](img/lf-background-refresh-type.png){width="350"}
+{align="center"}
+
+After selecting a Bluetooth type, *LoopFollow* scans for nearby devices and lists what it finds — tap a device to connect it.
+
+![Scanning for a Dexcom heartbeat device](img/lf-background-refresh-scanning.png){width="350"}
+{align="center"}
+
+Once connected, the **Selected Device** card shows the device name, its connection status, the signal strength (RSSI), and the expected BG delay, along with a Disconnect button.
 
 If the person using *LoopFollow* is also wearing a Dexcom or radiolink, they should choose their own device. The RSSI is a measure of the strength of the signal. It is normal for the Dexcom device to disconnect. It will reconnect regularly.
-
-🚧 import graphics from lnl 🚧
 
 - - -
 
@@ -254,5 +263,8 @@ Bullet List with Instructions:
 
 You’re ready to monitor your glucose data directly on your Apple Watch!
 
-🚧 import graphics from lnl 🚧
+The Contact settings screen also offers color options for the complication (not all watch faces honor them) and lets you include the trend, delta, or IOB in the same or a separate contact:
+
+![Contact settings screen](img/lf-contact-settings.png){width="350"}
+{align="center"}
 
