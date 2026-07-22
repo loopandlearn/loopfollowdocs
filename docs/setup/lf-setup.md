@@ -24,7 +24,7 @@ The guide steps through:
     * *Dexcom Share*: enter your **Username** and **Password**, and choose **US** or **Outside US**.
 5. **Units & metrics** — choose your glucose unit and how statistics are measured and displayed. See [Units and Metrics](#units-and-metrics).
 6. **Alarm basics** — set when your day and night begin, and how alarm sound behaves (for example, overriding the system volume so alarms are heard when the phone is silenced or in a Focus mode).
-7. **Recommended alarms** — a few useful alarms are offered with sensible defaults and a single control each: **Low**, **High**, **Missed Reading**, **Not Looping**, and **Phone Battery**. The device/system alarms (Not Looping, Phone Battery) rely on loop/uploader data and are only offered when following Nightscout.
+7. **Recommended alarms** — a set of useful alarms is offered with sensible defaults and a single control each: **Low glucose**, **Urgent low**, **High glucose**, **Fast drop**, and **Missed readings**. When following *Nightscout*, alarms that rely on loop/uploader data are also offered: **Not looping**, **Looping phone battery**, **IOB**, **COB**, **Sensor change**, **Pump change**, and **Pump insulin**. Alarm types you already have are not offered again.
 8. **Tabs** — arrange which features sit in the tab bar. You can always reach everything through the [Menu](#menu-screen).
 9. **Notifications** — *LoopFollow* explains why it needs notifications for alarms, then asks iOS for permission. Choose **Enable Notifications** or **Not now**.
 10. **Privacy** — optionally share anonymous diagnostics to help improve *LoopFollow*. Choose **Yes, send anonymous stats** or **No thanks**; you can change this any time in Settings → General → Diagnostics. See [Telemetry](../privacy/lf-telemetry.md){: target="_blank" } for exactly what is and isn't shared.
@@ -303,10 +303,10 @@ These items can be chosen for display on the Home screen. A Nightscout Site is r
 | Updated | Time of last `loop` | `Trio` |
 | TDD | Total Daily Dose in the last 24 hours | `Trio` |
 | IAGE | Insulin Age | Both |
-| DB Size | *Nightscout* database size: Megabytes (MB) used and the percentage of the site's configured limit. Hidden by default | Both |
+| DB Size | *Nightscout* database size: mebibytes (MiB) used and the percentage of the site's configured limit, for example `123 MiB (25%)`. Hidden by default | Both |
 
 !!! note "DB Size"
-    The **DB Size** row and the [*Nightscout* Database Size alarm](lf-features.md#alarms){: target="_blank" } both read from *Nightscout*'s `dbsize` plugin, so your site must have that plugin enabled. The percentage is measured against the site's `DBSIZE_MAX` setting, which is **496 MB** unless the site owner changed it. Because that setting may not match your hosting plan's real limit, the row leads with the absolute used MB figure, which is always meaningful.
+    The **DB Size** row and the [*Nightscout* Database Size alarm](lf-features.md#alarms){: target="_blank" } both read from *Nightscout*'s `dbsize` plugin, so your site must have that plugin enabled. The percentage is measured against the site's `DBSIZE_MAX` setting, which is **496 MiB** unless the site owner changed it. Because that setting may not match your hosting plan's real limit, the row leads with the absolute used MiB figure, which is always meaningful.
 
 #### Color Thresholds
 
