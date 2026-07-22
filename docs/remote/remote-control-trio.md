@@ -70,7 +70,17 @@ The sequence is *LoopFollow* to *Apple Push Notifications* to *Trio*, which uplo
 
 ### Remote Meal
 
-***More info coming soon!***
+The Meal screen sends a remote meal entry to *Trio*:
+
+* **Carbs** — up to the **Max Carbs** guardrail set in Remote Settings.
+* **Fat** and **Protein** — shown when **Meal with Fat/Protein** is enabled in [Meal Settings](#meal-settings), each with its own guardrail.
+* **Bolus Amount** — shown when **Meal with Bolus** is enabled, capped by the **Max Bolus** guardrail.
+* **Schedule for later** — enter the carbs at a chosen time instead of now.
+
+![remote meal entry](img/lf-trc-meal.png){width="300"}
+{align=center}
+
+Tapping **Send Meal** shows a confirmation that summarizes the whole entry. If a bolus is included, you must also authenticate with Face ID or your passcode before the command is sent.
 
 When entering meals and choosing to schedule the meal, any bolus included in the meal is enacted immediately. Only the carb entry is entered according to the schedule.
 
@@ -79,7 +89,15 @@ When entering meals and choosing to schedule the meal, any bolus included in the
 
 ### Remote Bolus
 
-***More info coming soon!***
+The Bolus screen sends a remote bolus to *Trio*:
+
+* **Recommended Bolus** — when *Trio*'s latest recommendation is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated.
+* **Bolus Amount** — capped by the **Max Bolus** guardrail. The amount is rounded down to the pump's bolus increment, which is detected automatically from *Nightscout*; a manual **Bolus Increment** setting appears in Remote Settings only when it cannot be detected.
+
+After the confirmation, you must authenticate with Face ID or your passcode before the bolus command is sent.
+
+![remote bolus screen](img/lf-trc-bolus.png){width="300"}
+{align=center}
 
 ### Quick-Pick Boluses and Meals
 
@@ -130,11 +148,26 @@ or **Quick-Pick Meals** in the app for a short in-screen explanation.
 
 ### Temp Target
 
-***More info coming soon!***
+The Temp Target screen enacts or cancels a temporary glucose target on *Trio*:
+
+* **Target** — between 80 and 200 mg/dL, shown in your glucose unit.
+* **Duration** — at least 5 minutes.
+* **Enact** — shows a confirmation with the target and duration before sending.
+* **Save as Preset** — stores the current values under a name of your choice. Presets are listed below the entry card; tap one to enact it, swipe left to delete it.
+
+![remote temp target](img/lf-trc-temp-target.png){width="300"}
+{align=center}
+
+When a temp target is already running, the screen shows it with a **Cancel Temp Target** button.
 
 ### Overrides
 
-***More info coming soon!***
+The override presets listed on this screen are defined in *Trio* — *LoopFollow* reads them (name, duration, percentage, and target) from the profile that *Trio* uploads to *Nightscout*. New presets cannot be created from *LoopFollow*.
+
+Tap a preset to activate it; a confirmation is shown before the command is sent. While an override is active, it is listed with a button to cancel it.
+
+![remote overrides](img/lf-trc-override.png){width="300"}
+{align=center}
 
 - - -
 
