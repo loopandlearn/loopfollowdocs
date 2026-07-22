@@ -123,7 +123,28 @@ The table below lists every alarm type available in *LoopFollow*, organized by g
 
 ## Snoozer
 
-🚧 Documentation Under Construction 🚧
+The Snoozer is a dedicated tab designed for the night stand and at-a-glance monitoring: a black screen with a large glucose value, the trend arrow, the delta, how long ago the reading arrived, and a clock. When the reading is stale, the glucose value is crossed out. Like the other features, the Snoozer can be placed in the toolbar using [Settings: Tabs](lf-setup.md#tabs).
+
+![Snoozer screen](img/lf-snoozer.png){width="350"}
+{align="center"}
+
+Two options in [Settings: General](lf-setup.md#general) tailor the screen: **Show Display Name** adds the app name (handy when following more than one person), and **Snoozer emoji** adds a face that reflects the current glucose.
+
+### When an Alarm Sounds
+
+When an alarm fires, a card appears at the bottom of the Snoozer showing the alarm name, a **Snooze for** stepper, and a **Snooze** button. The stepper's unit and limits depend on the alarm type — minutes for most alarms, hours or days for slow-moving ones like the expiration alerts. Setting the stepper to 0 turns the button into **Acknowledge**, which silences the alarm without snoozing it.
+
+![Snoozer showing an active alarm](img/lf-snoozer-alarm.png){width="350"}
+{align="center"}
+
+### Snooze All Alarms
+
+Tap anywhere on the Snoozer screen to show the bar at the top. When nothing is snoozed, it offers a one-tap **Snooze all · 1h** button, and a sun or moon symbol indicates whether your daytime or nighttime alarm hours are active. The bar hides itself again after a few seconds.
+
+While a global snooze is active, the bar reads **All alerts snoozed** and shows the end date and time — tap either one to adjust it — along with **− 30m** and **+ 30m** buttons and **End now**. Adjusting the end time below the current time also ends the snooze.
+
+![Snoozer with all alerts snoozed](img/lf-snoozer-snoozed.png){width="350"}
+{align="center"}
 
 - - -
 
