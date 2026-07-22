@@ -39,7 +39,7 @@ The guide steps through:
 *LoopFollow* asks for each system permission only when it is first needed:
 
 * **Notifications** — requested when you set up alarms in the guide, or the first time you add an alarm.
-* **Camera** — requested when you need to scan a QR code, for example to import a configuration from a different phone or configuring Loop remote control
+* **Camera** — requested when you need to scan a QR code, for example to import a configuration from a different phone or set up Loop remote control
 * **Calendar** — requested from the [Calendar](#calendar) settings screen when you enable calendar updates for CarPlay.
 * **Bluetooth** — requested only when you choose a Bluetooth [Background Refresh](lf-features.md#background-refresh){: target="_blank" } mode (an expired Dexcom sensor or a RileyLink device).
 
