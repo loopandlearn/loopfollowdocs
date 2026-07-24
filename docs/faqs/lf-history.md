@@ -17,6 +17,7 @@
     * [Color thresholds](../setup/lf-setup.md#color-thresholds){: target="_blank" } for Information Display rows
     * Search added to the alarms list, the Add Alarm sheet, and the [Menu](../setup/lf-setup.md#menu-screen){: target="_blank" }
     * [APNS credentials can be exported/imported](../setup/lf-setup.md#importexport){: target="_blank" } via QR code
+    * The [Live Activity](../setup/lf-setup.md#live-activity){: target="_blank" } and the [remote control](../remote/remote-control-trio.md#overrides){: target="_blank" } screens show the active override or temp target with its remaining time
     * Graph updates:
         * All graphs rebuilt on native Swift Charts
         * Dragging on the small graph moves the main chart in real time

@@ -44,8 +44,10 @@ Remember to give the system time to update.
 
 The sequence is *LoopFollow* to *Apple Push Notifications* to *Trio*, which uploads to *Nightscout* and then is displayed in the *LoopFollow* main screen.
 
-![loopfollow trio remote control choices](img/lf-trc.jpg){width="300"}
+![loopfollow trio remote control choices](img/lf-trc-active.png){width="300"}
 {align=center}
+
+While an override or temp target is active, its button is outlined with a green glow — in the screenshot above, both are active.
 
 ### Remote Sequence Steps
 
@@ -158,13 +160,16 @@ The Temp Target screen enacts or cancels a temporary glucose target on *Trio*:
 ![remote temp target](img/lf-trc-temp-target.png){width="300"}
 {align=center}
 
-When a temp target is already running, the screen shows it with a **Cancel Temp Target** button.
+When a temp target is already running, the screen shows it with its remaining time and a **Cancel Temp Target** button. The remaining time is a live countdown when 2 hours or less remain; otherwise it is shown as a duration, such as 5h 30m. A temp target set for a week or longer is treated as indefinite and shows no remaining time.
+
+![remote temp target with an active temp target](img/lf-trc-temp-target-active.png){width="300"}
+{align=center}
 
 ### Overrides
 
 The override presets listed on this screen are defined in *Trio* — *LoopFollow* reads them (name, duration, percentage, and target) from the profile that *Trio* uploads to *Nightscout*. New presets cannot be created from *LoopFollow*.
 
-Tap a preset to activate it; a confirmation is shown before the command is sent. While an override is active, it is listed with a button to cancel it.
+Tap a preset to activate it; a confirmation is shown before the command is sent. While an override is active, it is listed with its remaining time and a button to cancel it. The remaining time is a live countdown when 2 hours or less remain; otherwise it is shown as a duration, such as 5h 30m. An override set for a week or longer is treated as indefinite and shows no remaining time.
 
 ![remote overrides](img/lf-trc-override.png){width="300"}
 {align=center}
