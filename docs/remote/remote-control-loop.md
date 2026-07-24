@@ -150,7 +150,7 @@ Tap a preset to open the activation sheet:
 ![ override activation sheet](img/lf-lrc-override-modal.png){width="300"}
 {align=center}
 
-While an override is active, it is listed in an **Active Override** section with a button to cancel it.
+While an override is active, it is listed in an **Active Override** section with its remaining time and a button to cancel it. The remaining time is a live countdown when 2 hours or less remain; otherwise it is shown as a duration, such as 5h 30m. Overrides enabled indefinitely show no remaining time.
 
 - - -
 

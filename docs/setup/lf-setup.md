@@ -501,6 +501,8 @@ The Live Activity screen allows the following selections:
     * Each option can only appear in one slot at a time
     * The default slots are: IOB (top left), COB (bottom left), Projected BG (top right), Empty (bottom right)
 
+While an override or temp target is active, the Live Activity shows a row below the grid with its name or target value. When 2 hours or less remain, a live countdown is shown next to it; longer or indefinite overrides show just the name. The same row appears in the expanded Dynamic Island. Because of this row, the Override option is not offered for the 4 grid slots; it is still available for the small widget slot.
+
 The following options are available for each grid slot:
 
 | Option | Description |
@@ -525,7 +527,7 @@ The following options are available for each grid slot:
 | CAGE | Cannula Age |
 | IAGE | Insulin Age |
 | Carbs today | Total grams of carbs since midnight |
-| Override | Active override information |
+| Override | Active override information (small widget slot only) |
 | Profile | Named profile |
 
 ### Remote
