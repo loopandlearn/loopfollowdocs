@@ -34,6 +34,7 @@
 *[Loop]: With a capital L, Loop is one of several do-it-yourself artificial pancreas systems
 *[LoopFollow]: LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout
 *[Match-Secrets]: a private repository you must create in your github account, stores keys required to build with github Build Actions
+*[MiB]: mebibytes (MiB) is a unit of digital computer storage equal to 1,048,576 bytes (or 1,024 kibibytes)
 *[MTB]: Manual Temporary Basal: user initiated temporary basal, Omnipod Common feature
 *[MDT]: common abbreviation for Medtronic pumps
 *[modal]: message or alert appearing in front of app that must be acknowledged to return to app

@@ -81,6 +81,8 @@ When Google Translate is selected:
 
 **<span translate="no">Match-Secrets</span>**&nbsp; (Match-Secrets): a private repository you must create in your github account, stores keys required to build with github Build Actions
 
+**<span translate="no">MiB</span>**&nbsp; (MiB): mebibytes (MiB) is a unit of digital computer storage equal to 1,048,576 bytes (or 1,024 kibibytes)
+
 **<span translate="no">MTB</span>**&nbsp; (MTB): Manual Temporary Basal: user initiated temporary basal, Omnipod Common feature
 
 **<span translate="no">MDT</span>**&nbsp; (MDT): common abbreviation for Medtronic pumps
