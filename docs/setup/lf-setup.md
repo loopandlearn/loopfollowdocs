@@ -1,19 +1,54 @@
 ## Initial Configuration
 
-After you build *LoopFollow* the first time, you are asked a few questions (your initial choices can always be modified later):
+The first time you open *LoopFollow*, a short **onboarding guide** walks you through the essentials. It takes about five minutes, and anything you choose can be changed later in Settings. If you are already familiar with *LoopFollow* — for example when setting up a second phone — tap **Skip** at the top of any step to jump straight to the app.
 
-* **Calendar Access**: if you want to allow *LoopFollow* to provide real-time updates to carplay using the Calendar, choose **Allow Full Access**
-* **Bluetooth Access**: if you want to use an expired Dexcom sensor or a spare RileyLink device to keep *LoopFollow* running in the background while your phone is locked, choose **Allow**
-* **Notifications**: if you want *LoopFollow* to notify you for any of your alarms or if *LoopFollow* stops working, choose **Allow**
+!!! note "Permissions are no longer requested at launch"
+    *LoopFollow* does not ask for Notifications, Calendar, or Bluetooth permission when it first starts. Each is requested only when you first use the feature that needs it — see [Deferred permissions](#deferred-permissions) below — so a fresh install opens with the guide instead of a stack of prompts.
 
-You will then be presented with a home screen as shown below.
+### The Onboarding Guide
 
-![initial screen for LoopFollow](img/initial-screen-no-credentials.png){width="300"}
+![Welcome step](img/onboarding-welcome.png){width="280"}
+![Overview step](img/onboarding-overview.png){width="280"}
 {align="center"}
+
+The guide steps through:
+
+1. **Welcome** — a short introduction with a **Get Started** button.
+2. **Overview** — *"Here's what we'll do"*: connect your data, units & metrics, recommended alarms, and finish up.
+3. **Choose a data source** — *LoopFollow* needs a glucose source. Pick one (you can change or add more later):
+    * **Nightscout**
+    * **Dexcom Share**
+    * **Copy from another phone** — scan a QR code exported from a phone that is already set up
+4. **Connect** — enter credentials for the source you picked:
+    * *Nightscout*: enter or paste your **Site URL**. For the access token, choose **I have a token** (paste a token, or a URL that already includes one) or **Create one for me**, which uses your Nightscout **API secret** once to create a read-only token. The API secret only authorizes that request and is never stored.
+    * *Dexcom Share*: enter your **Username** and **Password**, and choose **US** or **Outside US**.
+5. **Units & metrics** — choose your glucose unit and how statistics are measured and displayed. See [Units and Metrics](#units-and-metrics).
+6. **Alarm basics** — set when your day and night begin, and how alarm sound behaves (for example, overriding the system volume so alarms are heard when the phone is silenced or in a Focus mode).
+7. **Recommended alarms** — a set of useful alarms is offered with sensible defaults and a single control each: **Low glucose**, **Urgent low**, **High glucose**, **Fast drop**, and **Missed readings**. When following *Nightscout*, alarms that rely on loop/uploader data are also offered: **Not looping**, **Looping phone battery**, **IOB**, **COB**, **Sensor change**, **Pump change**, and **Pump insulin**. Alarm types you already have are not offered again.
+8. **Tabs** — arrange which features sit in the tab bar. You can always reach everything through the [Menu](#menu-screen).
+9. **Notifications** — *LoopFollow* explains why it needs notifications for alarms, then asks iOS for permission. Choose **Enable Notifications** or **Not now**.
+10. **Privacy** — optionally share anonymous diagnostics to help improve *LoopFollow*. Choose **Yes, send anonymous stats** or **No thanks**; you can change this any time in Settings → General → Diagnostics. See [Telemetry](../privacy/lf-telemetry.md){: target="_blank" } for exactly what is and isn't shared.
+11. **You're all set** — a summary with a **Finish** button, plus a few features worth exploring next.
+
+![Choose a data source step](img/onboarding-data-source.png){width="280"}
+![Nightscout connect step](img/onboarding-nightscout.png){width="280"}
+{align="center"}
+
+### Deferred Permissions
+
+*LoopFollow* asks for each system permission only when it is first needed:
+
+* **Notifications** — requested when you set up alarms in the guide, or the first time you add an alarm.
+* **Camera** — requested when you need to scan a QR code, for example to import a configuration from a different phone or set up Loop remote control
+* **Calendar** — requested from the [Calendar](#calendar) settings screen when you enable calendar updates for CarPlay.
+* **Bluetooth** — requested only when you choose a Bluetooth [Background Refresh](lf-features.md#background-refresh){: target="_blank" } mode (an expired Dexcom sensor or a RileyLink device).
 
 ### Setup Your Data Source
 
-Tap on the "Setup Nightscout" button or "Setup Dexcom Share" button to enter your credentials for your preferred service.
+If you skip the guide, or finish it without adding a source, you land on the home screen below. Tap the **Setup Nightscout** button or **Setup Dexcom Share** button to enter your credentials for your preferred service.
+
+![initial screen for LoopFollow](img/initial-screen-no-credentials.png){width="300"}
+{align="center"}
 
 For more information about how to configure your data source, refer to these sections:
 
@@ -65,6 +100,8 @@ The following graphic shows the menu screen. The menu can always be reached usin
 * The features on this screen are described on the [*LoopFollowDocs* Features page](lf-features.md){: target="_blank" }
 * Settings, Logging and Build Information are covered below
 * [Support & Community](../index.md#community-support-and-build-help){: target="_blank" } are discussed on the *LoopFollowDocs* home page
+
+The Menu has a search field. Type to filter the menu's own rows (Settings, the tab features, View Log / Share Logs, and the support links) as well as the rows inside the Settings screen (General, Graph, Units and Metrics, Alarms, …). Selecting a Settings result opens that screen directly. An empty search shows the normal menu; a query with no matches shows a **No Results** state.
 
 
 ![Menu screen for *LoopFollow*](img/lf-menu.svg){width=400}
@@ -183,7 +220,7 @@ There are a few more sections on the Settings screen. These are summarized in th
 | Alarms | Control overall alarm behavior; individual alarms are configured in the Alarms feature | [Alarms](#alarms) |
 | Calendar | Configure calendar updates for CarPlay | [Calendar](#calendar) |
 | Contact | Configure real-time glucose updates on Apple Watch | [Contact](#contact) |
-| Advanced | Control which data is downloaded from Nightscout and adjust graph options | [Advanced](#advanced) |
+| Advanced | Control which data is downloaded from Nightscout and adjust graph options | [Advanced](#advanced-settings) |
 
 - - -
 
@@ -199,7 +236,7 @@ These settings are accessed through the General row in the Settings screen.
 | Persistent Notification | Typically disabled<br> When enabled, glucose is reported with every update |
 | Appearance | Choose Light, Dark or System for appearance |
 | Display Stats | When enabled, statistics for the last 24 hours are displayed on Home screen |
-| Display Small Graph | When enabled, a full history graph is displayed under the main plot. The history is determined by the Number of Days Back chosen in the Graph screen |
+| Display Small Graph | When enabled, a full history graph is displayed under the main plot. The history is determined by the Number of Days Back chosen in the Graph screen. Tap the small graph to move the main graph to that point in time; drag your finger across it to scrub the main graph in real time |
 | Color BG Text | When enabled, use colors to highlight low, in-range and high values |
 | Keep Screen Active | When enabled, override the auto-lock setting<br>This works whether the phone is plugged in or not, so be sure to lock screen manually|
 | Show Display Name | When enabled, the app name is shown on the Home screen<br>Very useful if more than one person is being followed|
@@ -242,6 +279,7 @@ These items can be chosen for display on the Home screen. A Nightscout Site is r
     
     * The order in the table below is the order in the LoopFollow code
     * You can drag the rows up and down to suit your preferred order
+    * Tap a row to open its detail, where you set its visibility and, for supported rows, [color thresholds](#color-thresholds)
 
 | Name | Description | `Loop` / `Trio` / Both |
 |:--|:--|:-:|
@@ -254,7 +292,7 @@ These items can be chosen for display on the Home screen. A Nightscout Site is r
 | Pump Battery | Battery level on pumps that report levels | Both |
 | SAGE | Sensor Age | Both |
 | CAGE | Cannula Age | Both |
-| Rec. Bolus | Recommended bolus<br>from last `loop` | Both |
+| Rec. Bolus | Recommended bolus<br>from last `loop`, shown using the pump's bolus increment | Both |
 | Min/Max | Minimum and maximum values for glucose from current OS-AID forecast | Both |
 | Carbs today | Total grams of Carbs since Midnight | Both |
 | Autosens | `Trio`: autosens value | `Trio` |
@@ -265,6 +303,34 @@ These items can be chosen for display on the Home screen. A Nightscout Site is r
 | Updated | Time of last `loop` | `Trio` |
 | TDD | Total Daily Dose in the last 24 hours | `Trio` |
 | IAGE | Insulin Age | Both |
+| DB Size | *Nightscout* database size: mebibytes (MiB) used and the percentage of the site's configured limit, for example `123 MiB (25%)`. Hidden by default | Both |
+
+!!! note "DB Size"
+    The **DB Size** row and the [*Nightscout* Database Size alarm](lf-features.md#alarms){: target="_blank" } both read from *Nightscout*'s `dbsize` plugin, so your site must have that plugin enabled. The percentage is measured against the site's `DBSIZE_MAX` setting, which is **496 MiB** unless the site owner changed it. Because that setting may not match your hosting plan's real limit, the row leads with the absolute used MiB figure, which is always meaningful.
+
+#### Color Thresholds
+
+Rows that show a single number can optionally turn **yellow** or **red** when their value crosses a threshold you set. This is a purely visual cue — it never triggers an alarm. Values that are in range stay green.
+
+To set them up, open a row's detail from the Information Display screen, turn on **Coloring**, and set the **Yellow at** and **Red at** thresholds. Each supported row starts with sensible defaults you can adjust.
+
+The "concerning" direction is fixed per row: battery and reservoir rows color when the value is **low**, while insulin/carb load and the age rows color when the value is **high**. *LoopFollow* keeps the Red threshold on the correct side of Yellow for that direction.
+
+Rows that support color thresholds:
+
+| Row | Colors when | Default Yellow / Red |
+|:--|:-:|:--|
+| IOB | high | 3 / 5 U |
+| COB | high | 30 / 60 g |
+| Battery (phone) | low | 30 / 15 % |
+| Pump Battery | low | 30 / 15 % |
+| Pump (reservoir) | low | 20 / 10 U |
+| TDD | high | 60 / 80 U |
+| Rec. Bolus | high | 1 / 2 U |
+| Carbs today | high | 150 / 250 g |
+| SAGE (sensor age) | high | 9 / 9.5 days |
+| CAGE (cannula age) | high | 2.5 / 3 days |
+| IAGE (insulin age) | high | 2.5 / 3 days |
 
 ### Units and Metrics
 
@@ -353,6 +419,7 @@ When setting up LoopFollow for another caregiver that will use some or all of th
 * Nightscout Site and token
 * Dexcom Share
 * Remote Configuration
+* APNS credentials (APNS Key ID and Key)
 * Alarms 
 
 
@@ -371,12 +438,15 @@ To export settings, select one of the options for
 *  Export Nightscout Settings
 *  Export Dexcom Share Settings
 *  Export Remote Settings
+*  Export APNS Settings
 *  Export Alarm Settings
 
 ![Export settings](img/import-settings.png){width="300"}
 {align="center"}
 
-Export Nightscout Settings, Export Dexcom Share Settings and Export Remote Settings will show a QR code directly that you can scan with the receiving phone.
+Export Nightscout Settings, Export Dexcom Share Settings, Export Remote Settings and Export APNS Settings will show a QR code directly that you can scan with the receiving phone.
+
+> Export APNS Settings requires a valid APNS Key ID and APNS Key to be configured first. It transfers only the APNS credentials, so a caregiver setting up a second device can reuse the same key without re-entering it. Importing APNS settings overwrites the existing APNS Key ID and APNS Key on the receiving phone.
 
 Export Alarm Settings will let you select up to 5 alarms at a time to export. If you re-enter the export screen after a successful export, it will mark the exported alarms so that you can export more alarms if needed
 
@@ -431,6 +501,8 @@ The Live Activity screen allows the following selections:
     * Each option can only appear in one slot at a time
     * The default slots are: IOB (top left), COB (bottom left), Projected BG (top right), Empty (bottom right)
 
+While an override or temp target is active, the Live Activity shows a row below the grid with its name or target value. When 2 hours or less remain, a live countdown is shown next to it; longer or indefinite overrides show just the name. The same row appears in the expanded Dynamic Island. Because of this row, the Override option is not offered for the 4 grid slots; it is still available for the small widget slot.
+
 The following options are available for each grid slot:
 
 | Option | Description |
@@ -455,7 +527,7 @@ The following options are available for each grid slot:
 | CAGE | Cannula Age |
 | IAGE | Insulin Age |
 | Carbs today | Total grams of carbs since midnight |
-| Override | Active override information |
+| Override | Active override information (small widget slot only) |
 | Profile | Named profile |
 
 ### Remote

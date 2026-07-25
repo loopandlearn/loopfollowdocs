@@ -60,19 +60,30 @@ Example messages are highlighted by red rectangles in the composite below for re
 
 ### Remote Meal
 
-***More info coming soon!***
+The Meal screen sends remote carbs to *Loop*:
+
+* **Carbs Amount** — up to the **Max Carbs** guardrail set in Remote Settings.
+* **Time** — defaults to now; the − / + buttons move it in 5-minute steps, or tap the time to pick it directly. Entries can be backdated up to 12 hours or set up to 1 hour into the future.
+* **Food Type** — the emoji shortcuts also set the absorption time: 🍭 30 minutes, 🌮 3 hours, 🍕 5 hours. The plate opens a custom picker; absorption time can be set between 0.5 and 8 hours.
+* **Security** — the current one-time password (OTP) is displayed with its remaining lifetime. Codes rotate every 30 seconds, and each code can authorize only **one** command — after sending, the Send button stays disabled until the next code is issued.
+
+Tapping **Send Carbs** shows a confirmation of the entry before anything is sent.
 
 ![ remote carb entries](img/lf-lrc-meal.png){width="300"}
 {align=center}
 
 ### Remote Bolus
 
-***More info coming soon!***
+The Insulin screen sends a remote bolus to *Loop*:
 
+* **Recommended Bolus** — when the last recommendation *Loop* uploaded is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated.
+* **Insulin Amount** — from 0.025 U up to the **Max Bolus** guardrail set in Remote Settings.
+* **Security** — the same one-time password rules as Remote Meal apply: the code rotates every 30 seconds and each code can be used only once.
 
-| Recent Rec Bolus | Last `Loop` > 12 minutes |
-|:-:|:-:|
-| ![ remote bolus current](img/lf-lrc-bolus.png){width="300"} | ![ remote bolus older than 12 minutes](img/lf-lrc-bolus-old.png){width="300"} |
+After the confirmation, you must authenticate with Face ID or your passcode before the bolus command is sent.
+
+![ remote bolus screen](img/lf-lrc-bolus.png){width="300"}
+{align=center}
 
 !!! tip "Make sure *Loop* information is up to date"
     The insulin amount is filled out with the last recommended bolus that *LoopFollow* downloaded from the *Nightscout* site, which in turn was uploaded from the *Loop* phone.
@@ -126,10 +137,20 @@ or **Quick-Pick Meals** in the app for a short in-screen explanation.
 
 ### Overrides
 
-***More info coming soon!***
+The override presets listed on this screen are defined in *Loop* — *LoopFollow* reads them (name, symbol, target range, overall insulin needs, and duration) from the profile that *Loop* uploads to *Nightscout*. New presets cannot be created from *LoopFollow*.
 
 ![ remote overrides](img/lf-lrc-override.png){width="300"}
 {align=center}
+
+Tap a preset to open the activation sheet:
+
+* Presets with a set duration are activated for that duration.
+* Presets defined as indefinite in *Loop* offer a choice: leave **Enable indefinitely** on, or turn it off and pick a duration with the slider (15 minutes up to 24 hours, in 15-minute steps).
+
+![ override activation sheet](img/lf-lrc-override-modal.png){width="300"}
+{align=center}
+
+While an override is active, it is listed in an **Active Override** section with its remaining time and a button to cancel it. The remaining time is a live countdown when 2 hours or less remain; otherwise it is shown as a duration, such as 5h 30m. Overrides enabled indefinitely show no remaining time.
 
 - - -
 
@@ -340,5 +361,33 @@ The graphic below shows a properly configured *LoopFollow* when the *Loop* app w
 
 ## Troubleshooting
 
-This section is a placeholder for troubleshooting issues.
+* [Loop Remote Control is not available or stopped working](#loop-remote-control-is-not-available-or-stopped-working)
+* [Run Diagnostics](#run-diagnostics)
+* [Common send errors](#common-send-errors)
+
+### Loop Remote Control is not available or stopped working
+
+*LoopFollow* addresses commands to the *Loop* phone using the **device token** and **bundle ID** found in the profile that *Loop* uploads to your *Nightscout* site. Both are shown in the **Debug / Info** section at the bottom of Remote Settings. If they are empty or outdated — for example after the *Loop* app was rebuilt or moved to a new phone — commands cannot reach the *Loop* phone until *Loop* uploads a fresh profile.
+
+### Run Diagnostics
+
+The **Run diagnostics** button in the Debug / Info section of Remote Settings scans the recent profile uploads on your *Nightscout* site and warns about the most common causes of failing remote commands:
+
+* **Profile uploaded by a different app** — the current *Nightscout* profile was uploaded by another app than the one you are configured for. When *Loop* and *Trio* share one *Nightscout* site, they overwrite each other's profile.
+* **Multiple devices uploading profiles** — device tokens are alternating between recent profile uploads, which usually means more than one installation of the app is uploading to the same *Nightscout*. Remove the app from spare or unused phones.
+* **Future-dated profile record found** — *LoopFollow* ignores profile records dated in the future; they usually come from a phone with the wrong system clock. Consider deleting the record.
+
+![ remote diagnostics](img/lf-lrc-diagnostics.png){width="300"}
+{align=center}
+
+### Common send errors
+
+If sending a command fails immediately, *LoopFollow* shows the reason:
+
+| Message | Usual cause |
+|:--|:--|
+| Authentication error / JWT error | The APNS Key ID, APNS Key, or Team ID is wrong |
+| Bad request | The **Production** environment toggle does not match how *Loop* was built — Production on for browser builds, off for Xcode builds |
+| The device token is no longer active | *Loop* was rebuilt or moved; wait for *Loop* to upload a fresh profile with the new token |
+| Too many requests | APNS is rate-limiting; wait before retrying |
 

@@ -4,9 +4,29 @@ Most features and the settings that control them are self-explanatory and docume
 
 - - -
 
+## Status Banner
+
+When *LoopFollow* has trouble reaching your data source or keeping itself awake in the background, it shows a dismissable banner across the top of the screen. The banner is visible on every tab and pushes the content down rather than covering it. It explains *what* went wrong so you can fix it, instead of the app silently showing no data.
+
+### What it reports
+
+* **Nightscout problems** — after a failed download, *LoopFollow* checks your site and reports the cause, for example *"The token is invalid."*, *"A token is required."*, *"The site was not found."*, or *"A network error occurred."* If the site is reachable but the data still didn't load, a softer warning says so.
+* **Dexcom Share problems** — a failed *Dexcom Share* login is explained in plain language (account not found, incorrect username or password, or too many failed attempts). If *Nightscout* is also configured, *LoopFollow* falls back to it and the banner notes that data keeps flowing using *Nightscout* as backup.
+* **Frequent heartbeat dropouts** — when a [Bluetooth heartbeat](#bluetooth-heartbeat) device starts arriving late repeatedly within the last hour — a typical sign of a dying transmitter battery — the banner suggests checking the transmitter/RileyLink/pod battery or Bluetooth range. A single late beat never triggers it.
+
+### Clearing and dismissing
+
+* A banner clears **automatically** when its source recovers (the next successful download, or a clean heartbeat window) or when you remove that source (URL/credentials cleared, device disconnected).
+* Tapping **✕** hides the banner. The same problem stays hidden for about 30 minutes and then reappears if it is still occurring; a *different* problem appears right away.
+* When more than one source has a problem, the most serious message is shown first; dismissing it reveals the next one.
+
+- - -
+
 ## Alarms
 
 When you select the Alarms Feature, the initial screen will be blank. By tapping on the plus sign upper right, you can add as many alarms as desired. There is quick access to the overall [Alarm Settings](lf-setup.md#alarms) by tapping the gear icon on this screen.
+
+Both the alarms list and the **Add Alarm** sheet have a search field. On the alarms list, type to filter your configured alarms by name or alarm type. In the **Add Alarm** sheet, type to filter the available alarm types by name, description, or group — non-matching groups are hidden. When nothing matches, a **No Results** message is shown.
 
 The graphic below shows a few typical alarms that might be chosen.
 
@@ -23,6 +43,40 @@ The graphic below shows the many types of alarms that are available with *LoopFo
 ![alarms to select](img/lf-alarms.svg){width="700"}
 {align="center"}
 
+### Alarm Sounds
+
+Each alarm plays a tone that you choose in the alarm's settings. Tap **Choose Tone** to open the tone picker, where you can preview and select from the built-in tones.
+
+#### Custom Sounds
+
+You can also use your own audio as an alarm tone. In the tone picker, the **Custom** section at the top offers two ways to add sounds:
+
+* **Import Sound…** — opens the Files browser so you can pick an audio file.
+* **Shared folder** — drop audio files into *LoopFollow*'s folder in the Files app; they are picked up automatically the next time you open the tone picker.
+
+Imported sounds must be a supported audio format (mp3, wav, m4a, aac, aif/aiff, caf), no larger than **2 MB**, and no longer than **30 seconds**.
+
+Custom sounds are stored on your device only and are **not** included in a settings export. Swipe a custom sound to delete it; any alarm still using a deleted sound falls back to a built-in tone.
+
+### Skip Options
+
+Some alarms can be told to stay quiet when the situation is already correcting itself. These toggles are **off by default**, so existing alarms behave exactly as before.
+
+| Alarm | Option | Behavior |
+|:--|:--|:--|
+| Low BG | **Skip if BG is rising** | Stays silent while glucose is rising; only sounds when the latest reading is flat or still falling. |
+| High BG | **Skip if BG is falling** | Stays silent while glucose is falling; only sounds when the latest reading is flat or still rising. |
+| Low Battery (phone) | **Skip while charging** | Stays silent while the phone is charging. Requires the uploader to report charging status; if it doesn't, the alert still sounds. |
+
+For the two BG alarms, the direction is judged from the last two readings.
+
+### Predictive Low Alert
+
+The Low BG Alert can warn you *before* glucose actually goes low, based on the forecast from the looping app. In the alarm's settings, set **Predictive** to the number of minutes to look ahead in the forecast (up to 60); if any forecast value in that window is at or below the alarm's threshold, you are warned early. Set it to 0 to alert only on actual readings.
+
+* For *Loop*, the forecast that *Loop* uploads is used.
+* For *Trio*, the lowest of *Trio*'s four forecast lines (ZT, IOB, COB, UAM) at each point in time is used.
+
 ### Alarm Types Reference
 
 The table below lists every alarm type available in *LoopFollow*, organized by group.
@@ -31,7 +85,7 @@ The table below lists every alarm type available in *LoopFollow*, organized by g
 
 | Alarm | Description |
 |:--|:--|
-| Low BG Alert | Alerts when BG goes below a limit |
+| Low BG Alert | Alerts when BG goes below a limit, now or in the [forecast](#predictive-low-alert) |
 | High BG Alert | Alerts when BG rises above a limit |
 | Fast Drop Alert | Rapid downward BG trend |
 | Fast Rise Alert | Rapid upward BG trend |
@@ -60,6 +114,7 @@ The table below lists every alarm type available in *LoopFollow*, organized by g
 | Sensor Change Alert | Sensor change due |
 | Not Looping Alert | Loop hasn't completed within a configurable number of minutes |
 | Looping app expiration | Looping-app build is expiring soon |
+| Nightscout Database Size | *Nightscout* database has filled to or above a chosen percentage of its configured size limit (defaults to 75%, daytime only) |
 
 #### Override / Target
 
@@ -75,7 +130,28 @@ The table below lists every alarm type available in *LoopFollow*, organized by g
 
 ## Snoozer
 
-🚧 Documentation Under Construction 🚧
+The Snoozer is a dedicated tab designed for the night stand and at-a-glance monitoring: a black screen with a large glucose value, the trend arrow, the delta, how long ago the reading arrived, and a clock. When the reading is stale, the glucose value is crossed out. Like the other features, the Snoozer can be placed in the toolbar using [Settings: Tabs](lf-setup.md#tabs).
+
+![Snoozer screen](img/lf-snoozer.png){width="350"}
+{align="center"}
+
+Two options in [Settings: General](lf-setup.md#general) tailor the screen: **Show Display Name** adds the app name (handy when following more than one person), and **Snoozer emoji** adds a face that reflects the current glucose.
+
+### When an Alarm Sounds
+
+When an alarm fires, a card appears at the bottom of the Snoozer showing the alarm name, a **Snooze for** stepper, and a **Snooze** button. The stepper's unit and limits depend on the alarm type — minutes for most alarms, hours or days for slow-moving ones like the expiration alerts. Setting the stepper to 0 turns the button into **Acknowledge**, which silences the alarm without snoozing it.
+
+![Snoozer showing an active alarm](img/lf-snoozer-alarm.png){width="350"}
+{align="center"}
+
+### Snooze All Alarms
+
+Tap anywhere on the Snoozer screen to show the bar at the top. When nothing is snoozed, it offers a one-tap **Snooze all · 1h** button, and a sun or moon symbol indicates whether your daytime or nighttime alarm hours are active. The bar hides itself again after a few seconds.
+
+While a global snooze is active, the bar reads **All alerts snoozed** and shows the end date and time — tap either one to adjust it — along with **− 30m** and **+ 30m** buttons and **End now**. Adjusting the end time below the current time also ends the snooze.
+
+![Snoozer with all alerts snoozed](img/lf-snoozer-snoozed.png){width="350"}
+{align="center"}
 
 - - -
 
@@ -146,16 +222,25 @@ These devices can provide a constant Bluetooth connection for your *LoopFollow* 
 * Dexcom Device (the battery can last for months after it is no longer in service with a sensor)
     * Dexcom G5/G6/ONE/Anubis transmitter
     * Dexcom G7/ONE+ sensor
+* Omnipod DASH pod within Bluetooth range (provides a heartbeat about every 3 minutes)
 
 If you use *LoopFollow* on your Looping phone for the features offered, you can connect to your own Dexcom device. You don’t need to use an expired device in addition.
 
 #### How do I configure Bluetooth Heartbeat?
 
-These graphics walk you through how to select the Background Refresh Type.  The example shows the steps if you choose to use a Dexcom Device (G5/G6/ONE/G7/ONE+). A similar process is used for a radiolink device.
+Open Settings: Background Refresh and tap **Background Refresh Type** to pick a mode. The example below shows the steps if you choose to use a Dexcom Device (G6/ONE/G7/ONE+). A similar process is used for a radiolink device or an Omnipod DASH pod.
+
+![Background Refresh Type picker](img/lf-background-refresh-type.png){width="350"}
+{align="center"}
+
+After selecting a Bluetooth type, *LoopFollow* scans for nearby devices and lists what it finds — tap a device to connect it.
+
+![Scanning for a Dexcom heartbeat device](img/lf-background-refresh-scanning.png){width="350"}
+{align="center"}
+
+Once connected, the **Selected Device** card shows the device name, its connection status, the signal strength (RSSI), and the expected BG delay, along with a Disconnect button.
 
 If the person using *LoopFollow* is also wearing a Dexcom or radiolink, they should choose their own device. The RSSI is a measure of the strength of the signal. It is normal for the Dexcom device to disconnect. It will reconnect regularly.
-
-🚧 import graphics from lnl 🚧
 
 - - -
 
@@ -206,5 +291,8 @@ Bullet List with Instructions:
 
 You’re ready to monitor your glucose data directly on your Apple Watch!
 
-🚧 import graphics from lnl 🚧
+The Contact settings screen also offers color options for the complication (not all watch faces honor them) and lets you include the trend, delta, or IOB in the same or a separate contact:
+
+![Contact settings screen](img/lf-contact-settings.png){width="350"}
+{align="center"}
 
