@@ -1015,7 +1015,8 @@
 <p>Once the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> app is configured, and while the <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> phone is handy, test sending Remote Commands. It is good to also have a browser open with the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> <abbr title="website address (Uniform Resource Locator)">URL</abbr> displayed.</p>
 <p>Remember to give the system time to update.</p>
 <p>The sequence is <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> to <em>Apple Push Notifications</em> to <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>, which uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> and then is displayed in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> main screen.</p>
-<p align="center"><img alt="loopfollow trio remote control choices" src="../img/lf-trc.jpg" width="300"/></p>
+<p align="center"><img alt="loopfollow trio remote control choices" src="../img/lf-trc-active.png" width="300"/></p>
+<p>While an override or temp target is active, its button is outlined with a green glow — in the screenshot above, both are active.</p>
 <h3 id="remote-sequence-steps">Remote Sequence Steps<a class="headerlink" href="#remote-sequence-steps" title="Link to this section for reference">¶</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Wait for the Result</p>
@@ -1047,11 +1048,25 @@
 </blockquote>
 </div>
 <h3 id="remote-meal">Remote Meal<a class="headerlink" href="#remote-meal" title="Link to this section for reference">¶</a></h3>
-<p><strong><em>More info coming soon!</em></strong></p>
+<p>The Meal screen sends a remote meal entry to <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>:</p>
+<ul>
+<li><strong>Carbs</strong> — up to the <strong>Max Carbs</strong> guardrail set in Remote Settings.</li>
+<li><strong>Fat</strong> and <strong>Protein</strong> — shown when <strong>Meal with Fat/Protein</strong> is enabled in <a href="#meal-settings">Meal Settings</a>, each with its own guardrail.</li>
+<li><strong>Bolus Amount</strong> — shown when <strong>Meal with Bolus</strong> is enabled, capped by the <strong>Max Bolus</strong> guardrail.</li>
+<li><strong>Schedule for later</strong> — enter the carbs at a chosen time instead of now.</li>
+</ul>
+<p align="center"><img alt="remote meal entry" src="../img/lf-trc-meal.png" width="300"/></p>
+<p>Tapping <strong>Send Meal</strong> shows a confirmation that summarizes the whole entry. If a bolus is included, you must also authenticate with Face ID or your passcode before the command is sent.</p>
 <p>When entering meals and choosing to schedule the meal, any bolus included in the meal is enacted immediately. Only the carb entry is entered according to the schedule.</p>
 <p align="center"><img alt="scheduled meal warning" src="../img/lf-trc-scheduled-meal.png" width="300"/></p>
 <h3 id="remote-bolus">Remote Bolus<a class="headerlink" href="#remote-bolus" title="Link to this section for reference">¶</a></h3>
-<p><strong><em>More info coming soon!</em></strong></p>
+<p>The Bolus screen sends a remote bolus to <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>:</p>
+<ul>
+<li><strong>Recommended Bolus</strong> — when <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>'s latest recommendation is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated.</li>
+<li><strong>Bolus Amount</strong> — capped by the <strong>Max Bolus</strong> guardrail. The amount is rounded down to the pump's bolus increment, which is detected automatically from <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>; a manual <strong>Bolus Increment</strong> setting appears in Remote Settings only when it cannot be detected.</li>
+</ul>
+<p>After the confirmation, you must authenticate with Face ID or your passcode before the bolus command is sent.</p>
+<p align="center"><img alt="remote bolus screen" src="../img/lf-trc-bolus.png" width="300"/></p>
 <h3 id="quick-pick-boluses-and-meals">Quick-Pick Boluses and Meals<a class="headerlink" href="#quick-pick-boluses-and-meals" title="Link to this section for reference">¶</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Available in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 6.2 and newer</p>
@@ -1109,9 +1124,20 @@ Quick-Pick suggestions until you send a few commands.</p>
 <p>Tap the <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"></path></svg></span> info icon next to <strong>Quick-Pick Boluses</strong>
 or <strong>Quick-Pick Meals</strong> in the app for a short in-screen explanation.</p>
 <h3 id="temp-target">Temp Target<a class="headerlink" href="#temp-target" title="Link to this section for reference">¶</a></h3>
-<p><strong><em>More info coming soon!</em></strong></p>
+<p>The Temp Target screen enacts or cancels a temporary glucose target on <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>:</p>
+<ul>
+<li><strong>Target</strong> — between 80 and 200 mg/dL, shown in your glucose unit.</li>
+<li><strong>Duration</strong> — at least 5 minutes.</li>
+<li><strong>Enact</strong> — shows a confirmation with the target and duration before sending.</li>
+<li><strong>Save as Preset</strong> — stores the current values under a name of your choice. Presets are listed below the entry card; tap one to enact it, swipe left to delete it.</li>
+</ul>
+<p align="center"><img alt="remote temp target" src="../img/lf-trc-temp-target.png" width="300"/></p>
+<p>When a temp target is already running, the screen shows it with its remaining time and a <strong>Cancel Temp Target</strong> button. The remaining time is a live countdown when 2 hours or less remain; otherwise it is shown as a duration, such as 5h 30m. A temp target set for a week or longer is treated as indefinite and shows no remaining time.</p>
+<p align="center"><img alt="remote temp target with an active temp target" src="../img/lf-trc-temp-target-active.png" width="300"/></p>
 <h3 id="overrides">Overrides<a class="headerlink" href="#overrides" title="Link to this section for reference">¶</a></h3>
-<p><strong><em>More info coming soon!</em></strong></p>
+<p>The override presets listed on this screen are defined in <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> — <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> reads them (name, duration, percentage, and target) from the profile that <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>. New presets cannot be created from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>.</p>
+<p>Tap a preset to activate it; a confirmation is shown before the command is sent. While an override is active, it is listed with its remaining time and a button to cancel it. The remaining time is a live countdown when 2 hours or less remain; otherwise it is shown as a duration, such as 5h 30m. An override set for a week or longer is treated as indefinite and shows no remaining time.</p>
+<p align="center"><img alt="remote overrides" src="../img/lf-trc-override.png" width="300"/></p>
 <hr/>
 <h2 id="configure-trio-phone-for-remote-control">Configure <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> Phone for Remote Control<a class="headerlink" href="#configure-trio-phone-for-remote-control" title="Link to this section for reference">¶</a></h2>
 <p><strong>Default:</strong> <em>OFF</em></p>

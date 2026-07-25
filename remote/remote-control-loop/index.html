@@ -545,6 +545,37 @@
       
     </span>
 </a>
+<nav aria-label="Troubleshooting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loop-remote-control-is-not-available-or-stopped-working">
+<span class="md-ellipsis">
+      
+        Loop Remote Control is not available or stopped working
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-diagnostics">
+<span class="md-ellipsis">
+      
+        Run Diagnostics
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-send-errors">
+<span class="md-ellipsis">
+      
+        Common send errors
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -861,6 +892,37 @@
       
     </span>
 </a>
+<nav aria-label="Troubleshooting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loop-remote-control-is-not-available-or-stopped-working">
+<span class="md-ellipsis">
+      
+        Loop Remote Control is not available or stopped working
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-diagnostics">
+<span class="md-ellipsis">
+      
+        Run Diagnostics
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-send-errors">
+<span class="md-ellipsis">
+      
+        Common send errors
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -931,24 +993,24 @@
 <p>Example messages are highlighted by red rectangles in the composite below for remote carb and remote bolus. The example on the right is an example error message that was returned.</p>
 <p align="center"><img alt="remote real-time-notifications " src="../img/lf-loop-remote-apns-real-time.png" width="650"/></p>
 <h3 id="remote-meal">Remote Meal<a class="headerlink" href="#remote-meal" title="Link to this section for reference">¶</a></h3>
-<p><strong><em>More info coming soon!</em></strong></p>
+<p>The Meal screen sends remote carbs to <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em>:</p>
+<ul>
+<li><strong>Carbs Amount</strong> — up to the <strong>Max Carbs</strong> guardrail set in Remote Settings.</li>
+<li><strong>Time</strong> — defaults to now; the − / + buttons move it in 5-minute steps, or tap the time to pick it directly. Entries can be backdated up to 12 hours or set up to 1 hour into the future.</li>
+<li><strong>Food Type</strong> — the emoji shortcuts also set the absorption time: 🍭 30 minutes, 🌮 3 hours, 🍕 5 hours. The plate opens a custom picker; absorption time can be set between 0.5 and 8 hours.</li>
+<li><strong>Security</strong> — the current one-time password (OTP) is displayed with its remaining lifetime. Codes rotate every 30 seconds, and each code can authorize only <strong>one</strong> command — after sending, the Send button stays disabled until the next code is issued.</li>
+</ul>
+<p>Tapping <strong>Send Carbs</strong> shows a confirmation of the entry before anything is sent.</p>
 <p align="center"><img alt=" remote carb entries" src="../img/lf-lrc-meal.png" width="300"/></p>
 <h3 id="remote-bolus">Remote Bolus<a class="headerlink" href="#remote-bolus" title="Link to this section for reference">¶</a></h3>
-<p><strong><em>More info coming soon!</em></strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Recent Rec Bolus</th>
-<th style="text-align: center;">Last <code>Loop</code> &gt; 12 minutes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><img alt=" remote bolus current" src="../img/lf-lrc-bolus.png" width="300"/></td>
-<td style="text-align: center;"><img alt=" remote bolus older than 12 minutes" src="../img/lf-lrc-bolus-old.png" width="300"/></td>
-</tr>
-</tbody>
-</table>
+<p>The Insulin screen sends a remote bolus to <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em>:</p>
+<ul>
+<li><strong>Recommended Bolus</strong> — when the last recommendation <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> uploaded is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated.</li>
+<li><strong>Insulin Amount</strong> — from 0.025 U up to the <strong>Max Bolus</strong> guardrail set in Remote Settings.</li>
+<li><strong>Security</strong> — the same one-time password rules as Remote Meal apply: the code rotates every 30 seconds and each code can be used only once.</li>
+</ul>
+<p>After the confirmation, you must authenticate with Face ID or your passcode before the bolus command is sent.</p>
+<p align="center"><img alt=" remote bolus screen" src="../img/lf-lrc-bolus.png" width="300"/></p>
 <div class="admonition tip">
 <p class="admonition-title">Make sure <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> information is up to date</p>
 <p>The insulin amount is filled out with the last recommended bolus that <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> downloaded from the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site, which in turn was uploaded from the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> phone.</p>
@@ -1005,8 +1067,15 @@ Quick-Pick suggestions until you send a few commands.</p>
 <p>Tap the <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"></path></svg></span> info icon next to <strong>Quick-Pick Boluses</strong>
 or <strong>Quick-Pick Meals</strong> in the app for a short in-screen explanation.</p>
 <h3 id="overrides">Overrides<a class="headerlink" href="#overrides" title="Link to this section for reference">¶</a></h3>
-<p><strong><em>More info coming soon!</em></strong></p>
+<p>The override presets listed on this screen are defined in <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> — <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> reads them (name, symbol, target range, overall insulin needs, and duration) from the profile that <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>. New presets cannot be created from <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>.</p>
 <p align="center"><img alt=" remote overrides" src="../img/lf-lrc-override.png" width="300"/></p>
+<p>Tap a preset to open the activation sheet:</p>
+<ul>
+<li>Presets with a set duration are activated for that duration.</li>
+<li>Presets defined as indefinite in <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> offer a choice: leave <strong>Enable indefinitely</strong> on, or turn it off and pick a duration with the slider (15 minutes up to 24 hours, in 15-minute steps).</li>
+</ul>
+<p align="center"><img alt=" override activation sheet" src="../img/lf-lrc-override-modal.png" width="300"/></p>
+<p>While an override is active, it is listed in an <strong>Active Override</strong> section with its remaining time and a button to cancel it. The remaining time is a live countdown when 2 hours or less remain; otherwise it is shown as a duration, such as 5h 30m. Overrides enabled indefinitely show no remaining time.</p>
 <hr/>
 <h2 id="faqs-for-remote-commands">FAQs for Remote Commands<a class="headerlink" href="#faqs-for-remote-commands" title="Link to this section for reference">¶</a></h2>
 <ol>
@@ -1199,7 +1268,49 @@ or <strong>Quick-Pick Meals</strong> in the app for a short in-screen explanatio
 <p align="center"><img alt="shows credentials entered into loopfollow are correct" src="../img/lf-lrc-debug.png" width="300"/></p>
 <hr/>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this section for reference">¶</a></h2>
-<p>This section is a placeholder for troubleshooting issues.</p>
+<ul>
+<li><a href="#loop-remote-control-is-not-available-or-stopped-working"><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> Remote Control is not available or stopped working</a></li>
+<li><a href="#run-diagnostics">Run Diagnostics</a></li>
+<li><a href="#common-send-errors">Common send errors</a></li>
+</ul>
+<h3 id="loop-remote-control-is-not-available-or-stopped-working"><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> Remote Control is not available or stopped working<a class="headerlink" href="#loop-remote-control-is-not-available-or-stopped-working" title="Link to this section for reference">¶</a></h3>
+<p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> addresses commands to the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> phone using the <strong>device token</strong> and <strong>bundle ID</strong> found in the profile that <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> uploads to your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site. Both are shown in the <strong>Debug / Info</strong> section at the bottom of Remote Settings. If they are empty or outdated — for example after the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> app was rebuilt or moved to a new phone — commands cannot reach the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> phone until <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> uploads a fresh profile.</p>
+<h3 id="run-diagnostics">Run Diagnostics<a class="headerlink" href="#run-diagnostics" title="Link to this section for reference">¶</a></h3>
+<p>The <strong>Run diagnostics</strong> button in the Debug / Info section of Remote Settings scans the recent profile uploads on your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site and warns about the most common causes of failing remote commands:</p>
+<ul>
+<li><strong>Profile uploaded by a different app</strong> — the current <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> profile was uploaded by another app than the one you are configured for. When <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> share one <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site, they overwrite each other's profile.</li>
+<li><strong>Multiple devices uploading profiles</strong> — device tokens are alternating between recent profile uploads, which usually means more than one installation of the app is uploading to the same <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>. Remove the app from spare or unused phones.</li>
+<li><strong>Future-dated profile record found</strong> — <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> ignores profile records dated in the future; they usually come from a phone with the wrong system clock. Consider deleting the record.</li>
+</ul>
+<p align="center"><img alt=" remote diagnostics" src="../img/lf-lrc-diagnostics.png" width="300"/></p>
+<h3 id="common-send-errors">Common send errors<a class="headerlink" href="#common-send-errors" title="Link to this section for reference">¶</a></h3>
+<p>If sending a command fails immediately, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> shows the reason:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Message</th>
+<th style="text-align: left;">Usual cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Authentication error / JWT error</td>
+<td style="text-align: left;">The APNS Key ID, APNS Key, or Team ID is wrong</td>
+</tr>
+<tr>
+<td style="text-align: left;">Bad request</td>
+<td style="text-align: left;">The <strong>Production</strong> environment toggle does not match how <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> was built — Production on for browser builds, off for <abbr title="program used to build an app">Xcode</abbr> builds</td>
+</tr>
+<tr>
+<td style="text-align: left;">The device token is no longer active</td>
+<td style="text-align: left;"><em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> was rebuilt or moved; wait for <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> to upload a fresh profile with the new token</td>
+</tr>
+<tr>
+<td style="text-align: left;">Too many requests</td>
+<td style="text-align: left;">APNS is rate-limiting; wait before retrying</td>
+</tr>
+</tbody>
+</table>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>

@@ -300,6 +300,24 @@
 <nav aria-label="Initial Configuration" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#the-onboarding-guide">
+<span class="md-ellipsis">
+      
+        The Onboarding Guide
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deferred-permissions">
+<span class="md-ellipsis">
+      
+        Deferred Permissions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#setup-your-data-source">
 <span class="md-ellipsis">
       
@@ -674,6 +692,24 @@
 <nav aria-label="Initial Configuration" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#the-onboarding-guide">
+<span class="md-ellipsis">
+      
+        The Onboarding Guide
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deferred-permissions">
+<span class="md-ellipsis">
+      
+        Deferred Permissions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#setup-your-data-source">
 <span class="md-ellipsis">
       
@@ -952,16 +988,50 @@
 </a>
 <h1>Setup</h1>
 <h2 id="initial-configuration">Initial Configuration<a class="headerlink" href="#initial-configuration" title="Link to this section for reference">¶</a></h2>
-<p>After you build <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> the first time, you are asked a few questions (your initial choices can always be modified later):</p>
-<ul>
-<li><strong>Calendar Access</strong>: if you want to allow <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> to provide real-time updates to carplay using the Calendar, choose <strong>Allow Full Access</strong></li>
-<li><strong>Bluetooth Access</strong>: if you want to use an expired Dexcom sensor or a spare RileyLink device to keep <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> running in the background while your phone is locked, choose <strong>Allow</strong></li>
-<li><strong>Notifications</strong>: if you want <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> to notify you for any of your alarms or if <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> stops working, choose <strong>Allow</strong></li>
+<p>The first time you open <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>, a short <strong>onboarding guide</strong> walks you through the essentials. It takes about five minutes, and anything you choose can be changed later in Settings. If you are already familiar with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> — for example when setting up a second phone — tap <strong>Skip</strong> at the top of any step to jump straight to the app.</p>
+<div class="admonition note">
+<p class="admonition-title">Permissions are no longer requested at launch</p>
+<p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> does not ask for Notifications, Calendar, or Bluetooth permission when it first starts. Each is requested only when you first use the feature that needs it — see <a href="#deferred-permissions">Deferred permissions</a> below — so a fresh install opens with the guide instead of a stack of prompts.</p>
+</div>
+<h3 id="the-onboarding-guide">The Onboarding Guide<a class="headerlink" href="#the-onboarding-guide" title="Link to this section for reference">¶</a></h3>
+<p align="center"><img alt="Welcome step" src="../img/onboarding-welcome.png" width="280"/>
+<img alt="Overview step" src="../img/onboarding-overview.png" width="280"/></p>
+<p>The guide steps through:</p>
+<ol>
+<li><strong>Welcome</strong> — a short introduction with a <strong>Get Started</strong> button.</li>
+<li><strong>Overview</strong> — <em>"Here's what we'll do"</em>: connect your data, units &amp; metrics, recommended alarms, and finish up.</li>
+<li><strong>Choose a data source</strong> — <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> needs a glucose source. Pick one (you can change or add more later):<ul>
+<li><strong><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></strong></li>
+<li><strong>Dexcom Share</strong></li>
+<li><strong>Copy from another phone</strong> — scan a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code exported from a phone that is already set up</li>
 </ul>
-<p>You will then be presented with a home screen as shown below.</p>
-<p align="center"><img alt="initial screen for LoopFollow" src="../img/initial-screen-no-credentials.png" width="300"/></p>
+</li>
+<li><strong>Connect</strong> — enter credentials for the source you picked:<ul>
+<li><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>: enter or paste your <strong>Site <abbr title="website address (Uniform Resource Locator)">URL</abbr></strong>. For the access token, choose <strong>I have a token</strong> (paste a token, or a <abbr title="website address (Uniform Resource Locator)">URL</abbr> that already includes one) or <strong>Create one for me</strong>, which uses your <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> <strong><abbr title="Application Programming Interface">API</abbr> secret</strong> once to create a read-only token. The <abbr title="Application Programming Interface">API</abbr> secret only authorizes that request and is never stored.</li>
+<li><em>Dexcom Share</em>: enter your <strong>Username</strong> and <strong>Password</strong>, and choose <strong>US</strong> or <strong>Outside US</strong>.</li>
+</ul>
+</li>
+<li><strong>Units &amp; metrics</strong> — choose your glucose unit and how statistics are measured and displayed. See <a href="#units-and-metrics">Units and Metrics</a>.</li>
+<li><strong>Alarm basics</strong> — set when your day and night begin, and how alarm sound behaves (for example, overriding the system volume so alarms are heard when the phone is silenced or in a Focus mode).</li>
+<li><strong>Recommended alarms</strong> — a set of useful alarms is offered with sensible defaults and a single control each: <strong>Low glucose</strong>, <strong>Urgent low</strong>, <strong>High glucose</strong>, <strong>Fast drop</strong>, and <strong>Missed readings</strong>. When following <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, alarms that rely on loop/uploader data are also offered: <strong>Not looping</strong>, <strong>Looping phone battery</strong>, <strong><abbr title="Insulin on Board, affects automated insulin delivery: the current active insulin (above or below the basal rate)">IOB</abbr></strong>, <strong><abbr title="Carbs on Board, affects automated insulin delivery">COB</abbr></strong>, <strong>Sensor change</strong>, <strong>Pump change</strong>, and <strong>Pump insulin</strong>. Alarm types you already have are not offered again.</li>
+<li><strong>Tabs</strong> — arrange which features sit in the tab bar. You can always reach everything through the <a href="#menu-screen">Menu</a>.</li>
+<li><strong>Notifications</strong> — <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> explains why it needs notifications for alarms, then asks <abbr title="operating system used by Apple Mobile devices (iPhone, iPod, iPad)">iOS</abbr> for permission. Choose <strong>Enable Notifications</strong> or <strong>Not now</strong>.</li>
+<li><strong>Privacy</strong> — optionally share anonymous diagnostics to help improve <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>. Choose <strong>Yes, send anonymous stats</strong> or <strong>No thanks</strong>; you can change this any time in Settings → General → Diagnostics. See <a href="../../privacy/lf-telemetry/" target="_blank">Telemetry</a> for exactly what is and isn't shared.</li>
+<li><strong>You're all set</strong> — a summary with a <strong>Finish</strong> button, plus a few features worth exploring next.</li>
+</ol>
+<p align="center"><img alt="Choose a data source step" src="../img/onboarding-data-source.png" width="280"/>
+<img alt="Nightscout connect step" src="../img/onboarding-nightscout.png" width="280"/></p>
+<h3 id="deferred-permissions">Deferred Permissions<a class="headerlink" href="#deferred-permissions" title="Link to this section for reference">¶</a></h3>
+<p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> asks for each system permission only when it is first needed:</p>
+<ul>
+<li><strong>Notifications</strong> — requested when you set up alarms in the guide, or the first time you add an alarm.</li>
+<li><strong>Camera</strong> — requested when you need to scan a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code, for example to import a configuration from a different phone or set up <abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> remote control</li>
+<li><strong>Calendar</strong> — requested from the <a href="#calendar">Calendar</a> settings screen when you enable calendar updates for CarPlay.</li>
+<li><strong>Bluetooth</strong> — requested only when you choose a Bluetooth <a href="../lf-features/#background-refresh" target="_blank">Background Refresh</a> mode (an expired Dexcom sensor or a RileyLink device).</li>
+</ul>
 <h3 id="setup-your-data-source">Setup Your Data Source<a class="headerlink" href="#setup-your-data-source" title="Link to this section for reference">¶</a></h3>
-<p>Tap on the "Setup <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr>" button or "Setup Dexcom Share" button to enter your credentials for your preferred service.</p>
+<p>If you skip the guide, or finish it without adding a source, you land on the home screen below. Tap the <strong>Setup <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></strong> button or <strong>Setup Dexcom Share</strong> button to enter your credentials for your preferred service.</p>
+<p align="center"><img alt="initial screen for LoopFollow" src="../img/initial-screen-no-credentials.png" width="300"/></p>
 <p>For more information about how to configure your data source, refer to these sections:</p>
 <ul>
 <li><a href="#setup-nightscout">Setup <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></a></li>
@@ -1031,6 +1101,7 @@
 <li>Settings, Logging and Build Information are covered below</li>
 <li><a href="../../#community-support-and-build-help" target="_blank">Support &amp; Community</a> are discussed on the <em>LoopFollowDocs</em> home page</li>
 </ul>
+<p>The Menu has a search field. Type to filter the menu's own rows (Settings, the tab features, View Log / Share Logs, and the support links) as well as the rows inside the Settings screen (General, Graph, Units and Metrics, Alarms, …). Selecting a Settings result opens that screen directly. An empty search shows the normal menu; a query with no matches shows a <strong>No Results</strong> state.</p>
 <p align="center"><img alt="Menu screen for *LoopFollow*" src="../img/lf-menu.svg" width="400"/></p>
 <hr/>
 <h2 id="settings-screen">Settings Screen<a class="headerlink" href="#settings-screen" title="Link to this section for reference">¶</a></h2>
@@ -1216,7 +1287,7 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <tr>
 <td style="text-align: left;">Advanced</td>
 <td style="text-align: left;">Control which data is downloaded from <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> and adjust graph options</td>
-<td style="text-align: left;"><a href="#advanced">Advanced</a></td>
+<td style="text-align: left;"><a href="#advanced-settings">Advanced</a></td>
 </tr>
 </tbody>
 </table>
@@ -1250,7 +1321,7 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 </tr>
 <tr>
 <td style="text-align: left;">Display Small Graph</td>
-<td style="text-align: left;">When enabled, a full history graph is displayed under the main plot. The history is determined by the Number of Days Back chosen in the Graph screen</td>
+<td style="text-align: left;">When enabled, a full history graph is displayed under the main plot. The history is determined by the Number of Days Back chosen in the Graph screen. Tap the small graph to move the main graph to that point in time; drag your finger across it to scrub the main graph in real time</td>
 </tr>
 <tr>
 <td style="text-align: left;">Color BG Text</td>
@@ -1364,6 +1435,7 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <ul>
 <li>The order in the table below is the order in the <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr> code</li>
 <li>You can drag the rows up and down to suit your preferred order</li>
+<li>Tap a row to open its detail, where you set its visibility and, for supported rows, <a href="#color-thresholds">color thresholds</a></li>
 </ul>
 </div>
 <table>
@@ -1422,7 +1494,7 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 </tr>
 <tr>
 <td style="text-align: left;">Rec. Bolus</td>
-<td style="text-align: left;">Recommended bolus<br/>from last <code>loop</code></td>
+<td style="text-align: left;">Recommended bolus<br/>from last <code>loop</code>, shown using the pump's bolus increment</td>
 <td style="text-align: center;">Both</td>
 </tr>
 <tr>
@@ -1474,6 +1546,86 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <td style="text-align: left;">IAGE</td>
 <td style="text-align: left;">Insulin Age</td>
 <td style="text-align: center;">Both</td>
+</tr>
+<tr>
+<td style="text-align: left;">DB Size</td>
+<td style="text-align: left;"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> database size: mebibytes (<abbr title="mebibytes (MiB) is a unit of digital computer storage equal to 1,048,576 bytes (or 1,024 kibibytes)">MiB</abbr>) used and the percentage of the site's configured limit, for example <code>123 MiB (25%)</code>. Hidden by default</td>
+<td style="text-align: center;">Both</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">DB Size</p>
+<p>The <strong>DB Size</strong> row and the <a href="../lf-features/#alarms" target="_blank"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> Database Size alarm</a> both read from <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>'s <code>dbsize</code> plugin, so your site must have that plugin enabled. The percentage is measured against the site's <code>DBSIZE_MAX</code> setting, which is <strong>496 <abbr title="mebibytes (MiB) is a unit of digital computer storage equal to 1,048,576 bytes (or 1,024 kibibytes)">MiB</abbr></strong> unless the site owner changed it. Because that setting may not match your hosting plan's real limit, the row leads with the absolute used <abbr title="mebibytes (MiB) is a unit of digital computer storage equal to 1,048,576 bytes (or 1,024 kibibytes)">MiB</abbr> figure, which is always meaningful.</p>
+</div>
+<h4 id="color-thresholds">Color Thresholds<a class="headerlink" href="#color-thresholds" title="Link to this section for reference">¶</a></h4>
+<p>Rows that show a single number can optionally turn <strong>yellow</strong> or <strong>red</strong> when their value crosses a threshold you set. This is a purely visual cue — it never triggers an alarm. Values that are in range stay green.</p>
+<p>To set them up, open a row's detail from the Information Display screen, turn on <strong>Coloring</strong>, and set the <strong>Yellow at</strong> and <strong>Red at</strong> thresholds. Each supported row starts with sensible defaults you can adjust.</p>
+<p>The "concerning" direction is fixed per row: battery and reservoir rows color when the value is <strong>low</strong>, while insulin/carb load and the age rows color when the value is <strong>high</strong>. <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> keeps the Red threshold on the correct side of Yellow for that direction.</p>
+<p>Rows that support color thresholds:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Row</th>
+<th style="text-align: center;">Colors when</th>
+<th style="text-align: left;">Default Yellow / Red</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><abbr title="Insulin on Board, affects automated insulin delivery: the current active insulin (above or below the basal rate)">IOB</abbr></td>
+<td style="text-align: center;">high</td>
+<td style="text-align: left;">3 / 5 U</td>
+</tr>
+<tr>
+<td style="text-align: left;"><abbr title="Carbs on Board, affects automated insulin delivery">COB</abbr></td>
+<td style="text-align: center;">high</td>
+<td style="text-align: left;">30 / 60 g</td>
+</tr>
+<tr>
+<td style="text-align: left;">Battery (phone)</td>
+<td style="text-align: center;">low</td>
+<td style="text-align: left;">30 / 15 %</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pump Battery</td>
+<td style="text-align: center;">low</td>
+<td style="text-align: left;">30 / 15 %</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pump (reservoir)</td>
+<td style="text-align: center;">low</td>
+<td style="text-align: left;">20 / 10 U</td>
+</tr>
+<tr>
+<td style="text-align: left;">TDD</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: left;">60 / 80 U</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rec. Bolus</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: left;">1 / 2 U</td>
+</tr>
+<tr>
+<td style="text-align: left;">Carbs today</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: left;">150 / 250 g</td>
+</tr>
+<tr>
+<td style="text-align: left;">SAGE (sensor age)</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: left;">9 / 9.5 days</td>
+</tr>
+<tr>
+<td style="text-align: left;"><abbr title="cannula (or pump site) age on Nightscout site">CAGE</abbr> (cannula age)</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: left;">2.5 / 3 days</td>
+</tr>
+<tr>
+<td style="text-align: left;">IAGE (insulin age)</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: left;">2.5 / 3 days</td>
 </tr>
 </tbody>
 </table>
@@ -1627,6 +1779,7 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <li><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> Site and token</li>
 <li>Dexcom Share</li>
 <li>Remote Configuration</li>
+<li>APNS credentials (APNS Key ID and Key)</li>
 <li>Alarms </li>
 </ul>
 <div class="admonition important">
@@ -1641,10 +1794,14 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <li>Export <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> Settings</li>
 <li>Export Dexcom Share Settings</li>
 <li>Export Remote Settings</li>
+<li>Export APNS Settings</li>
 <li>Export Alarm Settings</li>
 </ul>
 <p align="center"><img alt="Export settings" src="../img/import-settings.png" width="300"/></p>
-<p>Export <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> Settings, Export Dexcom Share Settings and Export Remote Settings will show a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code directly that you can scan with the receiving phone.</p>
+<p>Export <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> Settings, Export Dexcom Share Settings, Export Remote Settings and Export APNS Settings will show a <abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> code directly that you can scan with the receiving phone.</p>
+<blockquote>
+<p>Export APNS Settings requires a valid APNS Key ID and APNS Key to be configured first. It transfers only the APNS credentials, so a caregiver setting up a second device can reuse the same key without re-entering it. Importing APNS settings overwrites the existing APNS Key ID and APNS Key on the receiving phone.</p>
+</blockquote>
 <p>Export Alarm Settings will let you select up to 5 alarms at a time to export. If you re-enter the export screen after a successful export, it will mark the exported alarms so that you can export more alarms if needed</p>
 <p align="right"><img alt="Alarm Export" src="../img/alarms-export-first.png" width="300"/>
 <img alt="Alarm Export" src="../img/alarms-export-second.png" width="300"/></p>
@@ -1689,6 +1846,7 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 </ul>
 </li>
 </ul>
+<p>While an override or temp target is active, the Live Activity shows a row below the grid with its name or target value. When 2 hours or less remain, a live countdown is shown next to it; longer or indefinite overrides show just the name. The same row appears in the expanded Dynamic Island. Because of this row, the Override option is not offered for the 4 grid slots; it is still available for the small widget slot.</p>
 <p>The following options are available for each grid slot:</p>
 <table>
 <thead>
@@ -1780,7 +1938,7 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 </tr>
 <tr>
 <td style="text-align: left;">Override</td>
-<td style="text-align: left;">Active override information</td>
+<td style="text-align: left;">Active override information (small widget slot only)</td>
 </tr>
 <tr>
 <td style="text-align: left;">Profile</td>
