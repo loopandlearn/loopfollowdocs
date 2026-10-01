@@ -76,6 +76,19 @@ Once you’ve configured your settings, your Home screen will look as beautiful 
 ![overview graphic of home screen](img/lf-table-overview.png){width="700"}
 {align="center"}
 
+### Main Graph
+
+* **Move through time:** drag left or right. If you leave the graph in the past, it returns to the latest data after about 5 minutes, or right away when you tap the jump to now button at the lower right.
+* **Zoom:** pinch to show between 15 minutes and 24 hours, or double tap to step through 1, 3, 6, 12 and 24 hours.
+* **Tap** a glucose reading, treatment, override or temporary target to see its value and time. Tap an empty spot to close it.
+* **Press and hold, then drag** to look back in time. While your finger is down:
+    * The glucose display and the Information Display show the values at that time. They are shaded gray and the time is shown with a clock symbol, so they are not mistaken for current values.
+    * The forecast the looping app made at that time is drawn on the graph.
+    * Rows with no stored value for that time show `—`. For *Loop*, ISF, CR and Target come from the current profile at that time of day.
+    * Lift your finger to return to the current values. Alarms and the Live Activity always use the current values.
+
+To show these past values, *LoopFollow* keeps a copy of the looping app's *Nightscout* status records for the [Show Days Back](#graph) period on the phone. It downloads them once and after that only what is new. Changing the *Nightscout* address clears the copy.
+
 - - -
 
 ## Toolbar
@@ -262,11 +275,16 @@ These settings are accessed through the Graph row in the Settings screen.
 | Show Carb Absorption | Enable or Disable |
 | Show Yesterday's BG | When enabled, yesterday's glucose is overlaid on the main graph as a dimmed gray line, time-shifted 24 hours so it aligns with the same clock time today, for visual comparison<br>*Nightscout* only (Dexcom Share does not return enough history); default off |
 | Treatments on Small Graph | Enable or Disable |
+| Show IOB Graph | Graph of insulin on board over time; default off |
+| Show COB Graph | Graph of carbs on board over time; default off |
+| Show Smoothed BG | Line on the main graph with the glucose value the algorithm used at each `loop`. In *Trio* this is the smoothed glucose<br>`Trio` only; default off |
+| Show Sensitivity Ratio Graph | Graph of the sensitivity ratio over time. This is the autosens ratio, or the Dynamic ISF ratio when Dynamic ISF is on. Above 100% the looping app is more aggressive than your profile settings (it uses a lower ISF); below 100% it is less aggressive<br>`Trio` only; default off |
+| Curve Placement | Shown when an IOB, COB or Sensitivity Ratio graph is on<br>**Separate Graphs**: each curve gets its own small graph with its own scale under the main graph<br>**In Main Graph**: the curves are drawn as lines at the bottom of the main graph, below the low line, each scaled to its own range. Negative IOB is drawn upward in pink |
 | Height | Select height of small Graph |
 | Hours of Prediction | Select prediction extent on main plot |
 | Min Basal | clamp the minimum displayed range for basal rate plot |
 | Min BG Scale | clamp the minimum displayed range for glucose scale |
-| Show Days Back | Affects the small graph display and adjusts fetch from Nightscout Site |
+| Show Days Back | Affects the small graph display and adjusts fetch from Nightscout Site, including how much looping app history is kept on the phone for the [Main Graph](#main-graph) |
 
 ### Information Display
 
@@ -304,6 +322,7 @@ These items can be chosen for display on the Home screen. A Nightscout Site is r
 | TDD | Total Daily Dose in the last 24 hours | `Trio` |
 | IAGE | Insulin Age | Both |
 | DB Size | *Nightscout* database size: mebibytes (MiB) used and the percentage of the site's configured limit, for example `123 MiB (25%)`. Hidden by default | Both |
+| Smoothed BG | Glucose value the algorithm used in the last `loop`. In *Trio* this is the smoothed glucose. Hidden by default | `Trio` |
 
 !!! note "DB Size"
     The **DB Size** row and the [*Nightscout* Database Size alarm](lf-features.md#alarms){: target="_blank" } both read from *Nightscout*'s `dbsize` plugin, so your site must have that plugin enabled. The percentage is measured against the site's `DBSIZE_MAX` setting, which is **496 MiB** unless the site owner changed it. Because that setting may not match your hosting plan's real limit, the row leads with the absolute used MiB figure, which is always meaningful.
