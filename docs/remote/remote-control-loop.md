@@ -364,6 +364,7 @@ The graphic below shows a properly configured *LoopFollow* when the *Loop* app w
 * [Loop Remote Control is not available or stopped working](#loop-remote-control-is-not-available-or-stopped-working)
 * [Run Diagnostics](#run-diagnostics)
 * [Common send errors](#common-send-errors)
+* [Remote Command Errors](remote-command-errors.md){: target="_blank" } for messages returned by the *Loop* phone after the command was sent
 
 ### Loop Remote Control is not available or stopped working
 
@@ -390,4 +391,6 @@ If sending a command fails immediately, *LoopFollow* shows the reason:
 | Bad request | The **Production** environment toggle does not match how *Loop* was built — Production on for browser builds, off for Xcode builds |
 | The device token is no longer active | *Loop* was rebuilt or moved; wait for *Loop* to upload a fresh profile with the new token |
 | Too many requests | APNS is rate-limiting; wait before retrying |
+
+If the command was sent successfully but the *Loop* phone rejected it, the reason is shown on a gray dot on the main graph or in a returned notification. These messages are explained on the [Remote Command Errors](remote-command-errors.md){: target="_blank" } page.
 
