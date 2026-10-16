@@ -337,6 +337,19 @@
       
     </span>
 </a>
+<nav aria-label="Home" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-graph">
+<span class="md-ellipsis">
+      
+        Main Graph
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#toolbar">
@@ -729,6 +742,19 @@
       
     </span>
 </a>
+<nav aria-label="Home" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-graph">
+<span class="md-ellipsis">
+      
+        Main Graph
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#toolbar">
@@ -1053,6 +1079,20 @@
 </ul>
 <p>Once you’ve configured your settings, your Home screen will look as beautiful as the example below!</p>
 <p align="center"><img alt="overview graphic of home screen" src="../img/lf-table-overview.png" width="700"/></p>
+<h3 id="main-graph">Main Graph<a class="headerlink" href="#main-graph" title="Link to this section for reference">¶</a></h3>
+<ul>
+<li><strong>Move through time:</strong> drag left or right. If you leave the graph in the past, it returns to the latest data after about 5 minutes, or right away when you tap the jump to now button at the lower right.</li>
+<li><strong>Zoom:</strong> pinch to show between 15 minutes and 24 hours, or double tap to step through 1, 3, 6, 12 and 24 hours.</li>
+<li><strong>Tap</strong> a glucose reading, treatment, override or temporary target to see its value and time. Tap an empty spot to close it.</li>
+<li><strong>Press and hold, then drag</strong> to look back in time. While your finger is down:<ul>
+<li>The glucose display and the Information Display show the values at that time. They are shaded gray and the time is shown with a clock symbol, so they are not mistaken for current values.</li>
+<li>The forecast the looping app made at that time is drawn on the graph.</li>
+<li>Rows with no stored value for that time show <code>—</code>. For <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em>, <abbr title="Insulin Sensitivity Factor; how many points your blood sugar will drop for each unit of insulin; sometimes called Correction Factor">ISF</abbr>, <abbr title="Carb Ratio; how many grams of carbs are covered by one unit of rapid-acting insulin">CR</abbr> and Target come from the current profile at that time of day.</li>
+<li>Lift your finger to return to the current values. Alarms and the Live Activity always use the current values.</li>
+</ul>
+</li>
+</ul>
+<p>To show these past values, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> keeps a copy of the looping app's <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> status records for the <a href="#graph">Show Days Back</a> period on the phone. It downloads them once and after that only what is new. Changing the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> address clears the copy.</p>
 <hr/>
 <h2 id="toolbar">Toolbar<a class="headerlink" href="#toolbar" title="Link to this section for reference">¶</a></h2>
 <p>The toolbar (tab bar) at the bottom of the Home and Menu screens is configurable using <a href="#tabs">Settings: Tabs</a>. Four icons are displayed at a time — choose from the options below. The features that can be selected are:</p>
@@ -1404,6 +1444,26 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <td style="text-align: left;">Enable or Disable</td>
 </tr>
 <tr>
+<td style="text-align: left;">Show <abbr title="Insulin on Board, affects automated insulin delivery: the current active insulin (above or below the basal rate)">IOB</abbr> Graph</td>
+<td style="text-align: left;">Graph of insulin on board over time; default off</td>
+</tr>
+<tr>
+<td style="text-align: left;">Show <abbr title="Carbs on Board, affects automated insulin delivery">COB</abbr> Graph</td>
+<td style="text-align: left;">Graph of carbs on board over time; default off</td>
+</tr>
+<tr>
+<td style="text-align: left;">Show Smoothed BG</td>
+<td style="text-align: left;">Line on the main graph with the glucose value the algorithm used at each <code>loop</code>. In <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> this is the smoothed glucose<br/><code>Trio</code> only; default off</td>
+</tr>
+<tr>
+<td style="text-align: left;">Show Sensitivity Ratio Graph</td>
+<td style="text-align: left;">Graph of the sensitivity ratio over time. This is the autosens ratio, or the Dynamic <abbr title="Insulin Sensitivity Factor; how many points your blood sugar will drop for each unit of insulin; sometimes called Correction Factor">ISF</abbr> ratio when Dynamic <abbr title="Insulin Sensitivity Factor; how many points your blood sugar will drop for each unit of insulin; sometimes called Correction Factor">ISF</abbr> is on. Above 100% the looping app is more aggressive than your profile settings (it uses a lower <abbr title="Insulin Sensitivity Factor; how many points your blood sugar will drop for each unit of insulin; sometimes called Correction Factor">ISF</abbr>); below 100% it is less aggressive<br/><code>Trio</code> only; default off</td>
+</tr>
+<tr>
+<td style="text-align: left;">Curve Placement</td>
+<td style="text-align: left;">Shown when an <abbr title="Insulin on Board, affects automated insulin delivery: the current active insulin (above or below the basal rate)">IOB</abbr>, <abbr title="Carbs on Board, affects automated insulin delivery">COB</abbr> or Sensitivity Ratio graph is on<br/><strong>Separate Graphs</strong>: each curve gets its own small graph with its own scale under the main graph<br/><strong>In Main Graph</strong>: the curves are drawn as lines at the bottom of the main graph, below the low line, each scaled to its own range. Negative <abbr title="Insulin on Board, affects automated insulin delivery: the current active insulin (above or below the basal rate)">IOB</abbr> is drawn upward in pink</td>
+</tr>
+<tr>
 <td style="text-align: left;">Height</td>
 <td style="text-align: left;">Select height of small Graph</td>
 </tr>
@@ -1421,7 +1481,7 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 </tr>
 <tr>
 <td style="text-align: left;">Show Days Back</td>
-<td style="text-align: left;">Affects the small graph display and adjusts fetch from <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> Site</td>
+<td style="text-align: left;">Affects the small graph display and adjusts fetch from <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> Site, including how much looping app history is kept on the phone for the <a href="#main-graph">Main Graph</a></td>
 </tr>
 </tbody>
 </table>
@@ -1551,6 +1611,11 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <td style="text-align: left;">DB Size</td>
 <td style="text-align: left;"><em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> database size: mebibytes (<abbr title="mebibytes (MiB) is a unit of digital computer storage equal to 1,048,576 bytes (or 1,024 kibibytes)">MiB</abbr>) used and the percentage of the site's configured limit, for example <code>123 MiB (25%)</code>. Hidden by default</td>
 <td style="text-align: center;">Both</td>
+</tr>
+<tr>
+<td style="text-align: left;">Smoothed BG</td>
+<td style="text-align: left;">Glucose value the algorithm used in the last <code>loop</code>. In <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> this is the smoothed glucose. Hidden by default</td>
+<td style="text-align: center;"><code>Trio</code></td>
 </tr>
 </tbody>
 </table>
