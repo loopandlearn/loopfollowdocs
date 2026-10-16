@@ -592,6 +592,18 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../remote-command-errors/">
+<span class="md-ellipsis">
+    
+  
+    Remote Command Errors
+  
+
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1272,6 +1284,7 @@ or <strong>Quick-Pick Meals</strong> in the app for a short in-screen explanatio
 <li><a href="#loop-remote-control-is-not-available-or-stopped-working"><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> Remote Control is not available or stopped working</a></li>
 <li><a href="#run-diagnostics">Run Diagnostics</a></li>
 <li><a href="#common-send-errors">Common send errors</a></li>
+<li><a href="../remote-command-errors/" target="_blank">Remote Command Errors</a> for messages returned by the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> phone after the command was sent</li>
 </ul>
 <h3 id="loop-remote-control-is-not-available-or-stopped-working"><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> Remote Control is not available or stopped working<a class="headerlink" href="#loop-remote-control-is-not-available-or-stopped-working" title="Link to this section for reference">¶</a></h3>
 <p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> addresses commands to the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> phone using the <strong>device token</strong> and <strong>bundle ID</strong> found in the profile that <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> uploads to your <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> site. Both are shown in the <strong>Debug / Info</strong> section at the bottom of Remote Settings. If they are empty or outdated — for example after the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> app was rebuilt or moved to a new phone — commands cannot reach the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> phone until <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> uploads a fresh profile.</p>
@@ -1311,6 +1324,7 @@ or <strong>Quick-Pick Meals</strong> in the app for a short in-screen explanatio
 </tr>
 </tbody>
 </table>
+<p>If the command was sent successfully but the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> phone rejected it, the reason is shown on a gray dot on the main graph or in a returned notification. These messages are explained on the <a href="../remote-command-errors/" target="_blank">Remote Command Errors</a> page.</p>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
