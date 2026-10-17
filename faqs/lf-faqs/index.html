@@ -369,6 +369,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#widget">
+<span class="md-ellipsis">
+      
+        Does LoopFollow have a home screen widget?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#why-do-i-need-apn-credentials-to-use-live-activity">
 <span class="md-ellipsis">
       
@@ -480,6 +489,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#widget">
+<span class="md-ellipsis">
+      
+        Does LoopFollow have a home screen widget?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#why-do-i-need-apn-credentials-to-use-live-activity">
 <span class="md-ellipsis">
       
@@ -532,6 +550,10 @@
 <p>What is happening under the hood: when you pick DASH as your heartbeat, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> connects to the pod's normal <abbr title="Bluetooth low energy, used for communication by phones, CGM and some pumps">BLE</abbr> service and just listens in on the same notifications <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em>/<em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> is already getting. It's not poking the pod or asking it for anything extra — it's eavesdropping on traffic that is happening anyway.</p>
 <p>Because both apps, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> + (<em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> or <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em>), are on the same phone, <abbr title="operating system used by Apple Mobile devices (iPhone, iPod, iPad)">iOS</abbr> only opens one actual <abbr title="Bluetooth low energy, used for communication by phones, CGM and some pumps">BLE</abbr> connection to the pod and shares it between them. So from the pod's perspective there is just one controller talking to it, same as always. Whether one app is listening or two, the pod is doing the exact same radio work.</p>
 <p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> tagging along will not affect the pod battery.</p>
+<hr/>
+<h2 id="widget">Does <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> have a home screen widget?<a class="headerlink" href="#widget" title="Link to this section for reference">¶</a></h2>
+<p>No. <abbr title="operating system used by Apple Mobile devices (iPhone, iPod, iPad)">iOS</abbr> decides when a home screen widget refreshes, so a widget is not guaranteed to update when a new glucose value arrives and could show an old reading.</p>
+<p>Instead, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> offers a <a href="../../setup/lf-setup/#live-activity">Live Activity</a>. It shows glucose on the Lock Screen and in the Dynamic Island, and a smaller version appears in CarPlay and the Apple Watch Smart Stack.</p>
 <hr/>
 <h2 id="why-do-i-need-apn-credentials-to-use-live-activity">Why do I need <abbr title="Apple Push Notification service">APN</abbr> credentials to use Live Activity?<a class="headerlink" href="#why-do-i-need-apn-credentials-to-use-live-activity" title="Link to this section for reference">¶</a></h2>
 <ul>
