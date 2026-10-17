@@ -31,6 +31,14 @@ Because both apps, *LoopFollow* + (*Trio* or *Loop*), are on the same phone, iOS
 
 - - -
 
+## Does *LoopFollow* have a home screen widget? { #widget }
+
+No. iOS decides when a home screen widget refreshes, so a widget is not guaranteed to update when a new glucose value arrives and could show an old reading.
+
+Instead, *LoopFollow* offers a [Live Activity](../setup/lf-setup.md#live-activity). It shows glucose on the Lock Screen and in the Dynamic Island, and a smaller version appears in CarPlay and the Apple Watch Smart Stack.
+
+- - -
+
 ## Why do I need APN credentials to use Live Activity?
 
 * When *LoopFollow* uses Silent Tunes as Background Refresh, it is not able to update the Live Activity display while the phone is locked unless APN are available
