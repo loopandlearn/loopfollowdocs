@@ -31,7 +31,7 @@ Turn the Digital Crown, or swipe up and down, to move between the pages: Glucose
 * Top right: minutes since the latest reading
     * An orange *iPhone* symbol means the watch cannot reach the *iPhone* right now
     * A blue watch symbol means the watch is fetching the data itself
-* Carbs on board (COB) and the time since *Loop* or *Trio* last reported
+* Carbs on board (COB)
     * *Not looping* is shown in red when the loop has not reported for 15 minutes
 * A graph of the last two hours
 * Buttons for remote commands at the bottom, see [Remote Commands](#remote-commands)
@@ -98,7 +98,8 @@ The buttons on the glucose page send the same commands as the *LoopFollow* remot
 
 * The rows at the top are your *LoopFollow* Quick-Pick meals.
 * Set carbs with the Digital Crown.
-* Tap the row below carbs to add a time (from 2 hours ago to 1 hour ahead) and, for *Trio*, fat, protein and a bolus when *Meal with Fat/Protein* and *Meal with Bolus* are turned on in the *LoopFollow* *Remote Settings*.
+* For *Trio*, the same fields as on the *iPhone* follow below carbs: fat and protein when *Meal with Fat/Protein* is turned on, and a bolus when *Meal with Bolus* is turned on in the *LoopFollow* *Remote Settings*. Carbs and bolus are sent together as one command.
+* Tap *Time* to log the meal from 2 hours ago to 1 hour ahead. A bolus sent with the meal is given right away, also when the meal is set to another time.
 * For *Loop*, the watch sends carbs only, with an absorption time of 3 hours.
 
 ### Safety Checks
