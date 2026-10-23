@@ -295,7 +295,6 @@ When you select *Loop* Remote Control as the Remote Type in the *LoopFollow* app
 
     * [Developer Team ID](#developer-team-id)
     * [QR Code URL](#qr-code-url)
-    * [Environment Production](#environment-production)
 
 ![remote lrc settings ](img/lf-lrc-credentials.png){width="700"}
 {align="center"}
@@ -342,17 +341,22 @@ Options:
 
 While you are on the *Loop* Settings -> Services -> NightScout screen, notice that the 6-digit number on the One-Time Password row updates every 30 seconds.
 
-### Environment Production
+### APNS Environment
 
-If the *Loop* app was built with Browser Build, you must enable this row.
+!!! info "Available in *LoopFollow* 7.2 and newer"
 
-If the *Loop* app was built using Xcode on a Mac, you must disable this row.
+*Loop* uploads its APNS environment to *Nightscout*, and *LoopFollow* reads it from there. It is shown in the [Debug / Info](#debug-info) section as **APNS Environment**: Production when *Loop* was installed with TestFlight, Development when it was installed directly from Xcode to the phone.
+
+*Loop* uploads this value from version 3.14.7. Until it has, *LoopFollow* uses Development.
+
+!!! note "*Loop* next-dev"
+    The *Loop* `next-dev` branch (3.15) does not upload this value yet.
 
 ### Debug / Info
 
 This section indicates if *Loop* has uploaded required information to *Nightscout*.
 
-The graphic below shows a properly configured *LoopFollow* when the *Loop* app was built using the Browser Build method.
+The graphic below shows a properly configured *LoopFollow* when *Loop* was installed with TestFlight.
 
 ![shows credentials entered into loopfollow are correct](img/lf-lrc-debug.png){width="300"}
 {align=center}
@@ -388,7 +392,7 @@ If sending a command fails immediately, *LoopFollow* shows the reason:
 | Message | Usual cause |
 |:--|:--|
 | Authentication error / JWT error | The APNS Key ID, APNS Key, or Team ID is wrong |
-| Bad request | The **Production** environment toggle does not match how *Loop* was built — Production on for browser builds, off for Xcode builds |
+| Bad request | The [APNS Environment](#apns-environment) does not match how *Loop* was installed — Production for TestFlight, Development for a direct install from Xcode |
 | The device token is no longer active | *Loop* was rebuilt or moved; wait for *Loop* to upload a fresh profile with the new token |
 | Too many requests | APNS is rate-limiting; wait before retrying |
 
