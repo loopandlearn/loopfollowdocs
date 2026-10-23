@@ -72,6 +72,25 @@ Tapping **Send Carbs** shows a confirmation of the entry before anything is sent
 ![ remote carb entries](img/lf-lrc-meal.png){width="300"}
 {align=center}
 
+### Edit or Delete Carbs
+
+!!! info "Available in *LoopFollow* 7.2 and newer"
+
+Carb entries from *Loop* can be edited or deleted on the [Treatments](../setup/lf-features.md#treatments) screen. Tap the entry to open its details; the **Remote actions** section has **Edit carbs** and **Delete carbs**.
+
+![carb entry details with remote actions](img/lf-lrc-carb-detail.png){width="300"}
+{align=center}
+
+* **Edit carbs** shows the current values and lets you enter new carbs, absorption time, food type and time. Tapping **Update Carbs** asks for confirmation before the change is sent. *Loop* replaces the entry with the new values and keeps its history.
+* **Delete carbs** asks for confirmation. It removes the carb entry from *Loop*, and *Loop* recalculates carbs on board right away.
+
+| ![Edit Carbs screen](img/lf-lrc-carb-edit.png){width="300"} | ![delete carbs confirmation](img/lf-lrc-carb-delete.png){width="300"} |
+|:--:|:--:|
+
+Carb entries can be changed up to 23 hours after their time.
+
+The actions need the remote carb edit customization in the *Loop* app. Without it, the carb entry details show "Editing carbs needs the remote carb edit customization in Loop."
+
 ### Remote Bolus
 
 The Insulin screen sends a remote bolus to *Loop*:
