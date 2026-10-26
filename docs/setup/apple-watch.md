@@ -89,7 +89,7 @@ The buttons on the glucose page send the same commands as the *LoopFollow* remot
 
 * *Recommended* shows the recommendation from *Loop* or *Trio*, as on the *iPhone*. It is hidden when it is 12 minutes old or more, and you are warned when it is 5 minutes old or more.
 * The amounts below are your *LoopFollow* Quick-Pick boluses.
-* *Other Amount* lets you set any amount with the Digital Crown, up to the *Max Bolus* in *LoopFollow*.
+* *Other Amount* lets you set any amount with the Digital Crown, up to the *Max Bolus* in *LoopFollow*. Each click of the crown changes the amount by one bolus increment, and the **−** and **+** buttons beside the amount do the same.
 
 ### Meal
 
@@ -97,7 +97,7 @@ The buttons on the glucose page send the same commands as the *LoopFollow* remot
 {align="center"}
 
 * The rows at the top are your *LoopFollow* Quick-Pick meals.
-* Tap *Carbs* and set the amount with the Digital Crown. Until you tap a field, the Digital Crown scrolls the screen.
+* Tap *Carbs* and set the amount with the Digital Crown, or with the **−** and **+** buttons beside the amount. Until you tap a field, the Digital Crown scrolls the screen.
 * For *Trio*, the same fields as on the *iPhone* follow below carbs: fat and protein when *Meal with Fat/Protein* is turned on, and a bolus when *Meal with Bolus* is turned on in the *LoopFollow* *Remote Settings*. Carbs and bolus are sent together as one command.
 * Tap *Time* to log the meal from 2 hours ago to 1 hour ahead. A bolus sent with the meal is given right away, also when the meal is set to another time.
 * For *Loop*, the watch sends carbs only, with an absorption time of 3 hours.
