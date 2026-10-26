@@ -171,6 +171,8 @@ New builders - just continue with the instructions as provided on this page.
         * LoopFollow Watch Complications
     3. Run the `Build LoopFollow` action
 
+    If you already built this version of *LoopFollow* with *Xcode*, *Xcode* created the 2 watch identifiers for you, and `Add Identifiers` keeps their names. Their names start with `XC`, see [Previous Xcode Builders](#previous-xcode-builders). You do not need to delete them, but check that they have the LoopFollow App Group.
+
     If you skip these steps, the build log says `The Apple Watch app identifiers are not set up yet` with a link to this section.
 
 The `LoopFollow` *App Group* already exists if you previously built the *LoopFollow* app using *Xcode* with this *Apple Developer ID*. In that case, skip ahead to [Optional: App Group Description Modification](#optional-app-group-description-modification) to update the description.
@@ -225,6 +227,20 @@ For each identifier in the table below, click on the Identifer and then add the 
 | <span translate="no">LoopFollow Watch Complications</span> | <span translate="no">com.TEAMID.LoopFollow.watchkitapp.widgets</span> |
 
 > If you are building Second or Third versions, use the Name (Description) found in the [Identifiers](#identifiers) table.
+
+#### Previous Xcode Builders
+
+If you previously built *LoopFollow* with *Xcode*, the NAME of an identifier may be the *Xcode* version instead of the name in the table above. The *Xcode* version starts with `XC`, followed by the Bundle ID with the `.` replaced by a space. Only the Bundle ID matters for the build, so look for the Bundle ID.
+
+| NAME | XCode version | IDENTIFIER |
+|:--|:--|:--|
+| <span translate="no">LoopFollow</span> | <span translate="no">XC com TEAMID LoopFollow</span> | <span translate="no">com.TEAMID.LoopFollow</span> |
+| <span translate="no">LoopFollow Live Activity Extension</span> | <span translate="no">XC com TEAMID LoopFollow LoopFollowLAExtension</span> | <span translate="no">com.TEAMID.LoopFollow.LoopFollowLAExtension</span> |
+| <span translate="no">LoopFollow Watch App</span> | <span translate="no">XC com TEAMID LoopFollow watchkitapp</span> | <span translate="no">com.TEAMID.LoopFollow.watchkitapp</span> |
+| <span translate="no">LoopFollow Watch Complications</span> | <span translate="no">XC com TEAMID LoopFollow watchkitapp widgets</span> | <span translate="no">com.TEAMID.LoopFollow.watchkitapp.widgets</span> |
+
+??? tip "Optional Rename Step (click to open/close)"
+    For each identifier with an *Xcode* version NAME, tap on it to open the `Edit your App ID Configuration` screen, edit the Description to match the **NAME** in the table, and tap `Save`. The Bundle ID cannot be changed.
 
 The example graphic below has numbered steps that match these directions. The columns from left to right are `Capabilities`, `App Services` and `Capability Requests`. The check box under `Capabilities` will already be checked for you.:
 
