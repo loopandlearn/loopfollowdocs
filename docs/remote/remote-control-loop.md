@@ -74,7 +74,7 @@ Tapping **Send Carbs** shows a confirmation of the entry before anything is sent
 
 ### Edit or Delete Carbs
 
-!!! info "Available in *LoopFollow* 7.2 and newer"
+!!! info "Available in *LoopFollow* 8.0 and newer"
 
 Carb entries from *Loop* can be edited or deleted on the [Treatments](../setup/lf-features.md#treatments) screen. Tap the entry to open its details; the **Remote actions** section has **Edit carbs** and **Delete carbs**.
 
@@ -362,7 +362,7 @@ While you are on the *Loop* Settings -> Services -> NightScout screen, notice th
 
 ### APNS Environment
 
-!!! info "Available in *LoopFollow* 7.2 and newer"
+!!! info "Available in *LoopFollow* 8.0 and newer"
 
 *Loop* uploads its APNS environment to *Nightscout*, and *LoopFollow* reads it from there. It is shown in the [Debug / Info](#debug-info) section as **APNS Environment**: Production when *Loop* was installed with TestFlight, Development when it was installed directly from Xcode to the phone.
 

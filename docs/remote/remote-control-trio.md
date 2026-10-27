@@ -91,7 +91,7 @@ When entering meals and choosing to schedule the meal, any bolus included in the
 
 ### Edit or Delete a Meal
 
-!!! info "Available in *LoopFollow* 7.2 and newer"
+!!! info "Available in *LoopFollow* 8.0 and newer"
 
 Meals from *Trio* can be edited or deleted on the [Treatments](../setup/lf-features.md#treatments) screen. Tap the meal to open its details; the **Remote actions** section has **Edit meal** and **Delete meal**.
 
