@@ -352,16 +352,16 @@ The same reading is shown in either unit — switching the unit does not change 
 
 #### Range
 
-Selects the Low and High thresholds that define your target interval. The percentage of readings within this interval is shown on the Home screen. Tapping the Time in Range card on the Statistics screen cycles through the same options.
+Selects the Low and High thresholds that define your target interval. The percentage of readings within this interval is shown on the Home screen. The row shows the selected range with its Low and High values; tap it to open the list of ranges. Tapping the Time in Range card on the Statistics screen cycles through the same options.
 
-| Option   | Name                  | Low – High                          |
-|:--|:--|:--|
-| `TIR`    | Time in Range         | 70 – 180 mg/dL (3.9 – 10.0 mmol/L)  |
-| `TITR`   | Time in Tight Range   | 70 – 140 mg/dL (3.9 – 7.8 mmol/L)   |
-| `TING`   | Time in Normoglycemia | 63 – 140 mg/dL (3.5 – 7.8 mmol/L)   |
-| `Custom` | —                     | Values you enter below              |
+| Range                | Low – High                          |
+|:--|:--|
+| Time in Range        | 70 – 180 mg/dL (3.9 – 10.0 mmol/L)  |
+| Time in Tight Range  | 70 – 140 mg/dL (3.9 – 7.8 mmol/L)   |
+| Extended Tight Range | 63 – 140 mg/dL (3.5 – 7.8 mmol/L)   |
+| Custom Range         | Values you enter                    |
 
-When `Custom` is selected, two extra rows appear — **Low** and **High** — entered in the glucose unit you chose above. These same Low and High values also drive the Low and High BG lines drawn on the main graph.
+When `Custom Range` is selected, the list stays open and shows two extra rows — **Low** and **High** — entered in the glucose unit you chose above. These same Low and High values also drive the Low and High BG lines drawn on the main graph.
 
 #### Glycemic Metrics
 
