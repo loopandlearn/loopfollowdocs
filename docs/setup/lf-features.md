@@ -175,7 +175,7 @@ Quick access is provided using these links once you have configured *LoopFollow*
 
 ## Treatments
 
-The treatments screen displays all treatments downloaded from the Nightscout Site with user-selectable filters on treatment type.
+The treatments screen displays all treatments downloaded from the Nightscout Site with user-selectable filters on treatment type. Tap a treatment to see its details. With remote control, carb entries can be edited or deleted from their details; see [*Trio*](../remote/remote-control-trio.md#edit-or-delete-a-meal) and [*Loop*](../remote/remote-control-loop.md#edit-or-delete-carbs).
 
 ![example treatments screen](img/lf-treatments-screen.png){width=700}
 {align="center"}
