@@ -277,14 +277,30 @@ These settings are accessed through the Graph row in the Settings screen.
 | Treatments on Small Graph | Enable or Disable |
 | Show IOB Graph | Graph of insulin on board over time; default off |
 | Show COB Graph | Graph of carbs on board over time; default off |
+| Show Insulin Activity Graph | Graph of [insulin activity](#insulin-activity) over time, in U/h; default off |
+| Insulin Model | The insulin model *LoopFollow* uses to compute insulin activity and the IOB forecast for *Loop*. Choose the same model that is selected in *Loop*<br>`Loop` only; default Rapid-Acting – Adults |
 | Show Smoothed BG | Line on the main graph with the glucose value the algorithm used at each `loop`. In *Trio* this is the smoothed glucose<br>`Trio` only; default off |
 | Show Sensitivity Ratio Graph | Graph of the sensitivity ratio over time. This is the autosens ratio, or the Dynamic ISF ratio when Dynamic ISF is on. Above 100% the looping app is more aggressive than your profile settings (it uses a lower ISF); below 100% it is less aggressive<br>`Trio` only; default off |
-| Curve Placement | Shown when an IOB, COB or Sensitivity Ratio graph is on<br>**Separate Graphs**: each curve gets its own small graph with its own scale under the main graph<br>**In Main Graph**: the curves are drawn as lines at the bottom of the main graph, below the low line, each scaled to its own range. Negative IOB is drawn upward in pink |
+| Curve Placement | Shown when an IOB, COB, Insulin Activity or Sensitivity Ratio graph is on<br>**Separate Graphs**: each curve gets its own small graph with its own scale under the main graph<br>**In Main Graph**: the curves are drawn as lines at the bottom of the main graph, below the low line, each scaled to its own range. Negative IOB is drawn upward in pink and negative insulin activity upward in brown |
 | Height | Select height of small Graph |
 | Hours of Prediction | Select prediction extent on main plot |
 | Min Basal | clamp the minimum displayed range for basal rate plot |
 | Min BG Scale | clamp the minimum displayed range for glucose scale |
 | Show Days Back | Affects the small graph display and adjusts fetch from Nightscout Site, including how much looping app history is kept on the phone for the [Main Graph](#main-graph) |
+
+#### Insulin Activity
+
+IOB (insulin on board) is how much insulin is still left to act. It jumps up as soon as a bolus is given. Insulin activity is how much insulin is acting right now, in units per hour (U/h). After a bolus it starts at zero, peaks later and then slowly tails off.
+
+Like IOB, insulin activity is shown relative to your scheduled basal rate. Zero means insulin is acting the same as it would with your scheduled basal alone. Negative values mean less than that, for example while the looping app has lowered or stopped basal. With an unchanged basal rate, insulin activity can go no lower than minus the basal rate, which means almost no insulin is acting.
+
+* *Trio* uploads insulin activity to *Nightscout*.
+* *Loop* does not, so *LoopFollow* computes it from the boluses and temp basals in *Nightscout* with the **Insulin Model** you choose. Choose the same model that is selected in *Loop*.
+
+The IOB and Insulin Activity graphs also show a dashed forecast, out to **Hours of Prediction**. It shows where IOB and insulin activity are heading if no more insulin is given, counting the insulin already delivered and the temp basal that is running until it ends. *LoopFollow* computes the forecast for *Loop*. For *Trio* it is shown when *Trio* uploads it to *Nightscout*; versions that do not upload it show no forecast.
+
+!!! warning "Not medical advice"
+    Insulin activity and the forecast are calculated from a model of how insulin is usually absorbed, not measured in the body. How fast insulin acts varies with injection site, exercise, temperature and more. Talk with your care team about questions on dosing.
 
 ### Information Display
 
@@ -323,6 +339,7 @@ These items can be chosen for display on the Home screen. A Nightscout Site is r
 | IAGE | Insulin Age | Both |
 | DB Size | *Nightscout* database size: mebibytes (MiB) used and the percentage of the site's configured limit, for example `123 MiB (25%)`. Hidden by default | Both |
 | Smoothed BG | Glucose value the algorithm used in the last `loop`. In *Trio* this is the smoothed glucose. Hidden by default | `Trio` |
+| Ins. Activity | [Insulin activity](#insulin-activity) right now, in U/h. Hidden by default | Both |
 
 !!! note "DB Size"
     The **DB Size** row and the [*Nightscout* Database Size alarm](lf-features.md#alarms){: target="_blank" } both read from *Nightscout*'s `dbsize` plugin, so your site must have that plugin enabled. The percentage is measured against the site's `DBSIZE_MAX` setting, which is **496 MiB** unless the site owner changed it. Because that setting may not match your hosting plan's real limit, the row leads with the absolute used MiB figure, which is always meaningful.
@@ -340,6 +357,7 @@ Rows that support color thresholds:
 | Row | Colors when | Default Yellow / Red |
 |:--|:-:|:--|
 | IOB | high | 3 / 5 U |
+| Ins. Activity | high | 2 / 4 U/h |
 | COB | high | 30 / 60 g |
 | Battery (phone) | low | 30 / 15 % |
 | Pump Battery | low | 30 / 15 % |
