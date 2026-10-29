@@ -83,13 +83,30 @@ The buttons on the glucose page send the same commands as the *LoopFollow* remot
 
 ### Bolus
 
-| Choose an amount | Confirm with the Digital Crown |
+| Set the amount | Confirm with the Digital Crown |
 |:--:|:--:|
-| ![LoopFollow watch bolus choices](img/watch-bolus.png){width="200"} | ![LoopFollow watch bolus confirmation](img/watch-bolus-confirm.png){width="200"} |
+| ![LoopFollow watch bolus amount](img/watch-bolus.png){width="200"} | ![LoopFollow watch bolus confirmation](img/watch-bolus-confirm.png){width="200"} |
 
-* *Recommended* shows the recommendation from *Loop* or *Trio*, as on the *iPhone*. It is hidden when it is 12 minutes old or more, and you are warned when it is 5 minutes old or more.
-* The amounts below are your *LoopFollow* Quick-Pick boluses.
-* *Other Amount* lets you set any amount with the Digital Crown, up to the *Max Bolus* in *LoopFollow*. Each click of the crown changes the amount by one bolus increment, and the **−** and **+** buttons beside the amount do the same.
+The bolus screen opens on the amount. Set it with the Digital Crown, or with the **−** and **+** buttons beside the amount. Each click changes the amount by one bolus increment, up to the *Max Bolus* in *LoopFollow*. Tap *Continue* to confirm.
+
+**Starting at the recommendation**
+
+* When the recommendation from *Loop* or *Trio* is less than 5 minutes old, the amount starts there, rounded down to the bolus increment. The line under the amount shows the recommendation and how old it is, and turns red at 5 minutes.
+* Until you change the amount yourself, the watch keeps it in line with new loop cycles:
+    * A lower recommendation replaces the amount, and the watch taps your wrist.
+    * A higher recommendation is never filled in by itself. The line changes to *New 1.6 U, tap to use* and the watch taps your wrist. Tap the line to use it.
+    * When nothing was filled in as the screen opened, a new recommendation is offered the same way, with a tap.
+* Once you change the amount yourself, it stays as you set it.
+* If the amount is still the recommendation when you tap *Continue*, you are warned when the recommendation is 5 minutes old or more, the same as on the *iPhone*. At 12 minutes or more, the amount is cleared and you set it again.
+
+**Presets**
+
+Tap *Presets*, under *Continue*, for your *LoopFollow* Quick-Pick boluses. The recommendation is also listed there when it is 5 to 12 minutes old, with the same warning. The button is only shown when there is something to list.
+
+**Confirming**
+
+* When the amount came from the recommendation, the confirmation shows *Recommended* and how old it is.
+* If a new loop cycle lowers the recommendation while the confirmation is open, nothing is sent when you turn the crown. The watch shows *Recommendation Lowered* instead, where you can change to the new amount (then turn the crown again to send it), send the original amount anyway, or cancel.
 
 ### Meal
 
