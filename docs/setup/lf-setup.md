@@ -89,6 +89,21 @@ Once you’ve configured your settings, your Home screen will look as beautiful 
 
 To show these past values, *LoopFollow* keeps a copy of the looping app's *Nightscout* status records for the [Show Days Back](#graph) period on the phone. It downloads them once and after that only what is new. Changing the *Nightscout* address clears the copy.
 
+### Loop Status
+
+A symbol below the glucose age shows the status of the last `loop`, next to the eventual glucose forecast:
+
+| Symbol | Meaning |
+|:-:|:--|
+| ↻ | The last `loop` completed |
+| ⏀ | Open loop: Closed Loop is turned off in the looping app, so it suggests changes but does not adjust insulin automatically |
+| X | The last `loop` failed |
+| ⚠️ Not Looping! | No `loop` has been reported for 15 minutes or more |
+
+*LoopFollow* reads open loop from what the looping app uploads to *Nightscout*: *Trio* reports it in each status record, and *Loop* reports its Closed Loop setting in the *Nightscout* profile.
+
+While in open loop, *Trio* does not upload its full insulin-on-board details, so the IOB row shows the value from *Trio*'s latest suggestion. No temporary basals are set in open loop, so the Basal row shows the scheduled basal from the profile.
+
 - - -
 
 ## Toolbar
@@ -303,7 +318,7 @@ These items can be chosen for display on the Home screen. A Nightscout Site is r
 |:--|:--|:-:|
 | IOB | Active Insulin, also known as Insulin on Board | Both |
 | COB | Active Carbohydrates, also known as Carbs on Board | Both |
-| Basal | Current Basal Rate running on the pump | Both |
+| Basal | Current Basal Rate running on the pump<br>The scheduled rate from the profile when no temporary basal is running | Both |
 | Override | Sensitivity (if not 100%) and Target (for `Loop`) <br>Name (for `Trio`)| Both |
 | Battery | Battery level on the OS-AID Phone<br>*Trio* indicates if currently plugged in | Both |
 | Pump | Reservoir Level | Both |
