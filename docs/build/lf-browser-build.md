@@ -30,7 +30,7 @@ Detailed directions are found in the next sections, this is the summary of what 
 1. Create a `LoopFollow App Group` ([link](#create-app-group))
     * New with LoopFollow version 6.0 and newer
 1. Add the App Group to the Identifiers ([link](#add-app-group))
-    * The Apple Watch app adds 2 identifiers ([link](#update-for-the-apple-watch-app))
+    * New with LoopFollow version 8.0 and newer: the Apple Watch app adds 2 identifiers ([link](#update-for-the-apple-watch-app))
 1. Create the App in App Store Connect and configure TestFlight users ([link](#create-app-in-app-store-connect))
 1. Configure TestFlight users for the *LoopFollow* app ([link](#add-users-to-testflight-for-app))
 1. `Build LoopFollow` ([link](#build-app))
@@ -156,14 +156,14 @@ New builders - just continue with the instructions as provided on this page.
         * LoopFollow Live Activity Extension
 
 
-### Update for the Apple Watch app
+### Update to *LoopFollow* v8 { #update-for-the-apple-watch-app }
 
-!!! important "Updating to the LoopFollow version with the Apple Watch app"
+!!! important "Updating LoopFollow to version 8.0 and newer"
     This information admonition is for existing builders who need to update.
 
-    The [Apple Watch app](../setup/apple-watch.md) has 2 new identifiers that need the LoopFollow App Group. Your build will fail until you take these one-time steps.
+    The addition of the [Apple Watch app](../setup/apple-watch.md) requires 2 new identifiers with the LoopFollow App Group. Your build will fail until you take these one-time steps.
 
-    After you **sync your fork**:
+    If you are updating from an earlier version, **sync your fork** and then:
 
     1. Run the `Add Identifiers` action again
     2. Add the LoopFollow App Group to the 2 new identifiers, as described in [Add `App Group`](#add-app-group):

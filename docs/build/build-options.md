@@ -4,7 +4,8 @@
 
 * Browser Build: 
     * If you have never built, see [*LoopFollow* Browser Build](lf-browser-build.md)
-    * If you are updating from v5.x or older, you need follow the one-time steps to [Update to *LoopFollow* v6](lf-browser-build.md#update-to-loopfollow-v6){: target="_blank" }
+    * If you are updating from v5.x or older, first follow the one-time steps to [Update to *LoopFollow* v6](lf-browser-build.md#update-to-loopfollow-v6){: target="_blank" }, since the App Group must exist before it can be added to the watch identifiers
+    * If you are updating from v7.x or older, you need to follow the one-time steps to [Update to *LoopFollow* v8](lf-browser-build.md#update-for-the-apple-watch-app){: target="_blank" }
 * Mac-Xcode: [Build *LoopFollow* Script for Mac-Xcode](#build-loopfollow-script-for-mac-xcode)
 
 ### Build *LoopFollow* Script for Mac-Xcode
