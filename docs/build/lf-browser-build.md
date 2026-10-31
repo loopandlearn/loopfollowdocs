@@ -171,6 +171,18 @@ New builders - just continue with the instructions as provided on this page.
         * LoopFollow Watch Complications
     3. Run the `Build LoopFollow` action
 
+    In the [Identifiers list](https://developer.apple.com/account/resources/identifiers/list), open each watch identifier. Its Bundle ID ends in `.watchkitapp` or `.watchkitapp.widgets`:
+
+    ![a watch identifier: the Bundle ID ends in .watchkitapp](img/watch-identifier-edit.png){width="700"}
+
+    Scroll down to `App Groups`. When the box is checked and the notes say `Enabled App Groups (1)`, tap `Edit` to check that it is the LoopFollow App Group:
+
+    ![the App Groups row of a watch identifier](img/watch-identifier-app-groups.png){width="700"}
+
+    ![the LoopFollow App Group selected for the watch identifier](img/watch-identifier-app-group-assignment.png){width="600"}
+
+    If you changed anything, tap `Continue`, then `Save` and `Confirm`. If you only checked, tap `Cancel`.
+
     If you already built this version of *LoopFollow* with *Xcode*, *Xcode* created the 2 watch identifiers for you, and `Add Identifiers` keeps their names. Their names start with `XC`, see [Previous Xcode Builders](#previous-xcode-builders). You do not need to delete them, but check that they have the LoopFollow App Group.
 
     If you skip these steps, the build log says `The Apple Watch app identifiers are not set up yet` with a link to this section.
