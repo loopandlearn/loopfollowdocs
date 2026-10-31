@@ -348,6 +348,15 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loop-status">
+<span class="md-ellipsis">
+      
+        Loop Status
+      
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -753,6 +762,15 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loop-status">
+<span class="md-ellipsis">
+      
+        Loop Status
+      
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1093,6 +1111,36 @@
 </li>
 </ul>
 <p>To show these past values, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> keeps a copy of the looping app's <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> status records for the <a href="#graph">Show Days Back</a> period on the phone. It downloads them once and after that only what is new. Changing the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> address clears the copy.</p>
+<h3 id="loop-status"><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> Status<a class="headerlink" href="#loop-status" title="Link to this section for reference">¶</a></h3>
+<p>A symbol below the glucose age shows the status of the last <code>loop</code>, next to the eventual glucose forecast:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">↻</td>
+<td style="text-align: left;">The last <code>loop</code> completed</td>
+</tr>
+<tr>
+<td style="text-align: center;">⏀</td>
+<td style="text-align: left;">Open loop: Closed <abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> is turned off in the looping app, so it suggests changes but does not adjust insulin automatically</td>
+</tr>
+<tr>
+<td style="text-align: center;">X</td>
+<td style="text-align: left;">The last <code>loop</code> failed</td>
+</tr>
+<tr>
+<td style="text-align: center;">⚠️ Not Looping!</td>
+<td style="text-align: left;">No <code>loop</code> has been reported for 15 minutes or more</td>
+</tr>
+</tbody>
+</table>
+<p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> reads open loop from what the looping app uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>: <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> reports it in each status record, and <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> reports its Closed <abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> setting in the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> profile.</p>
+<p>While in open loop, <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> does not upload its full insulin-on-board details, so the <abbr title="Insulin on Board, affects automated insulin delivery: the current active insulin (above or below the basal rate)">IOB</abbr> row shows the value from <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>'s latest suggestion. No temporary basals are set in open loop, so the Basal row shows the scheduled basal from the profile.</p>
 <hr/>
 <h2 id="toolbar">Toolbar<a class="headerlink" href="#toolbar" title="Link to this section for reference">¶</a></h2>
 <p>The toolbar (tab bar) at the bottom of the Home and Menu screens is configurable using <a href="#tabs">Settings: Tabs</a>. Four icons are displayed at a time — choose from the options below. The features that can be selected are:</p>
@@ -1519,7 +1567,7 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 </tr>
 <tr>
 <td style="text-align: left;">Basal</td>
-<td style="text-align: left;">Current Basal Rate running on the pump</td>
+<td style="text-align: left;">Current Basal Rate running on the pump<br/>The scheduled rate from the profile when no temporary basal is running</td>
 <td style="text-align: center;">Both</td>
 </tr>
 <tr>
