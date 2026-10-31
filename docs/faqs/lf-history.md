@@ -2,6 +2,31 @@
 
 ## New Feature Highlights
 
+### Version 8.0.0
+
+!!! important "Browser Builders: one-time update"
+    The Apple Watch app adds 2 identifiers. Before your first build of v8.0.0, run `Add Identifiers` and add the LoopFollow App Group to the `LoopFollow Watch App` and `LoopFollow Watch Complications` identifiers, as described in [Update for the Apple Watch app](../build/lf-browser-build.md#update-for-the-apple-watch-app){: target="_blank" }. Until then, the automatic build fails with `The Apple Watch app identifiers are not set up yet`.
+
+!!! tip ""
+    New with *LoopFollow* v8.0.0:
+
+    * An [Apple Watch app](../setup/apple-watch.md){: target="_blank" } with glucose, graph, statistics and info pages, [complications](../setup/apple-watch.md#complications){: target="_blank" }, and [remote boluses and meals](../setup/apple-watch.md#remote-commands){: target="_blank" } from the watch
+    * Edit or delete meals and carbs remotely from the Treatments view, for [Loop](../remote/remote-control-loop.md#edit-or-delete-carbs){: target="_blank" } and [Trio](../remote/remote-control-trio.md#edit-or-delete-a-meal){: target="_blank" }
+    * Switch Loop profiles from the Loop remote screen
+    * Tap a pill in the main graph to open the treatment's details
+    * History graphs for device status values, with values at a scrubbed time
+    * CGM sensor states from Nightscout notes are shown
+    * Home screen statistics show the time in range band, for the last 24 hours or since midnight
+    * Loop automatic boluses are labeled Auto Bolus in the graph
+    * The Loop APNS environment is shown as information, read from Nightscout
+    * Live Activity: fits narrow lock screens, uses the selected range colors, and updates without being postponed by frequent polling
+    * Fixes:
+        * The Missed Bolus alarm fires again
+        * The predictive Low BG alert looks ahead over its full window
+        * Loop IOB and COB stay visible when a loop fails
+        * Statistics no longer hang on daylight saving fall-back days
+        * Crashes on unexpected Nightscout values are fixed
+
 ### Version 7.0.0
 
 !!! tip ""
