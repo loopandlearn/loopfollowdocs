@@ -84,6 +84,7 @@ Once you’ve configured your settings, your Home screen will look as beautiful 
     * Carbs, boluses, overrides and temporary targets that are listed on the [Treatments](lf-features.md#treatments) screen get a label with an arrow. Tap the label to open the treatment's details (*LoopFollow* 8.0 and newer).
 
     ![label for a carb entry on the main graph](img/lf-graph-treatment-pill.png){width="350"}
+
 * **Press and hold, then drag** to look back in time. While your finger is down:
     * The glucose display and the Information Display show the values at that time. They are shaded gray and the time is shown with a clock symbol, so they are not mistaken for current values.
     * The forecast the looping app made at that time is drawn on the graph.

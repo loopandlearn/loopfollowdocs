@@ -7,6 +7,7 @@ Normally the watch gets everything from *LoopFollow* on the paired *iPhone*. Whe
 !!! info "Requirements"
     * An *Apple Watch* paired with the *iPhone* that runs *LoopFollow*
     * watchOS 10 or newer (Apple Watch Series 4 or newer)
+    * LoopFollow version 8.0.0 or newer
 
 ### Install the Watch App
 
@@ -32,7 +33,7 @@ Turn the Digital Crown, or swipe up and down, to move between the pages: Glucose
     * An orange *iPhone* symbol means the watch cannot reach the *iPhone* right now
     * A blue watch symbol means the watch is fetching the data itself
 * Carbs on board (COB)
-    * *Not looping* is shown in red when the loop has not reported for 15 minutes
+* *Not looping* is shown in red when the loop has not reported for 15 minutes
 * A graph of the last two hours
 * Buttons for remote commands at the bottom, see [Remote Commands](#remote-commands)
 

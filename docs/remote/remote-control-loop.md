@@ -366,10 +366,7 @@ While you are on the *Loop* Settings -> Services -> NightScout screen, notice th
 
 *Loop* uploads its APNS environment to *Nightscout*, and *LoopFollow* reads it from there. It is shown in the [Debug / Info](#debug-info) section as **APNS Environment**: Production when *Loop* was installed with TestFlight, Development when it was installed directly from Xcode to the phone.
 
-*Loop* uploads this value from version 3.14.7. Until it has, *LoopFollow* uses Development.
-
-!!! note "*Loop* next-dev"
-    The *Loop* `next-dev` branch (3.15) does not upload this value yet.
+*Loop* uploads this value for version 3.14.7 or newer. Until it has, *LoopFollow* uses Development.
 
 ### Debug / Info
 
