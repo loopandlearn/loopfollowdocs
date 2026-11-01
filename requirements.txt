@@ -15,7 +15,7 @@ beautifulsoup4==4.14.3
     #   mkdocs-unused-files
 bracex==2.6
     # via wcmatch
-certifi==2026.1.4
+certifi==2026.10.19
     # via requests
 charset-normalizer==3.4.4
     # via requests
@@ -108,7 +108,7 @@ pygments==2.20.0
     # via mkdocs-material
 pymdown-extensions==11.0.1
     # via mkdocs-material
-pypdf==6.16.1
+pypdf==6.21.4
     # via mkdocs-exporter
 python-dateutil==2.9.0.post0
     # via
@@ -130,7 +130,7 @@ requests==2.33.0
     #   mkdocs-material
 six==1.17.0
     # via python-dateutil
-soupsieve==2.8.3
+soupsieve==2.9
     # via beautifulsoup4
 super-collections==0.6.2
     # via mkdocs-macros-plugin
@@ -140,7 +140,7 @@ typing-extensions==4.15.0
     # via
     #   beautifulsoup4
     #   pyee
-urllib3==2.6.3
+urllib3==2.8.0
     # via requests
 watchdog==6.0.0
     # via mkdocs
