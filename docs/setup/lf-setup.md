@@ -81,6 +81,10 @@ Once you’ve configured your settings, your Home screen will look as beautiful 
 * **Move through time:** drag left or right. If you leave the graph in the past, it returns to the latest data after about 5 minutes, or right away when you tap the jump to now button at the lower right.
 * **Zoom:** pinch to show between 15 minutes and 24 hours, or double tap to step through 1, 3, 6, 12 and 24 hours.
 * **Tap** a glucose reading, treatment, override or temporary target to see its value and time. Tap an empty spot to close it.
+    * Carbs, boluses, overrides and temporary targets that are listed on the [Treatments](lf-features.md#treatments) screen get a label with an arrow. Tap the label to open the treatment's details (*LoopFollow* 8.0 and newer).
+
+    ![label for a carb entry on the main graph](img/lf-graph-treatment-pill.png){width="350"}
+
 * **Press and hold, then drag** to look back in time. While your finger is down:
     * The glucose display and the Information Display show the values at that time. They are shaded gray and the time is shown with a clock symbol, so they are not mistaken for current values.
     * The forecast the looping app made at that time is drawn on the graph.
@@ -386,15 +390,16 @@ The same reading is shown in either unit — switching the unit does not change 
 
 #### Range
 
-Selects the Low and High thresholds that define your target interval. The percentage of readings within this interval is shown on the Home screen.
+Selects the Low and High thresholds that define your target interval. The percentage of readings within this interval is shown on the Home screen. The row shows the selected range with its Low and High values; tap it to open the list of ranges. Tapping the Time in Range card on the Statistics screen cycles through the same options.
 
-| Option   | Name                  | Low – High                          |
-|:--|:--|:--|
-| `TIR`    | Time in Range         | 70 – 180 mg/dL (3.9 – 10.0 mmol/L)  |
-| `TITR`   | Time in Tighter Range | 70 – 140 mg/dL (3.9 – 7.8 mmol/L)   |
-| `Custom` | —                     | Values you enter below              |
+| Range                | Low – High                          |
+|:--|:--|
+| Time in Range        | 70 – 180 mg/dL (3.9 – 10.0 mmol/L)  |
+| Time in Tight Range  | 70 – 140 mg/dL (3.9 – 7.8 mmol/L)   |
+| Extended Tight Range | 63 – 140 mg/dL (3.5 – 7.8 mmol/L)   |
+| Custom Range         | Values you enter                    |
 
-When `Custom` is selected, two extra rows appear — **Low** and **High** — entered in the glucose unit you chose above. These same Low and High values also drive the Low and High BG lines drawn on the main graph.
+When `Custom Range` is selected, the list stays open and shows two extra rows — **Low** and **High** — entered in the glucose unit you chose above. These same Low and High values also drive the Low and High BG lines drawn on the main graph.
 
 #### Glycemic Metrics
 

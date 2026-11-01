@@ -89,6 +89,25 @@ When entering meals and choosing to schedule the meal, any bolus included in the
 ![scheduled meal warning](img/lf-trc-scheduled-meal.png){width="300"}
 {align=center}
 
+### Edit or Delete a Meal
+
+!!! info "Available in *LoopFollow* 8.0 and newer"
+
+Meals from *Trio* can be edited or deleted on the [Treatments](../setup/lf-features.md#treatments) screen. Tap the meal to open its details; the **Remote actions** section has **Edit meal** and **Delete meal**.
+
+![meal details with remote actions](img/lf-trc-meal-detail.png){width="300"}
+{align=center}
+
+* **Edit meal** shows the current values and lets you enter new carbs, fat, protein and meal time. Tapping **Update Meal** asks for confirmation before the change is sent. *Trio* replaces the meal, including any fat and protein entries, with the new values.
+* **Delete meal** asks for confirmation. It removes the carb entry and any fat/protein entries *Trio* created from it.
+
+| ![Edit Meal screen](img/lf-trc-meal-edit.png){width="300"} | ![delete meal confirmation](img/lf-trc-meal-delete.png){width="300"} |
+|:--:|:--:|
+
+Meals can be changed up to 24 hours after and 12 hours before their time. The small carb entries *Trio* creates from a meal's fat and protein have a **Show original meal** link; editing or deleting one of them affects the whole meal.
+
+The actions need a *Trio* version that supports them. With an older version, the meal details show "Editing meals needs a newer Trio version."
+
 ### Remote Bolus
 
 The Bolus screen sends a remote bolus to *Trio*:

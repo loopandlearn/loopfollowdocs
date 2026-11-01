@@ -72,6 +72,25 @@ Tapping **Send Carbs** shows a confirmation of the entry before anything is sent
 ![ remote carb entries](img/lf-lrc-meal.png){width="300"}
 {align=center}
 
+### Edit or Delete Carbs
+
+!!! info "Available in *LoopFollow* 8.0 and newer"
+
+Carb entries from *Loop* can be edited or deleted on the [Treatments](../setup/lf-features.md#treatments) screen. Tap the entry to open its details; the **Remote actions** section has **Edit carbs** and **Delete carbs**.
+
+![carb entry details with remote actions](img/lf-lrc-carb-detail.png){width="300"}
+{align=center}
+
+* **Edit carbs** shows the current values and lets you enter new carbs, absorption time, food type and time. Tapping **Update Carbs** asks for confirmation before the change is sent. *Loop* replaces the entry with the new values and keeps its history.
+* **Delete carbs** asks for confirmation. It removes the carb entry from *Loop*, and *Loop* recalculates carbs on board right away.
+
+| ![Edit Carbs screen](img/lf-lrc-carb-edit.png){width="300"} | ![delete carbs confirmation](img/lf-lrc-carb-delete.png){width="300"} |
+|:--:|:--:|
+
+Carb entries can be changed up to 23 hours after their time.
+
+The actions need the remote carb edit customization in the *Loop* app. Without it, the carb entry details show "Editing carbs needs the remote carb edit customization in Loop."
+
 ### Remote Bolus
 
 The Insulin screen sends a remote bolus to *Loop*:
@@ -295,7 +314,6 @@ When you select *Loop* Remote Control as the Remote Type in the *LoopFollow* app
 
     * [Developer Team ID](#developer-team-id)
     * [QR Code URL](#qr-code-url)
-    * [Environment Production](#environment-production)
 
 ![remote lrc settings ](img/lf-lrc-credentials.png){width="700"}
 {align="center"}
@@ -342,17 +360,19 @@ Options:
 
 While you are on the *Loop* Settings -> Services -> NightScout screen, notice that the 6-digit number on the One-Time Password row updates every 30 seconds.
 
-### Environment Production
+### APNS Environment
 
-If the *Loop* app was built with Browser Build, you must enable this row.
+!!! info "Available in *LoopFollow* 8.0 and newer"
 
-If the *Loop* app was built using Xcode on a Mac, you must disable this row.
+*Loop* uploads its APNS environment to *Nightscout*, and *LoopFollow* reads it from there. It is shown in the [Debug / Info](#debug-info) section as **APNS Environment**: Production when *Loop* was installed with TestFlight, Development when it was installed directly from Xcode to the phone.
+
+*Loop* uploads this value for version 3.14.7 or newer. Until it has, *LoopFollow* uses Development.
 
 ### Debug / Info
 
 This section indicates if *Loop* has uploaded required information to *Nightscout*.
 
-The graphic below shows a properly configured *LoopFollow* when the *Loop* app was built using the Browser Build method.
+The graphic below shows a properly configured *LoopFollow* when *Loop* was installed with TestFlight.
 
 ![shows credentials entered into loopfollow are correct](img/lf-lrc-debug.png){width="300"}
 {align=center}
@@ -388,7 +408,7 @@ If sending a command fails immediately, *LoopFollow* shows the reason:
 | Message | Usual cause |
 |:--|:--|
 | Authentication error / JWT error | The APNS Key ID, APNS Key, or Team ID is wrong |
-| Bad request | The **Production** environment toggle does not match how *Loop* was built — Production on for browser builds, off for Xcode builds |
+| Bad request | The [APNS Environment](#apns-environment) does not match how *Loop* was installed — Production for TestFlight, Development for a direct install from Xcode |
 | The device token is no longer active | *Loop* was rebuilt or moved; wait for *Loop* to upload a fresh profile with the new token |
 | Too many requests | APNS is rate-limiting; wait before retrying |
 
