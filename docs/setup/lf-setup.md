@@ -603,7 +603,6 @@ A number of different options can be adjusted in this screen.
 | Advanced Setting | Default | Description |
 |:--|:-:|:--|
 | Download Treatments | enabled | Treatments from Nightscout, if available, are downloaded and displayed |
-| Download Prediction | enabled | Predictions (forecast), if available, are downloaded and displayed |
 | Graph Basal | enabled | Actual Basal Rates, if available, are downloaded and displayed |
 | Graph Bolus | enabled | Manual and Automatic Bolus values, if available, are downloaded and displayed |
 | Graph Carbs | enabled | Meal Entries, if available, are downloaded and displayed |
