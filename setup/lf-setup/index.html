@@ -357,6 +357,15 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cgm-sensor-states">
+<span class="md-ellipsis">
+      
+        CGM Sensor States
+      
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -621,6 +630,18 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../apple-watch/">
+<span class="md-ellipsis">
+    
+  
+    Apple Watch
+  
+
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -767,6 +788,15 @@
 <span class="md-ellipsis">
       
         Loop Status
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cgm-sensor-states">
+<span class="md-ellipsis">
+      
+        CGM Sensor States
       
     </span>
 </a>
@@ -1101,8 +1131,16 @@
 <ul>
 <li><strong>Move through time:</strong> drag left or right. If you leave the graph in the past, it returns to the latest data after about 5 minutes, or right away when you tap the jump to now button at the lower right.</li>
 <li><strong>Zoom:</strong> pinch to show between 15 minutes and 24 hours, or double tap to step through 1, 3, 6, 12 and 24 hours.</li>
-<li><strong>Tap</strong> a glucose reading, treatment, override or temporary target to see its value and time. Tap an empty spot to close it.</li>
-<li><strong>Press and hold, then drag</strong> to look back in time. While your finger is down:<ul>
+<li>
+<p><strong>Tap</strong> a glucose reading, treatment, override or temporary target to see its value and time. Tap an empty spot to close it.</p>
+<ul>
+<li>Carbs, boluses, overrides and temporary targets that are listed on the <a href="../lf-features/#treatments">Treatments</a> screen get a label with an arrow. Tap the label to open the treatment's details (<em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 8.0 and newer).</li>
+</ul>
+<p><img alt="label for a carb entry on the main graph" src="../img/lf-graph-treatment-pill.png" width="350"/></p>
+</li>
+<li>
+<p><strong>Press and hold, then drag</strong> to look back in time. While your finger is down:</p>
+<ul>
 <li>The glucose display and the Information Display show the values at that time. They are shaded gray and the time is shown with a clock symbol, so they are not mistaken for current values.</li>
 <li>The forecast the looping app made at that time is drawn on the graph.</li>
 <li>Rows with no stored value for that time show <code>—</code>. For <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em>, <abbr title="Insulin Sensitivity Factor; how many points your blood sugar will drop for each unit of insulin; sometimes called Correction Factor">ISF</abbr>, <abbr title="Carb Ratio; how many grams of carbs are covered by one unit of rapid-acting insulin">CR</abbr> and Target come from the current profile at that time of day.</li>
@@ -1141,6 +1179,14 @@
 </table>
 <p><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> reads open loop from what the looping app uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>: <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> reports it in each status record, and <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> reports its Closed <abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> setting in the <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> profile.</p>
 <p>While in open loop, <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> does not upload its full insulin-on-board details, so the <abbr title="Insulin on Board, affects automated insulin delivery: the current active insulin (above or below the basal rate)">IOB</abbr> row shows the value from <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>'s latest suggestion. No temporary basals are set in open loop, so the Basal row shows the scheduled basal from the profile.</p>
+<h3 id="cgm-sensor-states"><abbr title="continuous glucose monitor, wearable medical device that measures and reports glucose in interstitial fluid">CGM</abbr> Sensor States<a class="headerlink" href="#cgm-sensor-states" title="Link to this section for reference">¶</a></h3>
+<p>When the <abbr title="continuous glucose monitor, wearable medical device that measures and reports glucose in interstitial fluid">CGM</abbr> has no reliable reading, <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> can upload a note to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> with the state the <abbr title="continuous glucose monitor, wearable medical device that measures and reports glucose in interstitial fluid">CGM</abbr> reported, for example <code>CGM: temporarySensorIssue</code>. <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> (8.0 and newer) shows these states:</p>
+<ul>
+<li>On the main graph, as an orange triangle at the last reading before the note. Tap it to see the state and its time. The markers are shown when <a href="#advanced-settings">Graph Other Treatments</a> is enabled.</li>
+<li>Under the glucose on the Home screen, on the <a href="../lf-features/#snoozer">Snoozer</a> and on the <a href="#live-activity">Live Activity</a>, in orange, for example <em><abbr title="continuous glucose monitor, wearable medical device that measures and reports glucose in interstitial fluid">CGM</abbr>: Temporary sensor issue at 22:33</em>. The state is shown until a newer reading arrives.</li>
+<li>In the Missed Reading and Not Looping notifications, as an extra line.</li>
+</ul>
+<p>The notes are read with the other treatments, so <a href="#advanced-settings">Download Treatments</a> must be enabled. The state is information only. Alarms work the same as without it.</p>
 <hr/>
 <h2 id="toolbar">Toolbar<a class="headerlink" href="#toolbar" title="Link to this section for reference">¶</a></h2>
 <p>The toolbar (tab bar) at the bottom of the Home and Menu screens is configurable using <a href="#tabs">Settings: Tabs</a>. Four icons are displayed at a time — choose from the options below. The features that can be selected are:</p>
@@ -1404,10 +1450,6 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <td style="text-align: left;">Choose Light, Dark or System for appearance</td>
 </tr>
 <tr>
-<td style="text-align: left;">Display Stats</td>
-<td style="text-align: left;">When enabled, statistics for the last 24 hours are displayed on Home screen</td>
-</tr>
-<tr>
 <td style="text-align: left;">Display Small Graph</td>
 <td style="text-align: left;">When enabled, a full history graph is displayed under the main plot. The history is determined by the Number of Days Back chosen in the Graph screen. Tap the small graph to move the main graph to that point in time; drag your finger across it to scrub the main graph in real time</td>
 </tr>
@@ -1430,6 +1472,18 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 <tr>
 <td style="text-align: left;">Force Portrait Mode</td>
 <td style="text-align: left;">When enabled, aspect ratio is not affected by phone orientation</td>
+</tr>
+<tr>
+<td style="text-align: left;">Statistics: Display Stats</td>
+<td style="text-align: left;">When enabled, statistics are displayed at the bottom of the home screen<br/>Ranges are chosen under <a href="#units-and-metrics" target="_blank">Settings-&gt;Units and Metrics</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Statistics: Stats Style</td>
+<td style="text-align: left;">Shown when Display Stats is enabled. Options are<br/>- Statistics Box: original pie-chart with table<br/>- Time in Range Band: graphical, colored bar</td>
+</tr>
+<tr>
+<td style="text-align: left;">Statistics: Stats Period</td>
+<td style="text-align: left;">Shown when Display Stats is enabled. Options are<br/>- Last 24 Hours<br/>- Today (since midnight): midnight in your time zone, or in the Time Zone Override when it is on<br/>The <a href="../apple-watch/#statistics">Apple Watch</a> statistics use the same period</td>
 </tr>
 <tr>
 <td style="text-align: left;">Time Zone Override</td>
@@ -1767,34 +1821,34 @@ When you enter your credentials, <em><abbr title="LoopFollow combines custom ale
 </table>
 <p>The same reading is shown in either unit — switching the unit does not change any underlying data.</p>
 <h4 id="range">Range<a class="headerlink" href="#range" title="Link to this section for reference">¶</a></h4>
-<p>Selects the Low and High thresholds that define your target interval. The percentage of readings within this interval is shown on the Home screen.</p>
+<p>Selects the Low and High thresholds that define your target interval. The percentage of readings within this interval is shown on the Home screen. The row shows the selected range with its Low and High values; tap it to open the list of ranges. Tapping the Time in Range card on the Statistics screen cycles through the same options.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Option</th>
-<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Range</th>
 <th style="text-align: left;">Low – High</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>TIR</code></td>
 <td style="text-align: left;">Time in Range</td>
 <td style="text-align: left;">70 – 180 mg/dL (3.9 – 10.0 mmol/L)</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>TITR</code></td>
-<td style="text-align: left;">Time in Tighter Range</td>
+<td style="text-align: left;">Time in Tight Range</td>
 <td style="text-align: left;">70 – 140 mg/dL (3.9 – 7.8 mmol/L)</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>Custom</code></td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">Values you enter below</td>
+<td style="text-align: left;">Extended Tight Range</td>
+<td style="text-align: left;">63 – 140 mg/dL (3.5 – 7.8 mmol/L)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Custom Range</td>
+<td style="text-align: left;">Values you enter</td>
 </tr>
 </tbody>
 </table>
-<p>When <code>Custom</code> is selected, two extra rows appear — <strong>Low</strong> and <strong>High</strong> — entered in the glucose unit you chose above. These same Low and High values also drive the Low and High BG lines drawn on the main graph.</p>
+<p>When <code>Custom Range</code> is selected, the list stays open and shows two extra rows — <strong>Low</strong> and <strong>High</strong> — entered in the glucose unit you chose above. These same Low and High values also drive the Low and High BG lines drawn on the main graph.</p>
 <h4 id="glycemic-metrics">Glycemic Metrics<a class="headerlink" href="#glycemic-metrics" title="Link to this section for reference">¶</a></h4>
 <p>A long-term estimate of average glycemia, computed from the average glucose for the displayed period.</p>
 <table>
@@ -2096,11 +2150,6 @@ It is still useful for Carplay.</p>
 <td style="text-align: left;">Treatments from <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr>, if available, are downloaded and displayed</td>
 </tr>
 <tr>
-<td style="text-align: left;">Download Prediction</td>
-<td style="text-align: center;">enabled</td>
-<td style="text-align: left;">Predictions (forecast), if available, are downloaded and displayed</td>
-</tr>
-<tr>
 <td style="text-align: left;">Graph Basal</td>
 <td style="text-align: center;">enabled</td>
 <td style="text-align: left;">Actual Basal Rates, if available, are downloaded and displayed</td>
@@ -2118,7 +2167,7 @@ It is still useful for Carplay.</p>
 <tr>
 <td style="text-align: left;">Graph Other Treatments</td>
 <td style="text-align: center;">enabled</td>
-<td style="text-align: left;">Treatment notes, if available, are downloaded and displayed</td>
+<td style="text-align: left;">Treatment notes, if available, are downloaded and displayed, including <a href="#cgm-sensor-states"><abbr title="continuous glucose monitor, wearable medical device that measures and reports glucose in interstitial fluid">CGM</abbr> Sensor States</a></td>
 </tr>
 <tr>
 <td style="text-align: left;">BG Update Delay</td>

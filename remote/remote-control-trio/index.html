@@ -386,6 +386,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#edit-or-delete-a-meal">
+<span class="md-ellipsis">
+      
+        Edit or Delete a Meal
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#remote-bolus">
 <span class="md-ellipsis">
       
@@ -755,6 +764,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#edit-or-delete-a-meal">
+<span class="md-ellipsis">
+      
+        Edit or Delete a Meal
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#remote-bolus">
 <span class="md-ellipsis">
       
@@ -1071,10 +1089,36 @@
 <p>Tapping <strong>Send Meal</strong> shows a confirmation that summarizes the whole entry. If a bolus is included, you must also authenticate with Face ID or your passcode before the command is sent.</p>
 <p>When entering meals and choosing to schedule the meal, any bolus included in the meal is enacted immediately. Only the carb entry is entered according to the schedule.</p>
 <p align="center"><img alt="scheduled meal warning" src="../img/lf-trc-scheduled-meal.png" width="300"/></p>
+<h3 id="edit-or-delete-a-meal">Edit or Delete a Meal<a class="headerlink" href="#edit-or-delete-a-meal" title="Link to this section for reference">¶</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Available in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 8.0 and newer</p>
+</div>
+<p>Meals from <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> can be edited or deleted on the <a href="../../setup/lf-features/#treatments">Treatments</a> screen. Tap the meal to open its details; the <strong>Remote actions</strong> section has <strong>Edit meal</strong> and <strong>Delete meal</strong>.</p>
+<p align="center"><img alt="meal details with remote actions" src="../img/lf-trc-meal-detail.png" width="300"/></p>
+<ul>
+<li><strong>Edit meal</strong> shows the current values and lets you enter new carbs, fat, protein and meal time. Tapping <strong>Update Meal</strong> asks for confirmation before the change is sent. <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> replaces the meal, including any fat and protein entries, with the new values.</li>
+<li><strong>Delete meal</strong> asks for confirmation. It removes the carb entry and any fat/protein entries <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> created from it.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Edit Meal screen" src="../img/lf-trc-meal-edit.png" width="300"/></th>
+<th style="text-align: center;"><img alt="delete meal confirmation" src="../img/lf-trc-meal-delete.png" width="300"/></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Meals can be changed up to 24 hours after and 12 hours before their time. The small carb entries <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> creates from a meal's fat and protein have a <strong>Show original meal</strong> link; editing or deleting one of them affects the whole meal.</p>
+<p>Editing and deleting meals requires a <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> release newer than 1.0.2. It is available in <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> <code>dev</code> but not in 1.0.2. With an older version, the meal details show "Editing meals needs a newer <abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr> version."</p>
 <h3 id="remote-bolus">Remote Bolus<a class="headerlink" href="#remote-bolus" title="Link to this section for reference">¶</a></h3>
 <p>The Bolus screen sends a remote bolus to <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>:</p>
 <ul>
-<li><strong>Recommended Bolus</strong> — when <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>'s latest recommendation is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated.</li>
+<li><strong>Recommended Bolus</strong> — when <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>'s latest recommendation is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated. A recommendation is not shown when a manual bolus has been given since the loop cycle that calculated it, from <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> or the watch, since it does not count that bolus. The next loop cycle makes a new one.</li>
 <li><strong>Bolus Amount</strong> — capped by the <strong>Max Bolus</strong> guardrail. The amount is rounded down to the pump's bolus increment, which is detected automatically from <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>; a manual <strong>Bolus Increment</strong> setting appears in Remote Settings only when it cannot be detected.</li>
 </ul>
 <p>After the confirmation, you must authenticate with Face ID or your passcode before the bolus command is sent.</p>

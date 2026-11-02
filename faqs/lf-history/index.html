@@ -364,6 +364,24 @@
 <nav aria-label="New Feature Highlights" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#version-800">
+<span class="md-ellipsis">
+      
+        Version 8.0.0
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#version-710">
+<span class="md-ellipsis">
+      
+        Version 7.1.0
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#version-700">
 <span class="md-ellipsis">
       
@@ -430,6 +448,15 @@
 </a>
 <nav aria-label="Version Compatibility" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loopfollow-version-80-and-newer">
+<span class="md-ellipsis">
+      
+        LoopFollow Version 8.0 and newer
+      
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#loopfollow-version-61-and-newer">
 <span class="md-ellipsis">
@@ -525,6 +552,24 @@
 <nav aria-label="New Feature Highlights" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#version-800">
+<span class="md-ellipsis">
+      
+        Version 8.0.0
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#version-710">
+<span class="md-ellipsis">
+      
+        Version 7.1.0
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#version-700">
 <span class="md-ellipsis">
       
@@ -592,6 +637,15 @@
 <nav aria-label="Version Compatibility" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#loopfollow-version-80-and-newer">
+<span class="md-ellipsis">
+      
+        LoopFollow Version 8.0 and newer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#loopfollow-version-61-and-newer">
 <span class="md-ellipsis">
       
@@ -643,6 +697,59 @@
 <h1>History</h1>
 <hr/>
 <h2 id="new-feature-highlights">New Feature Highlights<a class="headerlink" href="#new-feature-highlights" title="Link to this section for reference">¶</a></h2>
+<h3 id="version-800">Version 8.0.0<a class="headerlink" href="#version-800" title="Link to this section for reference">¶</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Browser Builders: one-time update</p>
+<p>The Apple Watch app adds 2 identifiers. Before your first build of v8.0.0, run <code>Add Identifiers</code> and add the <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> to the <code>LoopFollow Watch App</code> and <code>LoopFollow Watch Complications</code> identifiers, as described in <a href="../../build/lf-browser-build/#update-to-loopfollow-v8" target="_blank">Update to <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr> v8</a>. Until then, the automatic build fails with <code>The Apple Watch app identifiers are not set up yet</code>.</p>
+</div>
+<div class="admonition tip">
+<p>New with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> v8.0.0:</p>
+<ul>
+<li>An <a href="../../setup/apple-watch/" target="_blank">Apple Watch app</a> with glucose, graph, statistics and info pages, <a href="../../setup/apple-watch/#complications" target="_blank">complications</a>, and <a href="../../setup/apple-watch/#remote-commands" target="_blank">remote boluses and meals</a> from the watch</li>
+<li>Edit or delete meals and carbs remotely from the Treatments view, for <a href="../../remote/remote-control-loop/#edit-or-delete-carbs" target="_blank"><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></a> and <a href="../../remote/remote-control-trio/#edit-or-delete-a-meal" target="_blank"><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></a></li>
+<li><a href="../../remote/remote-control-loop/#profiles" target="_blank">Switch <abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> profiles</a> from the <abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> remote screen</li>
+<li>Remote command results show sooner on the phone, watch and Live Activity</li>
+<li>A bolus recommendation is not offered when a bolus has been given since it was calculated</li>
+<li>Tap a pill in the main graph to open the treatment's details</li>
+<li>History graphs for device status values, with values at a scrubbed time</li>
+<li><a href="../../setup/lf-setup/#cgm-sensor-states" target="_blank"><abbr title="continuous glucose monitor, wearable medical device that measures and reports glucose in interstitial fluid">CGM</abbr> sensor states</a> from <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> notes are shown on the graph, Home screen, Snoozer and Live Activity</li>
+<li>Home screen statistics: choose the Statistics Box or the Time in Range Band with <em>Stats Style</em>, for the last 24 hours or since midnight with <em>Stats Period</em></li>
+<li>Optional <a href="../../setup/lf-features/#override-target" target="_blank">early warning</a> before an override or temp target ends</li>
+<li>Basal follows the scheduled basal after a temp basal ends, and shows 0 while a <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> pump is suspended</li>
+<li>The previous pod's reservoir is ignored after a pod change</li>
+<li>Larger text on the Snoozer</li>
+<li><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> automatic boluses are labeled Auto Bolus in the graph</li>
+<li>The <abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> APNS environment is shown as information, read from <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></li>
+<li>Live Activity: fits narrow lock screens, uses the selected range colors, and updates without being postponed by frequent polling</li>
+<li>Fixes:<ul>
+<li>The Missed Bolus alarm fires again</li>
+<li>The predictive Low BG alert looks ahead over its full window</li>
+<li><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr> <abbr title="Insulin on Board, affects automated insulin delivery: the current active insulin (above or below the basal rate)">IOB</abbr> and <abbr title="Carbs on Board, affects automated insulin delivery">COB</abbr> stay visible when a loop fails</li>
+<li>Statistics no longer hang on daylight saving fall-back days</li>
+<li>Crashes on unexpected <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> values are fixed</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="version-710">Version 7.1.0<a class="headerlink" href="#version-710" title="Link to this section for reference">¶</a></h3>
+<div class="admonition tip">
+<p>New with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> v7.1.0:</p>
+<ul>
+<li>Optional "This Time" guide lines on previous days in the main and small graphs</li>
+<li>Shortcuts actions to turn spoken BG readings on or off</li>
+<li>Choose the duration when sending a remote override to <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em></li>
+<li>Share Logs sends a single ZIP file</li>
+<li>Remote commands report "Command Sent": the command was sent, not yet confirmed as carried out by the Looper's phone</li>
+<li>Fixes:<ul>
+<li>Graph display toggles, prediction style changes and Yesterday BG updates work again after the 7.0 chart rebuild</li>
+<li>Fixes cases where the main graph could become unresponsive</li>
+<li><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> fat and protein entries are shown</li>
+<li><abbr title="Insulet tubeless insulin pump">Omnipod</abbr> reservoir handling avoids incorrect "50+U" readings and missed low reservoir alerts</li>
+<li>Better recovery when the Silent Tune stops, for example after audio interruptions or CarPlay disconnects; <abbr title="operating system used by Apple Mobile devices (iPhone, iPod, iPad)">iOS</abbr> can still stop background apps</li>
+</ul>
+</li>
+</ul>
+</div>
 <h3 id="version-700">Version 7.0.0<a class="headerlink" href="#version-700" title="Link to this section for reference">¶</a></h3>
 <div class="admonition tip">
 <p>New with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> v7.0.0:</p>
@@ -722,6 +829,14 @@
 </thead>
 <tbody>
 <tr>
+<td style="text-align: left;">8.0</td>
+<td style="text-align: left;">Apple Watch app with complications and remote commands - Browser Builders must add the <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr> <abbr title="a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it">App Group</abbr> to 2 new identifiers<br/>see <a href="../../build/lf-browser-build/#update-to-loopfollow-v8" target="_blank">Browser Build: Update to <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr> v8</a>; remote edit or delete of meals and carbs</td>
+</tr>
+<tr>
+<td style="text-align: left;">7.1</td>
+<td style="text-align: left;">"This Time" guide lines on previous days; Shortcuts actions for spoken BG; override duration for <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> remote overrides</td>
+</tr>
+<tr>
 <td style="text-align: left;">7.0</td>
 <td style="text-align: left;">Requires <abbr title="operating system used by Apple Mobile devices (iPhone, iPod, iPad)">iOS</abbr> 18 or newer; first-run onboarding guide; graphs rebuilt on native Swift Charts</td>
 </tr>
@@ -763,6 +878,13 @@
 <h2 id="version-compatibility">Version Compatibility<a class="headerlink" href="#version-compatibility" title="Link to this section for reference">¶</a></h2>
 <p>This section consolidates version requirements for <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> to work with <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> and <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em>, and provides historical context for how remote control has evolved.</p>
 <p>It also lists updates to the method for using Browser Build.</p>
+<h3 id="loopfollow-version-80-and-newer"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Version 8.0 and newer<a class="headerlink" href="#loopfollow-version-80-and-newer" title="Link to this section for reference">¶</a></h3>
+<p>With the addition of the Apple Watch app to <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>, the build directions for browser build were updated.</p>
+<ul>
+<li>If you use Browser Build, your automatic build will fail until you run <code>Add Identifiers</code> again and add the <code>LoopFollow App Group</code> to the 2 new identifiers: <code>LoopFollow Watch App</code> and <code>LoopFollow Watch Complications</code>.</li>
+<li>Instructions start here: <a href="../../build/lf-browser-build/#update-to-loopfollow-v8" target="_blank">Update to <abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr> v8</a></li>
+<li>The Apple Watch app requires <abbr title="Apple watch operating system; must be compatible with phone iOS">watchOS</abbr> 10 or newer. The <em>iPhone</em> app still requires <abbr title="operating system used by Apple Mobile devices (iPhone, iPod, iPad)">iOS</abbr> 18 or newer.</li>
+</ul>
 <h3 id="loopfollow-version-61-and-newer"><em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Version 6.1 and newer<a class="headerlink" href="#loopfollow-version-61-and-newer" title="Link to this section for reference">¶</a></h3>
 <p>After testing <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> Live Activity in version 6.0.0 and doing extensive research, it became clear that Live Activity with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> is not reliable without the use of Apple Push Notification credentials.</p>
 <p>This means that if you want to use Live Activity with <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>, you need to create those credentials and enter them in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> <a href="../../setup/lf-setup/#apn" target="_blank"><abbr title="Apple Push Notification service">APN</abbr> Settings</a>.</p>

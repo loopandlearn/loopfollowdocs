@@ -7,7 +7,7 @@
 <meta content="Loop and Learn" name="author"/>
 <link href="https://loopfollowdocs.org/setup/lf-features/" rel="canonical"/>
 <link href="../lf-setup/" rel="prev"/>
-<link href="../../remote/remote-control-overview/" rel="next"/>
+<link href="../apple-watch/" rel="next"/>
 <link href="../../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
 <title>Features - LoopFollowDocs</title>
@@ -495,6 +495,18 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../apple-watch/">
+<span class="md-ellipsis">
+    
+  
+    Apple Watch
+  
+
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -981,7 +993,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Override Ended</td>
-<td style="text-align: left;">An override ended</td>
+<td style="text-align: left;">An override ended<br/>Optional early warning, see below</td>
 </tr>
 <tr>
 <td style="text-align: left;">Temp Target Started</td>
@@ -989,14 +1001,16 @@
 </tr>
 <tr>
 <td style="text-align: left;">Temp Target Ended</td>
-<td style="text-align: left;">A temp target ended</td>
+<td style="text-align: left;">A temp target ended<br/>Optional early warning, see below</td>
 </tr>
 </tbody>
 </table>
+<p>The Override Ended and Temp Target Ended alarms have an <strong>Early Warning</strong> section with a <strong>Warn before end</strong> setting, from 0 to 30 minutes in steps of 5. When it is above 0, an extra alert titled <em>Override Ending Soon</em> or <em>Temp Target Ending Soon</em> sounds that many minutes before the end, and the alarm still sounds when it ends. The default is 0, which gives no early warning.</p>
 <hr/>
 <h2 id="snoozer">Snoozer<a class="headerlink" href="#snoozer" title="Link to this section for reference">¶</a></h2>
 <p>The Snoozer is a dedicated tab designed for the night stand and at-a-glance monitoring: a black screen with a large glucose value, the trend arrow, the delta, how long ago the reading arrived, and a clock. When the reading is stale, the glucose value is crossed out. Like the other features, the Snoozer can be placed in the toolbar using <a href="../lf-setup/#tabs">Settings: Tabs</a>.</p>
 <p align="center"><img alt="Snoozer screen" src="../img/lf-snoozer.png" width="350"/></p>
+<p>When <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> or <em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em> reports a <abbr title="continuous glucose monitor, wearable medical device that measures and reports glucose in interstitial fluid">CGM</abbr> state without reliable glucose, such as a temporary sensor issue, the Snoozer shows it in orange under the glucose until a newer reading arrives, see <a href="../lf-setup/#cgm-sensor-states"><abbr title="continuous glucose monitor, wearable medical device that measures and reports glucose in interstitial fluid">CGM</abbr> Sensor States</a>.</p>
 <p>Two options in <a href="../lf-setup/#general">Settings: General</a> tailor the screen: <strong>Show Display Name</strong> adds the app name (handy when following more than one person), and <strong>Snoozer emoji</strong> adds a face that reflects the current glucose.</p>
 <h3 id="when-an-alarm-sounds">When an Alarm Sounds<a class="headerlink" href="#when-an-alarm-sounds" title="Link to this section for reference">¶</a></h3>
 <p>When an alarm fires, a card appears at the bottom of the Snoozer showing the alarm name, a <strong>Snooze for</strong> stepper, and a <strong>Snooze</strong> button. The stepper's unit and limits depend on the alarm type — minutes for most alarms, hours or days for slow-moving ones like the expiration alerts. Setting the stepper to 0 turns the button into <strong>Acknowledge</strong>, which silences the alarm without snoozing it.</p>
@@ -1023,7 +1037,12 @@ Quick access is provided using these links once you have configured <em><abbr ti
 </blockquote>
 <hr/>
 <h2 id="treatments">Treatments<a class="headerlink" href="#treatments" title="Link to this section for reference">¶</a></h2>
-<p>The treatments screen displays all treatments downloaded from the <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> Site with user-selectable filters on treatment type.</p>
+<p>The treatments screen displays all treatments downloaded from the <abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr> Site with user-selectable filters on treatment type as illustrated in the graphic below. Tap a treatment to see its details.</p>
+<p>With remote control enabled, carb entries can be edited or deleted from their details with the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> app. For more information on this capability, see:</p>
+<ul>
+<li><a href="../../remote/remote-control-loop/#edit-or-delete-carbs" target="_blank"><em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em></a></li>
+<li><a href="../../remote/remote-control-trio/#edit-or-delete-a-meal" target="_blank"><em><abbr title="an iOS app that implements the OpenAPS (oref) algorithm on an iPhone">Trio</abbr></em></a></li>
+</ul>
 <p align="center"><img alt="example treatments screen" src="../img/lf-treatments-screen.png" width="700"/></p>
 <hr/>
 <h2 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Link to this section for reference">¶</a></h2>
@@ -1149,13 +1168,13 @@ Quick access is provided using these links once you have configured <em><abbr ti
               </div>
 </div>
 </a>
-<a aria-label="Next: Remote Control Overview" class="md-footer__link md-footer__link--next" href="../../remote/remote-control-overview/">
+<a aria-label="Next: Apple Watch" class="md-footer__link md-footer__link--next" href="../apple-watch/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                Remote Control Overview
+                Apple Watch
               </div>
 </div>
 <div class="md-footer__button md-icon">

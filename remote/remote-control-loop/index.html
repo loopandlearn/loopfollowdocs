@@ -374,6 +374,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#edit-or-delete-carbs">
+<span class="md-ellipsis">
+      
+        Edit or Delete Carbs
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#remote-bolus">
 <span class="md-ellipsis">
       
@@ -396,6 +405,15 @@
 <span class="md-ellipsis">
       
         Overrides
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#profiles">
+<span class="md-ellipsis">
+      
+        Profiles
       
     </span>
 </a>
@@ -517,10 +535,10 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#environment-production">
+<a class="md-nav__link" href="#apns-environment">
 <span class="md-ellipsis">
       
-        Environment Production
+        APNS Environment
       
     </span>
 </a>
@@ -733,6 +751,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#edit-or-delete-carbs">
+<span class="md-ellipsis">
+      
+        Edit or Delete Carbs
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#remote-bolus">
 <span class="md-ellipsis">
       
@@ -755,6 +782,15 @@
 <span class="md-ellipsis">
       
         Overrides
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#profiles">
+<span class="md-ellipsis">
+      
+        Profiles
       
     </span>
 </a>
@@ -876,10 +912,10 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#environment-production">
+<a class="md-nav__link" href="#apns-environment">
 <span class="md-ellipsis">
       
-        Environment Production
+        APNS Environment
       
     </span>
 </a>
@@ -1014,10 +1050,45 @@
 </ul>
 <p>Tapping <strong>Send Carbs</strong> shows a confirmation of the entry before anything is sent.</p>
 <p align="center"><img alt=" remote carb entries" src="../img/lf-lrc-meal.png" width="300"/></p>
+<h3 id="edit-or-delete-carbs">Edit or Delete Carbs<a class="headerlink" href="#edit-or-delete-carbs" title="Link to this section for reference">¶</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Available in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 8.0 and newer</p>
+</div>
+<p>Carb entries from <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> can be edited or deleted on the <a href="../../setup/lf-features/#treatments" target="_blank">Treatments</a> screen when the associated <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> app is built using the <a href="#remote-carb-edit-customization">remote_carb_edit Customization</a>.</p>
+<p>Tap the entry to open its details; with the proper configuration, the <strong>Remote actions</strong> section displays <strong>Edit carbs</strong> and <strong>Delete carbs</strong>.</p>
+<p align="center"><img alt="carb entry details with remote actions" src="../img/lf-lrc-carb-detail.png" width="300"/></p>
+<ul>
+<li><strong>Edit carbs</strong> shows the current values and lets you enter new carbs, absorption time, food type and time. Tapping <strong>Update Carbs</strong> asks for confirmation before the change is sent. <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> replaces the entry with the new values and keeps its history.<ul>
+<li>The <strong>Max Carbs</strong> value configured in the <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em>, Settings, Remote screen is enforced</li>
+<li>Even when the original entry is greater than your <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> limit, you cannot exceed that limit</li>
+</ul>
+</li>
+<li><strong>Delete carbs</strong> asks for confirmation. It removes the carb entry from <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em>, and <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> recalculates carbs on board right away.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Edit Carbs screen" src="../img/lf-lrc-carb-edit.png" width="300"/></th>
+<th style="text-align: center;"><img alt="delete carbs confirmation" src="../img/lf-lrc-carb-delete.png" width="300"/></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Carb entries can be edited or deleted from 23 hours after their time to 1 hour before it, so an entry set up to 1 hour into the future can be changed as well.</p>
+<h4 id="remote-carb-edit-customization">remote-carb-edit Customization<a class="headerlink" href="#remote-carb-edit-customization" title="Link to this section for reference">¶</a></h4>
+<p>The capability described above requires the remote_carb_edit customization in the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> app as well as <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> version 8.0 or newer. When the customization is not applied, the carb entry details show "Editing carbs needs the remote carb edit customization in <abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr>."</p>
+<ul>
+<li><a href="https://www.loopandlearn.org/custom-code/#remote-carb-edit">Remote Carb Edit Customization</a></li>
+</ul>
 <h3 id="remote-bolus">Remote Bolus<a class="headerlink" href="#remote-bolus" title="Link to this section for reference">¶</a></h3>
 <p>The Insulin screen sends a remote bolus to <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em>:</p>
 <ul>
-<li><strong>Recommended Bolus</strong> — when the last recommendation <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> uploaded is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated.</li>
+<li><strong>Recommended Bolus</strong> — when the last recommendation <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> uploaded is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated. A recommendation is not shown when a manual bolus has been given since the loop cycle that calculated it, from <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em>, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> or the watch, since it does not count that bolus. The next loop cycle makes a new one.</li>
 <li><strong>Insulin Amount</strong> — from 0.025 U up to the <strong>Max Bolus</strong> guardrail set in Remote Settings.</li>
 <li><strong>Security</strong> — the same one-time password rules as Remote Meal apply: the code rotates every 30 seconds and each code can be used only once.</li>
 </ul>
@@ -1088,6 +1159,39 @@ or <strong>Quick-Pick Meals</strong> in the app for a short in-screen explanatio
 </ul>
 <p align="center"><img alt=" override activation sheet" src="../img/lf-lrc-override-modal.png" width="300"/></p>
 <p>While an override is active, it is listed in an <strong>Active Override</strong> section with its remaining time and a button to cancel it. The remaining time is a live countdown when 2 hours or less remain; otherwise it is shown as a duration, such as 5h 30m. Overrides enabled indefinitely show no remaining time.</p>
+<h3 id="profiles">Profiles<a class="headerlink" href="#profiles" title="Link to this section for reference">¶</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Available in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 8.0 and newer</p>
+</div>
+<p>The <strong>Profiles</strong> button enables remote modification of the active profile in <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> when the associated <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> app is built using the <a href="#profiles-customization">profiles customization</a>.</p>
+<p>This new feature lists the profiles saved in <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> under <em>Saved profiles</em>, with the active one marked <em>Active</em>. <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> reads them from what <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> uploads to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, and the time of that upload is shown under the list.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Saved profiles</th>
+<th style="text-align: center;">Review before activating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img alt="list of saved Loop profiles" src="../img/lf-lrc-profiles.png" width="300"/></td>
+<td style="text-align: center;"><img alt="preview of a Loop profile" src="../img/lf-lrc-profile-preview.png" width="300"/></td>
+</tr>
+</tbody>
+</table>
+<p>Tap a profile to review it before anything is sent. The screen shows the values <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> will use: correction range, carb ratios, basal rates with the daily total, and insulin sensitivities.</p>
+<ul>
+<li>Tap <strong>Activate Profile</strong> and confirm. You must then confirm your identity with Face ID, Touch ID or your passcode before the command is sent.</li>
+<li><em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> replaces its correction range, carb ratios, basal rates and insulin sensitivities with the profile's values, and writes the basal rates to the pump.</li>
+<li>While <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> waits for <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em>'s reply, the button shows <em>Waiting for <abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr>...</em>. Only one profile switch can be pending at a time.</li>
+<li>The reply is shown as <em>Profile Activated</em>, <em>Profile Not Activated</em> with the reason, or <em>No Reply From <abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em>.</li>
+</ul>
+<h4 id="profiles-customization">profiles Customization<a class="headerlink" href="#profiles-customization" title="Link to this section for reference">¶</a></h4>
+<p>Switching profiles needs <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> built with the Profile Save &amp; Load customization, added with the <abbr title="A support group with mentors and developers who support the OS-AID community">Loop and Learn</abbr> Customization Select script. Without it, the button is gray, and tapping it shows <em>Profiles Not Available</em>. If no profiles are listed, save them in <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> under Settings → Profiles.</p>
+<p>The profiles Customization was updated in 2026 October so you may need to update your <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> build with the a fresh customization as well as building a version of <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> version 8.0 or newer on the caregiver phone.</p>
+<ul>
+<li><a href="https://www.loopandlearn.org/loop-features-in-development/#profiles">Profiles Customization</a></li>
+</ul>
 <hr/>
 <h2 id="faqs-for-remote-commands">FAQs for Remote Commands<a class="headerlink" href="#faqs-for-remote-commands" title="Link to this section for reference">¶</a></h2>
 <ol>
@@ -1138,7 +1242,7 @@ or <strong>Quick-Pick Meals</strong> in the app for a short in-screen explanatio
 <li>A custom override (not named) shows up as "Custom Override" in the Active Override row - the details can be observed in the Information Table on the main <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> screen</li>
 </ul>
 </li>
-<li>The values set for the override may take up to 5 minutes to appear in the Information Table Display, at which time the %insulin needs and target are shown.</li>
+<li>With <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 8.0 and newer, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> checks <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em> several times during the first 2 minutes after a remote command, so the values set for the override usually appear in the Information Table Display within a minute or two, once <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> has uploaded them. With older versions, this may take up to 5 minutes.</li>
 </ul>
 </li>
 <li>
@@ -1238,7 +1342,6 @@ or <strong>Quick-Pick Meals</strong> in the app for a short in-screen explanatio
 <ul>
 <li><a href="#developer-team-id">Developer Team ID</a></li>
 <li><a href="#qr-code-url"><abbr title="a machine-readable code consisting of an array of black and white squares">QR</abbr> Code <abbr title="website address (Uniform Resource Locator)">URL</abbr></a></li>
-<li><a href="#environment-production">Environment Production</a></li>
 </ul>
 </li>
 </ul>
@@ -1271,12 +1374,15 @@ or <strong>Quick-Pick Meals</strong> in the app for a short in-screen explanatio
 </ul>
 <p align="center"><img alt="example screen for nightscout and qr code" src="../img/qr-code-example.png" width="650"/></p>
 <p>While you are on the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> Settings -&gt; Services -&gt; NightScout screen, notice that the 6-digit number on the One-Time Password row updates every 30 seconds.</p>
-<h3 id="environment-production">Environment Production<a class="headerlink" href="#environment-production" title="Link to this section for reference">¶</a></h3>
-<p>If the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> app was built with Browser Build, you must enable this row.</p>
-<p>If the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> app was built using <abbr title="program used to build an app">Xcode</abbr> on a Mac, you must disable this row.</p>
+<h3 id="apns-environment">APNS Environment<a class="headerlink" href="#apns-environment" title="Link to this section for reference">¶</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Available in <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> 8.0 and newer</p>
+</div>
+<p><em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> uploads its APNS environment to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, and <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> reads it from there. It is shown in the <a href="#debug-info">Debug / Info</a> section as <strong>APNS Environment</strong>: Production when <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> was installed with <abbr title="a method to distribute apps without direct connection">TestFlight</abbr>, Development when it was installed directly from <abbr title="program used to build an app">Xcode</abbr> to the phone.</p>
+<p><em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> uploads this value for version 3.14.7 or newer. Until it reads this information from <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>, <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> keeps the setting from the earlier Production toggle, or uses Development on a new install.</p>
 <h3 id="debug-info">Debug / Info<a class="headerlink" href="#debug-info" title="Link to this section for reference">¶</a></h3>
 <p>This section indicates if <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> has uploaded required information to <em><abbr title="a personal website used to view your glucose and diabetes management data.">Nightscout</abbr></em>.</p>
-<p>The graphic below shows a properly configured <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> when the <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> app was built using the Browser Build method.</p>
+<p>The graphic below shows a properly configured <em><abbr title="LoopFollow combines custom alerts and display from many open-source apps such as Loop, Trio and Nightscout">LoopFollow</abbr></em> when <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> was installed with <abbr title="a method to distribute apps without direct connection">TestFlight</abbr>.</p>
 <p align="center"><img alt="shows credentials entered into loopfollow are correct" src="../img/lf-lrc-debug.png" width="300"/></p>
 <hr/>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this section for reference">¶</a></h2>
@@ -1312,7 +1418,7 @@ or <strong>Quick-Pick Meals</strong> in the app for a short in-screen explanatio
 </tr>
 <tr>
 <td style="text-align: left;">Bad request</td>
-<td style="text-align: left;">The <strong>Production</strong> environment toggle does not match how <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> was built — Production on for browser builds, off for <abbr title="program used to build an app">Xcode</abbr> builds</td>
+<td style="text-align: left;">The <a href="#apns-environment">APNS Environment</a> does not match how <em><abbr title="With a capital L, Loop is one of several do-it-yourself artificial pancreas systems">Loop</abbr></em> was installed — Production for <abbr title="a method to distribute apps without direct connection">TestFlight</abbr>, Development for a direct install from <abbr title="program used to build an app">Xcode</abbr></td>
 </tr>
 <tr>
 <td style="text-align: left;">The device token is no longer active</td>
