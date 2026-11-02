@@ -106,7 +106,7 @@ Meals from *Trio* can be edited or deleted on the [Treatments](../setup/lf-featu
 
 Meals can be changed up to 24 hours after and 12 hours before their time. The small carb entries *Trio* creates from a meal's fat and protein have a **Show original meal** link; editing or deleting one of them affects the whole meal.
 
-The actions need a *Trio* version that supports them. With an older version, the meal details show "Editing meals needs a newer Trio version."
+Editing and deleting meals requires a *Trio* release newer than 1.0.2. It is available in *Trio* `dev` but not in 1.0.2. With an older version, the meal details show "Editing meals needs a newer Trio version."
 
 ### Remote Bolus
 
