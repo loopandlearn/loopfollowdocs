@@ -30,7 +30,7 @@ Detailed directions are found in the next sections, this is the summary of what 
 1. Create a `LoopFollow App Group` ([link](#create-app-group))
     * New with LoopFollow version 6.0 and newer
 1. Add the App Group to the Identifiers ([link](#add-app-group))
-    * New with LoopFollow version 8.0 and newer: the Apple Watch app adds 2 identifiers ([link](#update-for-the-apple-watch-app))
+    * New with LoopFollow version 8.0 and newer: the Apple Watch app adds 2 identifiers ([link](#update-to-loopfollow-v8))
 1. Create the App in App Store Connect and configure TestFlight users ([link](#create-app-in-app-store-connect))
 1. Configure TestFlight users for the *LoopFollow* app ([link](#add-users-to-testflight-for-app))
 1. `Build LoopFollow` ([link](#build-app))
@@ -138,28 +138,33 @@ The `Add Identifier` &nbsp;<span class=notranslate>Action</span>&nbsp; should su
 
 ## Create `App Group`
 
-New builders - just continue with the instructions as provided on this page. 
+New builders - just continue with the instructions as provided on this page. Skip ahead to [Create the LoopFollow Group](#create-the-loopfollow-group).
+
+Existing Browser Builders who have not updated:
+
+* since version 5.x or older need to follow both sets of update instructions below
+* since version 6.x or 7.x should skip to [Update to *LoopFollow* v8](#update-to-loopfollow-v8)
 
 ### Update to *LoopFollow* v6
 
 !!! important "Updating LoopFollow to version 6.0 and newer"
-    This information admonition is for existing builders who need to update.
+    This information admonition is for existing builders who need to update from version 5.x or older.
 
     The addition of Live Activity requires adding the LoopFollow App Group. Your build will fail until you take these one-time steps.
     
     If you are updating from an earlier version, **sync your fork** and then:
     
     1. Run the `Add Identifiers` action again
-    2. Create the LoopFollow App Group
+    2. [Create the LoopFollow App Group](#create-the-loopfollow-group){: target="_blank" }
     3. Add the LoopFollow App Group to the 2 identifiers:
         * LoopFollow
         * LoopFollow Live Activity Extension
 
 
-### Update to *LoopFollow* v8 { #update-for-the-apple-watch-app }
+### Update to *LoopFollow* v8
 
 !!! important "Updating LoopFollow to version 8.0 and newer"
-    This information admonition is for existing builders who need to update.
+    This information admonition is for existing builders who need to update from version 6.x or 7.x.
 
     The addition of the [Apple Watch app](../setup/apple-watch.md) requires 2 new identifiers with the LoopFollow App Group. Your build will fail until you take these one-time steps.
 
@@ -189,6 +194,8 @@ New builders - just continue with the instructions as provided on this page.
 
 The `LoopFollow` *App Group* already exists if you previously built the *LoopFollow* app using *Xcode* with this *Apple Developer ID*. In that case, skip ahead to [Optional: App Group Description Modification](#optional-app-group-description-modification) to update the description.
 
+## Create the LoopFollow Group
+
 If you have never built the *LoopFollow* app with *Xcode* using your `TEAMID`, you need to create an *App Group* associated with your `TEAMID`.
 
 1. Open this link: [Register an App Group](https://developer.apple.com/account/resources/identifiers/applicationGroup/add/) on the *Apple Developer* site.
@@ -217,9 +224,9 @@ If you get an error saying `An Application Group with Identifier 'group.com.TEAM
     * In the Description box in the upper left, edit the Description to match the **NAME**
     * Tap Save in the upper right and confirm the the change for that identifier._
 
-    Notice in the table below that the XCode version of the **NAME** for the `App Group` is the same as the **IDENTIFIER** but with the `.` replaced with a space.
+    Notice in the table below that the Xcode version of the **NAME** for the `App Group` is the same as the **IDENTIFIER** but with the `.` replaced with a space.
 
-    | NAME | XCode version | IDENTIFIER |
+    | NAME | Xcode version | IDENTIFIER |
     |:--|:--|:--|
     | LoopFollow App Group | group com TEAMID LoopFollow| group.com.TEAMID.LoopFollow |
 
@@ -229,7 +236,7 @@ You will need to add the `LoopFollow App Group` to the App Group capability for 
 
 ### Identifiers for the *LoopFollow* app
 
-For each identifier in the table below, click on the Identifer and then add the LoopFollow App Group to the App Group capability.
+For each Identifier in the table below, click on the Identifier and then add the LoopFollow App Group to the App Group capability.
 
 | Name (Description) | Bundle ID |
 | --- | --- |
@@ -244,7 +251,7 @@ For each identifier in the table below, click on the Identifer and then add the 
 
 If you previously built *LoopFollow* with *Xcode*, the NAME of an identifier may be the *Xcode* version instead of the name in the table above. The *Xcode* version starts with `XC`, followed by the Bundle ID with the `.` replaced by a space. Only the Bundle ID matters for the build, so look for the Bundle ID.
 
-| NAME | XCode version | IDENTIFIER |
+| NAME | Xcode version | IDENTIFIER |
 |:--|:--|:--|
 | <span translate="no">LoopFollow</span> | <span translate="no">XC com TEAMID LoopFollow</span> | <span translate="no">com.TEAMID.LoopFollow</span> |
 | <span translate="no">LoopFollow Live Activity Extension</span> | <span translate="no">XC com TEAMID LoopFollow LoopFollowLAExtension</span> | <span translate="no">com.TEAMID.LoopFollow.LoopFollowLAExtension</span> |
@@ -303,12 +310,12 @@ Refer to the table below to see how the App Group and Identifiers for LoopFollow
 | <span translate="no">LoopFollow Watch Complications</span> | <span translate="no">com.TEAMID.LoopFollow.watchkitapp.widgets</span> |
 | <span translate="no">LoopFollowSecond</span> | <span translate="no">com.TEAMID.LoopFollow.Second</span> |
 | <span translate="no">LoopFollowSecond Live Activity Extension</span> | <span translate="no">com.TEAMID.LoopFollow.Second.LoopFollowLAExtension</span> |
-| <span translate="no">LoopFollow Watch App</span> | <span translate="no">com.TEAMID.LoopFollow.Second.watchkitapp</span> |
-| <span translate="no">LoopFollow Watch Complications</span> | <span translate="no">com.TEAMID.LoopFollow.Second.watchkitapp.widgets</span> |
+| <span translate="no">LoopFollowSecond Watch App</span> | <span translate="no">com.TEAMID.LoopFollow.Second.watchkitapp</span> |
+| <span translate="no">LoopFollowSecond Watch Complications</span> | <span translate="no">com.TEAMID.LoopFollow.Second.watchkitapp.widgets</span> |
 | <span translate="no">LoopFollowThird</span> | <span translate="no">com.TEAMID.LoopFollow.Third</span> |
 | <span translate="no">LoopFollowThird Live Activity Extension</span> | <span translate="no">com.TEAMID.LoopFollow.Third.LoopFollowLAExtension</span> |
-| <span translate="no">LoopFollow Watch App</span> | <span translate="no">com.TEAMID.LoopFollow.Third.watchkitapp</span> |
-| <span translate="no">LoopFollow Watch Complications</span> | <span translate="no">com.TEAMID.LoopFollow.Third.watchkitapp.widgets</span> |
+| <span translate="no">LoopFollowThird Watch App</span> | <span translate="no">com.TEAMID.LoopFollow.Third.watchkitapp</span> |
+| <span translate="no">LoopFollowThird Watch Complications</span> | <span translate="no">com.TEAMID.LoopFollow.Third.watchkitapp.widgets</span> |
 
 - - -
 

@@ -112,7 +112,7 @@ The actions need a *Trio* version that supports them. With an older version, the
 
 The Bolus screen sends a remote bolus to *Trio*:
 
-* **Recommended Bolus** — when *Trio*'s latest recommendation is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated.
+* **Recommended Bolus** — when *Trio*'s latest recommendation is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated. A recommendation is not shown when a manual bolus has been given since the loop cycle that calculated it, from *Trio*, *LoopFollow* or the watch, since it does not count that bolus. The next loop cycle makes a new one.
 * **Bolus Amount** — capped by the **Max Bolus** guardrail. The amount is rounded down to the pump's bolus increment, which is detected automatically from *Nightscout*; a manual **Bolus Increment** setting appears in Remote Settings only when it cannot be detected.
 
 After the confirmation, you must authenticate with Face ID or your passcode before the bolus command is sent.

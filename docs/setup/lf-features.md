@@ -121,9 +121,11 @@ The table below lists every alarm type available in *LoopFollow*, organized by g
 | Alarm | Description |
 |:--|:--|
 | Override Started | An override just started |
-| Override Ended | An override ended |
+| Override Ended | An override ended<br>Optional early warning, see below |
 | Temp Target Started | A temp target started |
-| Temp Target Ended | A temp target ended |
+| Temp Target Ended | A temp target ended<br>Optional early warning, see below |
+
+The Override Ended and Temp Target Ended alarms have an **Early Warning** section with a **Warn before end** setting, from 0 to 30 minutes in steps of 5. When it is above 0, an extra alert titled *Override Ending Soon* or *Temp Target Ending Soon* sounds that many minutes before the end, and the alarm still sounds when it ends. The default is 0, which gives no early warning.
 
 
 - - -
@@ -134,6 +136,8 @@ The Snoozer is a dedicated tab designed for the night stand and at-a-glance moni
 
 ![Snoozer screen](img/lf-snoozer.png){width="350"}
 {align="center"}
+
+When *Loop* or *Trio* reports a CGM state without reliable glucose, such as a temporary sensor issue, the Snoozer shows it in orange under the glucose until a newer reading arrives, see [CGM Sensor States](lf-setup.md#cgm-sensor-states).
 
 Two options in [Settings: General](lf-setup.md#general) tailor the screen: **Show Display Name** adds the app name (handy when following more than one person), and **Snoozer emoji** adds a face that reflects the current glucose.
 
