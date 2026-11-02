@@ -236,7 +236,7 @@ You will need to add the `LoopFollow App Group` to the App Group capability for 
 
 ### Identifiers for the *LoopFollow* app
 
-For each Identifier in the table below, click on the Identifer and then add the LoopFollow App Group to the App Group capability.
+For each Identifier in the table below, click on the Identifier and then add the LoopFollow App Group to the App Group capability.
 
 | Name (Description) | Bundle ID |
 | --- | --- |

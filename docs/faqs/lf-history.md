@@ -12,11 +12,17 @@
 
     * An [Apple Watch app](../setup/apple-watch.md){: target="_blank" } with glucose, graph, statistics and info pages, [complications](../setup/apple-watch.md#complications){: target="_blank" }, and [remote boluses and meals](../setup/apple-watch.md#remote-commands){: target="_blank" } from the watch
     * Edit or delete meals and carbs remotely from the Treatments view, for [Loop](../remote/remote-control-loop.md#edit-or-delete-carbs){: target="_blank" } and [Trio](../remote/remote-control-trio.md#edit-or-delete-a-meal){: target="_blank" }
-    * Switch Loop profiles from the Loop remote screen
+    * [Switch Loop profiles](../remote/remote-control-loop.md#profiles){: target="_blank" } from the Loop remote screen
+    * Remote command results show sooner on the phone, watch and Live Activity
+    * A bolus recommendation is not offered when a bolus has been given since it was calculated
     * Tap a pill in the main graph to open the treatment's details
     * History graphs for device status values, with values at a scrubbed time
-    * CGM sensor states from Nightscout notes are shown
-    * Home screen statistics show the time in range band, for the last 24 hours or since midnight
+    * [CGM sensor states](../setup/lf-setup.md#cgm-sensor-states){: target="_blank" } from Nightscout notes are shown on the graph, Home screen, Snoozer and Live Activity
+    * Home screen statistics: choose the Statistics Box or the Time in Range Band with *Stats Style*, for the last 24 hours or since midnight with *Stats Period*
+    * Optional [early warning](../setup/lf-features.md#override-target){: target="_blank" } before an override or temp target ends
+    * Basal follows the scheduled basal after a temp basal ends, and shows 0 while a *Trio* pump is suspended
+    * The previous pod's reservoir is ignored after a pod change
+    * Larger text on the Snoozer
     * Loop automatic boluses are labeled Auto Bolus in the graph
     * The Loop APNS environment is shown as information, read from Nightscout
     * Live Activity: fits narrow lock screens, uses the selected range colors, and updates without being postponed by frequent polling
