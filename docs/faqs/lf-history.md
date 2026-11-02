@@ -2,6 +2,54 @@
 
 ## New Feature Highlights
 
+### Version 8.0.0
+
+!!! important "Browser Builders: one-time update"
+    The Apple Watch app adds 2 identifiers. Before your first build of v8.0.0, run `Add Identifiers` and add the LoopFollow App Group to the `LoopFollow Watch App` and `LoopFollow Watch Complications` identifiers, as described in [Update to LoopFollow v8](../build/lf-browser-build.md#update-to-loopfollow-v8){: target="_blank" }. Until then, the automatic build fails with `The Apple Watch app identifiers are not set up yet`.
+
+!!! tip ""
+    New with *LoopFollow* v8.0.0:
+
+    * An [Apple Watch app](../setup/apple-watch.md){: target="_blank" } with glucose, graph, statistics and info pages, [complications](../setup/apple-watch.md#complications){: target="_blank" }, and [remote boluses and meals](../setup/apple-watch.md#remote-commands){: target="_blank" } from the watch
+    * Edit or delete meals and carbs remotely from the Treatments view, for [Loop](../remote/remote-control-loop.md#edit-or-delete-carbs){: target="_blank" } and [Trio](../remote/remote-control-trio.md#edit-or-delete-a-meal){: target="_blank" }
+    * [Switch Loop profiles](../remote/remote-control-loop.md#profiles){: target="_blank" } from the Loop remote screen
+    * Remote command results show sooner on the phone, watch and Live Activity
+    * A bolus recommendation is not offered when a bolus has been given since it was calculated
+    * Tap a pill in the main graph to open the treatment's details
+    * History graphs for device status values, with values at a scrubbed time
+    * [CGM sensor states](../setup/lf-setup.md#cgm-sensor-states){: target="_blank" } from Nightscout notes are shown on the graph, Home screen, Snoozer and Live Activity
+    * Home screen statistics: choose the Statistics Box or the Time in Range Band with *Stats Style*, for the last 24 hours or since midnight with *Stats Period*
+    * Optional [early warning](../setup/lf-features.md#override-target){: target="_blank" } before an override or temp target ends
+    * Basal follows the scheduled basal after a temp basal ends, and shows 0 while a *Trio* pump is suspended
+    * The previous pod's reservoir is ignored after a pod change
+    * Larger text on the Snoozer
+    * Loop automatic boluses are labeled Auto Bolus in the graph
+    * The Loop APNS environment is shown as information, read from Nightscout
+    * Live Activity: fits narrow lock screens, uses the selected range colors, and updates without being postponed by frequent polling
+    * Fixes:
+        * The Missed Bolus alarm fires again
+        * The predictive Low BG alert looks ahead over its full window
+        * Loop IOB and COB stay visible when a loop fails
+        * Statistics no longer hang on daylight saving fall-back days
+        * Crashes on unexpected Nightscout values are fixed
+
+### Version 7.1.0
+
+!!! tip ""
+    New with *LoopFollow* v7.1.0:
+
+    * Optional "This Time" guide lines on previous days in the main and small graphs
+    * Shortcuts actions to turn spoken BG readings on or off
+    * Choose the duration when sending a remote override to *Loop*
+    * Share Logs sends a single ZIP file
+    * Remote commands report "Command Sent": the command was sent, not yet confirmed as carried out by the Looper's phone
+    * Fixes:
+        * Graph display toggles, prediction style changes and Yesterday BG updates work again after the 7.0 chart rebuild
+        * Fixes cases where the main graph could become unresponsive
+        * *Trio* fat and protein entries are shown
+        * Omnipod reservoir handling avoids incorrect "50+U" readings and missed low reservoir alerts
+        * Better recovery when the Silent Tune stops, for example after audio interruptions or CarPlay disconnects; iOS can still stop background apps
+
 ### Version 7.0.0
 
 !!! tip ""
@@ -73,6 +121,8 @@ The feature history is summarized below in reverse chronological order.
 
 | *LoopFollow* Version | Feature Added |
 |:--|:--|
+| 8.0 | Apple Watch app with complications and remote commands - Browser Builders must add the LoopFollow App Group to 2 new identifiers<br>see [Browser Build: Update to LoopFollow v8](../build/lf-browser-build.md#update-to-loopfollow-v8){: target="_blank" }; remote edit or delete of meals and carbs |
+| 7.1 | "This Time" guide lines on previous days; Shortcuts actions for spoken BG; override duration for *Loop* remote overrides |
 | 7.0 | Requires iOS 18 or newer; first-run onboarding guide; graphs rebuilt on native Swift Charts |
 | 6.2 | WebSocket for near real-time *Nightscout* updates; Quick Pick remote buttons; Run Diagnostics for remote setup |
 | 6.1 | Live Activity requires APN credentials<br>see [APN Settings](../setup/lf-setup.md#apn){: target="_blank" } |
@@ -97,6 +147,14 @@ The APNS credentials only need to be in *Nightscout* if you also use *Nightscout
 This section consolidates version requirements for *LoopFollow* to work with *Loop* and *Trio*, and provides historical context for how remote control has evolved.
 
 It also lists updates to the method for using Browser Build.
+
+### *LoopFollow* Version 8.0 and newer
+
+With the addition of the Apple Watch app to *LoopFollow*, the build directions for browser build were updated.
+
+* If you use Browser Build, your automatic build will fail until you run `Add Identifiers` again and add the `LoopFollow App Group` to the 2 new identifiers: `LoopFollow Watch App` and `LoopFollow Watch Complications`.
+* Instructions start here: [Update to LoopFollow v8](../build/lf-browser-build.md#update-to-loopfollow-v8){: target="_blank" }
+* The Apple Watch app requires watchOS 10 or newer. The *iPhone* app still requires iOS 18 or newer.
 
 ### *LoopFollow* Version 6.1 and newer
 

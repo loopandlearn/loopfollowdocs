@@ -72,11 +72,38 @@ Tapping **Send Carbs** shows a confirmation of the entry before anything is sent
 ![ remote carb entries](img/lf-lrc-meal.png){width="300"}
 {align=center}
 
+### Edit or Delete Carbs
+
+!!! info "Available in *LoopFollow* 8.0 and newer"
+
+Carb entries from *Loop* can be edited or deleted on the [Treatments](../setup/lf-features.md#treatments){: target="_blank"} screen when the associated *Loop* app is built using the [remote_carb_edit Customization](#remote-carb-edit-customization).
+
+Tap the entry to open its details; with the proper configuration, the **Remote actions** section displays **Edit carbs** and **Delete carbs**.
+
+![carb entry details with remote actions](img/lf-lrc-carb-detail.png){width="300"}
+{align=center}
+
+* **Edit carbs** shows the current values and lets you enter new carbs, absorption time, food type and time. Tapping **Update Carbs** asks for confirmation before the change is sent. *Loop* replaces the entry with the new values and keeps its history.
+    * The **Max Carbs** value configured in the *LoopFollow*, Settings, Remote screen is enforced
+    * Even when the original entry is greater than your *LoopFollow* limit, you cannot exceed that limit
+* **Delete carbs** asks for confirmation. It removes the carb entry from *Loop*, and *Loop* recalculates carbs on board right away.
+
+| ![Edit Carbs screen](img/lf-lrc-carb-edit.png){width="300"} | ![delete carbs confirmation](img/lf-lrc-carb-delete.png){width="300"} |
+|:--:|:--:|
+
+Carb entries can be edited or deleted from 23 hours after their time to 1 hour before it, so an entry set up to 1 hour into the future can be changed as well.
+
+#### remote-carb-edit Customization
+
+The capability described above requires the remote_carb_edit customization in the *Loop* app as well as *LoopFollow* version 8.0 or newer. When the customization is not applied, the carb entry details show "Editing carbs needs the remote carb edit customization in Loop."
+
+* [Remote Carb Edit Customization](https://www.loopandlearn.org/custom-code/#remote-carb-edit)
+
 ### Remote Bolus
 
 The Insulin screen sends a remote bolus to *Loop*:
 
-* **Recommended Bolus** — when the last recommendation *Loop* uploaded is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated.
+* **Recommended Bolus** — when the last recommendation *Loop* uploaded is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated. A recommendation is not shown when a manual bolus has been given since the loop cycle that calculated it, from *Loop*, *LoopFollow* or the watch, since it does not count that bolus. The next loop cycle makes a new one.
 * **Insulin Amount** — from 0.025 U up to the **Max Bolus** guardrail set in Remote Settings.
 * **Security** — the same one-time password rules as Remote Meal apply: the code rotates every 30 seconds and each code can be used only once.
 
@@ -152,6 +179,34 @@ Tap a preset to open the activation sheet:
 
 While an override is active, it is listed in an **Active Override** section with its remaining time and a button to cancel it. The remaining time is a live countdown when 2 hours or less remain; otherwise it is shown as a duration, such as 5h 30m. Overrides enabled indefinitely show no remaining time.
 
+### Profiles
+
+!!! info "Available in *LoopFollow* 8.0 and newer"
+
+The **Profiles** button enables remote modification of the active profile in *Loop* when the associated *Loop* app is built using the [profiles customization](#profiles-customization).
+
+This new feature lists the profiles saved in *Loop* under *Saved profiles*, with the active one marked *Active*. *LoopFollow* reads them from what *Loop* uploads to *Nightscout*, and the time of that upload is shown under the list.
+
+
+| Saved profiles | Review before activating |
+|:--:|:--:|
+| ![list of saved Loop profiles](img/lf-lrc-profiles.png){width="300"} | ![preview of a Loop profile](img/lf-lrc-profile-preview.png){width="300"} |
+
+Tap a profile to review it before anything is sent. The screen shows the values *Loop* will use: correction range, carb ratios, basal rates with the daily total, and insulin sensitivities.
+
+* Tap **Activate Profile** and confirm. You must then confirm your identity with Face ID, Touch ID or your passcode before the command is sent.
+* *Loop* replaces its correction range, carb ratios, basal rates and insulin sensitivities with the profile's values, and writes the basal rates to the pump.
+* While *LoopFollow* waits for *Loop*'s reply, the button shows *Waiting for Loop...*. Only one profile switch can be pending at a time.
+* The reply is shown as *Profile Activated*, *Profile Not Activated* with the reason, or *No Reply From Loop*.
+
+#### profiles Customization
+
+Switching profiles needs *Loop* built with the Profile Save & Load customization, added with the Loop and Learn Customization Select script. Without it, the button is gray, and tapping it shows *Profiles Not Available*. If no profiles are listed, save them in *Loop* under Settings → Profiles.
+
+The profiles Customization was updated in 2026 October so you may need to update your *Loop* build with the a fresh customization as well as building a version of *LoopFollow* version 8.0 or newer on the caregiver phone.
+
+* [Profiles Customization](https://www.loopandlearn.org/loop-features-in-development/#profiles)
+
 - - -
 
 ## FAQs for Remote Commands
@@ -195,7 +250,7 @@ For remote overrides in particular:
         * If it is a named preset (override), the name is listed at the top of the screen in the Active Override row
         * If you want to see the details, you may need to scroll down to find that override in the list
         * A custom override (not named) shows up as "Custom Override" in the Active Override row - the details can be observed in the Information Table on the main *LoopFollow* screen
-    * The values set for the override may take up to 5 minutes to appear in the Information Table Display, at which time the %insulin needs and target are shown.
+    * With *LoopFollow* 8.0 and newer, *LoopFollow* checks *Nightscout* several times during the first 2 minutes after a remote command, so the values set for the override usually appear in the Information Table Display within a minute or two, once *Loop* has uploaded them. With older versions, this may take up to 5 minutes.
 
 1. **Can a looper cancel a remote override**?  
    **Answer**: Yes. They can tap the heart icon <font color="blue">:fontawesome-solid-heart-pulse:</font> in&nbsp;_<span translate="no">Loop</span>_&nbsp;so that it is no longer highlighted. This turns off the override, regardless of where it was initiated.
@@ -295,7 +350,6 @@ When you select *Loop* Remote Control as the Remote Type in the *LoopFollow* app
 
     * [Developer Team ID](#developer-team-id)
     * [QR Code URL](#qr-code-url)
-    * [Environment Production](#environment-production)
 
 ![remote lrc settings ](img/lf-lrc-credentials.png){width="700"}
 {align="center"}
@@ -342,17 +396,19 @@ Options:
 
 While you are on the *Loop* Settings -> Services -> NightScout screen, notice that the 6-digit number on the One-Time Password row updates every 30 seconds.
 
-### Environment Production
+### APNS Environment
 
-If the *Loop* app was built with Browser Build, you must enable this row.
+!!! info "Available in *LoopFollow* 8.0 and newer"
 
-If the *Loop* app was built using Xcode on a Mac, you must disable this row.
+*Loop* uploads its APNS environment to *Nightscout*, and *LoopFollow* reads it from there. It is shown in the [Debug / Info](#debug-info) section as **APNS Environment**: Production when *Loop* was installed with TestFlight, Development when it was installed directly from Xcode to the phone.
+
+*Loop* uploads this value for version 3.14.7 or newer. Until it reads this information from *Nightscout*, *LoopFollow* keeps the setting from the earlier Production toggle, or uses Development on a new install.
 
 ### Debug / Info
 
 This section indicates if *Loop* has uploaded required information to *Nightscout*.
 
-The graphic below shows a properly configured *LoopFollow* when the *Loop* app was built using the Browser Build method.
+The graphic below shows a properly configured *LoopFollow* when *Loop* was installed with TestFlight.
 
 ![shows credentials entered into loopfollow are correct](img/lf-lrc-debug.png){width="300"}
 {align=center}
@@ -388,7 +444,7 @@ If sending a command fails immediately, *LoopFollow* shows the reason:
 | Message | Usual cause |
 |:--|:--|
 | Authentication error / JWT error | The APNS Key ID, APNS Key, or Team ID is wrong |
-| Bad request | The **Production** environment toggle does not match how *Loop* was built — Production on for browser builds, off for Xcode builds |
+| Bad request | The [APNS Environment](#apns-environment) does not match how *Loop* was installed — Production for TestFlight, Development for a direct install from Xcode |
 | The device token is no longer active | *Loop* was rebuilt or moved; wait for *Loop* to upload a fresh profile with the new token |
 | Too many requests | APNS is rate-limiting; wait before retrying |
 

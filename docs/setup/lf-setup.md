@@ -81,6 +81,10 @@ Once you’ve configured your settings, your Home screen will look as beautiful 
 * **Move through time:** drag left or right. If you leave the graph in the past, it returns to the latest data after about 5 minutes, or right away when you tap the jump to now button at the lower right.
 * **Zoom:** pinch to show between 15 minutes and 24 hours, or double tap to step through 1, 3, 6, 12 and 24 hours.
 * **Tap** a glucose reading, treatment, override or temporary target to see its value and time. Tap an empty spot to close it.
+    * Carbs, boluses, overrides and temporary targets that are listed on the [Treatments](lf-features.md#treatments) screen get a label with an arrow. Tap the label to open the treatment's details (*LoopFollow* 8.0 and newer).
+
+    ![label for a carb entry on the main graph](img/lf-graph-treatment-pill.png){width="350"}
+
 * **Press and hold, then drag** to look back in time. While your finger is down:
     * The glucose display and the Information Display show the values at that time. They are shaded gray and the time is shown with a clock symbol, so they are not mistaken for current values.
     * The forecast the looping app made at that time is drawn on the graph.
@@ -103,6 +107,16 @@ A symbol below the glucose age shows the status of the last `loop`, next to the 
 *LoopFollow* reads open loop from what the looping app uploads to *Nightscout*: *Trio* reports it in each status record, and *Loop* reports its Closed Loop setting in the *Nightscout* profile.
 
 While in open loop, *Trio* does not upload its full insulin-on-board details, so the IOB row shows the value from *Trio*'s latest suggestion. No temporary basals are set in open loop, so the Basal row shows the scheduled basal from the profile.
+
+### CGM Sensor States
+
+When the CGM has no reliable reading, *Loop* and *Trio* can upload a note to *Nightscout* with the state the CGM reported, for example `CGM: temporarySensorIssue`. *LoopFollow* (8.0 and newer) shows these states:
+
+* On the main graph, as an orange triangle at the last reading before the note. Tap it to see the state and its time. The markers are shown when [Graph Other Treatments](#advanced-settings) is enabled.
+* Under the glucose on the Home screen, on the [Snoozer](lf-features.md#snoozer) and on the [Live Activity](#live-activity), in orange, for example *CGM: Temporary sensor issue at 22:33*. The state is shown until a newer reading arrives.
+* In the Missed Reading and Not Looping notifications, as an extra line.
+
+The notes are read with the other treatments, so [Download Treatments](#advanced-settings) must be enabled. The state is information only. Alarms work the same as without it.
 
 - - -
 
@@ -263,13 +277,15 @@ These settings are accessed through the General row in the Settings screen.
 | Display App Badge | When enabled<br>- current glucose is displayed with app icon<br>- select a Background Refresh option or badge will be stale. | 
 | Persistent Notification | Typically disabled<br> When enabled, glucose is reported with every update |
 | Appearance | Choose Light, Dark or System for appearance |
-| Display Stats | When enabled, statistics for the last 24 hours are displayed on Home screen |
 | Display Small Graph | When enabled, a full history graph is displayed under the main plot. The history is determined by the Number of Days Back chosen in the Graph screen. Tap the small graph to move the main graph to that point in time; drag your finger across it to scrub the main graph in real time |
 | Color BG Text | When enabled, use colors to highlight low, in-range and high values |
 | Keep Screen Active | When enabled, override the auto-lock setting<br>This works whether the phone is plugged in or not, so be sure to lock screen manually|
 | Show Display Name | When enabled, the app name is shown on the Home screen<br>Very useful if more than one person is being followed|
 | Snoozer Emoji | When enabled, the snoozer screen shows emojis in addition to glucose values |
 | Force Portrait Mode | When enabled, aspect ratio is not affected by phone orientation |
+| Statistics: Display Stats | When enabled, statistics are displayed at the bottom of the home screen<br>Ranges are chosen under [Settings->Units and Metrics](#units-and-metrics){: target="_blank" } |
+| Statistics: Stats Style | Shown when Display Stats is enabled. Options are<br>- Statistics Box: original pie-chart with table<br>- Time in Range Band: graphical, colored bar |
+| Statistics: Stats Period | Shown when Display Stats is enabled. Options are<br>- Last 24 Hours<br>- Today (since midnight): midnight in your time zone, or in the Time Zone Override when it is on<br>The [Apple Watch](apple-watch.md#statistics) statistics use the same period |
 | Time Zone Override | When enabled, another row is displayed<br>Select the time zone for the T1D who is being followed |
 | Speak BG | When enabled, glucose is spoken aloud in selected language<br>Options are available to limit this but see also Persistent Notification |
 
@@ -386,15 +402,16 @@ The same reading is shown in either unit — switching the unit does not change 
 
 #### Range
 
-Selects the Low and High thresholds that define your target interval. The percentage of readings within this interval is shown on the Home screen.
+Selects the Low and High thresholds that define your target interval. The percentage of readings within this interval is shown on the Home screen. The row shows the selected range with its Low and High values; tap it to open the list of ranges. Tapping the Time in Range card on the Statistics screen cycles through the same options.
 
-| Option   | Name                  | Low – High                          |
-|:--|:--|:--|
-| `TIR`    | Time in Range         | 70 – 180 mg/dL (3.9 – 10.0 mmol/L)  |
-| `TITR`   | Time in Tighter Range | 70 – 140 mg/dL (3.9 – 7.8 mmol/L)   |
-| `Custom` | —                     | Values you enter below              |
+| Range                | Low – High                          |
+|:--|:--|
+| Time in Range        | 70 – 180 mg/dL (3.9 – 10.0 mmol/L)  |
+| Time in Tight Range  | 70 – 140 mg/dL (3.9 – 7.8 mmol/L)   |
+| Extended Tight Range | 63 – 140 mg/dL (3.5 – 7.8 mmol/L)   |
+| Custom Range         | Values you enter                    |
 
-When `Custom` is selected, two extra rows appear — **Low** and **High** — entered in the glucose unit you chose above. These same Low and High values also drive the Low and High BG lines drawn on the main graph.
+When `Custom Range` is selected, the list stays open and shows two extra rows — **Low** and **High** — entered in the glucose unit you chose above. These same Low and High values also drive the Low and High BG lines drawn on the main graph.
 
 #### Glycemic Metrics
 
@@ -603,11 +620,10 @@ A number of different options can be adjusted in this screen.
 | Advanced Setting | Default | Description |
 |:--|:-:|:--|
 | Download Treatments | enabled | Treatments from Nightscout, if available, are downloaded and displayed |
-| Download Prediction | enabled | Predictions (forecast), if available, are downloaded and displayed |
 | Graph Basal | enabled | Actual Basal Rates, if available, are downloaded and displayed |
 | Graph Bolus | enabled | Manual and Automatic Bolus values, if available, are downloaded and displayed |
 | Graph Carbs | enabled | Meal Entries, if available, are downloaded and displayed |
-| Graph Other Treatments | enabled | Treatment notes, if available, are downloaded and displayed |
+| Graph Other Treatments | enabled | Treatment notes, if available, are downloaded and displayed, including [CGM Sensor States](#cgm-sensor-states) |
 | BG Update Delay | 10 sec | how many seconds *LoopFollow* waits before it fetches it from your data source<br>See [Update Delay Explained](#update-delay-explained)|
 | Debug Log Level | enabled | Allows you to enable or disable debug logging<br>See [Debug Log Level](#debug-log-level) |
 

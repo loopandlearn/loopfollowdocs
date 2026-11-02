@@ -89,11 +89,30 @@ When entering meals and choosing to schedule the meal, any bolus included in the
 ![scheduled meal warning](img/lf-trc-scheduled-meal.png){width="300"}
 {align=center}
 
+### Edit or Delete a Meal
+
+!!! info "Available in *LoopFollow* 8.0 and newer"
+
+Meals from *Trio* can be edited or deleted on the [Treatments](../setup/lf-features.md#treatments) screen. Tap the meal to open its details; the **Remote actions** section has **Edit meal** and **Delete meal**.
+
+![meal details with remote actions](img/lf-trc-meal-detail.png){width="300"}
+{align=center}
+
+* **Edit meal** shows the current values and lets you enter new carbs, fat, protein and meal time. Tapping **Update Meal** asks for confirmation before the change is sent. *Trio* replaces the meal, including any fat and protein entries, with the new values.
+* **Delete meal** asks for confirmation. It removes the carb entry and any fat/protein entries *Trio* created from it.
+
+| ![Edit Meal screen](img/lf-trc-meal-edit.png){width="300"} | ![delete meal confirmation](img/lf-trc-meal-delete.png){width="300"} |
+|:--:|:--:|
+
+Meals can be changed up to 24 hours after and 12 hours before their time. The small carb entries *Trio* creates from a meal's fat and protein have a **Show original meal** link; editing or deleting one of them affects the whole meal.
+
+Editing and deleting meals requires a *Trio* release newer than 1.0.2. It is available in *Trio* `dev` but not in 1.0.2. With an older version, the meal details show "Editing meals needs a newer Trio version."
+
 ### Remote Bolus
 
 The Bolus screen sends a remote bolus to *Trio*:
 
-* **Recommended Bolus** — when *Trio*'s latest recommendation is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated.
+* **Recommended Bolus** — when *Trio*'s latest recommendation is less than 12 minutes old, it is shown at the top; tap the arrow to fill it into the amount field. A warning reminds you that new treatments may have occurred since it was calculated. A recommendation is not shown when a manual bolus has been given since the loop cycle that calculated it, from *Trio*, *LoopFollow* or the watch, since it does not count that bolus. The next loop cycle makes a new one.
 * **Bolus Amount** — capped by the **Max Bolus** guardrail. The amount is rounded down to the pump's bolus increment, which is detected automatically from *Nightscout*; a manual **Bolus Increment** setting appears in Remote Settings only when it cannot be detected.
 
 After the confirmation, you must authenticate with Face ID or your passcode before the bolus command is sent.
