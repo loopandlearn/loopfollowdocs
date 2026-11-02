@@ -5,7 +5,7 @@
 ### Version 8.0.0
 
 !!! important "Browser Builders: one-time update"
-    The Apple Watch app adds 2 identifiers. Before your first build of v8.0.0, run `Add Identifiers` and add the LoopFollow App Group to the `LoopFollow Watch App` and `LoopFollow Watch Complications` identifiers, as described in [Update to LoopFollow v8](../build/lf-browser-build.md#update-for-the-apple-watch-app){: target="_blank" }. Until then, the automatic build fails with `The Apple Watch app identifiers are not set up yet`.
+    The Apple Watch app adds 2 identifiers. Before your first build of v8.0.0, run `Add Identifiers` and add the LoopFollow App Group to the `LoopFollow Watch App` and `LoopFollow Watch Complications` identifiers, as described in [Update to LoopFollow v8](../build/lf-browser-build.md#update-to-loopfollow-v8){: target="_blank" }. Until then, the automatic build fails with `The Apple Watch app identifiers are not set up yet`.
 
 !!! tip ""
     New with *LoopFollow* v8.0.0:
@@ -115,7 +115,7 @@ The feature history is summarized below in reverse chronological order.
 
 | *LoopFollow* Version | Feature Added |
 |:--|:--|
-| 8.0 | Apple Watch app with complications and remote commands - Browser Builders must add the LoopFollow App Group to 2 new identifiers<br>see [Browser Build: Update to LoopFollow v8](../build/lf-browser-build.md#update-for-the-apple-watch-app){: target="_blank" }; remote edit or delete of meals and carbs |
+| 8.0 | Apple Watch app with complications and remote commands - Browser Builders must add the LoopFollow App Group to 2 new identifiers<br>see [Browser Build: Update to LoopFollow v8](../build/lf-browser-build.md#update-to-loopfollow-v8){: target="_blank" }; remote edit or delete of meals and carbs |
 | 7.1 | "This Time" guide lines on previous days; Shortcuts actions for spoken BG; override duration for *Loop* remote overrides |
 | 7.0 | Requires iOS 18 or newer; first-run onboarding guide; graphs rebuilt on native Swift Charts |
 | 6.2 | WebSocket for near real-time *Nightscout* updates; Quick Pick remote buttons; Run Diagnostics for remote setup |
@@ -147,7 +147,7 @@ It also lists updates to the method for using Browser Build.
 With the addition of the Apple Watch app to *LoopFollow*, the build directions for browser build were updated.
 
 * If you use Browser Build, your automatic build will fail until you run `Add Identifiers` again and add the `LoopFollow App Group` to the 2 new identifiers: `LoopFollow Watch App` and `LoopFollow Watch Complications`.
-* Instructions start here: [Update to LoopFollow v8](../build/lf-browser-build.md#update-for-the-apple-watch-app){: target="_blank" }
+* Instructions start here: [Update to LoopFollow v8](../build/lf-browser-build.md#update-to-loopfollow-v8){: target="_blank" }
 * The Apple Watch app requires watchOS 10 or newer. The *iPhone* app still requires iOS 18 or newer.
 
 ### *LoopFollow* Version 6.1 and newer

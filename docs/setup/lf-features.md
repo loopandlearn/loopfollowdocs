@@ -121,8 +121,10 @@ The table below lists every alarm type available in *LoopFollow*, organized by g
 | Alarm | Description |
 |:--|:--|
 | Override Started | An override just started |
+| Override Ends Soon | User can select an early warning time from 0 to 30 min, steps of 5 |
 | Override Ended | An override ended |
 | Temp Target Started | A temp target started |
+| Temp Target Ends Soon | User can selectan early warning time from 0 to 30 min, steps of 5 |
 | Temp Target Ended | A temp target ended |
 
 

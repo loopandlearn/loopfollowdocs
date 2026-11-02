@@ -28,11 +28,10 @@ Turn the Digital Crown, or swipe up and down, to move between the pages: Glucose
 * The latest glucose value with its trend arrow and the change since the previous reading
     * Colors follow the *LoopFollow* settings on your *iPhone*: green in range, yellow high, red low, or white when *Color BG Text* is off
     * The value is struck through when the latest reading is 12 minutes old or more
-* Top left: insulin on board (IOB)
+* Under the Glucose: syringe icon: insulin on board (IOB) and Knife and fork icon: Carbs on board (COB)
 * Top right: minutes since the latest reading
     * An orange *iPhone* symbol means the watch cannot reach the *iPhone* right now
     * A blue watch symbol means the watch is fetching the data itself
-* Carbs on board (COB)
 * *Not looping* is shown in red when the loop has not reported for 15 minutes
 * A graph of the last two hours
 * Buttons for remote commands at the bottom, see [Remote Commands](#remote-commands)
@@ -40,6 +39,11 @@ Turn the Digital Crown, or swipe up and down, to move between the pages: Glucose
 When an alarm is sounding on the *iPhone*, its name is shown at the top of the page. Tap it to snooze the alarm on the *iPhone*. The watch app has no alarms of its own.
 
 ### Graph
+
+The Loop graph and out-of-date Trio graph are shown.
+
+![LoopFollow watch graph page](img/watch-graph-loop.png){width="200"}
+{align="center"}
 
 ![LoopFollow watch graph page](img/watch-graph-trio.png){width="200"}
 {align="center"}
@@ -82,6 +86,9 @@ The buttons on the glucose page send the same commands as the *LoopFollow* remot
 | **+** (middle) | Meal or Bolus |
 | Temp Target (right) | *Trio* only: start one of the temp target presets saved in *LoopFollow*, or cancel the active temp target |
 
+![how a command from the watch is sent](img/watch-command-flow.png){width="600"}
+{align="center"}
+
 ### Bolus
 
 | Set the amount | Confirm with the Digital Crown |
@@ -89,6 +96,9 @@ The buttons on the glucose page send the same commands as the *LoopFollow* remot
 | ![LoopFollow watch bolus amount](img/watch-bolus.png){width="200"} | ![LoopFollow watch bolus confirmation](img/watch-bolus-confirm.png){width="200"} |
 
 The bolus screen opens on the amount. Set it with the Digital Crown, or with the **−** and **+** buttons beside the amount. Each click changes the amount by one bolus increment, up to the *Max Bolus* in *LoopFollow*. Tap *Continue* to confirm.
+
+![how a bolus from the watch is sent](img/watch-bolus-flow.png){width="600"}
+{align="center"}
 
 **Starting at the recommendation**
 
@@ -145,6 +155,9 @@ Remote commands from the watch are on by default. To turn them off, open *LoopFo
 {align="center"}
 
 The watch normally gets its data and sends its commands through the *iPhone*. When the *iPhone* is switched off or out of reach, the watch carries on by itself:
+
+![LoopFollow watch fetching on its own](img/watch-data-flow.png){width="600"}
+{align="center"}
 
 * **Data**: when the *iPhone* has not sent anything for 10 minutes, the watch fetches glucose, IOB, COB, the prediction and treatments directly from *Nightscout*, or glucose from *Dexcom Share* if you do not use *Nightscout*. A blue watch symbol next to the minutes shows that the watch is fetching on its own. Statistics and the info table keep showing the *iPhone*'s latest values, with the time they are from.
 * **Commands**: when the *iPhone* is out of reach, the watch sends the command directly to *Loop* or *Trio*, checked against the limits it last received from the *iPhone*. The confirmation from *Loop* or *Trio* still goes to the *iPhone*, so check *Loop* or *Trio* for the result. Insulin can be sent from the watch alone at most once a minute.

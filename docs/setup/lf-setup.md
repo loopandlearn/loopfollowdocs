@@ -274,6 +274,9 @@ These settings are accessed through the General row in the Settings screen.
 | Show Display Name | When enabled, the app name is shown on the Home screen<br>Very useful if more than one person is being followed|
 | Snoozer Emoji | When enabled, the snoozer screen shows emojis in addition to glucose values |
 | Force Portrait Mode | When enabled, aspect ratio is not affected by phone orientation |
+| Statistics: Display Stats | When enabled, statistics are displayed at the bottom of the home screen<br>Ranges are chosen under [Settings->Units and Metrics](#units-and-metrics){: target="_blank" } |
+| Statistics: Stats Style | Options are<br>- Statistics Box: original pie-chart with table<br>- Time in Range Band: graphical, colored bar |
+| Statistics: Stats Period | Options are<br>- last 24 hours<br>- Time since midnight |
 | Time Zone Override | When enabled, another row is displayed<br>Select the time zone for the T1D who is being followed |
 | Speak BG | When enabled, glucose is spoken aloud in selected language<br>Options are available to limit this but see also Persistent Notification |
 

@@ -87,7 +87,7 @@ Carb entries from *Loop* can be edited or deleted on the [Treatments](../setup/l
 | ![Edit Carbs screen](img/lf-lrc-carb-edit.png){width="300"} | ![delete carbs confirmation](img/lf-lrc-carb-delete.png){width="300"} |
 |:--:|:--:|
 
-Carb entries can be changed up to 23 hours after their time.
+Carb entries can be edited up to 23 hours after their original entry time.
 
 The actions need the remote carb edit customization in the *Loop* app. Without it, the carb entry details show "Editing carbs needs the remote carb edit customization in Loop."
 
@@ -214,7 +214,8 @@ For remote overrides in particular:
         * If it is a named preset (override), the name is listed at the top of the screen in the Active Override row
         * If you want to see the details, you may need to scroll down to find that override in the list
         * A custom override (not named) shows up as "Custom Override" in the Active Override row - the details can be observed in the Information Table on the main *LoopFollow* screen
-    * The values set for the override may take up to 5 minutes to appear in the Information Table Display, at which time the %insulin needs and target are shown.
+    * With older versions of LoopFollow, the values set for the override may take up to 5 minutes to appear in the Information Table Display, at which time the %insulin needs and target are shown.
+    * With *LoopFollow* version 8.0.0, the remote command response is typically returned in seconds when APNs is working properly
 
 1. **Can a looper cancel a remote override**?  
    **Answer**: Yes. They can tap the heart icon <font color="blue">:fontawesome-solid-heart-pulse:</font> in&nbsp;_<span translate="no">Loop</span>_&nbsp;so that it is no longer highlighted. This turns off the override, regardless of where it was initiated.
