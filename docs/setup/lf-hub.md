@@ -189,6 +189,7 @@ The hub needs an APN key to send notifications to the phones.
 * The admin's phone sends the APN key from Settings → APN to the hub. The hub stores it encrypted.
 * Family members on the same *LoopFollow* build (built with the same *Apple* Developer team) need no key of their own. The hub uses an admin's key for them, and their APN settings show **Managed by LF Hub**.
 * A phone that joined with an invite never sends its own APN key. If no admin has added a key yet, its Ready list says so.
+* An admin's key only works for *LoopFollow* built with the same *Apple* Developer account. A family member who builds *LoopFollow* under their own account and joins with an invite gets no notifications from the hub, and *LoopFollow* on that phone keeps checking the alarms itself. To use *LF Hub*, that family member installs *LoopFollow* from the same build as the admin.
 
 !!! tip "Use a separate APN key for the hub"
     An APN key can send notifications to every app in the *Apple* Developer team it belongs to. Consider creating a new APN key just for *LF Hub*, rather than reusing a key you already use for other things, so that you can revoke it on its own if you ever need to.
