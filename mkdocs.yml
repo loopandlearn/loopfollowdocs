@@ -188,6 +188,7 @@ nav:
 - Setup and Features:
   - Setup: 'setup/lf-setup.md'
   - Features: 'setup/lf-features.md'
+  - 'LF Hub': 'setup/lf-hub.md'
   - 'Apple Watch': 'setup/apple-watch.md'
 - Remote Control:
   - 'Remote Control Overview': 'remote/remote-control-overview.md'
