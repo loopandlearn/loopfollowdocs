@@ -29,7 +29,6 @@ install would send under *Settings* > *General Settings* > *Diagnostics*
 | Build commit | `46a9ed3` | A short code that identifies the exact source code the app was built from. |
 | TestFlight or not | `true` / `false` | Whether the install came from TestFlight or a local Xcode build. |
 | Instance | `LoopFollow` / `LoopFollow_.Second` / ... | If you have more than one *LoopFollow* installed side by side, this tells them apart. |
-| Install ID | random UUID | A random code created by *LoopFollow* the first time it runs. It is not linked to your name, phone number or *Apple ID*, and is deleted when you delete the app. |
 | IDFV | Apple per-vendor UUID | Apple's `identifierForVendor`: an opaque code that is the same for all apps from this developer on your device, and resets when all of them are removed. Together with *Instance*, it identifies one install. |
 | Device | `iPhone15,2` | Apple's hardware identifier (not the marketing name). |
 | Platform | `iOS` / `iPadOS` / `macCatalyst` | |
