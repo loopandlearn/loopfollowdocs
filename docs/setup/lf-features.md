@@ -231,7 +231,7 @@ These devices can provide a constant Bluetooth connection for your *LoopFollow* 
 * Dexcom Device (the battery can last for months after it is no longer in service with a sensor)
     * Dexcom G5/G6/ONE/Anubis transmitter
     * Dexcom G7/ONE+ sensor
-* Omnipod DASH pod within Bluetooth range (provides a heartbeat about every 3 minutes)
+* Omnipod DASH pod within Bluetooth range (provides a heartbeat about every 5 minutes)
 
 If you use *LoopFollow* on your Looping phone for the features offered, you can connect to your own Dexcom device. You don’t need to use an expired device in addition.
 
