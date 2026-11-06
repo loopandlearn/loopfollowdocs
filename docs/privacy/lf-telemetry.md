@@ -11,11 +11,8 @@ helps decide, for example, when it's safe to drop support for an older
 Usage stats are **on by default**. You can turn them off at any time in
 *Settings* > *General Settings* > *Diagnostics* > *Send anonymous usage
 stats*. If you already chose **No thanks** or turned the toggle off in
-an earlier version, that choice is kept.
-
-When usage stats are off, *LoopFollow* still sends a much smaller
-check-in so the maintainers can count how many installs run each
-version. See [When usage stats are off](#when-usage-stats-are-off).
+an earlier version, that choice is kept. When usage stats are off,
+nothing is sent.
 
 - - -
 
@@ -61,26 +58,6 @@ The server adds two fields when it stores each report:
 
 - - -
 
-## When usage stats are off
-
-With *Send anonymous usage stats* turned off, *LoopFollow* sends only
-this, once a day and after installing a new version:
-
-| Field | Example |
-|:--|:--|
-| App version | `8.0.1` |
-| Build date | `2026-11-03` |
-| Build commit | `46a9ed3` |
-| Install ID | the random code described above |
-| What triggered it, and the previous error category if any | `cold_launch` |
-
-It contains nothing about your device, your settings or your health
-data, and no IDFV. It is used only to count how many installs run each
-version. *What's sent* shows this smaller check-in when usage stats are
-off.
-
-- - -
-
 ## What is **not** sent
 
 Specifically and explicitly:
@@ -112,8 +89,7 @@ not shared.
 
 The toggle is at *Settings* > *General Settings* > *Diagnostics* >
 *Send anonymous usage stats*. Turning it off takes effect immediately
-and stays off. From then on only the smaller check-in described in
-[When usage stats are off](#when-usage-stats-are-off) is sent.
+and stays off. From then on nothing is sent.
 
 The *Diagnostics* section also has:
 
