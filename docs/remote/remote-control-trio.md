@@ -193,6 +193,14 @@ Tap a preset to activate it; a confirmation is shown before the command is sent.
 ![remote overrides](img/lf-trc-override.png){width="300"}
 {align=center}
 
+### Profiles
+
+When *Trio* has Therapy Profiles and accepts profile commands, a **Profiles** button appears on this screen. From there you can review, activate, create, edit, rename and delete the profiles saved in *Trio*.
+
+Activating a profile, or editing the active profile, changes insulin dosing right away. Agree on profiles and any change to them with the care team.
+
+See [Remote Profiles](remote-profiles.md) for how it works, what *Trio* needs, and what the replies mean.
+
 - - -
 
 ## Configure *Trio* Phone for Remote Control
