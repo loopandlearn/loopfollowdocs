@@ -77,14 +77,14 @@ The Meal screen sends a remote meal entry to *Trio*:
 * **Carbs** — up to the **Max Carbs** guardrail set in Remote Settings.
 * **Fat** and **Protein** — shown when **Meal with Fat/Protein** is enabled in [Meal Settings](#meal-settings), each with its own guardrail.
 * **Bolus Amount** — shown when **Meal with Bolus** is enabled, capped by the **Max Bolus** guardrail.
-* **Schedule for later** — enter the carbs at a chosen time instead of now.
+* **Adjust meal time** — enter the carbs at a chosen time, earlier or later than now.
 
 ![remote meal entry](img/lf-trc-meal.png){width="300"}
 {align=center}
 
 Tapping **Send Meal** shows a confirmation that summarizes the whole entry. If a bolus is included, you must also authenticate with Face ID or your passcode before the command is sent.
 
-When entering meals and choosing to schedule the meal, any bolus included in the meal is enacted immediately. Only the carb entry is entered according to the schedule.
+When the meal time is adjusted, any bolus included in the meal is enacted immediately. Only the carb entry uses the adjusted time.
 
 ![scheduled meal warning](img/lf-trc-scheduled-meal.png){width="300"}
 {align=center}
