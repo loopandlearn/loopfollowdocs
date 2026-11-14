@@ -73,6 +73,8 @@ When Google Translate is selected:
 
 **<span translate="no">macOS</span>**&nbsp; (macOS): operating system for Mac computer
 
+**<span translate="no">LF Hub</span>**&nbsp; (LF Hub): a small server that watches one person's glucose data and sends alarms, the badge and the Live Activity to the family's phones, see [What is LF Hub](../hub/lf-hub-overview.md)
+
 **<span translate="no">Loop and Learn</span>**&nbsp; (Loop and Learn): A support group with mentors and developers who support the OS-AID community
 
 **<span translate="no">Loop</span>**&nbsp; (Loop): With a capital L, Loop is one of several do-it-yourself artificial pancreas systems

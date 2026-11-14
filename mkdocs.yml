@@ -199,6 +199,10 @@ nav:
   - 'LoopFollow Browser Build': 'build/lf-browser-build.md'
 - Privacy:
   - 'Anonymous Telemetry': 'privacy/lf-telemetry.md'
+- LF Hub:
+  - 'What is LF Hub': 'hub/lf-hub-overview.md'
+  - 'Get a Hub': 'hub/lf-hub-get.md'
+  - 'Set Up and Invite': 'hub/lf-hub-onboarding.md'
 - Reference:
   - 'FAQs': 'faqs/lf-faqs.md'
   - 'History': 'faqs/lf-history.md'
