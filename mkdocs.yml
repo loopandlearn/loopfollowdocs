@@ -105,6 +105,8 @@ plugins:
         - .DS_Store
         - extra.css
         - favicon.ico
+        - forge-1.3.1.min.js
+        - lf-android-builder.js
         - front.html.j2
         - .keep
         - mathjax.js
@@ -121,6 +123,7 @@ extra_css:
 extra_javascript:
   - assets/javascripts/mathjax.js
   - assets/javascripts/mkdocs-exporter.js
+  - assets/javascripts/lf-android-builder.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js
 
@@ -197,6 +200,8 @@ nav:
 - Build:
   - 'LoopFollow Build': 'build/build-options.md'
   - 'LoopFollow Browser Build': 'build/lf-browser-build.md'
+- Android:
+  - 'LoopFollow for Android': 'android/lf-android.md'
 - Privacy:
   - 'Anonymous Telemetry': 'privacy/lf-telemetry.md'
 - LF Hub:
