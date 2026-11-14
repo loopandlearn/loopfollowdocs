@@ -31,6 +31,7 @@ Detailed directions are found in the next sections, this is the summary of what 
     * New with LoopFollow version 6.0 and newer
 1. Add the App Group to the Identifiers ([link](#add-app-group))
     * New with LoopFollow version 8.0 and newer: the Apple Watch app adds 2 identifiers ([link](#update-to-loopfollow-v8))
+    * New in the `dev` branch: LF Hub adds 1 identifier ([link](#update-for-lf-hub))
 1. Create the App in App Store Connect and configure TestFlight users ([link](#create-app-in-app-store-connect))
 1. Configure TestFlight users for the *LoopFollow* app ([link](#add-users-to-testflight-for-app))
 1. `Build LoopFollow` ([link](#build-app))
@@ -144,11 +145,12 @@ Existing Browser Builders who have not updated:
 
 * since version 5.x or older need to follow both sets of update instructions below
 * since version 6.x or 7.x should skip to [Update to *LoopFollow* v8](#update-to-loopfollow-v8)
+* who build the `dev` branch also need [Update for LF Hub](#update-for-lf-hub)
 
 ### Update to *LoopFollow* v6
 
 !!! important "Updating LoopFollow to version 6.0 and newer"
-    This information admonition is for existing builders who need to update from version 5.x or older.
+    This section is for existing builders who need to update from version 5.x or older.
 
     The addition of Live Activity requires adding the LoopFollow App Group. Your build will fail until you take these one-time steps.
     
@@ -161,10 +163,11 @@ Existing Browser Builders who have not updated:
         * LoopFollow Live Activity Extension
 
 
+<a id="update-for-the-apple-watch-app"></a>
 ### Update to *LoopFollow* v8
 
 !!! important "Updating LoopFollow to version 8.0 and newer"
-    This information admonition is for existing builders who need to update from version 6.x or 7.x.
+    This section is for existing builders who need to update from version 6.x or 7.x.
 
     The addition of the [Apple Watch app](../setup/apple-watch.md) requires 2 new identifiers with the LoopFollow App Group. Your build will fail until you take these one-time steps.
 
@@ -175,6 +178,8 @@ Existing Browser Builders who have not updated:
         * LoopFollow Watch App
         * LoopFollow Watch Complications
     3. Run the `Build LoopFollow` action
+
+    If you already built a version with LF Hub with *Xcode*, *Xcode* created the identifier for you, as in the screenshots below, and `Add Identifiers` keeps its name. Its name starts with `XC`, see [Previous Xcode Builders](#previous-xcode-builders). You do not need to delete it, but check that it has the LoopFollow App Group.
 
     In the [Identifiers list](https://developer.apple.com/account/resources/identifiers/list), open each watch identifier. Its Bundle ID ends in `.watchkitapp` or `.watchkitapp.widgets`:
 
@@ -191,6 +196,35 @@ Existing Browser Builders who have not updated:
     If you already built this version of *LoopFollow* with *Xcode*, *Xcode* created the 2 watch identifiers for you, and `Add Identifiers` keeps their names. Their names start with `XC`, see [Previous Xcode Builders](#previous-xcode-builders). You do not need to delete them, but check that they have the LoopFollow App Group.
 
     If you skip these steps, the build log says `The Apple Watch app identifiers are not set up yet` with a link to this section.
+
+### Update for LF Hub
+
+!!! important "Building the `dev` branch with LF Hub"
+    This section is for builders of the `dev` branch. The same steps will be needed for the release that brings LF Hub to `main`.
+
+    LF Hub alarms are rung by a new notification service extension, which needs 1 new identifier with the LoopFollow App Group. Your build will fail until you take these one-time steps.
+
+    Run each action from the branch you build: in the `Run workflow` dropdown, select `dev` under `Use workflow from`.
+
+    1. Run the `Add Identifiers` action again
+    2. Add the LoopFollow App Group to the new identifier, as described in [Add `App Group`](#add-app-group):
+        * LoopFollow Notification Service
+    3. Run the `Create Certificates` action
+    4. Run the `Build LoopFollow` action
+
+    In the [Identifiers list](https://developer.apple.com/account/resources/identifiers/list), open the notification service identifier. Its Bundle ID ends in `.LoopFollowNotificationService`:
+
+    ![the notification service identifier: the Bundle ID ends in .LoopFollowNotificationService](img/notification-service-identifier-edit.png){width="700"}
+
+    Scroll down to `App Groups`. When the box is checked and the notes say `Enabled App Groups (1)`, tap `Edit` to check that it is the LoopFollow App Group:
+
+    ![the App Groups row of the notification service identifier](img/notification-service-identifier-app-groups.png){width="700"}
+
+    ![the LoopFollow App Group selected for the notification service identifier](img/notification-service-identifier-app-group-assignment.png){width="600"}
+
+    If you changed anything, tap `Continue`, then `Save` and `Confirm`. If you only checked, tap `Cancel`.
+
+    If you skip these steps, the build log says `The LoopFollow Notification Service identifier is not set up yet`.
 
 The `LoopFollow` *App Group* already exists if you previously built the *LoopFollow* app using *Xcode* with this *Apple Developer ID*. In that case, skip ahead to [Optional: App Group Description Modification](#optional-app-group-description-modification) to update the description.
 
@@ -242,6 +276,7 @@ For each Identifier in the table below, click on the Identifier and then add the
 | --- | --- |
 | <span translate="no">LoopFollow</span> | <span translate="no">com.TEAMID.LoopFollow</span> |
 | <span translate="no">LoopFollow Live Activity Extension</span> | <span translate="no">com.TEAMID.LoopFollow.LoopFollowLAExtension</span> |
+| <span translate="no">LoopFollow Notification Service</span> (`dev`) | <span translate="no">com.TEAMID.LoopFollow.LoopFollowNotificationService</span> |
 | <span translate="no">LoopFollow Watch App</span> | <span translate="no">com.TEAMID.LoopFollow.watchkitapp</span> |
 | <span translate="no">LoopFollow Watch Complications</span> | <span translate="no">com.TEAMID.LoopFollow.watchkitapp.widgets</span> |
 
@@ -255,6 +290,7 @@ If you previously built *LoopFollow* with *Xcode*, the NAME of an identifier may
 |:--|:--|:--|
 | <span translate="no">LoopFollow</span> | <span translate="no">XC com TEAMID LoopFollow</span> | <span translate="no">com.TEAMID.LoopFollow</span> |
 | <span translate="no">LoopFollow Live Activity Extension</span> | <span translate="no">XC com TEAMID LoopFollow LoopFollowLAExtension</span> | <span translate="no">com.TEAMID.LoopFollow.LoopFollowLAExtension</span> |
+| <span translate="no">LoopFollow Notification Service</span> | <span translate="no">XC com TEAMID LoopFollow LoopFollowNotificationService</span> | <span translate="no">com.TEAMID.LoopFollow.LoopFollowNotificationService</span> |
 | <span translate="no">LoopFollow Watch App</span> | <span translate="no">XC com TEAMID LoopFollow watchkitapp</span> | <span translate="no">com.TEAMID.LoopFollow.watchkitapp</span> |
 | <span translate="no">LoopFollow Watch Complications</span> | <span translate="no">XC com TEAMID LoopFollow watchkitapp widgets</span> | <span translate="no">com.TEAMID.LoopFollow.watchkitapp.widgets</span> |
 
@@ -282,7 +318,7 @@ If you did not need to make changes, the `Save` button will not be active.
 
 The full list of Identifiers should be displayed again.
 
-Repeat until the 4 Identifiers have the `LoopFollow App Group` configured.
+Repeat until the 4 Identifiers have the `LoopFollow App Group` configured, or 5 Identifiers if you build the `dev` branch.
 
 * If you miss an identifier, the `Create Certificates` step will succeed but `Build LoopFollow` will fail.
 
@@ -306,6 +342,7 @@ Refer to the table below to see how the App Group and Identifiers for LoopFollow
 | --- | --- |
 | <span translate="no">LoopFollow</span> | <span translate="no">com.TEAMID.LoopFollow</span> |
 | <span translate="no">LoopFollow Live Activity Extension</span> | <span translate="no">com.TEAMID.LoopFollow.LoopFollowLAExtension</span> |
+| <span translate="no">LoopFollow Notification Service</span> (`dev`) | <span translate="no">com.TEAMID.LoopFollow.LoopFollowNotificationService</span> |
 | <span translate="no">LoopFollow Watch App</span> | <span translate="no">com.TEAMID.LoopFollow.watchkitapp</span> |
 | <span translate="no">LoopFollow Watch Complications</span> | <span translate="no">com.TEAMID.LoopFollow.watchkitapp.widgets</span> |
 | <span translate="no">LoopFollowSecond</span> | <span translate="no">com.TEAMID.LoopFollow.Second</span> |
