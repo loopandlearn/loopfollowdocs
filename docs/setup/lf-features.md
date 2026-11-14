@@ -16,7 +16,7 @@ When *LoopFollow* has trouble reaching your data source or keeping itself awake 
 
 ### Clearing and dismissing
 
-* A banner clears **automatically** when its source recovers (the next successful download, or a clean heartbeat window) or when you remove that source (URL/credentials cleared, device disconnected).
+* A banner clears **automatically** when its source recovers (the next successful download, or at most one late heartbeat in the last hour) or when you remove that source (URL/credentials cleared, device disconnected).
 * Tapping **✕** hides the banner. The same problem stays hidden for about 30 minutes and then reappears if it is still occurring; a *different* problem appears right away.
 * When more than one source has a problem, the most serious message is shown first; dismissing it reveals the next one.
 
@@ -231,7 +231,7 @@ These devices can provide a constant Bluetooth connection for your *LoopFollow* 
 * Dexcom Device (the battery can last for months after it is no longer in service with a sensor)
     * Dexcom G5/G6/ONE/Anubis transmitter
     * Dexcom G7/ONE+ sensor
-* Omnipod DASH pod within Bluetooth range (provides a heartbeat about every 3 minutes)
+* Omnipod DASH pod within Bluetooth range (provides a heartbeat about every 5 minutes)
 
 If you use *LoopFollow* on your Looping phone for the features offered, you can connect to your own Dexcom device. You don’t need to use an expired device in addition.
 
