@@ -16,7 +16,7 @@ When *LoopFollow* has trouble reaching your data source or keeping itself awake 
 
 ### Clearing and dismissing
 
-* A banner clears **automatically** when its source recovers (the next successful download, or a clean heartbeat window) or when you remove that source (URL/credentials cleared, device disconnected).
+* A banner clears **automatically** when its source recovers (the next successful download, or at most one late heartbeat in the last hour) or when you remove that source (URL/credentials cleared, device disconnected).
 * Tapping **✕** hides the banner. The same problem stays hidden for about 30 minutes and then reappears if it is still occurring; a *different* problem appears right away.
 * When more than one source has a problem, the most serious message is shown first; dismissing it reveals the next one.
 
