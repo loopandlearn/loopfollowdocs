@@ -150,7 +150,7 @@ Existing Browser Builders who have not updated:
 ### Update to *LoopFollow* v6
 
 !!! important "Updating LoopFollow to version 6.0 and newer"
-    This information admonition is for existing builders who need to update from version 5.x or older.
+    This section is for existing builders who need to update from version 5.x or older.
 
     The addition of Live Activity requires adding the LoopFollow App Group. Your build will fail until you take these one-time steps.
     
@@ -163,10 +163,11 @@ Existing Browser Builders who have not updated:
         * LoopFollow Live Activity Extension
 
 
+<a id="update-for-the-apple-watch-app"></a>
 ### Update to *LoopFollow* v8
 
 !!! important "Updating LoopFollow to version 8.0 and newer"
-    This information admonition is for existing builders who need to update from version 6.x or 7.x.
+    This section is for existing builders who need to update from version 6.x or 7.x.
 
     The addition of the [Apple Watch app](../setup/apple-watch.md) requires 2 new identifiers with the LoopFollow App Group. Your build will fail until you take these one-time steps.
 
@@ -177,6 +178,8 @@ Existing Browser Builders who have not updated:
         * LoopFollow Watch App
         * LoopFollow Watch Complications
     3. Run the `Build LoopFollow` action
+
+    If you already built a version with LF Hub with *Xcode*, *Xcode* created the identifier for you, as in the screenshots below, and `Add Identifiers` keeps its name. Its name starts with `XC`, see [Previous Xcode Builders](#previous-xcode-builders). You do not need to delete it, but check that it has the LoopFollow App Group.
 
     In the [Identifiers list](https://developer.apple.com/account/resources/identifiers/list), open each watch identifier. Its Bundle ID ends in `.watchkitapp` or `.watchkitapp.widgets`:
 
@@ -197,7 +200,7 @@ Existing Browser Builders who have not updated:
 ### Update for LF Hub
 
 !!! important "Building the `dev` branch with LF Hub"
-    This information admonition is for builders of the `dev` branch. The same steps will be needed for the release that brings LF Hub to `main`.
+    This section is for builders of the `dev` branch. The same steps will be needed for the release that brings LF Hub to `main`.
 
     LF Hub alarms are rung by a new notification service extension, which needs 1 new identifier with the LoopFollow App Group. Your build will fail until you take these one-time steps.
 
@@ -220,8 +223,6 @@ Existing Browser Builders who have not updated:
     ![the LoopFollow App Group selected for the notification service identifier](img/notification-service-identifier-app-group-assignment.png){width="600"}
 
     If you changed anything, tap `Continue`, then `Save` and `Confirm`. If you only checked, tap `Cancel`.
-
-    If you already built a version with LF Hub with *Xcode*, *Xcode* created the identifier for you, and `Add Identifiers` keeps its name. Its name starts with `XC`, see [Previous Xcode Builders](#previous-xcode-builders). You do not need to delete it, but check that it has the LoopFollow App Group.
 
     If you skip these steps, the build log says `The LoopFollow Notification Service identifier is not set up yet`.
 
@@ -346,12 +347,10 @@ Refer to the table below to see how the App Group and Identifiers for LoopFollow
 | <span translate="no">LoopFollow Watch Complications</span> | <span translate="no">com.TEAMID.LoopFollow.watchkitapp.widgets</span> |
 | <span translate="no">LoopFollowSecond</span> | <span translate="no">com.TEAMID.LoopFollow.Second</span> |
 | <span translate="no">LoopFollowSecond Live Activity Extension</span> | <span translate="no">com.TEAMID.LoopFollow.Second.LoopFollowLAExtension</span> |
-| <span translate="no">LoopFollowSecond Notification Service</span> (`dev`) | <span translate="no">com.TEAMID.LoopFollow.Second.LoopFollowNotificationService</span> |
 | <span translate="no">LoopFollowSecond Watch App</span> | <span translate="no">com.TEAMID.LoopFollow.Second.watchkitapp</span> |
 | <span translate="no">LoopFollowSecond Watch Complications</span> | <span translate="no">com.TEAMID.LoopFollow.Second.watchkitapp.widgets</span> |
 | <span translate="no">LoopFollowThird</span> | <span translate="no">com.TEAMID.LoopFollow.Third</span> |
 | <span translate="no">LoopFollowThird Live Activity Extension</span> | <span translate="no">com.TEAMID.LoopFollow.Third.LoopFollowLAExtension</span> |
-| <span translate="no">LoopFollowThird Notification Service</span> (`dev`) | <span translate="no">com.TEAMID.LoopFollow.Third.LoopFollowNotificationService</span> |
 | <span translate="no">LoopFollowThird Watch App</span> | <span translate="no">com.TEAMID.LoopFollow.Third.watchkitapp</span> |
 | <span translate="no">LoopFollowThird Watch Complications</span> | <span translate="no">com.TEAMID.LoopFollow.Third.watchkitapp.widgets</span> |
 
