@@ -87,7 +87,7 @@ Once you’ve configured your settings, your Home screen will look as beautiful 
     * Rows with no stored value for that time show `—`. For *Loop*, ISF, CR and Target come from the current profile at that time of day.
     * Lift your finger to return to the current values. Alarms and the Live Activity always use the current values.
 
-To show these past values, *LoopFollow* keeps a copy of the looping app's *Nightscout* status records for the [Show Days Back](#graph) period on the phone. It downloads them once and after that only what is new. Changing the *Nightscout* address clears the copy.
+To show these past values, *LoopFollow* keeps a copy of the looping app's *Nightscout* status records for the [Show Days Back](#graph) period on the phone. It downloads them once and after that only what is new. Changing the *Nightscout* address clears the copy. When an update of *LoopFollow* stores more values in the copy, as the update that adds [insulin activity](#insulin-activity) does, the whole period is downloaded again once after updating.
 
 - - -
 
@@ -295,7 +295,7 @@ IOB (insulin on board) is how much insulin is still left to act. It jumps up as 
 Like IOB, insulin activity is shown relative to your scheduled basal rate. Zero means insulin is acting the same as it would with your scheduled basal alone. Negative values mean less than that, for example while the looping app has lowered or stopped basal. With an unchanged basal rate, insulin activity can go no lower than minus the basal rate, which means almost no insulin is acting.
 
 * *Trio* uploads insulin activity to *Nightscout*.
-* *Loop* does not, so *LoopFollow* computes it from the boluses and temp basals in *Nightscout* with the **Insulin Model** you choose. Choose the same model that is selected in *Loop*.
+* *Loop* does not, so *LoopFollow* computes it from the boluses and temp basals in *Nightscout* with the **Insulin Model** you choose. Choose the same model that is selected in *Loop*. This needs [Download Treatments](#advanced-settings) to be enabled; with it off, the Insulin Activity graph, the Ins. Activity row and the forecast stay empty for *Loop*.
 
 The IOB and Insulin Activity graphs also show a dashed forecast, out to **Hours of Prediction**. It shows where IOB and insulin activity are heading if no more insulin is given, counting the insulin already delivered and the temp basal that is running until it ends. *LoopFollow* computes the forecast for *Loop*. For *Trio* it is shown when *Trio* uploads it to *Nightscout*; versions that do not upload it show no forecast.
 
