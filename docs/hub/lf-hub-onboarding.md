@@ -6,7 +6,7 @@ You need a running hub (see [Get a Hub](lf-hub-get.md)) and, on every phone, *Lo
 
 - - -
 
-## Part 1: The first phone (owner)
+## Part 1: The first phone (admin)
 
 Use a phone where *LoopFollow* already shows the glucose data: *Nightscout* and/or *Dexcom Share* work, and an APN key is set under *Settings* → *APN*. The hub takes the data source from this phone.
 
@@ -14,7 +14,7 @@ Use a phone where *LoopFollow* already shows the glucose data: *Nightscout* and/
 
 Tap *Menu* → *Settings* → *LF Hub*. It is the last row under *Data Settings*.
 
-The page has two parts. *Join with Invite* is for family members. *Set Up as Owner* is for you.
+The page has two parts. *Join with Invite* is for family members. *Set Up as Owner* is for you, and makes this phone an admin.
 
 ![the LF Hub page before the phone is connected](img/hub-settings-empty.png){width="350"}
 {align="center"}
@@ -29,8 +29,11 @@ Under *Set Up as Owner*:
 1. On a new hub, enter the name of the person you follow and a name for this phone. Everyone who manages the hub sees the phone's name in the list of phones.
 1. Tap *Connect*.
 
-![the owner form with the address, setup token, the person's name and the phone's name](img/hub-owner-connect.png){width="350"}
+![the Set Up as Owner form with the address, setup token, the person's name and the phone's name](img/hub-owner-connect.png){width="350"}
 {align="center"}
+
+!!! warning "Keep the setup token secret"
+    Anyone with the setup token can join as an admin, take over any phone on the hub and read the person's data source settings. Don't give it to family members. They join with an invite instead.
 
 The screenshots on this page come from a test hub on a computer, so the address is `http://localhost:8090`. Your hub's address starts with `https://`.
 
@@ -73,9 +76,9 @@ A row that is not done says what is missing, often with a button that fixes it.
 
 Each invite lets one more phone follow the same person. The invite works once and for 24 hours. Make a new one for each phone.
 
-### Make an invite on the owner's phone
+### Make an invite on an admin's phone
 
-On the owner's *LF Hub* page, tap *Invite Family Member*. A QR code appears.
+On an admin's *LF Hub* page, tap *Invite Family Member*. A QR code appears.
 
 ![the invite QR code](img/hub-invite.png){width="350"}
 {align="center"}
@@ -98,7 +101,7 @@ On the *Choose a data source* step, choose *Join a Family Hub* and tap *Continue
 
 ### Scan the invite
 
-Tap *Scan Invite Code* and point the camera at the QR code on the owner's phone. If you got the invite as a link, paste it in the field instead. Tap *Continue*.
+Tap *Scan Invite Code* and point the camera at the QR code on the admin's phone. If you got the invite as a link, paste it in the field instead. Tap *Continue*.
 
 ![the invite step with a pasted invite link](img/hub-join-invite.png){width="350"}
 {align="center"}
@@ -108,14 +111,17 @@ Tap *Scan Invite Code* and point the camera at the QR code on the owner's phone.
 The phone shows which hub and which person the invite is for. Only join a hub you know.
 
 * *Copy settings from …* starts with the same alarms and settings as that phone.
+* *Replace …* is for a phone you no longer use. This phone takes over that phone's alarms and settings, and the hub stops recognizing the old phone. If the old phone was used in the last 15 minutes, *LoopFollow* asks first, since it may still be in use. A phone that joins with an invite cannot replace an admin's phone, so this choice only appears for members' phones.
 * *Start fresh* gives this phone its own alarms, which you choose in the next steps.
+
+Joining later under *Settings* → *LF Hub* → *Join with Invite* offers the same choices, named *Copy Settings from …*, *Replace …* and *New Device*.
 
 ![the choice to copy settings from another phone or start fresh](img/hub-join-choice.png){width="350"}
 {align="center"}
 
 ### Name this phone
 
-Enter a name that tells the owner whose phone it is, and tap *Join*.
+Enter a name that tells the admins whose phone it is, and tap *Join*.
 
 ![naming the phone before joining](img/hub-join-name.png){width="350"}
 {align="center"}
@@ -132,20 +138,20 @@ When all three rows are green, tap *Continue*. *LoopFollow* switches *Background
 ![the permission list with every row green](img/hub-join-permissions-done.png){width="350"}
 {align="center"}
 
-The family member's phone now follows the person with the hub's data source, with the role *Member*. Its *Settings* → *LF Hub* page has the same *Ready* list as the owner's, and the same test alarm buttons.
+The family member's phone now follows the person with the hub's data source, with the role *Member*. Its *Settings* → *LF Hub* page has the same *Ready* list as the admin's, and the same test alarm buttons.
 
 - - -
 
 ## Part 4: Manage the phones
 
-Every phone that follows the person is listed under *Devices* on an owner's *LF Hub* page.
+Every phone that follows the person is listed under *Devices* on an admin's *LF Hub* page.
 
-![the Devices list with the owner's and the family member's phones](img/hub-devices.png){width="350"}
+![the Devices list with the admin's and the family member's phones](img/hub-devices.png){width="350"}
 {align="center"}
 
 Tap a phone to:
 
-* *Make Admin*: the phone can then change the data source, invite and manage phones. On an owner's phone the choice is *Make Member*.
+* *Make Admin*: the phone can then change the data source, invite and manage phones. If the phone you tapped is already an admin, the choice is *Make Member*. The hub always keeps at least one admin.
 * *Remove*: the hub stops sending to that phone.
 
 ![the menu for a family member's phone](img/hub-device-menu.png){width="350"}
@@ -155,7 +161,7 @@ A *Push failing* warning on a phone in the list means the hub cannot reach it. O
 
 ### Change the data source
 
-An owner changes the *Nightscout* site or *Dexcom* account under *Patient Data Sources* on the *LF Hub* page. The change reaches every phone that follows the person.
+An admin changes the *Nightscout* site or *Dexcom* account under *Patient Data Sources* on the *LF Hub* page. The change reaches every phone that follows the person.
 
 ### Leave the hub
 

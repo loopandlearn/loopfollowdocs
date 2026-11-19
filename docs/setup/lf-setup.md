@@ -527,6 +527,7 @@ Features which need APN:
 
 * Live Activity
 * Remote Control
+* [LF Hub](../hub/lf-hub-overview.md){: target="_blank" } (on the phone that sets up the hub)
 
 Details about creating APN credentials are found in the [Remote Control Overview](../remote/remote-control-overview.md#apple-push-notifications-system-apns){: target="_blank" }
 
@@ -536,7 +537,7 @@ The Live Activity feature for *LoopFollow* has the following requirements or it 
 
 * **APN Credentials** must be entered
 * **Background Refresh** must be enabled
-    * Typically caregivers use Silent Tunes to keep the app alive in the background
+    * Caregivers use Silent Tune or a Bluetooth heartbeat to keep the app alive in the background, or [LF Hub](../hub/lf-hub-overview.md){: target="_blank" }, which keeps the Live Activity up to date while *LoopFollow* is closed
     * If background refresh is not working, the app notifies the user and they should assume Live Activity is also not refreshing
 * **Live Activity** must be enabled
 

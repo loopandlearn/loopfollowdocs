@@ -203,6 +203,7 @@ nav:
   - 'What is LF Hub': 'hub/lf-hub-overview.md'
   - 'Get a Hub': 'hub/lf-hub-get.md'
   - 'Set Up and Invite': 'hub/lf-hub-onboarding.md'
+  - 'How LF Hub Works': 'hub/lf-hub-how-it-works.md'
 - Reference:
   - 'FAQs': 'faqs/lf-faqs.md'
   - 'History': 'faqs/lf-history.md'
