@@ -6,7 +6,7 @@ There are two ways to get an *LF Hub* for your family.
 
 ## Hosted for you
 
-We are talking with service providers so that families can buy *LF Hub* as a service, the way many people pay for a hosted *Nightscout* site, instead of running a server themselves. There is nothing to announce yet. This page will say more when there is.
+Families can buy *LF Hub* as a service, the way many people pay for a hosted *Nightscout* site, instead of running a server themselves. *LF Hub* is available from [10be](https://ns.10be.de/en). We are also talking with more providers, and this page will list them as they offer *LF Hub*.
 
 - - -
 
