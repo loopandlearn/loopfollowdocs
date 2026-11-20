@@ -183,29 +183,11 @@ While an override is active, it is listed in an **Active Override** section with
 
 !!! info "Available in *LoopFollow* 8.0 and newer"
 
-The **Profiles** button enables remote modification of the active profile in *Loop* when the associated *Loop* app is built using the [profiles customization](#profiles-customization).
+The **Profiles** button opens the profiles saved in *Loop*. With a *Loop* that has therapy profiles, you can review, activate, create, edit, rename and delete them, and change the weekly scheduled switches. With a *Loop* built with the older Profile Save & Load customization, you can only review and activate them.
 
-This new feature lists the profiles saved in *Loop* under *Saved profiles*, with the active one marked *Active*. *LoopFollow* reads them from what *Loop* uploads to *Nightscout*, and the time of that upload is shown under the list.
+Activating a profile, editing the active profile, or a scheduled switch changes insulin dosing right away. Agree on profiles and any change to them with the care team.
 
-
-| Saved profiles | Review before activating |
-|:--:|:--:|
-| ![list of saved Loop profiles](img/lf-lrc-profiles.png){width="300"} | ![preview of a Loop profile](img/lf-lrc-profile-preview.png){width="300"} |
-
-Tap a profile to review it before anything is sent. The screen shows the values *Loop* will use: correction range, carb ratios, basal rates with the daily total, and insulin sensitivities.
-
-* Tap **Activate Profile** and confirm. You must then confirm your identity with Face ID, Touch ID or your passcode before the command is sent.
-* *Loop* replaces its correction range, carb ratios, basal rates and insulin sensitivities with the profile's values, and writes the basal rates to the pump.
-* While *LoopFollow* waits for *Loop*'s reply, the button shows *Waiting for Loop...*. Only one profile switch can be pending at a time.
-* The reply is shown as *Profile Activated*, *Profile Not Activated* with the reason, or *No Reply From Loop*.
-
-#### profiles Customization
-
-Switching profiles needs *Loop* built with the Profile Save & Load customization, added with the Loop and Learn Customization Select script. Without it, the button is gray, and tapping it shows *Profiles Not Available*. If no profiles are listed, save them in *Loop* under Settings → Profiles.
-
-The profiles Customization was updated in 2026 October so you may need to update your *Loop* build with the a fresh customization as well as building a version of *LoopFollow* version 8.0 or newer on the caregiver phone.
-
-* [Profiles Customization](https://www.loopandlearn.org/loop-features-in-development/#profiles)
+See [Remote Profiles](remote-profiles.md) for how it works, what *Loop* needs, and what the replies mean.
 
 - - -
 
