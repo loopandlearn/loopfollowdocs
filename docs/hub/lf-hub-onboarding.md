@@ -67,8 +67,15 @@ The *LF Hub* page now shows the hub, the person you follow and this phone. Scrol
 
 A row that is not done says what is missing, often with a button that fixes it.
 
-!!! tip "Test it"
-    When every row is green, lock the phone and tap *Send Test Alarm in 30 s* under *Hub Mode*. The alarm should ring even with the phone silenced.
+![the Ready list with every row green](img/hub-ready-green.png){width="350"}
+{align="center"}
+
+### Test it
+
+When every row is green, tap *Send Test Alarm in 30 s* under *Hub Mode* and lock the phone right away. After 30 seconds the alarm should ring on the locked phone, even with the phone silenced. Slide to stop it.
+
+![the LF Hub test alarm on the locked phone](img/hub-test-alarm-locked.png){width="350"}
+{align="center"}
 
 - - -
 
