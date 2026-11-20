@@ -27,8 +27,7 @@ The guide steps through:
 7. **Recommended alarms** — a set of useful alarms is offered with sensible defaults and a single control each: **Low glucose**, **Urgent low**, **High glucose**, **Fast drop**, and **Missed readings**. When following *Nightscout*, alarms that rely on loop/uploader data are also offered: **Not looping**, **Looping phone battery**, **IOB**, **COB**, **Sensor change**, **Pump change**, and **Pump insulin**. Alarm types you already have are not offered again.
 8. **Tabs** — arrange which features sit in the tab bar. You can always reach everything through the [Menu](#menu-screen).
 9. **Notifications** — *LoopFollow* explains why it needs notifications for alarms, then asks iOS for permission. Choose **Enable Notifications** or **Not now**.
-10. **Privacy** — optionally share anonymous diagnostics to help improve *LoopFollow*. Choose **Yes, send anonymous stats** or **No thanks**; you can change this any time in Settings → General → Diagnostics. See [Telemetry](../privacy/lf-telemetry.md){: target="_blank" } for exactly what is and isn't shared.
-11. **You're all set** — a summary with a **Finish** button, plus a few features worth exploring next.
+10. **You're all set** — a summary with a **Finish** button, plus a few features worth exploring next.
 
 ![Choose a data source step](img/onboarding-data-source.png){width="280"}
 ![Nightscout connect step](img/onboarding-nightscout.png){width="280"}
