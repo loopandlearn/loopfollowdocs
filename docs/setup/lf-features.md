@@ -207,6 +207,9 @@ The Statistics screen displays a variety of plots and values. This requires an a
 
 *LoopFollow* has traditionally provided an option to play a silent audio as a trick to allow it to wake up when in the background or when the phone is locked. This has several drawbacks including battery drain and limited reliability.
 
+!!! tip "LoopFollow Hub"
+    With [LF Hub](../hub/lf-hub-overview.md), a service that runs online does the watching and sends the alarms, badge and Live Activity to the phone, so *LoopFollow* does not need to stay awake. Choose **LoopFollow Hub** under Background Refresh to use it. See [How LF Hub Works](../hub/lf-hub-how-it-works.md).
+
 With *LoopFollow* version 2.2.9 or newer, an additional method is provided using an external device to provide a heartbeat. This can be a radiolink device, if you have one available, or a used Dexcom Transmitter (G5/ G6/ ONE/ Anubis) or Sensor (G7/ ONE+). The batteries on Dexcom devices continue to provide power to the Bluetooth system, giving a heartbeat at about 5 minute intervals. The radiolink devices provide a heartbeat every minute.
 
 ### Bluetooth Heartbeat

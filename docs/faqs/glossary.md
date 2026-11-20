@@ -15,6 +15,8 @@ When Google Translate is selected:
 
 **<span translate="no">App Group</span>**&nbsp; (App Group): a unique identifier that Apple users for a given app, yours has your TEAMID embedded in it
 
+**<span translate="no">AlarmKit</span>**&nbsp; (AlarmKit): the iOS 26 feature that lets an app ring a system alarm, like the Clock app; it rings through silent mode and Focus
+
 **<span translate="no">BLE</span>**&nbsp; (BLE): Bluetooth low energy, used for communication by phones, CGM and some pumps
 
 **<span translate="no">branch</span>**&nbsp; (branch): version of code within a single repository or workspace repository
@@ -73,6 +75,8 @@ When Google Translate is selected:
 
 **<span translate="no">macOS</span>**&nbsp; (macOS): operating system for Mac computer
 
+**<span translate="no">LF Hub</span>**&nbsp; (LF Hub): a service that runs online around the clock, watches one person's glucose data and sends alarms, the badge and the Live Activity to the family's phones
+
 **<span translate="no">Loop and Learn</span>**&nbsp; (Loop and Learn): A support group with mentors and developers who support the OS-AID community
 
 **<span translate="no">Loop</span>**&nbsp; (Loop): With a capital L, Loop is one of several do-it-yourself artificial pancreas systems
@@ -118,6 +122,8 @@ When Google Translate is selected:
 **<span translate="no">GH_PAT</span>**&nbsp; (GH_PAT): One of 6 Secrets: Generated with your GitHub account; set it to never expire
 
 **<span translate="no">MATCH_PASSWORD</span>**&nbsp; (MATCH_PASSWORD): One of 6 Secrets: Git repo encryption passphrase, used to encrypt the Match-Secrets repository when it is created. You must save and use the same MATCH_PASSWORD for every repository if you build multiple apps.
+
+**<span translate="no">setup token</span>**&nbsp; (setup token): the secret chosen by whoever runs an LF Hub; anyone with it can join that hub as an admin
 
 **<span translate="no">SHA-1</span>**&nbsp; (SHA-1): Secure Hash Algorithm 1; used to generate an alphanumeric code for commits in git (github)
 
