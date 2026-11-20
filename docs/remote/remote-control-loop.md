@@ -183,9 +183,9 @@ While an override is active, it is listed in an **Active Override** section with
 
 !!! info "Available in *LoopFollow* 8.0 and newer"
 
-The **Profiles** button opens the profiles saved in *Loop*. Depending on the *Loop* build, you can review and activate them, and with the current profiles customization also create, edit, rename and delete them.
+The **Profiles** button opens the profiles saved in *Loop*. With a *Loop* that has therapy profiles, you can review, activate, create, edit, rename and delete them, and change the weekly scheduled switches. With a *Loop* built with the older Profile Save & Load customization, you can only review and activate them.
 
-Activating a profile, or editing the active profile, changes insulin dosing right away. Agree on profiles and any change to them with the care team.
+Activating a profile, editing the active profile, or a scheduled switch changes insulin dosing right away. Agree on profiles and any change to them with the care team.
 
 See [Remote Profiles](remote-profiles.md) for how it works, what *Loop* needs, and what the replies mean.
 

@@ -195,9 +195,9 @@ Tap a preset to activate it; a confirmation is shown before the command is sent.
 
 ### Profiles
 
-When *Trio* has Therapy Profiles and accepts profile commands, a **Profiles** button appears on this screen. From there you can review, activate, create, edit, rename and delete the profiles saved in *Trio*.
+When *Trio* has Therapy Profiles and accepts profile commands, a **Profiles** button appears on this screen. From there you can review, activate, create, edit, rename and delete the profiles saved in *Trio*, and change the weekly scheduled switches.
 
-Activating a profile, or editing the active profile, changes insulin dosing right away. Agree on profiles and any change to them with the care team.
+Activating a profile, editing the active profile, or a scheduled switch changes insulin dosing right away. Agree on profiles and any change to them with the care team.
 
 See [Remote Profiles](remote-profiles.md) for how it works, what *Trio* needs, and what the replies mean.
 
