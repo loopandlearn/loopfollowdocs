@@ -131,7 +131,7 @@ When the hub sends the alarms, they ring as system alarms:
 * They ring at the phone's alarm volume and through silent mode and *Focus*.
 * *Override System Volume*, *Volume Level* and *Audio During Calls* in *Alarm Settings* do not apply to them.
 * An alarm repeats its sound without a delay between sounds, whatever repeat delay you set.
-* Stop or snooze them with the alarm's own *Stop* and *Snooze* buttons. Don't count on the volume buttons to snooze them.
+* The alarm's button (on the lock screen: *slide to stop*) and the volume buttons both snooze the alarm for its *Default Snooze*, or acknowledge it when *Default Snooze* is 0. While the reason for the alarm remains, it rings again when the snooze ends.
 
 Which alarms you have, their limits and their snoozes still come from *LoopFollow* on each phone. Each phone has its own alarms.
 
