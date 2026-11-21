@@ -198,8 +198,8 @@ The app is signed with your own key. **Always use the same key.** *Android* only
 1. <a class="lfab-btn" id="lfab-openActions" href="#build-step-1" target="_blank" rel="noopener">Open the build page</a> of <code class="lfab-repoUrl"></code>
 1. If asked, click the green button to enable workflows. Use **Build LoopFollow** in the list. Ignore **LoopFollow Builder**: it holds the build steps and has no **Run workflow** button.
 1. Click **Run workflow**. Check the choices, then click the green **Run workflow** button:
-    * **LoopFollow version**: `latest` builds the newest release.
-      `dev` builds the development version, where new features are tested before a release. It is for experienced users and has minimal support. To go back from `dev` to a release, wait for the next release, or export your settings and uninstall first: *Android* does not install an older version over a newer one.
+    * **LoopFollow version**: keep `main`, the released version.
+      `dev` builds the development version, where new features are tested before a release. It is for experienced users and has minimal support. To go back from `dev` to `main`, wait until `main` has a newer version, or export your settings and uninstall first: *Android* does not install an older version over a newer one.
     * **Which app**: keep `LoopFollow`. Following more than one person? Choose `Second` or `Third` to build a separate app with its own settings, next to the first one. Use the same key for all of them.
     * **Name under the app icon**: leave it empty for `LoopFollow`, `LoopFollow_Second` or `LoopFollow_Third`, or type your own.
 1. Wait about 10 minutes. A green check means it is done.
