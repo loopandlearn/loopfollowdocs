@@ -5,9 +5,9 @@
 Like *LoopFollow* for *iOS*, it is not in an app store. You build it yourself, for free, in your own *GitHub* account, and install it on your phone. This page explains how, and what is different from the *iPhone* version.
 
 !!! warning "Not a medical device"
-    *LoopFollow* is a tool for following glucose and loop data. It is not a medical device and does not give dosing advice. Talk to your care team about how to manage diabetes.
+    *LoopFollow* is a tool for following glucose and loop data. It is not a medical device.
 
-    Before you rely on *LoopFollow* alarms, check that they reach you, also at night and with the phone locked. Keep your other alarms until you have.
+    *LoopFollow* alarms are an extra layer, not your main alarm. A phone can delay or stop an app, lose its connection or run out of battery. Make sure other alarms are set up, for example in the CGM app or the loop app.
 
 ### Requirements
 
