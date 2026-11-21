@@ -243,3 +243,31 @@
 .video-center video {
   max-width: 100%;
 }
+
+/*
+ * LoopFollow for Android: setup form for the build steps
+ */
+.md-typeset .lfab-label { display: block; font-weight: 700; margin: 1em 0 0.25em; }
+.md-typeset .lfab-input {
+  display: block; width: 100%; max-width: 30em; padding: 0.4em 0.6em; font: inherit;
+  color: var(--md-typeset-color); background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lighter); border-radius: 0.2em;
+}
+.md-typeset .lfab-check { display: flex; gap: 0.5em; align-items: center; margin-top: 0.75em; }
+.md-typeset .lfab-btn, .md-typeset a.lfab-btn:visited {
+  display: inline-block; margin: 0.25em 0; padding: 0.4em 1em; border-radius: 0.2em; cursor: pointer;
+  border: 1px solid var(--md-primary-fg-color); background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color); font: inherit; font-weight: 700; text-decoration: none;
+}
+.md-typeset .lfab-btn:hover { opacity: 0.85; }
+.md-typeset .lfab-btn.lfab-secondary, .md-typeset a.lfab-btn.lfab-secondary:visited {
+  background: transparent; color: var(--md-primary-fg-color);
+}
+.md-typeset .lfab-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.md-typeset a.lfab-btn[target="_blank"]::after { content: none; }
+.md-typeset .lfab-msg { display: inline-block; margin-left: 0.4em; }
+.md-typeset .lfab-msg.ok { color: #1a7f37; }
+.md-typeset .lfab-msg.err { color: #cf222e; }
+.md-typeset .lfab-msg.warn { color: #9a6700; }
+.md-typeset .lfab-box { background: var(--md-code-bg-color); border-radius: 0.2em; padding: 0.75em 1em; margin: 0.75em 0; }
+.md-typeset [hidden] { display: none !important; }
