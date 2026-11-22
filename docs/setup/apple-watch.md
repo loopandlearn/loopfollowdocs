@@ -72,7 +72,7 @@ The *iPhone* info table: the same rows, in the same order, with the same colors 
 
 You can add *LoopFollow* to your watch face. Edit the watch face, choose a complication slot and pick *LoopFollow*. All sizes show glucose, trend and the minutes since the reading. The rectangular, corner and inline sizes also show the change since the previous reading, and the rectangular size adds a two-hour graph.
 
-watchOS decides how often complications refresh, so a complication can lag behind the watch app. Always check the minutes shown next to the value.
+watchOS decides how often complications refresh, so a complication can lag behind the watch app. Always check the minutes shown next to the value. See [Why does the watch complication lag behind?](../faqs/lf-faqs.md#watch-complication)
 
 ## Remote Commands
 
