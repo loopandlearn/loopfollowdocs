@@ -39,6 +39,17 @@ Instead, *LoopFollow* offers a [Live Activity](../setup/lf-setup.md#live-activit
 
 - - -
 
+## Why does the watch complication lag behind? { #watch-complication }
+
+watchOS lets the *iPhone* push only about 50 updates a day to a complication on the active watch face, so *LoopFollow* sends a new value to the [complication](../setup/apple-watch.md#complications) at most every 15 minutes. In between, it can lag behind the *iPhone*. Always check the minutes shown next to the value.
+
+For a current value on the watch:
+
+* **Live Activity**: the *LoopFollow* [Live Activity](../setup/lf-setup.md#live-activity) also shows in the Smart Stack on the watch. Turn the Digital Crown or swipe up from the watch face to see it.
+* **Watch app**: the watch app is up to date when you open it. To keep it on screen longer, on the watch go to Settings → General → Return to Clock, tap *LoopFollow*, choose Custom and pick After 1 hour, the longest watchOS allows. When you lower your wrist, the app keeps showing the glucose and the minutes since the reading.
+
+- - -
+
 ## Why do I need APN credentials to use Live Activity?
 
 * When *LoopFollow* uses Silent Tunes as Background Refresh, it is not able to update the Live Activity display while the phone is locked unless APN are available
