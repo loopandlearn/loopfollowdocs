@@ -15,7 +15,7 @@
 // https://github.com/digitalbazaar/forge, the unmodified dist/forge.min.js of the npm package.
 (() => {
   const TEMPLATE = { owner: 'loopandlearn', name: 'LoopFollowAndroid-Builder' };
-  const REPO_NAME = 'my-loopfollow';
+  const REPO_NAME = 'my-loopfollow-android';
   const WORKFLOW_PATH = '.github/workflows/build.yml';
   const scriptBase = document.currentScript ? document.currentScript.src.replace(/[^/]*$/, '') : '';
 

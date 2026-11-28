@@ -15,7 +15,7 @@ Like *LoopFollow* for *iOS*, it is not in an app store. You build it yourself, f
 * A free *GitHub* account
 * A web browser: *Chrome* on your phone or any browser on a computer
 
-You do not need an *Apple* developer account, a computer or any program to build *LoopFollow* for *Android*.
+You do not need an *Apple Developer* account, a computer or any program to build *LoopFollow* for *Android*.
 
 - - -
 
@@ -25,16 +25,22 @@ Most of the app looks and works the same as on an *iPhone*. These are the differ
 
 ### Not Available on *Android*
 
-* *Apple Watch*, *CarPlay*, widgets, the *Dynamic Island* and the app badge
+* *Apple Watch*, *CarPlay*, the *Dynamic Island* and the app badge
 * The calendar and contact-image features
 * *LF Hub*
 
-### Live Activity is a Notification
+### Persistent Glucose Notification
 
-On *Android*, the Live Activity card is shown as a notification that stays while *LoopFollow* runs. It is updated by the app itself each time new data arrives, so there is no "Tap to update" and no renewal every 8 hours.
+On *Android*, *LoopFollow* shows your glucose information in a notification that stays while the app is running. The notification is updated automatically whenever new glucose data arrives. Its settings are under *Settings* > *Live Activity*, the same name as on the *iPhone*.
 
-* It is on by default. If you turn the Live Activity off, a small notification with only the app name stays: *Android* requires one for an app that keeps running in the background.
-* A glucose reading that is 12 minutes old or older is shown struck through.
+* The notification is on by default. If you turn it off, *Android* still shows a small notification with only the app name. *Android* requires this for apps that keep running in the background.
+* Glucose readings that are 12 minutes old or older are shown with a strikethrough.
+* On *Android* 16 and newer, glucose and trend are also shown in a small chip in the status bar.
+
+### Widget and Screensaver
+
+* The *LoopFollow* widget shows glucose, trend, change and the age of the reading on the home screen, and on the lock screen on phones that allow lock screen widgets. Touch and hold an empty spot on the home screen, choose *Widgets* and pick *LoopFollow*.
+* The *LoopFollow* screensaver shows the same in large type while the phone is charging. Choose it in the phone's display settings under *Screen saver*. Not all phones have screensavers.
 
 ### Keeping *LoopFollow* Running
 
@@ -54,14 +60,16 @@ On *Android*, the Live Activity card is shown as a notification that stays while
 
 Remote control of *Loop* and *Trio* works, with these differences:
 
-* You always enter the APNS Key ID and APNS Key in the remote settings, since the *Android* app is not built with an *Apple* developer account. See [Remote Control Overview](../remote/remote-control-overview.md).
+* You always enter the APNS Key ID and APNS Key in the remote settings, since the *Android* app is not built with an *Apple Developer* account. See [Remote Control Overview](../remote/remote-control-overview.md).
 * The *Android* app cannot receive the confirmation that *Loop* or *Trio* sends back. After you send a command, *LoopFollow* shows "Command Sent", and the result shows once *Loop* or *Trio* uploads it to *Nightscout*. *LoopFollow* checks *Nightscout* more often for a while after each command.
-* Editing or deleting a meal or carb entry, and switching a *Loop* profile, have no "waiting" state. Check the result in *Nightscout* data before you send the command again.
+* Editing or deleting a meal or carb entry, and switching a profile, have no "waiting" state. Check the result in *Nightscout* data before you send the command again.
 
 ### Your Settings and Passwords
 
 * The *Nightscout* token, *Dexcom* password, APNS keys and other secrets are stored encrypted on the phone.
-* *LoopFollow* data is not included in *Android* backups or in a transfer to a new phone. To move to a new phone, or to keep a copy of your settings, use *Settings* > *Import/Export* and the QR code. The QR code holds your secrets: keep it private.
+* *LoopFollow* data is not included in *Android* backups or in a transfer to a new phone. To move to a new phone, or to keep a copy of your settings, use *Settings* > *Import/Export* and the QR codes. The QR codes hold your secrets: keep them private.
+* Settings are exported in parts: *Nightscout*, *Dexcom Share*, remote, APNS and alarm settings. Export and scan each part you use.
+* The QR code is scanned with the camera of the phone that receives the settings, so it must be shown on another screen. Moving to a new build on the same phone? Take a picture of each QR code first, and show it on a computer or another device while you scan it.
 * QR codes made on an *iPhone* work on *Android*, and the other way around.
 
 ### Other Differences
@@ -96,9 +104,12 @@ First log in to [github.com](https://github.com){: target="_blank" } in this bro
 Use your username, shown in your *GitHub* profile, not your email.
 
 <label class="lfab-label" for="lfab-repo">Name of your repository</label>
-<input class="lfab-input" type="text" id="lfab-repo" spellcheck="false" placeholder="my-loopfollow">
+<input class="lfab-input" type="text" id="lfab-repo" spellcheck="false" placeholder="my-loopfollow-android">
 
-Keep the suggestion. Already created your repository with another name? Type that exact name here.
+Keep the suggestion. It has *android* in the name, so you can tell it apart from a *LoopFollow* fork for the *iPhone* in the same account. Already created your repository with another name? Type that exact name here.
+
+??? note "Rename an existing repository"
+    You can rename your build repository in *GitHub*: open it, then *Settings* > *General* > *Repository name*. The key secret and your builds stay. Type the new name above afterwards, so the buttons on this page open the right repository.
 
 Your repository: <code class="lfab-repoUrl"></code>
 
@@ -196,7 +207,7 @@ The app is signed with your own key. **Always use the same key.** *Android* only
 ### Step 4 – Build the App { #build-step-4 }
 
 1. <a class="lfab-btn" id="lfab-openActions" href="#build-step-1" target="_blank" rel="noopener">Open the build page</a> of <code class="lfab-repoUrl"></code>
-1. If asked, click the green button to enable workflows. Use **Build LoopFollow** in the list. Ignore **LoopFollow Builder**: it holds the build steps and has no **Run workflow** button.
+1. Check that the page shows your *Android* build repository, not a *LoopFollow* fork for the *iPhone*. If asked, click the green button to enable workflows. Use **Build LoopFollow** in the list. Ignore **LoopFollow Builder**: it holds the build steps and has no **Run workflow** button.
 1. Click **Run workflow**. Check the choices, then click the green **Run workflow** button:
     * **LoopFollow version**: keep `main`, the released version.
       `dev` builds the development version, where new features are tested before a release. It is for experienced users and has minimal support. To go back from `dev` to `main`, wait until `main` has a newer version, or export your settings and uninstall first: *Android* does not install an older version over a newer one.
